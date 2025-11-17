@@ -1,0 +1,216 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+interface Exam {
+  _id: string;
+  title: string;
+  description: string;
+  duration: number;
+  published: boolean;
+  createdAt: string;
+}
+
+interface QuestionBank {
+  _id: string;
+  name: string;
+}
+
+export function ExamManagement() {
+  const [exams, setExams] = useState<Exam[]>([]);
+  const [banks, setBanks] = useState<QuestionBank[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [newExamTitle, setNewExamTitle] = useState('');
+  const [newExamDesc, setNewExamDesc] = useState('');
+  const [selectedBankId, setSelectedBankId] = useState('');
+  const [duration, setDuration] = useState(60);
+
+  useEffect(() => {
+    fetchExams();
+    fetchBanks();
+  }, []);
+
+  const fetchExams = async () => {
+    try {
+      const response = await fetch('/api/teacher/exams');
+      const data = await response.json();
+      setExams(data.exams || []);
+    } catch (error) {
+      console.error('Failed to fetch exams:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const fetchBanks = async () => {
+    try {
+      const response = await fetch('/api/teacher/banks');
+      const data = await response.json();
+      setBanks(data.banks || []);
+    } catch (error) {
+      console.error('Failed to fetch banks:', error);
+    }
+  };
+
+  const handleCreateExam = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!selectedBankId) return;
+
+    try {
+      const response = await fetch('/api/teacher/exams', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: newExamTitle,
+          description: newExamDesc,
+          bankId: selectedBankId,
+          duration
+        })
+      });
+
+      if (response.ok) {
+        setNewExamTitle('');
+        setNewExamDesc('');
+        setSelectedBankId('');
+        setDuration(60);
+        fetchExams();
+      }
+    } catch (error) {
+      console.error('Failed to create exam:', error);
+    }
+  };
+
+  const handlePublishExam = async (examId: string, published: boolean) => {
+    try {
+      const response = await fetch(`/api/teacher/exams/${examId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ published: !published })
+      });
+
+      if (response.ok) {
+        fetchExams();
+      }
+    } catch (error) {
+      console.error('Failed to publish exam:', error);
+    }
+  };
+
+  const handleDeleteExam = async (examId: string) => {
+    if (confirm('Delete this exam?')) {
+      try {
+        const response = await fetch(`/api/teacher/exams/${examId}`, {
+          method: 'DELETE'
+        });
+
+        if (response.ok) {
+          fetchExams();
+        }
+      } catch (error) {
+        console.error('Failed to delete exam:', error);
+      }
+    }
+  };
+
+  return (
+    <div className="space-y-6">
+      <Card className="border-border bg-muted-lighter/30">
+        <CardHeader>
+          <CardTitle className="text-foreground">Create Exam</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={handleCreateExam} className="space-y-4">
+            <Input
+              placeholder="Exam title"
+              value={newExamTitle}
+              onChange={(e) => setNewExamTitle(e.target.value)}
+              className="bg-input border-border text-foreground"
+              required
+            />
+
+            <Input
+              placeholder="Description (optional)"
+              value={newExamDesc}
+              onChange={(e) => setNewExamDesc(e.target.value)}
+              className="bg-input border-border text-foreground"
+            />
+
+            <select
+              value={selectedBankId}
+              onChange={(e) => setSelectedBankId(e.target.value)}
+              className="w-full rounded-md border border-border bg-input px-3 py-2 text-foreground"
+              required
+            >
+              <option value="">Select question bank</option>
+              {banks.map((bank) => (
+                <option key={bank._id} value={bank._id}>
+                  {bank.name}
+                </option>
+              ))}
+            </select>
+
+            <Input
+              type="number"
+              placeholder="Duration (minutes)"
+              value={duration}
+              onChange={(e) => setDuration(Number(e.target.value))}
+              className="bg-input border-border text-foreground"
+              required
+            />
+
+            <Button type="submit" className="w-full bg-primary hover:bg-primary-dark">
+              Create Exam
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+
+      <Card className="border-border bg-muted-lighter/30">
+        <CardHeader>
+          <CardTitle className="text-foreground">Exams</CardTitle>
+        </CardHeader>
+        <CardContent>
+          {isLoading ? (
+            <p className="text-muted">Loading exams...</p>
+          ) : exams.length === 0 ? (
+            <p className="text-muted">No exams created</p>
+          ) : (
+            <div className="space-y-3">
+              {exams.map((exam) => (
+                <div
+                  key={exam._id}
+                  className="flex items-center justify-between p-4 rounded-md bg-input border border-border"
+                >
+                  <div>
+                    <p className="font-medium text-foreground">{exam.title}</p>
+                    <p className="text-sm text-muted">{exam.duration} minutes</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      onClick={() => handlePublishExam(exam._id, exam.published)}
+                      className={exam.published ? 'bg-success hover:bg-success/90' : 'bg-warning hover:bg-warning/90'}
+                    >
+                      {exam.published ? 'Published' : 'Draft'}
+                    </Button>
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => handleDeleteExam(exam._id)}
+                      className="bg-error hover:bg-error/90"
+                    >
+                      Delete
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+}

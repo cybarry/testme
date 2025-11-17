@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: #0f172a;
+  --color-foreground: #f1f5f9;
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1e40af;
+  --color-secondary: #06b6d4;
+  --color-accent: #ef4444;
+  --color-muted: #64748b;
+  --color-muted-lighter: #475569;
+  --color-border: #1e293b;
+  --color-input: #1e293b;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  --radius: 0.5rem;
+  
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+/* Disable text selection during exam */
+.exam-session {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Anti-cheating styles */
+.cheating-warning {
+  @apply fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center;
+}
+
+.cheating-modal {
+  @apply bg-error/10 border-2 border-error rounded-lg p-8 max-w-md text-center;
+}
