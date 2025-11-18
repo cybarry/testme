@@ -9,39 +9,39 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const currentUser = await getCurrentUser();
-    
+
     if (!currentUser) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
     }
-    
+
     await connectDB();
-    
+
     const { examId, cheatingAttempts, terminatedForCheating } = await request.json();
-    
+
     const progress = await StudentProgress.findOne({
       studentId: currentUser.userId,
       examId
     });
-    
+
     if (!progress) {
       return NextResponse.json({ error: 'Progress not found' }, { status: 404 });
     }
-    
+
     const exam = await Exam.findById(examId).populate('questions');
     if (!exam) {
       return NextResponse.json({ error: 'Exam not found' }, { status: 404 });
     }
-    
+
     // Calculate score
     let correctCount = 0;
     const incorrectAnswers = [];
-    
+
     for (const answer of progress.answers) {
       const question = await Question.findById(answer.questionId);
       if (!question) continue;
-      
+
       const isCorrect = JSON.stringify(answer.selectedAnswer) === JSON.stringify(question.answer);
-      
+
       if (isCorrect) {
         correctCount++;
       } else {
@@ -52,9 +52,9 @@ export async function POST(request: NextRequest) {
         });
       }
     }
-    
+
     const normalizedScore = (correctCount / exam.questions.length) * 1000;
-    
+
     // Create score record
     const score = new Score({
       studentId: currentUser.userId,
@@ -71,13 +71,13 @@ export async function POST(request: NextRequest) {
       cheatingAttempts,
       terminatedForCheating
     });
-    
+
     await score.save();
-    
+
     // Mark progress as completed
     progress.completed = true;
     await progress.save();
-    
+
     return NextResponse.json({
       score: {
         id: score._id,
