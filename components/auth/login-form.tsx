@@ -6,6 +6,7 @@ import { useAuthStore } from '@/lib/zustand-store';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { PasswordInput } from '@/components/ui/PasswordInput';
 
 export function LoginForm() {
   const [username, setUsername] = useState('');
@@ -77,9 +78,8 @@ export function LoginForm() {
               <label htmlFor="password" className="text-sm font-medium text-foreground">
                 Password
               </label>
-              <Input
+              <PasswordInput
                 id="password"
-                type="password"
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

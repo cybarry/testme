@@ -5,11 +5,12 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AlertCircle, CheckCircle2 } from 'lucide-react';
+import { PasswordInput } from '@/components/ui/PasswordInput';
 
 export function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('student');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -21,38 +22,69 @@ export function RegisterForm() {
     setSuccess('');
     setIsLoading(true);
 
+    // Basic client-side validation
+    if (!username.trim() || !password.trim()) {
+      setError('Please fill in all fields');
+      setIsLoading(false);
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters long');
+      setIsLoading(false);
+      return;
+    }
+
     try {
       const response = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password, role })
+        body: JSON.stringify({
+          username: username.trim(),
+          password,
+          role: 'student', // Hardcoded — only students can self-register
+        }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.error || 'Registration failed');
+        setError(data.error || 'Registration failed. Try a different username.');
+        setIsLoading(false);
         return;
       }
 
       setSuccess('Account created successfully! Redirecting to login...');
-      setTimeout(() => router.push('/login'), 2000);
+      
+      // Redirect to login after successful registration
+      setTimeout(() => {
+        router.push('/login');
+      }, 2000);
+
     } catch (err) {
-      setError('An error occurred. Please try again.');
+      setError('Network error. Please check your connection and try again.');
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background">
-      <Card className="w-full max-w-md border-border bg-muted-lighter/30">
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-2xl text-foreground">Create Account</CardTitle>
-          <p className="text-sm text-muted">Register for the CBT Platform</p>
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-background to-muted px-4">
+      <Card className="w-full max-w-md shadow-xl border-border">
+        <CardHeader className="space-y-3 text-center">
+          <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+            <CheckCircle2 className="w-10 h-10 text-primary" />
+          </div>
+          <CardTitle className="text-2xl font-bold text-foreground">
+            Join the CBT Platform
+          </CardTitle>
+          <p className="text-muted-foreground">
+            Create your student account to start taking exams
+          </p>
         </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+
+        <CardContent className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
               <label htmlFor="username" className="text-sm font-medium text-foreground">
                 Username
@@ -60,11 +92,13 @@ export function RegisterForm() {
               <Input
                 id="username"
                 type="text"
-                placeholder="Choose a username"
+                placeholder="Enter your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 disabled={isLoading}
-                className="bg-input border-border text-foreground placeholder:text-muted"
+                required
+                autoFocus
+                className="h-11"
               />
             </div>
 
@@ -72,60 +106,55 @@ export function RegisterForm() {
               <label htmlFor="password" className="text-sm font-medium text-foreground">
                 Password
               </label>
-              <Input
+              <PasswordInput
                 id="password"
-                type="password"
                 placeholder="Choose a strong password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
-                className="bg-input border-border text-foreground placeholder:text-muted"
+                required
+                minLength={6}
+                className="h-11"
               />
+              <p className="text-xs text-muted-foreground">
+                Minimum 6 characters
+              </p>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="role" className="text-sm font-medium text-foreground">
-                Role
-              </label>
-              <select
-                id="role"
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-                disabled={isLoading}
-                className="w-full rounded-md border border-border bg-input px-3 py-2 text-foreground"
-              >
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-                <option value="admin">Admin</option>
-              </select>
-            </div>
-
+            {/* Error Message */}
             {error && (
-              <div className="rounded-md bg-error/10 p-3 text-sm text-error border border-error/30">
-                {error}
+              <div className="flex items-center gap-2 rounded-lg bg-destructive/10 border border-destructive/30 px-4 py-3 text-sm text-destructive">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                <span>{error}</span>
               </div>
             )}
 
+            {/* Success Message */}
             {success && (
-              <div className="rounded-md bg-success/10 p-3 text-sm text-success border border-success/30">
-                {success}
+              <div className="flex items-center gap-2 rounded-lg bg-success/10 border border-success/30 px-4 py-3 text-sm text-success">
+                <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                <span>{success}</span>
               </div>
             )}
 
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-primary hover:bg-primary-dark text-white"
+              className="w-full h-11 text-base font-medium"
             >
-              {isLoading ? 'Creating account...' : 'Create Account'}
+              {isLoading ? 'Creating Account...' : 'Create Student Account'}
             </Button>
           </form>
 
-          <p className="mt-4 text-center text-sm text-muted">
+          <div className="text-center text-sm text-muted-foreground">
             Already have an account?{' '}
-            <a href="/login" className="text-primary hover:text-primary-dark">
+            <a href="/login" className="font-medium text-primary hover:underline">
               Sign in here
             </a>
+          </div>
+
+          <p className="text-center text-xs text-muted-foreground mt-6">
+            Teachers and Admins are created by the platform administrator only.
           </p>
         </CardContent>
       </Card>
