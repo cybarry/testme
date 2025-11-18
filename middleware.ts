@@ -17,6 +17,7 @@ export async function middleware(request: NextRequest) {
   }
   
   // If token exists, verify it
+
   if (token) {
     const decoded = await verifyToken(token);
     

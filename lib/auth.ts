@@ -1,28 +1,43 @@
-import jwt from 'jsonwebtoken';
+import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || 'your-very-strong-secret-here-change-in-prod';
+const encodedKey = new TextEncoder().encode(JWT_SECRET);
 
 export interface TokenPayload {
   userId: string;
   role: 'admin' | 'teacher' | 'student';
+  iat?: number;
+  exp?: number;
 }
 
 export async function generateToken(payload: TokenPayload) {
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: '24h' });
+  return await new SignJWT(payload)
+    .setProtectedHeader({ alg: 'HS256' })
+    .setIssuedAt()
+    .setExpirationTime('24h')
+    .sign(encodedKey);
 }
 
 export async function verifyToken(token: string): Promise<TokenPayload | null> {
   try {
-    return jwt.verify(token, JWT_SECRET) as TokenPayload;
-  } catch {
+    const { payload } = await jwtVerify(token, encodedKey, {
+      algorithms: ['HS256'],
+    });
+    return payload as TokenPayload;
+  } catch (error) {
+    console.error('Token verification failed:', error);
     return null;
   }
 }
 
 export async function getTokenFromCookies() {
-  const cookieStore = await cookies();
-  return cookieStore.get('auth_token')?.value;
+  try {
+    const cookieStore = await cookies();
+    return cookieStore.get('auth_token')?.value;
+  } catch {
+    return null;
+  }
 }
 
 export async function setAuthCookie(token: string) {
@@ -31,7 +46,8 @@ export async function setAuthCookie(token: string) {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: 24 * 60 * 60
+    path: '/',
+    maxAge: 24 * 60 * 60, // 24 hours
   });
 }
 
@@ -39,4 +55,9 @@ export async function getCurrentUser() {
   const token = await getTokenFromCookies();
   if (!token) return null;
   return await verifyToken(token);
+}
+
+export async function removeAuthCookie() {
+  const cookieStore = await cookies();
+  cookieStore.delete('auth_token');
 }

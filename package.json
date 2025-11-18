@@ -48,7 +48,7 @@
     "http": "latest",
     "immer": "latest",
     "input-otp": "1.4.1",
-    "jsonwebtoken": "latest",
+    "jose": "^6.1.2",
     "lucide-react": "^0.454.0",
     "mongoose": "latest",
     "next": "16.0.3",
