@@ -1,0 +1,2638 @@
+[
+  {
+    "question": "Regarding the description of the Windows log event type, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "A warning event refers to an event of successful operation of an application, driver, or service.",
+      "B": "Error events usually refer to the loss of functions and data. For example, if a service cannot be loaded as a system boot, an error event will be generated.",
+      "C": "When the disk space is insufficient, it will be recorded as an 'information event'",
+      "D": "Failed audit events refer to failed audit security login attempts. For example, if the user view fails to access a network drive, it will be recorded as a failureAudit event."
+    },
+    "answer": ["B"]
+  },
+
+  {
+    "question": "Encryption technology can be divided into the following types?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Symmetric encryption",
+      "B": "Distributed symmetric encryption",
+      "C": "Fingerprint encryption",
+      "D": "Data encryption"
+    },
+    "answer": ["A"]
+  },
+
+  {
+    "question": "Which of the following is the status information that can be backed up by the Huawei Redundancy Protocol (HRP)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Session table",
+      "B": "ServerMap table entries",
+      "C": "Dynamic blacklist",
+      "D": "Routing table"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "Which of the following is the core part of the P2DR model?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Policy",
+      "B": "Protection",
+      "C": "Detection",
+      "D": "Response"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Evidence appraisal needs to solve the completeness verification of evidence and determine whether it meets the applicable standards. Regarding the standard of evidence appraisal, which one of the following descriptions is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The relevance standard means that if the electronic evidence can have a substantial impact on the facts of the case to a certain extent, the court should rule that it is relevant.",
+      "B": "The objectivity standard refers to the legality of the acquisition, storage, and submission of electronic evidence. This right does not constitute a serious violation.",
+      "C": "The legality standard is to ensure that the content of electronic evidence remains unchanged from the initial acquisition and collection to the submission and use of litigation evidence.",
+      "D": "The fairness standard means that only the evidential materials obtained by legal entities by legal means have the ability to prove."
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Data analysis technology is to find and match keywords or key phrases in the acquired data stream or information stream, and analyze the relevance of time. Which is not an evidence analysis technique?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Code deciphering, data decryption technology",
+      "B": "Document digital summary analysis technology",
+      "C": "Techniques to discover connections between different evidences",
+      "D": "Spam tracking technology"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding AH and ESP security protocols, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AH can provide encryption and verification functions",
+      "B": "ESP can provide encryption and authentication functions",
+      "C": "The protocol number of AH is 51",
+      "D": "The protocol number of ESP is 51"
+    },
+    "answer": ["B", "C"]
+  },
+
+  {
+    "question": "Which of the following types of attacks are DDoS attacks?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Snooping scan attack",
+      "B": "Malformed message attack",
+      "C": "Special message attack",
+      "D": "Traffic attacks"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding SSL VPN technology, which of the following options is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "SSL VPN technology can be perfectly suitable for NAT traversal scenarios",
+      "B": "The encryption of SSL VPN technology only takes effect at the application layer",
+      "C": "SSL VPN requires a dial-up client",
+      "D": "SSL VPN technology expands the scope of the enterprise's network"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following options can be operated in the advanced settings of the windows firewall?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Restore default values",
+      "B": "Change notification rules",
+      "C": "Set connection security rules",
+      "D": "Set up inbound and outbound rules"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "When NAT Server is configured on the USG series firewall, a server-map table will be generated. Which of the following is not included in the performance?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Destination IP",
+      "B": "Destination port number",
+      "C": "Agreement number",
+      "D": "Source IP"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following attacks is not a special packet attack?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "ICMP redirect packet attack",
+      "B": "ICMP unreachable packet attack",
+      "C": "IP address scanning attack",
+      "D": "Oversized ICMP packet attack"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following attacks is not a malformed packet attack?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Teardrop attack",
+      "B": "Smurf attack",
+      "C": "TCP Fragmentation Attack",
+      "D": "ICMP unreachable packet attack"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "The 'Caesar cipher' is mainly used to encrypt data by using a stick of a specific specification.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following are remote authentication methods?",
+    "question_type": "multiple_choice",
+    "options": { "A": "RADIUS", "B": "Local", "C": "HWTACACS", "D": "LLDP" },
+    "answer": ["A", "C"]
+  },
+
+  {
+    "question": "When the firewall hard disk is in place, which of the following descriptions of the firewall log is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Administrators can post content logs to view the detection and defense records of cyber threats",
+      "B": "The administrator can understand the user's security risk behavior and the reason for being alerted or blocked through the threat log",
+      "C": "The administrator knows the user's behavior, the searched keywords, and the effectiveness of the audit policy configuration through the user activity log",
+      "D": "The administrator can learn the security policy of traffic hits through the policy hit log, which can be used for fault location when a problem occurs"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "In the Client-Initiated VPN configuration, it is generally recommended to plan the address pool and the headquarters network address into different network segments, otherwise it needs to be on the gateway device Turn on the proxy forwarding function.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following is the encryption technology used in the digital envelope?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Symmetric encryption algorithm",
+      "B": "Asymmetric encryption algorithm",
+      "C": "Hashing algorithm",
+      "D": "Stream encryption algorithm"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "In addition to supporting built-in Portal authentication, the firewall also supports custom Portal authentication. When custom Portal authentication is used, it does not need to be deployed separately External Portal server.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "NAPT technology can realize a public IP address for multiple private network hosts.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "IPSec VPN technology does not support NAT traversal when it adopts ESP security protocol encapsulation, because ESP encrypts the header of the message",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of SSL VPN, which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Can be used without a client",
+      "B": "The IP layer can be encrypted",
+      "C": "There is a NAT traversal problem",
+      "D": "No authentication required"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Some applications, such as Oracle database applications, have no data stream transmission for a long time, which interrupts the firewall session connection, which leads to business interruption. Which is the best solution?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Configure a long connection for a business",
+      "B": "Enable ASPF function",
+      "C": "Optimize security strategy",
+      "D": "Turn on shard caching"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "'Implementing security monitoring and management of information and information systems to prevent illegal use of information and information systems' is to achieve which feature of information security?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Controllability",
+      "C": "Non-repudiation",
+      "D": "Integrity"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "When configuring a security policy, a security policy can reference an address set or configure multiple destination IP addresses.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following options does not belong to the five-tuple range?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Source IP",
+      "B": "Source MAC",
+      "C": "Destination IP",
+      "D": "Destination port"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding Client-Initialized L2TP VPN, which of the following statements is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "After the remote user accesses the internet, he can directly initiate an L2TP tunnel connection request to the remote LNS through the client software",
+      "B": "The LNS device receives the user's L2TP connection request, and can verify the user based on the user name and password",
+      "C": "LNS assigns private IP addresses to remote users",
+      "D": "Remote users do not need to install VPN client software"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding the description of vulnerability scanning, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Vulnerability scanning is a technology based on the network to remotely monitor the security performance vulnerabilities of the target network or host...",
+      "B": "Vulnerability scanning is used to detect whether there are vulnerabilities in the target host system...",
+      "C": "Vulnerability scanning is a passive preventive measure, which can effectively avoid hacker attacks",
+      "D": "Vulnerability scan can be performed based on the results of ping scan and port scan"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Regarding the firewall security policy statement, which of the following options is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "If the security policy is permit, the discarded packets will not accumulate the 'hit times'",
+      "B": "When configuring the security policy name, the same name cannot be used repeatedly",
+      "C": "Adjust the sequence of the security policy without saving the configuration file, it will take effect immediately",
+      "D": "The security policy entries of Huawei USG series firewalls cannot exceed 128"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following protection levels are included in the TCSEC standard?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Verify protection level",
+      "B": "Mandatory protection level",
+      "C": "Autonomous protection level",
+      "D": "Passive protection level"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "Which of the following options are part of the PKI architecture?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Terminal entity",
+      "B": "Certification authority",
+      "C": "Certificate registration authority",
+      "D": "Certificate storage organization"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "'Being good at observing' and 'keeping suspicion' can help us better identify security threats in the cyber world",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "In the tunnel encapsulation mode. IPSec configuration does not need to have a route to the destination private network segment, because the data will be re-encapsulated to use the new IP The head looks up the routing table.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of windows firewall, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The windows firewall can only allow or prohibit the preset programs...",
+      "B": "Windows firewall can not only allow or prohibit preset programs... but also supports custom release rules",
+      "C": "If you cannot access the Internet during the process of setting up the windows firewall, you can use the restore default function...",
+      "D": "The notification rules can be changed even when the windows firewall is turned off"
+    },
+    "answer": ["B", "C"]
+  },
+
+  {
+    "question": "Which of the following descriptions about investigation and evidence collection is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Evidence is not necessarily needed during the investigation",
+      "B": "Evidence obtained through wiretapping is also valid",
+      "C": "In all investigations and evidence collection processes, it is best to involve law enforcement agencies",
+      "D": "Document evidence is necessary in computer crime"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Regarding online user management, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Each user group can include multiple users and user groups",
+      "B": "Each user group can belong to multiple parent user groups",
+      "C": "The system defaults to a default user group...",
+      "D": "Each user belongs to at least one user group..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following does not belong to the method used in the Detection link of the P2DR model?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Real-time monitoring",
+      "B": "Detection",
+      "C": "Alarm",
+      "D": "Turn off the service"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following is not part of the LINUX operating system?",
+    "question_type": "single_choice",
+    "options": { "A": "CentOS", "B": "RedHat", "C": "Ubuntu", "D": "MAC OS" },
+    "answer": "D"
+  },
+
+  {
+    "question": "In some scenarios, it is necessary to convert both the source IP address and the destination IP address. Which of the following technologies is used in this scenario?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Two-way NAT",
+      "B": "Source NAT",
+      "C": "NAT-Server",
+      "D": "NAT ALG"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following protocols can guarantee the confidentiality of data transmission?",
+    "question_type": "multiple_choice",
+    "options": { "A": "Telnet", "B": "SSH", "C": "FTP", "D": "HTTPS" },
+    "answer": ["B", "D"]
+  },
+
+  {
+    "question": "On the USG series firewalls, after the web redirection function is configured, the authentication cannot pop up. Which of the following is not the cause of the fault?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The authentication policy is not configured or the authentication policy is configured incorrectly",
+      "B": "Web authentication function is not enabled",
+      "C": "The SSL version of the browser does not match the SSL version of the firewall authentication page",
+      "D": "The port number of the authentication service is set to 8887"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following options correctly describes the sequence of the four stages of the Information Security Management System (ISMS)?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Plan->Check->Do->Action",
+      "B": "Check->Plan->Do->Action",
+      "C": "Plan->Do->Check->Action",
+      "D": "Plan->Check->Action->Do"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "In the information security system construction management cycle, which of the following behaviors needs to be implemented in the 'check' link?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Safety management system design",
+      "B": "Safety management system implementation",
+      "C": "Risk assessment",
+      "D": "Safety management system operation monitoring"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "To classify servers according to their appearance, which of the following types can be divided into?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Blade server",
+      "B": "Tower server",
+      "C": "Rack server",
+      "D": "X86 server"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "Commonly used scanning attacks include: port scanning tools, vulnerability scanning tools, application scanning tools, database scanning tools, etc.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "The firewalls are divided according to the protection objects. Windows firewalls belong to——?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Software firewall",
+      "B": "Hardware firewall",
+      "C": "Stand-alone firewall",
+      "D": "Network firewall"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following options belong to the way the PKI entity applies for a local certificate from the CA?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Online application",
+      "B": "Local application",
+      "C": "Online application",
+      "D": "Offline application"
+    },
+    "answer": ["A", "D"]
+  },
+
+  {
+    "question": "Intrusion prevention system (IPS, intrusion prevention system) is a defense system that can block intrusion in real time",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following is not a symmetric encryption algorithm?",
+    "question_type": "single_choice",
+    "options": { "A": "DES", "B": "3DES", "C": "AES", "D": "RSA" },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding the configuration of the firewall security zone, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The firewall has four security zones by default...",
+      "B": "The firewall can have up to 12 security zones",
+      "C": "The firewall can create two security zones with the same priority",
+      "D": "When data flows between different security areas, it will trigger the security check..."
+    },
+    "answer": ["D"]
+  },
+
+  {
+    "question": "Digital certificates can be divided into local certificates, CA certificates, root certificates, and self-signed certificates according to different usage scenarios.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Regarding the root CA certificate, which of the following descriptions is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The issuer is CA",
+      "B": "The subject name of the certificate is CA",
+      "C": "The public key information is the CA's public key",
+      "D": "The signature is generated by CA public key encryption"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following configurations can realize the NAT ALG function?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "nat alg protocol",
+      "B": "alg protocol",
+      "C": "nat protocol",
+      "D": "detect protocol"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding the antivirus response method of the firewall gateway to the HTTP protocol, which of the following statements is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "When the gateway device blocks the HTTP connection...",
+      "B": "Response methods include announcement and blocking",
+      "C": "Alarm mode The device only generates logs...",
+      "D": "Blocking means that the device disconnects from the HTTP server..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following does not belong to the user authentication method in the USG firewall?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Certification-free",
+      "B": "Password authentication",
+      "C": "Single sign-on",
+      "D": "Fingerprint authentication"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Both GE1/0/1 and GE1/0/2 ports of the firewall belong to the DMZ zone. If you want to realize that the area connected to GE1/0/1 can access the area connected to GE1/0/2 Region, which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Need to configure the security policy from Local to DMZ",
+      "B": "No configuration required",
+      "C": "Need to configure inter-domain security policies",
+      "D": "Need to configure DMZ to local security policy"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "For the process of forwarding the first packet of a session between firewall domains, there are the following steps: 1. Look up the routing table 2. Find inter-domain packet filtering rules 3. Look up the session table 4. Find the blacklist Which of the following is the correct order?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1->3->2->4",
+      "B": "3->2->1->4",
+      "C": "3->4->1->2",
+      "D": "4->3->1->2"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "The administrator wants to know the current session table. Which of the following commands is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "clear firewall session table",
+      "B": "reset firewall session table",
+      "C": "display firewall session table",
+      "D": "display session table"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following are the basic functions of anti-virus software?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Prevent viruses",
+      "B": "Find viruses",
+      "C": "Remove the virus",
+      "D": "Replicating virus"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "The European TCSEC guidelines are divided into two modules: function and evaluation, which are mainly used in the military, government and commercial fields",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "In the future development trend of information security, terminal detection is an important part. Which of the following methods belong to the category of terminal detection?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Install host antivirus software",
+      "B": "Monitor and remember external devices",
+      "C": "Prevent users from accessing public search engines",
+      "D": "Monitoring host registry modification records"
+    },
+    "answer": ["A", "B", "D"]
+  },
+
+  {
+    "question": "Which of the following is not included in the consistency check of the HRP master/backup configuration?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "NAT policy",
+      "B": "Whether the heartbeat interface with the same serial number is configured",
+      "C": "Next hop and outgoing interface of the static route",
+      "D": "Authentication strategy"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "In the USG series firewall, you can use the ______ function to provide well-known application services for non-well-known ports.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Port mapping",
+      "B": "MAC and IP address binding",
+      "C": "Packet filtering",
+      "D": "Long connection"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following is not included in the design principles of the questionnaire survey?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Integrity",
+      "B": "Openness",
+      "C": "Specificity",
+      "D": "Consistency"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "If you want to implement the 'anti-virus function' in the security policy, you must activate the license.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "The configuration commands for the NAT address pool are as follows: Among them, the meaning of the no-pat parameter is:",
+    "question_type": "single_choice",
+    "options": {
+      "A": "No address translation",
+      "B": "Perform port multiplexing",
+      "C": "Do not convert the source port",
+      "D": "Do not convert the destination port"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "On the surface, threats such as viruses, vulnerabilities, and Trojan horses are the causes of information security incidents, but at the root, information security incidents are related to people and information systems It is also very relevant.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "When connecting to Wi-Fi in a public place, which of the following is relatively safer?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Connect to unencrypted Wi-Fi hotspots",
+      "B": "Connect to the paid Wi-Fi hotspot provided by the operator and only browse the Internet",
+      "C": "Connect to unencrypted free Wi-Fi for online shopping",
+      "D": "Connect to encrypted free Wi-Fi for online transfer operations"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following is the action to be taken in the summary phase of cybersecurity emergency response?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Establish a defense system and specify control measures",
+      "B": "Evaluate the implementation of emergency plans and propose follow-up improvement plans",
+      "C": "Judging the effectiveness of isolation measures",
+      "D": "Evaluate the members of the emergency response organization"
+    },
+    "answer": ["B", "D"]
+  },
+
+  {
+    "question": "Regarding port mirroring, which of the following descriptions are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The mirroring port copies the packet to the observing port",
+      "B": "The observation port sends the received message to the monitoring device",
+      "C": "The mirror port sends the received message to the monitoring device",
+      "D": "The observing port copies the packet to the mirroring port"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Which of the following options is the protocol number of GRE?",
+    "question_type": "single_choice",
+    "options": { "A": "46", "B": "47", "C": "89", "D": "50" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which one of the following descriptions of the VGMP protocol is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "VGMP adds multiple VRRP backup groups...",
+      "B": "VGMP uniformly controls the switching...",
+      "C": "The VGMP group device in the Active state will periodically send hello messages...",
+      "D": "By default, when the standby end does not receive the hello message..."
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "When both parties of communication A and B are in data communication, if an asymmetric encryption algorithm is used for encryption, when A sends data to B, which of the following keys will be used Encrypt data?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "A's public key",
+      "B": "A's private key",
+      "C": "B's public key",
+      "D": "B's private key"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "IPSec VPN uses an asymmetric encryption algorithm to encrypt the transmitted data",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding GRE encapsulation and decapsulation, which of the following descriptions is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "In the encapsulation process...",
+      "B": "Encapsulation process, after encapsulation by the GRE module...",
+      "C": "Decapsulation process...",
+      "D": "Decapsulation process, after the GRE module decapsulates..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "The repair of antivirus software only needs to repair some system files that were accidentally deleted when checking and killing viruses to prevent system crashes.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following does not belong to the classification of network security incidents?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Major cybersecurity incident",
+      "B": "Special cyber security incidents",
+      "C": "General cybersecurity incidents",
+      "D": "Major cybersecurity incidents"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding single sign-on, which of the following statements are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The device can identify users who have passed the authentication...",
+      "B": "There is only one deployment mode for AD domain single sign-on",
+      "C": "Although there is no need to enter the user password...",
+      "D": "AD domain single sign-on can be synchronized to the firewall by mirroring the login data stream"
+    },
+    "answer": ["A", "C", "D"]
+  },
+
+  {
+    "question": "Regarding the relationship and function of VRRP/VGMP/HRP, which of the following statements are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "VRRP is responsible for sending gratuitous ARP...",
+      "B": "VGMP is responsible for monitoring equipment failures...",
+      "C": "HRP is responsible for data backup during dual-system hot backup operation",
+      "D": "The VGMP group in the Active state may contain the VRRP group in the Standby state"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "The administrator's PC is directly connected to the management port of the USG firewall and uses the web method to perform initialization operations. Which of the following statements are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The browser of the management PC visits http://192.168.0.1",
+      "B": "The IP address of the management PC is manually set to 192.168.0.2-192.168.0.254",
+      "C": "The browser of the management PC visit http://192.168.1.1",
+      "D": "Set the network card of the management PC to automatically obtain an IP address"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "In the Huawei SDSec solution, which layer of equipment does the firewall belong to?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Analysis layer",
+      "B": "Control layer",
+      "C": "Executive level",
+      "D": "Monitoring layer"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "When dual-system hot backup is deployed on the firewall, which protocol is required to switch the overall state of the VRRP backup group?",
+    "question_type": "single_choice",
+    "options": { "A": "VRRP", "B": "VGMP", "C": "HRP", "D": "OSPF" },
+    "answer": "B"
+  },
+
+  {
+    "question": "The online scenario of internal users in the enterprise is shown in the figure. The user online process is as follows: ... The following correct process sequence should be:",
+    "question_type": "single_choice",
+    "options": {
+      "A": "2->5->3->1->4",
+      "B": "2->3->5->1->4",
+      "C": "2->1->3->5->4",
+      "D": "2->3->1->5->4"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of firewall dual-system hot backup, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "When multiple areas on the firewall need to provide dual-system backup...",
+      "B": "The state of all VRRP backup groups of the same VGMP management group...",
+      "C": "The firewall dual-system hot backup needs to synchronize the backup of the session table...",
+      "D": "VGMP is used to ensure the consistency of all VRRP backup group switching"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "Regarding the matching conditions of the security policy, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The 'source security zone' in the matching condition is an optional parameter",
+      "B": "'Time period' in the matching condition is an optional parameter",
+      "C": "'Application' in the matching condition is an optional parameter",
+      "D": "'Service' in the matching condition is an optional parameter"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "The attacker responds to the request by sending ICMP and sets the destination address of the request packet to the broadcast address of the victim network. What kind of attack does this behavior belong to?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IP spoofing attack",
+      "B": "Smurf attack",
+      "C": "ICMP redirect attack",
+      "D": "SYN flood attack"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the sequence of the PKI work process, which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1-2-6-5-7-4-3-8",
+      "B": "1-2-7-6-5-4-3-8",
+      "C": "6-5-4-1-2-7-3-8",
+      "D": "6-5-4-3-1-2-7-8"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Clients in the Trust zone of the firewall can log in to the FTP server in the Untrust zone, but cannot download files. Which of the following methods can solve the problem?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Release 21 port number between Trust and Untrust",
+      "B": "When FTP working mode is port mode...",
+      "C": "Enable detect ftp",
+      "D": "When FTP working mode is Passive mode..."
+    },
+    "answer": ["C"]
+  },
+
+  {
+    "question": "Which of the following is not part of the digital certificate?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Public key",
+      "B": "Private key",
+      "C": "Validity period",
+      "D": "Issuer"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of TCP/IP protocol stack packet decapsulation, which of the following is correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The data message is first transmitted to the data link layer...",
+      "B": "After the transport layer (TCP) receives the data message...",
+      "C": "After the network layer receives the data message...",
+      "D": "After the application layer receives the data message..."
+    },
+    "answer": ["A", "D"]
+  },
+
+  {
+    "question": "Which of the following is not a key technology of anti-virus software?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Shelling technology",
+      "B": "Self-protection",
+      "C": "Format the disk",
+      "D": "Real-time update virus database"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following options are malicious programs?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Trojan Horse",
+      "B": "Vulnerabilities",
+      "C": "Worms",
+      "D": "Viruses"
+    },
+    "answer": ["A", "C", "D"]
+  },
+
+  {
+    "question": "Which of the following options are the key elements of information security prevention?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Asset management",
+      "B": "Safe operation and maintenance and management",
+      "C": "Security products and technologies",
+      "D": "Personnel"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "Which of the following is not a major form of computer crime?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Plant a Trojan horse into the target host",
+      "B": "Hacking the target host",
+      "C": "Use a computer to conduct personal surveys",
+      "D": "Use scanning tools to collect network information without permission"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "When deploying the IPSec VPN tunnel mode, the AH protocol is used for packet encapsulation. Which of the following parameters does not need to be performed in the header field of the new IP packet Data integrity check?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Source IP address",
+      "B": "Destination IP address",
+      "C": "TTL",
+      "D": "Identification"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "When configuring a GRE Tunnel interface, which of the following parameters generally refers to the Destination address?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The IP address of the local Tunnel interface",
+      "B": "Outbound IP address of the local external network",
+      "C": "The external IP address of the peer",
+      "D": "IP address of the remote tunnel interface"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following options belong to application risk?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Network virus",
+      "B": "Email Security",
+      "C": "Database system configuration security",
+      "D": "WEB service security"
+    },
+    "answer": ["B", "C", "D"]
+  },
+
+  {
+    "question": "Security policy conditions can be divided into multiple fields... between these fields is The 'and' relationship...",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Regarding the description of the four-way handshake for disconnecting the TCP connection, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The active closing party sends the first FIN...",
+      "B": "When passive shutdown receives the first FIN, it will send back an ACK and randomly generate an acknowledgment sequence number.",
+      "C": "The passive closing party needs to send an end-of-file character...",
+      "D": "After the passive closing party sends FIN..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following is not asymmetric encryption algorithm?",
+    "question_type": "single_choice",
+    "options": { "A": "DH", "B": "MD5", "C": "DSA", "D": "RSA" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding Client-Initiated VPN, which of the following statements are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "A tunnel is established between each access user and LNS",
+      "B": "Each tunnel carries only one L2TP session and PPP connection",
+      "C": "Each tunnel carries multiple L2TP sessions and PPP connections",
+      "D": "Each tunnel carries multiple L2TP sessions and one PPP connection"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Which of the following options of VPN technology support encryption of data messages?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "SSL VPN",
+      "B": "GRE VPN",
+      "C": "IPSec VPN",
+      "D": "L2TP VPN"
+    },
+    "answer": ["A", "C"]
+  },
+
+  {
+    "question": "Which of the following is the user name/password for the first login of the USG series firewall?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Username admin Password Admin@123",
+      "B": "Username admin Password admin@123",
+      "C": "Username admin Password admin",
+      "D": "Username admin Password Admin123"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following options is not included in the survey object targeted by the questionnaire in the security assessment method?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Network system administrator",
+      "B": "Security Administrator",
+      "C": "HR",
+      "D": "Technical leader"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "The vulnerabilities that have not been discovered are 0 day vulnerabilities",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Regarding the problem that authentication-free two-way binding users cannot access network resources, which of the following options are possible reasons?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Authentication-free users and authenticated users are in the same security zone",
+      "B": "The authentication-free user does not use the PC with the specified IP/MAC address",
+      "C": "The authentication action in the authentication policy is set to 'no account/authentication-free'",
+      "D": "Online users have reached the maximum"
+    },
+    "answer": ["B", "D"]
+  },
+
+  {
+    "question": "ASPF (Application Specific Packet Filter) is a packet filtering technology based on the application layer... Regarding ASPF and server-map tables, which of the following are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "ASPF monitors the messages in the communication process",
+      "B": "ASPF can dynamically create server-map tables",
+      "C": "ASPF dynamically allows multi-channel protocol data to pass through the server-map table",
+      "D": "The five-tuple server-map table entry implements a function similar to the session table"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "Regarding NAT address translation, which of the following statements is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Configure the NAT address pool in the source NAT technology...",
+      "B": "Address conversion can provide FTP, WWW, Telnet...",
+      "C": "Some application layer protocols carry IP address information...",
+      "D": "For some non-TCP, UDP protocols (such as ICMP, PPTP), NAT conversion is not possible"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "When the firewall uses the security service center to upgrade the signature database and virus database online, the firewall must first be able to connect to the Internet, and secondly, the configuration must be correct. DNS address",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "The results seen through display ike sa are as follows. Which of the following statements is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IKE SA has been established",
+      "B": "IPSec SA has been established",
+      "C": "The neighbor address is 2.2.2.1",
+      "D": "IKE uses the V1 version"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the comparison between windows and linux, which of the following statements is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "It is difficult to get started for linux novices...",
+      "B": "Windows can be compatible with most software...",
+      "C": "Linux is open source...",
+      "D": "Windows is open source, you can do whatever you want"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following options are the core elements of the IATF (Information Assurance Technology Framework) model?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Environment",
+      "B": "People",
+      "C": "Technology",
+      "D": "Operation"
+    },
+    "answer": ["B", "C", "D"]
+  },
+
+  {
+    "question": "Which of the following are multi-user operating systems?",
+    "question_type": "multiple_choice",
+    "options": { "A": "MSDOS", "B": "UNIX", "C": "LINUX", "D": "Windows" },
+    "answer": ["B", "C"]
+  },
+
+  {
+    "question": "The preservation of electronic evidence is directly related to the legal effect of evidence... Which of the following is not For evidence preservation technology?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Encryption technology",
+      "B": "digital certificate technology",
+      "C": "Digital signature technology",
+      "D": "Message mark tracking technology"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "When one of the following situations occurs in the VGMP group, the VGMP group will not actively send VGMP messages to the opposite end/",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The dual-system hot backup function is enabled",
+      "B": "Manually switch the firewall status between active and standby",
+      "C": "firewall service interface failure",
+      "D": "Session table entry changes"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "In information security protection, commonly used security products include firewalls, Anti-DDos devices, and IPS/IDS devices",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "If the administrator uses the default default authentication domain to authenticate the user, the user only needs to enter the user name when logging in; if the administrator Use the newly created authentication domain to authenticate the user, and the user needs to enter 'Username@Authentication Domain Name' when logging in",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Digital certificate technology solves the problem that the owner of the public key cannot be determined in digital signature technology",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "About firewall security policy, the following items are correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "By default, the security policy can control unicast packets and broadcast packets.",
+      "B": "By default, the security policy can control multicast",
+      "C": "By default, the security policy only controls unicast packets.",
+      "D": "By default, the security policy can control unicast messages, broadcast messages and multicast messages"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "In the process of using the digital envelope, which of the following information will be encrypted?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Symmetric key",
+      "B": "User data",
+      "C": "Recipient's public key",
+      "D": "Receiver's private key"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Which of the following options belong to the certification area of ISO27001?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Access control",
+      "B": "Personnel safety",
+      "C": "Vulnerability management",
+      "D": "Business continuity management"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "Regarding the description of the firewall, which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The firewall cannot transparently access the network.",
+      "B": "Adding a firewall to the network will inevitably change the topology...",
+      "C": "In order to avoid a single point of failure...",
+      "D": "According to different usage scenarios, the firewall can be deployed in transparent mode or in a three-bedroom style."
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "On Huawei USG series devices, the administrator wants to erase the configuration file. Which of the following commands is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "clear saved-configuration",
+      "B": "reset saved-configuration",
+      "C": "reset current-configuration",
+      "D": "reset running-configuration"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of the buffer overflow attack, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Buffer overflow attack exploits the flaws...",
+      "B": "Buffer overflow attacks have nothing to do with operating system vulnerabilities...",
+      "C": "Buffer overflow attack is one of the common methods...",
+      "D": "Buffer overflow attacks are application layer attacks."
+    },
+    "answer": ["A", "C", "D"]
+  },
+
+  {
+    "question": "Security technology has different methods in different technical levels and fields. Which of the following devices can be used for network layer security protection?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Vulnerability scanning equipment",
+      "B": "Firewall",
+      "C": "Anti-DDoS equipment",
+      "D": "IPS/IDS equipment"
+    },
+    "answer": ["B", "C", "D"]
+  },
+
+  {
+    "question": "Which of the following options belong to the function of SSL VPN?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "User authentication",
+      "B": "Port scan",
+      "C": "File sharing",
+      "D": "WEB rewrite"
+    },
+    "answer": ["A", "C", "D"]
+  },
+
+  {
+    "question": "In the digital signature process, which of the following items is mainly used for the HASH algorithm to verify the integrity of the data transmission?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "User data",
+      "B": "Symmetric key",
+      "C": "Recipient's public key",
+      "D": "Receiver's private key"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following traffic matches the authentication policy will trigger authentication?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Access to the device or the traffic initiated by the device",
+      "B": "DHCP, BGP, OSPF, LDP packets",
+      "C": "Traffic of visitors accessing HTTP services",
+      "D": "DNS packet corresponding to the first HTTP service data flow"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Using a computer to store information about criminal activities is not a way of computer crime",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding IKE SA, which of the following descriptions is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IKE SA is two-way",
+      "B": "IKE is an application layer protocol based on UDP",
+      "C": "IKE SA serves IPSec SA",
+      "D": "The encryption algorithm used in user data packets is determined by IKE SA"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding VPN, which of the following statements is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Virtual private network has lower cost than dedicated line",
+      "B": "VPN technology must involve encryption technology",
+      "C": "VPN technology is a technology that multiplexes logical channels...",
+      "D": "The emergence of VPN technology allows employees on business trips..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following are the standard port numbers of the FTP protocol?",
+    "question_type": "multiple_choice",
+    "options": { "A": "20", "B": "21", "C": "23", "D": "80" },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Information security grade protection is to improve the overall national security level, while at the same time rationally optimizing the allocation of security resources so that Send back the greatest safety and economic benefits",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "In response to network security incidents, remote emergency response is generally taken first...",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "We usually divide servers into two categories: general servers and functional servers. Which of the following options meets this classification standard?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Divided by application level",
+      "B": "Divided by purpose",
+      "C": "Divided by shape",
+      "D": "Divided by system architecture"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "After the firewall uses the hrp standby config enable command to enable the standby device configuration function...",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following options are characteristic of symmetric encryption algorithms?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Fast encryption speed",
+      "B": "Slow confidentiality",
+      "C": "Key distribution is not secure",
+      "D": "High key distribution security"
+    },
+    "answer": ["A", "C"]
+  },
+
+  {
+    "question": "Which of the following options are harmful to traffic-based attacks?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The network is down",
+      "B": "Server down",
+      "C": "Data is stolen",
+      "D": "The web has been tampered with"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "An intrusion prevention system (IPS) is a defense system that can block intrusions in real time",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Regarding the NAT configuration statement, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Configure source NAT in transparent mode...",
+      "B": "The IP address in the address pool can overlap...",
+      "C": "When there is VoIP service in the network...",
+      "D": "The firewall does not support NAPT conversion of ESP and AH packets"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding the actions of the security policy and the description of the security configuration file, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "If the action of the security policy is 'Prohibited'...",
+      "B": "The security configuration file can take effect without being applied...",
+      "C": "The security configuration file must be applied to the security policy where the action is allowed...",
+      "D": "If the security policy action is 'Allow'..."
+    },
+    "answer": ["A", "C"]
+  },
+
+  {
+    "question": "Which of the following options are included in the encryption technology to protect the data during data transmission?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Controllability",
+      "C": "Integrity",
+      "D": "Source verification"
+    },
+    "answer": ["A", "C", "D"]
+  },
+
+  {
+    "question": "After a cyber attack occurs, set up isolation areas... The above actions are a cyber security emergency What is the work content in which stage of the response?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Preparation stage",
+      "B": "Testing phase",
+      "C": "Inhibition phase",
+      "D": "Recovery phase"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "The digital certificate uses a third-party organization to impartiality to the public key... So confirm that the public key is correct Sex only needs the certificate of the communicating party",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Digital signature is to generate a digital fingerprint by using a hash algorithm to ensure the integrity of data transmission",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Regarding the description of the firewall fragment caching function, which of the following options are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "By default, the firewall caches fragmented packets",
+      "B": "After configuring the direct forwarding of fragmented packets...",
+      "C": "For fragmented packets, NAT ALG does not support the processing of SIP fragmented packets",
+      "D": "By default, the maximum number of fragment buffers for an IPv4 packet is 32..."
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+
+  {
+    "question": "The SIP protocol uses SDP messages to establish a session, and the SDP message contains a remote address or multicast address",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following attacks is not a network attack?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IP spoofing attack",
+      "B": "Smurf attack",
+      "C": "MAC address spoofing attack",
+      "D": "ICMP attack"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "What are the versions of the SNMP protocol?",
+    "question_type": "multiple_choice",
+    "options": { "A": "SNMPv1", "B": "SNMPv2b", "C": "SNMPv2c", "D": "SNMPv3" },
+    "answer": ["A", "C", "D"]
+  },
+
+  {
+    "question": "Regarding the description of the preemption function managed by VGMP, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "By default, the preemption function of the VGMP management group is enabled",
+      "B": "By default, the preemption delay time of the VGMP management group is 40s",
+      "C": "Preemption means that when the original failed master device recovers...",
+      "D": "After the VRRP backup group is added to the VGMP management group..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "In the IPSec VPN transmission mode, which part of the data packet is encrypted?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Network layer and upper layer data packets",
+      "B": "Original IP header",
+      "C": "New IP header",
+      "D": "Transport layer and upper layer data messages"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding the windows log, which of the following descriptions is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The system log is used to record events generated by operating system components...",
+      "B": "The system log of windows server 2008 is stored in Application.evtx",
+      "C": "Application log contains events recorded by applications...",
+      "D": "The security log of windows server 2008 is stored in security.evtx"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of IP Spoofing, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IP spoofing attacks are launched by using the normal IP address-based trust relationship...",
+      "B": "After an IP spoofing attack is successful...",
+      "C": "The attacker needs to disguise the source IP address as a trusted host...",
+      "D": "Hosts in a trust relationship based on IP addresses can log in directly..."
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "In the USG series firewalls, which of the following commands can be used to query the NAT translation results?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "display nat translation",
+      "B": "display firewall session table",
+      "C": "display current nat",
+      "D": "display firewall nat translation"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "As shown in the figure, a TCP connection is established between client A and server B. Which of the following should be the sequence number of the two '?' messages in the figure?",
+    "question_type": "single_choice",
+    "options": { "A": "a+1: a", "B": "a:a+1", "C": "b+1:b", "D": "a+1:a+1" },
+    "answer": "D"
+  },
+
+  {
+    "question": "Regarding IPSec SA, which of the following statements is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IPSec SA is one-way",
+      "B": "IPSec SA is bidirectional",
+      "C": "Used to generate encryption keys",
+      "D": "Used to generate secret algorithms"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following is not included in the steps of the safety assessment method?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Manual audit",
+      "B": "Penetration testing",
+      "C": "Questionnaire survey",
+      "D": "Data analysis"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "In Isobao 2.0, which item stipulates that 'spam should be detected and protected at key network nodes...'",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Malicious code prevention",
+      "B": "Communication transmission",
+      "C": "Centralized control",
+      "D": "Border protection"
+    },
+    "answer": "A"
+  },
+
+  {
+    "question": "In a stateful inspection firewall, when the stateful inspection mechanism is turned on, the second packet (SYN+ACK) of the three-way handshake reaches the firewall. At that time, if there is no corresponding session table on the firewall, which of the following descriptions is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The firewall does not create a session table, but allows packets to pass through",
+      "B": "If the firewall security policy allows packets to pass, create a session table",
+      "C": "The message must not pass through the firewall",
+      "D": "The message must pass through the firewall and establish a session"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "In the VRRP (Virtual Router Redundancy Protocol) group, the primary firewall periodically sends notification messages to the backup firewall. The backup firewall is only responsible for listening to the notification message and will not respond",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Huawei USG firewall VRRP notification messages are multicast messages, so each firewall in the backup group must be able to realize direct Layer 2 intercommunication",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Because the server is a kind of computer, we can use our personal computer as a server in the enterprise.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "As shown in the figure, it is an application scenario of a NAT server... Which of the following statements are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "When configuring the interzone security policy, you need to set the source security zone to Untrust...",
+      "B": "When configuring NAT Server, the internal address is 10.1.1.2...",
+      "C": "When configuring the interzone security policy, set the source security zone to DMZ...",
+      "D": "When configuring NAT Server, the internal address is 200.10.10.1..."
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "In the configuration of L2TP, which of the following statements are correct for the Tunnel Name command?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Used to specify the local tunnel name",
+      "B": "Used to specify the tunnel name of the opposite end",
+      "C": "Tunnel Names on both ends must be consistent",
+      "D": "If Tunnel Name is not configured, the tunnel name is the name of the local system"
+    },
+    "answer": ["A", "D"]
+  },
+
+  {
+    "question": "Regarding the command to view the number of security policy matches, which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "display firewall sesstion table",
+      "B": "display security-policy all",
+      "C": "display security-policy count",
+      "D": "count security-policy hit"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following options belongs to Layer 2 VPN technology?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "SSL VPN",
+      "B": "L2TP VPN",
+      "C": "GRE VPN",
+      "D": "IPSec VPN"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of the advanced settings of the windows firewall, which of the following options are wrong?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "When setting the stacking rules, only the local port can be restricted...",
+      "B": "When setting the stacking rules, both the local port and the remote port can be restricted",
+      "C": "When setting the stacking rules, only the local port can be restricted...",
+      "D": "When setting the stacking rules, both the local port and the remote port can be restricted"
+    },
+    "answer": ["A", "C"]
+  },
+
+  {
+    "question": "Regarding the description of VGMP group management, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The master/backup status of a VRRP backup group needs to be notified...",
+      "B": "The interface type and number of the heartbeat ports of the two firewalls can be different...",
+      "C": "The VGMP of the active and standby firewalls periodically send hello messages",
+      "D": "The active and standby equipment learns the status of each other..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "In the security assessment method, the purpose of security scanning is to use scanning analysis and assessment tools to scan the target system in order to find relevant vulnerabilities. Prepare for attack",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "In the construction of an information security system, a security model is needed to accurately describe the relationship between important aspects of security and system behavior",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "The matching principle of the security policy is: first search for the manually configured inter-domain security policy, if it does not match, then directly discard the data packet.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following are the response actions after the gateway antivirus detects the mail virus?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Warning",
+      "B": "Block",
+      "C": "Declaration",
+      "D": "Delete attachment"
+    },
+    "answer": ["A", "B", "C"]
+  },
+
+  {
+    "question": "Regarding NAT address translation, which of the following statements is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Configure the NAT address pool...",
+      "B": "Address conversion can provide FTP...",
+      "C": "Some application layer protocols carry IP address information...",
+      "D": "For some TCP and UDP protocols (such as ICMP, PPTP), NAT conversion is not possible"
+    },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following are the main implementation methods of gateway antivirus?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Acting scan mode",
+      "B": "Stream scanning method",
+      "C": "Package inspection and killing method",
+      "D": "File scanning and killing methods"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Which of the following options is not a hash algorithm?",
+    "question_type": "single_choice",
+    "options": { "A": "MD5", "B": "SHA1", "C": "SM1", "D": "SHA2" },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following options is not the certificate saving file format supported by the USG6000 series devices?",
+    "question_type": "single_choice",
+    "options": { "A": "PKCS#12", "B": "DER", "C": "PEM", "D": "PKCS#" },
+    "answer": "D"
+  },
+
+  {
+    "question": "Which of the following is used to encrypt digital fingerprints in digital signature technology?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The sender's public key",
+      "B": "The sender's private key",
+      "C": "Recipient's public key",
+      "D": "Receiver's private key"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "The reason why OSPF is more commonly used than RIP is that OSPF has a device authentication function and is more secure",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "The content of intrusion detection covers authorized and unauthorized intrusion behaviors. Which of the following behaviors does not fall into the scope of intrusion detection?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Impersonating other users",
+      "B": "The administrator deletes the configuration by mistake",
+      "C": "Plant a worm Trojan horse",
+      "D": "Disclosure of data and information"
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Regarding the description of the ARP spoofing attack, which of the following is wrong",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The ARP implementation mechanism only considers normal business interactions...",
+      "B": "ARP spoofing attacks can only be achieved through ARP responses...",
+      "C": "When a host sends a normal ARP request...",
+      "D": "ARP static binding is a solution to ARP spoofing attacks..."
+    },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following mechanisms are used to implement MAC flooding attacks?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "MAC learning mechanism of the switch",
+      "B": "The forwarding mechanism of the switch",
+      "C": "ARP learning mechanism",
+      "D": "Limit on the number of MAC entries"
+    },
+    "answer": ["A", "B", "D"]
+  },
+
+  {
+    "question": "In practical applications, asymmetric encryption is mainly used to encrypt user data",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "When an enterprise establishes its own information system, it checks every operation in accordance with the authoritative international standards and can detect its own information Is the system safe",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+
+  {
+    "question": "Which of the following options is the port number used by L2TP packets?",
+    "question_type": "single_choice",
+    "options": { "A": "17", "B": "500", "C": "1701", "D": "4500" },
+    "answer": "C"
+  },
+
+  {
+    "question": "Regarding the firewall security policy, which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "By default, the security policy can control unicast packets and broadcast packets",
+      "B": "By default, the security policy can control multicast",
+      "C": "By default, the security policy only controls unicast packets",
+      "D": "By default, the security policy can control unicast messages, broadcast messages and multicast messages"
+    },
+    "answer": "C"
+  },
+
+  {
+    "question": "Which of the following is an action to be taken during the eradication phase in a cybersecurity emergency response?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Look for trojan horses, illegal authorizations...",
+      "B": "Revise the security policy based on the security incidents...",
+      "C": "Block the attacking behavior...",
+      "D": "Confirm the degree of damage caused by the security incident..."
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Which of the following attacks can DHCP Snooping prevent?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "DHCP Server counterfeit attack",
+      "B": "Man-in-the-middle and IP/MAC spoofing attacks",
+      "C": "IP spoofing attack",
+      "D": "Fake DHCP lease renewal packet attack using option82 field"
+    },
+    "answer": ["A", "B", "D"]
+  },
+
+  {
+    "question": "In the Huawei SDSec solution, which of the following options belong to the execution layer equipment?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "CIS",
+      "B": "Fierhunter",
+      "C": "Router",
+      "D": "AntiDDoS"
+    },
+    "answer": ["B", "C", "D"]
+  },
+
+  {
+    "question": "An employee account of a company has expired, but the account can still be used to access the company's server. What security risks do the above scenarios belong to?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Manage security risks",
+      "B": "Access security risks",
+      "C": "System security risks",
+      "D": "Physical security risks"
+    },
+    "answer": ["A", "B"]
+  },
+
+  {
+    "question": "Network administrators can collect data that needs to be analyzed on network devices through packet capture, port mirroring or logs.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "The world’s first worm-'Morris worm' made people realize that as people’s reliance on computers increases... it is necessary to establish a complete emergency response system",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+
+  {
+    "question": "Which of the following is the necessary configuration of IPSec VPN? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Configure IKE neighbors",
+      "B": "Configure IKE SA related parameters",
+      "C": "Configure IPSec SA related parameters",
+      "D": "Configure the stream of interest"
+    },
+    "answer": ["A", "C", "D"]
+  },
+  {
+    "question": "Which of the following categories are included in the user management of Huawei firewalls? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Internet user management",
+      "B": "Access user management",
+      "C": "Administrator user management",
+      "D": "Device user management"
+    },
+    "answer": ["B", "C"]
+  },
+  {
+    "question": "In order to obtain criminal evidence, it is necessary to master intrusion tracking technology. Which of the following options describes the tracking technology correctly? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Data packet recording technology inserts trace data into the IP data packet to be traced, thereby marking the data packet on each router mentioned",
+      "B": "Link detection technology determines the source of the attack information by testing the network connection between routers",
+      "C": "Data packet marking technology records data packets on the router, and then uses data drilling technology to extract information about the source of the attack",
+      "D": "Shallow mail behavior analysis can realize information such as sending IP address, sending time, sending frequency, number of recipients, and shallow email headers.Information analysis"
+    },
+    "answer": ["A", "B"]
+  },
+  {
+    "question": "When the user uses the session authentication method to trigger the firewall's built-in Portal authentication, the user does not take the initiative to perform identity authentication, advanced business access,The device pushes \"redirect\" to the authentication page",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "Regarding the description of the intrusion detection system, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The intrusion detection system can dynamically collect a large amount of key information through the network and computer. It can analyze and judge the entire system environment in timeCurrent status",
+      "B": "Once the intrusion detection system finds a violation of the security policy or the system has traces of being attacked, it can implement blocking operations",
+      "C": "Intrusion detection system includes all software and hardware systems used for intrusion detection",
+      "D": "The immersion detection system can be linked with firewalls and switches to become a powerful \"assistant\" of firewalls, which can better and more accurately control the flow between domains.Volume visits"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following options belong to the encapsulation mode supported by IPSec VPN? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AH mode",
+      "B": "Tunnel mode",
+      "C": "Transmission mode",
+      "D": "ESP mode"
+    },
+    "answer": ["B", "C"]
+  },
+  {
+    "question": "The tunnel addresses at both ends of the GRE tunnel can be configured as addresses of different network segments",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "Regarding the description of the data packet during iptables transmission, which of the following options is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "When a data packet enters the network card, it first matches the PREROUTING chain",
+      "B": "If the destination address of the data packet is this machine, the system will send the data packet to the INPUT chain.",
+      "C": "If the destination address of the data packet is not the local machine, the system will send the data packet to the OUTPUT chain",
+      "D": "If the destination address of the data packet is not the local machine, the system will send the data packet to the FORWARD chain."
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Regarding the description of the operating system, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The operating system is the interface between the user and the computer",
+      "B": "The operating system is responsible for managing all hardware resources of the computer system and controlling the execution of software.",
+      "C": "The interface between the operating system and the user is a graphical interface",
+      "D": "The operating system itself is also software"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is not a requirement for firewall dual-system hot backup?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The firewall hardware models are the same",
+      "B": "The firewall software version is consistent",
+      "C": "The interface type and number used are the same",
+      "D": "The IP address of the firewall interface is the same"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Regarding the NAT policy processing flow, which of the following options are correct?(Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Server-map is processed after status detection",
+      "B": "The source NAT policy query is processed after the session is created",
+      "C": "The source NAT policy is processed after the security policy is matched",
+      "D": "Server-map is processed before the security policy is matched"
+    },
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Which of the following options are necessary for firewall dual-system hot backup scenarios?(Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "hrp enable",
+      "B": "hrp mirror session enable",
+      "C": "hrp interface interface-type interface-number",
+      "D": "hrp preempt [delay interval]"
+    },
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Manual audit is a supplement to tool evaluation. It does not require any software to be installed on the target system being evaluated.There is no impact on operation and status. Which of the following options is not included in the manual audit?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Manual detection of the host operating system",
+      "B": "Manual inspection of the database",
+      "C": "Manual inspection of network equipment",
+      "D": "Manual inspection of the process of the administrator operating the equipment"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following options belong to the default security zone of Huawei firewall? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Zone",
+      "B": "Trust zone",
+      "C": "Untrust zone",
+      "D": "Security area"
+    },
+    "answer": ["B", "C"]
+  },
+  {
+    "question": "For major cybersecurity incidents that occur, what level of early warning corresponds to?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Red alert",
+      "B": "Orange warning",
+      "C": "Yellow warning",
+      "D": "Blue warning"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Regarding the source of electronic evidence, which of the following descriptions is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Fax materials and cell phone recordings are electronic evidence related to communication technology.",
+      "B": "Movies and TV series are electronic evidence related to network technology.",
+      "C": "Database operation records and operating system logs are electronic evidence related to computers",
+      "D": "The operating system, e-mail, and chat records can all be used as the source of electronic evidence"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Regarding the sequence of call establishment procedures for L2TP corridors, which of the following descriptions is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1->2->3->5->4",
+      "B": "1->5->3->2->4",
+      "C": "2->1->5->3->4",
+      "D": "2->3->1->5->4"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "The protocol (protocol) field in the IP packet header identifies the protocol used by the upper layer. Which of the following field values indicates that the upper layer protocol is UDP protocol?",
+    "question_type": "single_choice",
+    "options": { "A": "6", "B": "17", "C": "11", "D": "18" },
+    "answer": "B"
+  },
+  {
+    "question": "According to management regulations, conduct regular inspections of network security systems and equipment, patch upgrades, and organize network security emergency response drills,The above actions belong to which part of the MPDRR network security model?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Protection link",
+      "B": "Testing link",
+      "C": "Response link",
+      "D": "Management"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Information security grade protection is the basic system of national information security work",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following options is not a sign of IPSec SA?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "SPI",
+      "B": "Destination address",
+      "C": "Source address",
+      "D": "Security Agreement"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following statements about the difference between pre-accident prevention strategies and post-accident recovery strategies is correct? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Prevention strategies focus on minimizing the possibility of accidents before the story occurs. The recovery strategy focuses on minimizing the impact on the enterprise after the accidentImpact and loss",
+      "B": "The role of pre-disaster prevention strategies does not include minimizing the economic and reputation losses caused by the accident",
+      "C": "Recovery strategies are used to improve business high availability",
+      "D": "Recovery strategy is part of the business continuity plan"
+    },
+    "answer": ["A", "D"]
+  },
+  {
+    "question": "Which of the following operations are necessary when the administrator upgrades the USG firewall software version? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "upload firewall software version",
+      "B": "Restart the device",
+      "C": "Restore the factory settings of the device",
+      "D": "Specify the software version to be loaded next time"
+    },
+    "answer": ["A", "B", "D"]
+  },
+  {
+    "question": "If the company structure has undergone practical changes, it is necessary to re-test whether the business continuity plan is feasible",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "HTTP messages are carried by UDP, and the HTTPS protocol is based on TCP three-way handshake, so HTTPS is more secure and recommendedUse HTTPS.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "Single sign-on function for Internet users, the user directly authenticates to the AD server, the device does not interfere with the user authentication process, and the AD monitoring service needsDeployed in the USG device to monitor the authentication information of the AD server",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "UDP port scanning means that the attacker sends a zero-byte length UDP packet to a specific port of the target host. If the port is open,An ICMP port reachable data message will be returned.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "Regarding the business continuity plan, which of the following statements is correct? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The business continuity plan does not require the participation of the company's senior management during the project scope stage",
+      "B": "Because it cannot predict all possible accidents, BCP needs to be flexible",
+      "C": "The business continuity plan does not require the participation of the company's senior management before it is formally documented",
+      "D": "Not all safety incidents must be reported to the company's senior management"
+    },
+    "answer": ["B", "D"]
+  },
+  {
+    "question": "When the hard disk of the USG series firewall is in place, which of the following logs can be viewed? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Operation log",
+      "B": "Business log",
+      "C": "Warning information",
+      "D": "Threat log"
+    },
+    "answer": ["A", "B", "C", "D"]
+  },
+  {
+    "question": "Social engineering is a kind of psychological traps such as the psychological weakness, instinctual reaction, curiosity, trust, greed, etc. of the victim.Deception, harm and other harmful means.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "Applying for special funds for emergency response and purchasing emergency response software and hardware equipment belong to which stage of the work in the complete network emergency response?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Preparation stage",
+      "B": "Inhibition phase",
+      "C": "Response phase",
+      "D": "Recovery phase"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "Device sabotage attacks are generally not easy to cause information leakage, but usually cause the interruption of network communication services.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "Regarding the description of the authentication of Internet users and VPN access users, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Internet users and VPN access users share data, and user attribute checks (user status, account expiration time, etc.) are also correctVPN access takes effect",
+      "B": "The process of local authentication or server authentication for online users is basically the same, both of which authenticate users through the authentication domain, and the user triggers the methodAlso the same",
+      "C": "After VPN users access the network, they can access the network resources of the corporate headquarters, and the firewall can control the accessible network resources based on the user name",
+      "D": "VPN access users will be online at the same time on the user online list after being authenticated"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following descriptions about the patch is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "A patch is a small program made by the original author of the software for the discovered vulnerabilities",
+      "B": "Not applying a patch does not affect the operation of the system, so it does not matter whether it is patched or not.",
+      "C": "The patch program will generally be updated continuously.",
+      "D": "Computer users should download and install the latest patches in time to protect their systems"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Regarding the description of the intrusion prevention system (IPS), which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The IDS device needs to be linked with the firewall to block the intrusion",
+      "B": "IPS devices cannot be deployed in bypass mode in the network",
+      "C": "IPS equipment can be connected in series at the network boundary and deployed online",
+      "D": "Once the IPS device detects an intrusion, it can block it in real time"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Regarding Huawei’s routers and text changers, which of the following statements are correct? (multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Routers can implement some security functions, and some routers can implement more security functions by adding security boards",
+      "B": "The main function of a router is to forward data. When an enterprise has security requirements, sometimes a firewall may be a more suitable choice.",
+      "C": "The switch has some security functions, and some switches can realize more security functions by adding a security board",
+      "D": "The switch does not have security functions"
+    },
+    "answer": ["A", "B", "C"]
+  },
+  {
+    "question": "Which of the following options does not belong to the log type of the windows operating system?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Business log",
+      "B": "Application log",
+      "C": "Security log",
+      "D": "System log"
+    },
+    "answer": "A"
+  },
+  {
+    "question": "After a network intrusion event occurs, obtain the identity of the intrusion, the source of the attack and other information according to the plan, and block the intrusion. The above actionsWhat are the links in the PDRR network security model? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Protection link",
+      "B": "Testing link",
+      "C": "Response link",
+      "D": "Recovery link"
+    },
+    "answer": ["C"]
+  },
+  {
+    "question": "Regarding the vulnerability scan, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The vulnerability is unknown in advance and discovered afterwards.",
+      "B": "Vulnerabilities can generally be patched",
+      "C": "Vulnerabilities are security risks, which can expose computers to hacker attacks",
+      "D": "Vulnerabilities can be avoided"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "When the single sign-on user configuration using PC message receiving mode, the authentication process which has the steps of:1 The visitor's PC executes the login script and sends the user login information to the AD monitor2 The firewall extracts the corresponding relationship between the user and IP from the login information and adds it to the online user table3 The AD monitor connects to the AD server to query login user information, and forwards the queried user information to the firewall4 The visitor logs in to the AD domain, and the AD server returns a login success message to the user and issues a login scriptWhich of the following is the correct order?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1-2-3-4",
+      "B": "4-1-3-2",
+      "C": "3-2-1-4",
+      "D": "1-4-3-2"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Regarding the actions of the security policy and the description of the security configuration file, which of the following options are correct? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Prohibited If the action of the security policy is \"Prohibited\", the device will discard this traffic and no further content security checks will be performed",
+      "B": "The security configuration file can take effect without being applied to the security policy where the action is allowed",
+      "C": "The security configuration file must be applied to the security policy where the action is allowed to take effect.",
+      "D": "If the security policy action is \"Allow\", the traffic will not match the security profile"
+    },
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Which of the following options belong to the same characteristics of windows system and LINUX system? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Support multitasking",
+      "B": "Support graphical interface operation",
+      "C": "Open source system",
+      "D": "Support multiple terminal platforms"
+    },
+    "answer": ["A", "D"]
+  },
+  {
+    "question": "During NAT configuration, in which of the following situations, the device will generate Server-map entries? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Automatically generate server-map entries when configuring source NAT",
+      "B": "After the NAT server is successfully configured, the device will automatically generate Server-map entries",
+      "C": "When configuring easy-ip, server-map entries will be generated",
+      "D": "After configuring NAT No-PAT, the device will create a server-map table for the configured multi-channel protocol data flow"
+    },
+    "answer": ["B", "D"]
+  },
+  {
+    "question": "NAT technology can realize data secure transmission by encrypting data.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is the correct sequence for incident response management?1 detection2 reports3 ease4 sum up experience5 repair6 recovery7 responses",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1-3-2-7-5-6-4",
+      "B": "1-3-2-7-6-5-4",
+      "C": "1-2-3-7-6-5-4",
+      "D": "1-7-3-2-6-5-4"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Regarding L2TP VPN, which of the following is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Applicable for employees on business trips to dial-up access to the intranet",
+      "B": "Data will not be encrypted",
+      "C": "Can be used in conjunction with IPsec VPN",
+      "D": "Belongs to the three-tier VPN technology"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Encryption technology can convert readable information into unreadable information through a certain method.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "ASPF (Application specific Packet Filter) is a packet filtering technology based on the application layer, and through the server-map tableA special safety mechanism is realized. Regarding ASPF and server-map tables, which of the following are correct? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "ASPF monitors the messages in the communication process",
+      "B": "ASPF can dynamically create server-map",
+      "C": "ASPF dynamically allows multi-channel protocol data to pass through the server-map table",
+      "D": "The five-tuple server-map table entry implements a function similar to the session table"
+    },
+    "answer": ["A", "B", "C"]
+  },
+  {
+    "question": "The role of anti-virus software and host firewall is the same.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "The process of electronic evidence collection includes: protecting the scene, obtaining evidence, preserving evidence, identifying evidence, analyzing evidence, tracking and presenting evidence.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "In the USG series firewall system view, the device configuration will be restored to the default configuration after the reset saved-configuration command is executed.No other operations are required to take effect.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "Which of the following is the difference between NAPT and No-PAT?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "After No-PAT conversion, for external users, all messages come from the same IP address",
+      "B": "No-PAT only supports protocol port conversion at the transport layer",
+      "C": "NAPT only supports protocol address translation at the network layer",
+      "D": "No-PAT supports protocol address translation at the network layer"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Regarding the description of the buffer overflow attack, which of the following options are correct? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Buffer overflow attack exploits the flaws in the memory operation of the software system to run the attack code with high operating authority",
+      "B": "Buffer overflow attacks have nothing to do with operating system vulnerabilities and architecture",
+      "C": "Buffer overflow attack is one of the common methods in the behavior of attacking software systems",
+      "D": "Buffer overflow attacks are application layer attacks"
+    },
+    "answer": ["A", "C", "D"]
+  },
+  {
+    "question": "Which of the following is not the business scope of the National Internet Emergency Response Center?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Emergency handling of security incidents",
+      "B": "Early warning and notification of security incidents",
+      "C": "Provide security evaluation services for government departments, enterprises and institutions",
+      "D": "Cooperate with other organizations to provide training services"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "The host firewall is mainly used to protect the host from attacks and intrusions from the network.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following options belong to international organizations related to information security standardization? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "International Organization for Standardization (ISO)",
+      "B": "International Electrotechnical Commission (IEC)",
+      "C": "International Telecommunication Union (ITU)",
+      "D": "Wi-Fi Alliance Wi-Fi Alliance Organization"
+    },
+    "answer": ["A", "B", "C"]
+  },
+  {
+    "question": "Digital signature technology obtains a digital signature by encrypting which of the following data?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "User data",
+      "B": "Recipient's public key",
+      "C": "The sender's public key",
+      "D": "Digital fingerprint"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "On Huawei USG series firewalls, the default security policy does not support modification.",
+    "question_type": "true_or_false",
+    "options": { "A": "Yes", "B": "Wrong" },
+    "answer": "B"
+  },
+  {
+    "question": "In the classification of the information security level protection system, which of the following levels defines if the information system is damaged, it will affect the social order andDamage to the public interest? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "First level User self-protection level",
+      "B": "Second level System audit protection level",
+      "C": "Level 3 Security mark protection",
+      "D": "Level 4 Structured protection"
+    },
+    "answer": ["C"]
+  },
+  {
+    "question": "In the Huawei SDSec solution, which of the following is an analysis layer device?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "CIS",
+      "B": "Agile Controller",
+      "C": "switch",
+      "D": "Firehunter"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Regarding the control actions permit and deny of firewall inter-domain forwarding security policies, which of the following options are correct? (Multiple choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The default security policy action of the firewall is deny",
+      "B": "After the packet matches the deny action of the inter-domain security policy, the packet is immediately discarded, and other inter-domain security policies will not continue to be executed",
+      "C": "Even if the data packet matches the permit action of the security policy, it will not necessarily be forwarded by the firewall",
+      "D": "The message will be transferred to the UTM module for processing whether it is a permit action or a deny action that matches the security policy"
+    },
+    "answer": ["A", "B", "C"]
+  },
+  {
+    "question": "Which of the following is not included in the Business Impact Analysis (BIA)?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Business priority",
+      "B": "Incident handling priority",
+      "C": "Impact assessment",
+      "D": "Risk identification"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "When deploying IPSec VPN, which of the following is the main application scenario of tunnel mode?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Between host and host",
+      "B": "Between the host and the security gateway",
+      "C": "Between security gateways",
+      "D": "Between host and server"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "HRP (Huawei Redundancy Protocol) protocol, used to synchronize the key configuration and connection status of the firewall to the standby firewall, Which of the following options does not belong to the scope of synchronization?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Security Policy",
+      "B": "NAT strategy",
+      "C": "Blacklist",
+      "D": "IPS signature set"
+    },
+    "answer": "D"
+  }
+]
