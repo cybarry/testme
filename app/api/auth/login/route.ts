@@ -1,64 +1,84 @@
+// app/api/auth/login/route.ts
 import { connectDB } from '@/lib/db';
 import { User } from '@/lib/schemas/user.schema';
-import { generateToken, setAuthCookie } from '@/lib/auth';
 import { NextRequest, NextResponse } from 'next/server';
+import bcrypt from 'bcryptjs';
+import { z } from 'zod';
+
+// Optional: If you still want to use your generateToken & setAuthCookie
+import { generateToken, setAuthCookie } from '@/lib/auth';
+
+// Zod validation
+const loginSchema = z.object({
+  username: z.string().min(1, 'Username is required'),
+  password: z.string().min(1, 'Password is required'),
+});
 
 export async function POST(request: NextRequest) {
   try {
     await connectDB();
-    
-    const { username, password } = await request.json();
-    
-    if (!username || !password) {
+
+    const body = await request.json();
+    const parsed = loginSchema.safeParse(body);
+
+    if (!parsed.success) {
       return NextResponse.json(
         { error: 'Username and password are required' },
         { status: 400 }
       );
     }
-    
-    // Find user
-    const user = await User.findOne({ username });
+
+    const { username, password } = parsed.data;
+
+    // Find user (case-insensitive)
+    const user = await User.findOne({
+      username: username.toLowerCase(),
+    });
+
     if (!user) {
       return NextResponse.json(
         { error: 'Invalid credentials' },
         { status: 401 }
       );
     }
-    
-    // Compare password
-    const isPasswordValid = await user.comparePassword(password);
+
+    // Compare password with bcrypt
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
     if (!isPasswordValid) {
       return NextResponse.json(
         { error: 'Invalid credentials' },
         { status: 401 }
       );
     }
-    
-    // Generate token
+
+    // Generate JWT token (your existing function)
     const token = await generateToken({
       userId: user._id.toString(),
-      role: user.role
+      role: user.role,
     });
-    
-    // Set cookie
+
+    // Create response
     const response = NextResponse.json(
       {
         message: 'Login successful',
         user: {
           id: user._id,
           username: user.username,
-          role: user.role
-        }
+          role: user.role,
+        },
       },
       { status: 200 }
     );
-    
-    await setAuthCookie(token);
-    
+
+    // Set secure HttpOnly cookie
+    await setAuthCookie(token, response); // pass response if needed
+
     return response;
   } catch (error) {
+    console.error('Login error:', error);
     return NextResponse.json(
-      { error: 'Login failed' },
+      { error: 'Login failed. Please try again later.' },
       { status: 500 }
     );
   }

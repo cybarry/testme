@@ -158,6 +158,7 @@ module.exports = mod;
 "[project]/Documents/Cybarry Solutions/2025 Q3/projects/testme/app/api/auth/register/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+// app/api/auth/register/route.ts
 __turbopack_context__.s([
     "POST",
     ()=>POST
@@ -165,48 +166,77 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Cybarry Solutions/2025 Q3/projects/testme/lib/db.ts [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$lib$2f$schemas$2f$user$2e$schema$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Cybarry Solutions/2025 Q3/projects/testme/lib/schemas/user.schema.ts [app-route] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Cybarry Solutions/2025 Q3/projects/testme/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/server.js [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$bcryptjs$40$3$2e$0$2e$3$2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Cybarry Solutions/2025 Q3/projects/testme/node_modules/.pnpm/bcryptjs@3.0.3/node_modules/bcryptjs/index.js [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$zod$40$3$2e$25$2e$76$2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__ = __turbopack_context__.i("[project]/Documents/Cybarry Solutions/2025 Q3/projects/testme/node_modules/.pnpm/zod@3.25.76/node_modules/zod/v3/external.js [app-route] (ecmascript) <export * as z>");
 ;
 ;
 ;
+;
+;
+// Zod schema — strict validation
+const registerSchema = __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$zod$40$3$2e$25$2e$76$2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
+    username: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$zod$40$3$2e$25$2e$76$2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().min(3, 'Username must be at least 3 characters').max(30, 'Username too long').regex(/^[a-zA-Z0-9_]+$/, 'Only letters, numbers, and underscores allowed'),
+    password: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$zod$40$3$2e$25$2e$76$2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().min(6, 'Password must be at least 6 characters'),
+    role: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$zod$40$3$2e$25$2e$76$2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].enum([
+        'student'
+    ]).optional().default('student')
+});
 async function POST(request) {
     try {
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["connectDB"])();
-        const { username, password, role } = await request.json();
-        if (!username || !password) {
+        const body = await request.json();
+        // Validate input
+        const parsed = registerSchema.safeParse(body);
+        if (!parsed.success) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-                error: 'Username and password are required'
+                error: parsed.error.errors[0].message
             }, {
                 status: 400
             });
         }
-        // Check if user exists
+        const { username, password, role } = parsed.data;
+        // Block any attempt to register as teacher/admin
+        if (role !== 'student') {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: 'Only student registration is allowed.'
+            }, {
+                status: 403
+            });
+        }
+        // Normalize username (lowercase for consistency)
+        const normalizedUsername = username.toLowerCase();
+        // Check if user already exists
         const existingUser = await __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$lib$2f$schemas$2f$user$2e$schema$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["User"].findOne({
-            username
+            username: normalizedUsername
         });
         if (existingUser) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-                error: 'Username already exists'
+                error: 'Username already taken.'
             }, {
                 status: 409
             });
         }
-        // Create new user
+        // Hash password securely
+        const salt = await __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$bcryptjs$40$3$2e$0$2e$3$2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].genSalt(12); // 12 rounds = strong & fast enough
+        const hashedPassword = await __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$bcryptjs$40$3$2e$0$2e$3$2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].hash(password, salt);
+        // Create user
         const user = new __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$lib$2f$schemas$2f$user$2e$schema$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["User"]({
-            username,
-            password,
-            role: role || 'student'
+            username: normalizedUsername,
+            password: hashedPassword,
+            role: 'student'
         });
         await user.save();
         return __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-            message: 'User registered successfully',
+            message: 'Student account created successfully!',
             userId: user._id
         }, {
             status: 201
         });
     } catch (error) {
         console.error('Registration error:', error);
+        // Hide internal errors from user
         return __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Cybarry__Solutions$2f$2025__Q3$2f$projects$2f$testme$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-            error: 'Registration failed'
+            error: 'Registration failed. Please try again later.'
         }, {
             status: 500
         });

@@ -1,3 +1,4 @@
+import { AdminSidebar } from '@/components/admin/sidebar';
 import { ExamManagement } from '@/components/teacher/exam-management';
 import { TeacherSidebar } from '@/components/teacher/sidebar';
 
@@ -8,7 +9,7 @@ export const metadata = {
 export default function TeacherExamsPage() {
   return (
     <div className="flex bg-background">
-      <TeacherSidebar />
+      <AdminSidebar />
       <main className="flex-1 p-8">
         <div className="max-w-7xl mx-auto space-y-8">
           <div>
