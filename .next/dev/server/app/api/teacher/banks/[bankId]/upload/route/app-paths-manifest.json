@@ -1,0 +1,3 @@
+{
+  "/api/teacher/banks/[bankId]/upload/route": "app/api/teacher/banks/[bankId]/upload/route.js"
+}
