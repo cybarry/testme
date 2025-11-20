@@ -171,7 +171,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
       });
       if (response.ok) {
         const data = await response.json();
-        router.push(`/student/result/${data.Id}`);
+        router.push(`/student/result/${data?.score?.id}`);
       }
     } catch (err) {
       console.error('Submit failed');
