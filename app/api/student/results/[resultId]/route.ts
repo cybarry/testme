@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { resultId: string } }
+  { params }: { params: Promise<{ resultId: string }>}
 ) {
   try {
     const currentUser = await getCurrentUser();
@@ -16,8 +16,9 @@ export async function GET(
     }
     
     await connectDB();
+    const { resultId } = await params;
     
-    const score = await Score.findById(params.resultId)
+    const score = await Score.findById(resultId)
       .populate('studentId', 'username')
       .populate('examId');
     

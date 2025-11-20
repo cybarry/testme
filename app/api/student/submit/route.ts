@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Progress not found' }, { status: 404 });
     }
 
-    const exam = await Exam.findById(examId).populate('questions');
+    const exam = await Exam.findById(examId);
     if (!exam) {
       return NextResponse.json({ error: 'Exam not found' }, { status: 404 });
     }
@@ -35,10 +35,12 @@ export async function POST(request: NextRequest) {
     // Calculate score
     let correctCount = 0;
     const incorrectAnswers = [];
+    const questionsDict: { [key: string]: any } = {};
 
     for (const answer of progress.answers) {
       const question = await Question.findById(answer.questionId);
       if (!question) continue;
+      questionsDict[question._id] = question;
 
       const isCorrect = JSON.stringify(answer.selectedAnswer) === JSON.stringify(question.answer);
 
@@ -53,7 +55,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const normalizedScore = (correctCount / exam.questions.length) * 1000;
+    const normalizedScore = (correctCount / exam.numberOfQuestion) * 1000;
 
     // Create score record
     const score = new Score({
@@ -62,11 +64,11 @@ export async function POST(request: NextRequest) {
       rawScore: correctCount,
       normalizedScore: Math.round(normalizedScore),
       correctAnswers: progress.answers
-        .filter((a) => {
-          const q = exam.questions.find((q: any) => q._id.toString() === a.questionId.toString());
+        .filter((a: any) => {
+          const q = questionsDict[a.questionId.toString()];
           return q && JSON.stringify(a.selectedAnswer) === JSON.stringify(q.answer);
         })
-        .map((a) => a.questionId),
+        .map((a: any) => a.questionId),
       incorrectAnswers,
       cheatingAttempts,
       terminatedForCheating
@@ -83,7 +85,7 @@ export async function POST(request: NextRequest) {
         id: score._id,
         normalizedScore: score.normalizedScore,
         rawScore: score.rawScore,
-        totalQuestions: exam.questions.length,
+        totalQuestions: exam.numberOfQuestions,
         passed: normalizedScore >= exam.passingScore
       }
     }, { status: 200 });

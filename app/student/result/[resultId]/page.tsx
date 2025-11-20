@@ -5,7 +5,8 @@ export const metadata = {
   title: 'Exam Result - CBT Platform'
 };
 
-export default function ResultPage({ params }: { params: { resultId: string } }) {
+export default async function ResultPage({ params }: { params: Promise<{ resultId: string }> }) {
+  const { resultId } = await params;
   return (
     <div className="flex bg-background">
       <StudentSidebar />
@@ -15,7 +16,7 @@ export default function ResultPage({ params }: { params: { resultId: string } })
             <h2 className="text-3xl font-bold text-foreground">Exam Result</h2>
             <p className="text-muted mt-2">Review your performance</p>
           </div>
-          <ResultView resultId={params.resultId} />
+          <ResultView resultId={resultId} />
         </div>
       </main>
     </div>

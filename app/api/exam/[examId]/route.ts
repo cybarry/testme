@@ -42,7 +42,7 @@ export async function GET(
     const questions = [
       ...trueFalseQuestions,
       ...singleChoiceQuestions,
-      ...multipleChoiceQuestions,
+      ...multipleChoiceQuestions
     ];
 
     return NextResponse.json({
