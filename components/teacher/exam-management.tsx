@@ -196,7 +196,9 @@ export function ExamManagement() {
                 type="number"
                 placeholder="Passing Score"
                 value={passingScore}
-                onChange={(e) => setPassingScore(Number(e.target.value))}
+                onChange={(e) => setPassingScore(Math.min(1000, Math.max(0, Number(e.target.value))))}
+                max="1000"
+                min="0"
                 className="bg-input border-border text-foreground"
                 required
               />
@@ -234,7 +236,7 @@ export function ExamManagement() {
                         <span className="text-muted">Questions:</span> <span className="text-foreground">{exam.numberOfQuestion}</span>
                       </p>
                       <p className="text-sm">
-                        <span className="text-muted">Passing Score:</span> <span className="text-foreground">{exam.passingScore}</span>
+                        <span className="text-muted">Passing Score:</span> <span className="text-foreground">{exam.passingScore}/1000</span>
                       </p>
                     </div>
                   </div>
