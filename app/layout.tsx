@@ -1,10 +1,15 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+// app/layout.tsx
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css';
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+// Using Inter (cleaner & more professional than Geist for education platforms)
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'ABU Huawei Test Prep Platform',
@@ -27,19 +32,21 @@ export const metadata: Metadata = {
     ],
     apple: '/abu-apple-icon.png',
   },
-}
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="en" className="h-full">
+      <body
+        className={`${inter.variable} font-sans antialiased bg-background text-foreground min-h-full`}
+      >
         {children}
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

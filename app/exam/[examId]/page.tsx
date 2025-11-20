@@ -1,66 +1,69 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+// app/exam/[examId]/page.tsx
+import { notFound } from 'next/navigation';
 import { ExamInterface } from '@/components/exam/exam-interface';
+import { ExamErrorBoundary } from '@/components/exam/exam-error-boundary';
+import { getCurrentUser } from '@/lib/auth';  
 
-export default function ExamPage({
-  params,
-}: {
-  params: Promise<{ examId: string }>; // params is a Promise!
-}) {
-  const [exam, setExam] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState('');
+interface ExamPageProps {
+  params: Promise<{ examId: string }>;
+}
 
-  useEffect(() => {
-    let isMounted = true;
+export default async function ExamPage({ params }: ExamPageProps) {
+  const { examId } = await params;
+  const user = await getCurrentUser();
 
-    async function loadExam() {
-      try {
-        const resolvedParams = await params; // await here!
-        const examId = resolvedParams.examId;
+  // Security: Only students can take exams
+  if (!user || user.role !== 'student') {
+    return <ExamErrorBoundary message="You must be logged in as a student to take this exam." />;
+  }
 
-        const response = await fetch(`/api/exam/${examId}`);
-        if (!response.ok) {
-          throw new Error('Exam not found or not published');
-        }
-        const data = await response.json();
-        if (isMounted) {
-          setExam(data.exam);
-        }
-      } catch (err: any) {
-        if (isMounted) {
-          setError(err.message || 'Failed to load exam');
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
+  let exam = null;
+
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/exam/${examId}`, {
+      cache: 'no-store',
+    });
+
+    if (!res.ok) {
+      const errorMsg = res.status === 404 
+        ? 'Exam not found' 
+        : res.status === 403 
+        ? 'This exam is not available or has been closed' 
+        : 'Failed to load exam';
+      throw new Error(errorMsg);
     }
 
-    loadExam();
+    const data = await res.json();
+    exam = data.exam;
+  } catch (err: any) {
+    return <ExamErrorBoundary message={err.message} />;
+  }
 
-    return () => {
-      isMounted = false;
+  if (!exam) {
+    return <ExamErrorBoundary />;
+  }
+
+  return (
+    <ExamInterface
+      exam={exam}
+      studentName={user.username || 'Student'}
+    />
+  );
+}
+
+export async function generateMetadata({ params }: ExamPageProps) {
+  const { examId } = await params;
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/exam/${examId}`, {
+      cache: 'no-store',
+    });
+    if (!res.ok) return { title: 'Exam Not Found' };
+    const { exam } = await res.json();
+    return {
+      title: `${exam.title} • CBT Exam`,
+      description: 'Secure Computer-Based Test',
     };
-  }, [params]);
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen text-foreground">
-        Loading exam...
-      </div>
-    );
+  } catch {
+    return { title: 'Loading Exam...' };
   }
-
-  if (error || !exam) {
-    return (
-      <div className="flex items-center justify-center min-h-screen text-error">
-        {error || 'Exam not found'}
-      </div>
-    );
-  }
-
-  return <ExamInterface exam={exam} />;
 }
