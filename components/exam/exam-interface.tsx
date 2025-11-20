@@ -78,7 +78,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
 
   useEffect(() => {
     const requestFullscreen = async () => {
-      try { await document.documentElement.requestFullscreen(); } catch (err) {}
+      try { await document.documentElement.requestFullscreen(); } catch (err) { }
     };
     requestFullscreen();
     setIsExamActive(true);
@@ -94,6 +94,38 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
     }, 1000);
     return () => clearInterval(timer);
   }, [isExamActive, timeRemaining]);
+
+  // Auto-save progress
+  useEffect(() => {
+    const saveInterval = setInterval(() => {
+      if (Object.keys(answers).length > 0 && isExamActive) {
+        saveProgress();
+      }
+    }, 3000);
+
+    return () => clearInterval(saveInterval);
+  }, [answers, currentQuestionIndex, cheatingAttempts, isExamActive]);
+
+  const saveProgress = async () => {
+    try {
+      await fetch('/api/student/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          examId: exam._id,
+          currentQuestionIndex,
+          answers: Object.entries(answers).map(([qId, ans]) => ({
+            questionId: qId,
+            selectedAnswer: ans,
+          })),
+          cheatingAttempts,
+          terminatedForCheating: isTerminated,
+        }),
+      });
+    } catch (err) {
+      console.error('Auto-save failed');
+    }
+  };
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60).toString().padStart(2, '0');
@@ -139,7 +171,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
       });
       if (response.ok) {
         const data = await response.json();
-        router.push(`/student/result/${data.scoreId}`);
+        router.push(`/student/result/${data.Id}`);
       }
     } catch (err) {
       console.error('Submit failed');
@@ -327,11 +359,10 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                           return (
                             <label
                               key={key}
-                              className={`flex items-center p-10 border-4 rounded-3xl cursor-pointer transition-all hover:shadow-2xl relative group ${
-                                isSelected
+                              className={`flex items-center p-10 border-4 rounded-3xl cursor-pointer transition-all hover:shadow-2xl relative group ${isSelected
                                   ? 'border-blue-600 bg-blue-50 shadow-2xl ring-4 ring-blue-200'
                                   : 'border-gray-300 hover:border-blue-400 hover:bg-blue-50/30'
-                              }`}
+                                }`}
                             >
                               <input
                                 type="radio"
@@ -352,11 +383,10 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                           return (
                             <label
                               key={key}
-                              className={`flex items-center p-10 border-4 rounded-3xl cursor-pointer transition-all hover:shadow-2xl relative group ${
-                                isSelected
+                              className={`flex items-center p-10 border-4 rounded-3xl cursor-pointer transition-all hover:shadow-2xl relative group ${isSelected
                                   ? 'border-blue-600 bg-blue-50 shadow-2xl ring-4 ring-blue-200'
                                   : 'border-gray-300 hover:border-blue-400 hover:bg-blue-50/30'
-                              }`}
+                                }`}
                             >
                               <input
                                 type="checkbox"
