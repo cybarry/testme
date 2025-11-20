@@ -92,7 +92,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
     const newAttempts = cheatingAttempts + 1;
     setCheatingAttempts(newAttempts);
     setShowWarning(true);
-    if (newAttempts >= MAX_VIOLATIONS) {
+    if (newAttempts > MAX_VIOLATIONS) {
       setIsTerminated(true);
       setTimeout(() => handleSubmit(true), 3000);
     }
