@@ -47,6 +47,7 @@ export function ExamManagement() {
     try {
       const response = await fetch('/api/teacher/exams');
       const data = await response.json();
+      console.log(data)
       setExams(data.exams || []);
     } catch (error) {
       console.error('Failed to fetch exams:', error);
@@ -112,19 +113,18 @@ export function ExamManagement() {
   };
 
   const handleDeleteExam = async (examId: string) => {
-    if (confirm('Delete this exam?')) {
-      try {
-        const response = await fetch(`/api/teacher/exams/${examId}`, {
-          method: 'DELETE'
-        });
+    try {
+      const response = await fetch(`/api/teacher/exams/${examId}`, {
+        method: 'DELETE'
+      });
 
-        if (response.ok) {
-          fetchExams();
-        }
-      } catch (error) {
-        console.error('Failed to delete exam:', error);
+      if (response.ok) {
+        fetchExams();
       }
+    } catch (error) {
+      console.error('Failed to delete exam:', error);
     }
+
   };
 
   return (
