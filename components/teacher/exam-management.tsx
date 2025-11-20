@@ -4,6 +4,12 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 interface Exam {
   _id: string;
@@ -29,8 +35,8 @@ export function ExamManagement() {
   const [newExamDesc, setNewExamDesc] = useState('');
   const [selectedBankId, setSelectedBankId] = useState('');
   const [duration, setDuration] = useState(60);
-  const [numberOfQuestion, setNumberOfQuestion] = useState(10);
-  const [passingScore, setPassingScore] = useState(500);
+  const [numberOfQuestion, setNumberOfQuestion] = useState(60);
+  const [passingScore, setPassingScore] = useState(600);
 
   useEffect(() => {
     fetchExams();
@@ -158,31 +164,43 @@ export function ExamManagement() {
               ))}
             </select>
 
-            <Input
-              type="number"
-              placeholder="Duration (minutes)"
-              value={duration}
-              onChange={(e) => setDuration(Number(e.target.value))}
-              className="bg-input border-border text-foreground"
-              required
-            />
+            <h3 className="text-lg font-semibold text-foreground">Exam Settings</h3>
 
-            <Input
-              type="number"
-              placeholder="Set number of questions"
-              value={numberOfQuestion}
-              onChange={(e) => setNumberOfQuestion(Number(e.target.value))}
-              className="bg-input border-border text-foreground"
-              required
-            />
-            <Input
-              type="number"
-              placeholder="Passing Score"
-              value={passingScore}
-              onChange={(e) => setPassingScore(Number(e.target.value))}
-              className="bg-input border-border text-foreground"
-              required
-            />
+            <div>
+              <label className="text-sm font-medium text-foreground">Duration (minutes)</label>
+              <Input
+                type="number"
+                placeholder="Duration (minutes)"
+                value={duration}
+                onChange={(e) => setDuration(Number(e.target.value))}
+                className="bg-input border-border text-foreground"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="text-sm font-medium text-foreground">Number of Questions</label>
+              <Input
+                type="number"
+                placeholder="Set number of questions"
+                value={numberOfQuestion}
+                onChange={(e) => setNumberOfQuestion(Number(e.target.value))}
+                className="bg-input border-border text-foreground"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="text-sm font-medium text-foreground">Passing Score</label>
+              <Input
+                type="number"
+                placeholder="Passing Score"
+                value={passingScore}
+                onChange={(e) => setPassingScore(Number(e.target.value))}
+                className="bg-input border-border text-foreground"
+                required
+              />
+            </div>
             <Button type="submit" className="w-full bg-primary hover:bg-primary-dark">
               Create Exam
             </Button>
@@ -208,26 +226,52 @@ export function ExamManagement() {
                 >
                   <div>
                     <p className="font-medium text-foreground">{exam.title}</p>
-                    <p className="text-sm text-muted">{exam.duration} minutes</p>
-                    <p className="font-medium text-foreground">{exam.numberOfQuestion}</p>
-                    <p className="text-sm text-muted">{exam.passingScore}</p>
+                    <div className="space-y-1 mt-2">
+                      <p className="text-sm">
+                        <span className="text-muted">Duration:</span> <span className="text-foreground">{exam.duration} minutes</span>
+                      </p>
+                      <p className="text-sm">
+                        <span className="text-muted">Questions:</span> <span className="text-foreground">{exam.numberOfQuestion}</span>
+                      </p>
+                      <p className="text-sm">
+                        <span className="text-muted">Passing Score:</span> <span className="text-foreground">{exam.passingScore}</span>
+                      </p>
+                    </div>
                   </div>
                   <div className="flex gap-2">
-                    <Button
-                      size="sm"
-                      onClick={() => handlePublishExam(exam._id, exam.published)}
-                      className={exam.published ? 'bg-success hover:bg-success/90' : 'bg-warning hover:bg-warning/90'}
-                    >
-                      {exam.published ? 'Published' : 'Draft'}
-                    </Button>
-                    <Button
-                      variant="destructive"
-                      size="sm"
-                      onClick={() => handleDeleteExam(exam._id)}
-                      className="bg-error hover:bg-error/90"
-                    >
-                      Delete
-                    </Button>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            size="sm"
+                            onClick={() => handlePublishExam(exam._id, exam.published)}
+                            className={exam.published ? 'bg-success hover:bg-success/90' : 'bg-warning hover:bg-warning/90'}
+                          >
+                            {exam.published ? 'Published' : 'Draft'}
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          Click to {exam.published ? 'unpublish' : 'publish'} this exam
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="destructive"
+                            size="sm"
+                            onClick={() => handleDeleteExam(exam._id)}
+                            className="bg-error hover:bg-error/90"
+                          >
+                            Delete
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          Click to delete this exam
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                 </div>
               ))}

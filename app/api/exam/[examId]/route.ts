@@ -10,7 +10,7 @@ export async function GET(
   try {
     await connectDB();
     const { examId } = await params;
-    console.log('Fetching exam with ID:', examId);
+
     const exam = await Exam.findById(examId).populate('questions');
     
     if (!exam || !exam.published) {
