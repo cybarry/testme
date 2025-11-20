@@ -26,7 +26,7 @@ const scoreSchema = new mongoose.Schema(
         {
           _id: mongoose.Schema.Types.ObjectId,
           questionText: String,
-          question_type: String,
+          questionType: String,
           options: mongoose.Schema.Types.Mixed
         }
       ],

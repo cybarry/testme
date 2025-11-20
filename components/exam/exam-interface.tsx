@@ -18,6 +18,7 @@ const MAX_VIOLATIONS = 3;
 interface Question {
   _id: string;
   questionText: string;
+  questionType: 'single_choice' | 'multiple_choice' | 'true_or_false' | 'drag_drop' | string;
   type: 'single_choice' | 'multiple_choice' | 'true_or_false' | 'drag_drop' | string;
   options: Record<string, string>;
   answer: string | string[];
@@ -210,7 +211,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
   };
 
   const questionsByType = exam.questions.reduce((acc, q, i) => {
-    const type = q.type || 'unknown';
+    const type = q.questionType || 'unknown';
     if (!acc[type]) acc[type] = [];
     acc[type].push({ q, i });
     return acc;

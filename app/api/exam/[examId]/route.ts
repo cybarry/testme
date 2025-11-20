@@ -86,7 +86,10 @@ export async function GET(
       ...trueFalseQuestions,
       ...singleChoiceQuestions,
       ...multipleChoiceQuestions
-    ];
+    ].map(q => ({
+      questionType: q.type,
+      ...q
+    }));
 
     // Create new score record with unfinished status
     const newScore = new Score({
@@ -94,12 +97,7 @@ export async function GET(
       examId,
       attemptNumber: finishedAttempts + 1,
       status: 'unfinished',
-      questions: questions.map(q => ({
-        _id: q._id,
-        questionText: q.questionText,
-        question_type: q.type,
-        options: q.options
-      }))
+      questions
     });
 
     await newScore.save();
