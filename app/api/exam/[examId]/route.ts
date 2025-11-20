@@ -1,6 +1,8 @@
 import { connectDB } from '@/lib/db';
 import { Exam } from '@/lib/schemas/exam.schema';
 import { Question } from '@/lib/schemas/question.schema';
+import { Score } from '@/lib/schemas/score.schema';
+import { getCurrentUser } from '@/lib/auth';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
@@ -8,6 +10,12 @@ export async function GET(
   { params }: { params: Promise<{ examId: string }> }
 ) {
   try {
+    const currentUser = await getCurrentUser();
+
+    if (!currentUser) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+    }
+
     await connectDB();
     const { examId } = await params;
     const exam = await Exam.findById(examId);
@@ -16,26 +24,61 @@ export async function GET(
       return NextResponse.json({ error: 'Exam not found or not published' }, { status: 404 });
     }
 
+    // Check for existing unfinished attempt
+    let existingScore = await Score.findOne({
+      studentId: currentUser.userId,
+      examId,
+      status: 'unfinished'
+    });
+
+    // If unfinished attempt exists, return it with questions
+    if (existingScore) {
+      return NextResponse.json({
+        exam: {
+          ...exam.toObject(),
+          questions: existingScore.questions,
+          attemptNumber: existingScore.attemptNumber,
+          scoreId: existingScore._id,
+        }
+      }, { status: 200 });
+    }
+
+    // Check number of finished attempts
+    const finishedAttempts = await Score.countDocuments({
+      studentId: currentUser.userId,
+      examId,
+      status: 'finished'
+    });
+
+    // Check if max attempts exceeded
+    if (finishedAttempts >= exam.maxAttempts) {
+      return NextResponse.json(
+        { error: `No more permission. Maximum ${exam.maxAttempts} attempts allowed.` },
+        { status: 403 }
+      );
+    }
+
+    // Generate questions for new attempt
     const totalQuestions = exam.numberOfQuestion;
-    const trueFalseCount = Math.ceil(totalQuestions * 0.2); // 10%
-    const singleChoiceCount = Math.ceil(totalQuestions * 0.3); // 40%
-    const multipleChoiceCount = totalQuestions - trueFalseCount - singleChoiceCount; // Remaining for 50%
+    const trueFalseCount = Math.ceil(totalQuestions * 0.2); // 20%
+    const singleChoiceCount = Math.ceil(totalQuestions * 0.3); // 30%
+    const multipleChoiceCount = totalQuestions - trueFalseCount - singleChoiceCount; // 50%
 
     const [trueFalseQuestions, singleChoiceQuestions, multipleChoiceQuestions] = await Promise.all([
       Question.aggregate([
-        { $match: { type: 'true_false', questionBank: exam.questionBank } },
+        { $match: { type: 'true_false', bankId: exam.bankId } },
         { $sample: { size: trueFalseCount } },
-        { $project: { answer: 0 } }
+        { $project: { answer: 0, explanation: 0 } }
       ]),
       Question.aggregate([
-        { $match: { type: 'single_choice', questionBank: exam.questionBank } },
+        { $match: { type: 'single_choice', bankId: exam.bankId } },
         { $sample: { size: singleChoiceCount } },
-        { $project: { answer: 0 } }
+        { $project: { answer: 0, explanation: 0 } }
       ]),
       Question.aggregate([
-        { $match: { type: 'multiple_choice', questionBank: exam.questionBank } },
+        { $match: { type: 'multiple_choice', bankId: exam.bankId } },
         { $sample: { size: multipleChoiceCount } },
-        { $project: { answer: 0 } }
+        { $project: { answer: 0, explanation: 0 } }
       ])
     ]);
 
@@ -45,14 +88,32 @@ export async function GET(
       ...multipleChoiceQuestions
     ];
 
+    // Create new score record with unfinished status
+    const newScore = new Score({
+      studentId: currentUser.userId,
+      examId,
+      attemptNumber: finishedAttempts + 1,
+      status: 'unfinished',
+      questions: questions.map(q => ({
+        _id: q._id,
+        questionText: q.questionText,
+        question_type: q.type,
+        options: q.options
+      }))
+    });
+
+    await newScore.save();
+
     return NextResponse.json({
       exam: {
         ...exam.toObject(),
         questions,
+        attemptNumber: newScore.attemptNumber,
+        scoreId: newScore._id,
       }
     }, { status: 200 });
   } catch (error) {
-    console.error('Error fetching exam:', error);
+    console.log('Error fetching exam:', error.errors);
     return NextResponse.json({ error: 'Failed to fetch exam' }, { status: 500 });
   }
 }

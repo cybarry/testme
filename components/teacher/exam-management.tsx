@@ -20,6 +20,7 @@ interface Exam {
   passingScore: number;
   published: boolean;
   createdAt: string;
+  maxAttempts: number;
 }
 
 interface QuestionBank {
@@ -37,6 +38,7 @@ export function ExamManagement() {
   const [duration, setDuration] = useState(60);
   const [numberOfQuestion, setNumberOfQuestion] = useState(60);
   const [passingScore, setPassingScore] = useState(600);
+  const [maxAttempts, setMaxAttempts] = useState(3);
 
   useEffect(() => {
     fetchExams();
@@ -47,7 +49,6 @@ export function ExamManagement() {
     try {
       const response = await fetch('/api/teacher/exams');
       const data = await response.json();
-      console.log(data)
       setExams(data.exams || []);
     } catch (error) {
       console.error('Failed to fetch exams:', error);
@@ -81,6 +82,7 @@ export function ExamManagement() {
           duration,
           numberOfQuestion,
           passingScore,
+          maxAttempts,
         })
       });
 
@@ -203,6 +205,18 @@ export function ExamManagement() {
                 required
               />
             </div>
+
+            <div>
+              <label className="text-sm font-medium text-foreground">Maximum Attempts</label>
+              <Input
+                type="number"
+                placeholder="Maximum Attempts"
+                value={maxAttempts}
+                onChange={(e) => setMaxAttempts(Number(e.target.value))}
+                className="bg-input border-border text-foreground"
+                required
+              />
+            </div>
             <Button type="submit" className="w-full bg-primary hover:bg-primary-dark">
               Create Exam
             </Button>
@@ -237,6 +251,9 @@ export function ExamManagement() {
                       </p>
                       <p className="text-sm">
                         <span className="text-muted">Passing Score:</span> <span className="text-foreground">{exam.passingScore}/1000</span>
+                      </p>
+                      <p className="text-sm">
+                        <span className="text-muted">Max Attempts:</span> <span className="text-foreground">{exam.maxAttempts}</span>
                       </p>
                     </div>
                   </div>

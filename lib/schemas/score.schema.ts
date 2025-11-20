@@ -12,11 +12,28 @@ const scoreSchema = new mongoose.Schema(
       ref: 'Exam',
       required: true
     },
-    rawScore: Number,
-    normalizedScore: {
+    attemptNumber: {
       type: Number,
-      required: true
+      default: 1
     },
+    status: {
+      type: String,
+      enum: ['unfinished', 'finished'],
+      default: 'unfinished'
+    },
+    questions: {
+      type: [
+        {
+          _id: mongoose.Schema.Types.ObjectId,
+          questionText: String,
+          question_type: String,
+          options: mongoose.Schema.Types.Mixed
+        }
+      ],
+      default: []
+    },
+    rawScore: Number,
+    normalizedScore: Number,
     correctAnswers: [mongoose.Schema.Types.ObjectId],
     incorrectAnswers: [{
       questionId: mongoose.Schema.Types.ObjectId,
@@ -31,10 +48,11 @@ const scoreSchema = new mongoose.Schema(
       type: Boolean,
       default: false
     },
-    completedAt: {
+    startedAt: {
       type: Date,
       default: Date.now
-    }
+    },
+    completedAt: Date
   },
   { timestamps: true }
 );

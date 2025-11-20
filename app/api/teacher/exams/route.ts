@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 
     await connectDB();
 
-    const { title, description, bankId, duration, passingScore, numberOfQuestion } = await request.json();
+    const { title, description, bankId, duration, passingScore, numberOfQuestion, maxAttempts } = await request.json();
 
     // Get questions from bank
     const questions = await Question.find({ bankId });
@@ -59,6 +59,7 @@ export async function POST(request: NextRequest) {
       passingScore: passingScore || 500,
       createdBy: currentUser.userId,
       published: true,
+      maxAttempts: maxAttempts
     });
 
     await exam.save();
