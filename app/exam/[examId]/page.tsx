@@ -2,7 +2,7 @@
 import { notFound } from 'next/navigation';
 import { ExamInterface } from '@/components/exam/exam-interface';
 import { ExamErrorBoundary } from '@/components/exam/exam-error-boundary';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser } from '@/lib/auth';  
 
 interface ExamPageProps {
   params: Promise<{ examId: string }>;

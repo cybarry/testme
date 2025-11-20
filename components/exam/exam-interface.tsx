@@ -57,11 +57,24 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeTab, setActiveTab] = useState('all');
 
+  // SAFELY access current question
   const currentQuestion = exam.questions[currentQuestionIndex];
   const totalQuestions = exam.questions.length;
   const answeredCount = Object.keys(answers).length;
   const pendingCount = totalQuestions - answeredCount;
   const markedCount = markedForReview.size;
+
+  // Prevent crash if exam or questions not loaded
+  if (!exam || !exam.questions || exam.questions.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-xl text-gray-700">Loading exam...</p>
+        </div>
+      </div>
+    );
+  }
 
   useEffect(() => {
     const requestFullscreen = async () => {
@@ -92,7 +105,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
     const newAttempts = cheatingAttempts + 1;
     setCheatingAttempts(newAttempts);
     setShowWarning(true);
-    if (newAttempts > MAX_VIOLATIONS) {
+    if (newAttempts >= MAX_VIOLATIONS) {
       setIsTerminated(true);
       setTimeout(() => handleSubmit(true), 3000);
     }
@@ -194,8 +207,8 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
           </header>
 
           <div className="flex flex-1 relative">
-            {/* CLEAN SIDEBAR - COLORED BOXES ONLY */}
-            <aside className={`absolute left-0 top-0 h-full bg-white border-r border-gray-200 shadow-2xl transition-all duration-300 z-40 ${sidebarOpen ? 'w-96' : 'w-20'}`}>
+            {/* COMPACT SIDEBAR */}
+            <aside className={`absolute left-0 top-0 h-full bg-white border-r border-gray-200 shadow-2xl transition-all duration-300 z-40 ${sidebarOpen ? 'w-80' : 'w-20'}`}>
               <div className="absolute -right-8 top-24 z-50">
                 <Button
                   variant="default"
@@ -208,19 +221,19 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
               </div>
 
               {sidebarOpen && (
-                <div className="p-8 h-full overflow-y-auto">
-                  <h3 className="text-2xl font-bold text-center mb-8 text-blue-800 tracking-wide">Question Navigator</h3>
+                <div className="p-6 h-full overflow-y-auto">
+                  <h3 className="text-xl font-bold text-center mb-6 text-blue-800">Question Navigator</h3>
 
                   <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                    <TabsList className="grid w-full grid-cols-4 mb-8 h-14 text-base font-semibold">
+                    <TabsList className="grid w-full grid-cols-4 mb-6 h-12 text-sm font-semibold">
                       <TabsTrigger value="all">All ({totalQuestions})</TabsTrigger>
-                      <TabsTrigger value="answered">Answered ({answeredCount})</TabsTrigger>
-                      <TabsTrigger value="pending">Pending ({pendingCount})</TabsTrigger>
-                      <TabsTrigger value="marked">Marked ({markedCount})</TabsTrigger>
+                      <TabsTrigger value="answered">Ans ({answeredCount})</TabsTrigger>
+                      <TabsTrigger value="pending">Pend ({pendingCount})</TabsTrigger>
+                      <TabsTrigger value="marked">Mark ({markedCount})</TabsTrigger>
                     </TabsList>
 
-                    <TabsContent value={activeTab} className="mt-4">
-                      <div className="space-y-8">
+                    <TabsContent value={activeTab} className="mt-3">
+                      <div className="space-y-6">
                         {Object.entries(questionsByType).map(([type, items]) => {
                           const filtered = items.filter(({ q }) => {
                             if (activeTab === 'all') return true;
@@ -235,14 +248,13 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                           const { label, icon: Icon, color } = getQuestionTypeInfo(type);
 
                           return (
-                            <div key={type} className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-300 shadow-md">
-                              <div className="flex items-center gap-3 mb-5">
-                                <Icon className={`w-8 h-8 ${color}`} />
-                                <h4 className="text-xl font-bold text-gray-800">{label} ({filtered.length})</h4>
+                            <div key={type} className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-4 border border-gray-300 shadow-sm">
+                              <div className="flex items-center gap-2 mb-3">
+                                <Icon className={`w-6 h-6 ${color}`} />
+                                <h4 className="text-sm font-bold text-gray-800">{label} ({filtered.length})</h4>
                               </div>
 
-                              {/* CLEAN COLORED BOXES - NO CIRCLES, NO BORDERS */}
-                              <div className="grid grid-cols-4 gap-4">
+                              <div className="grid grid-cols-5 gap-3">
                                 {filtered.map(({ q, i }) => {
                                   const isCurrent = i === currentQuestionIndex;
                                   const isAnswered = !!answers[q._id];
@@ -252,7 +264,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                                     <button
                                       key={q._id}
                                       onClick={() => setCurrentQuestionIndex(i)}
-                                      className={`relative w-full aspect-square rounded-2xl font-bold text-4xl transition-all shadow-lg hover:shadow-xl hover:scale-110 flex items-center justify-center text-white
+                                      className={`relative w-full aspect-square rounded-xl font-bold text-2xl transition-all shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center text-white
                                         ${isCurrent
                                           ? 'bg-blue-600 ring-4 ring-blue-300'
                                           : isAnswered && isMarked
@@ -265,11 +277,9 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                                         }`}
                                     >
                                       {i + 1}
-
-                                      {/* Small Review Badge */}
                                       {isMarked && !isCurrent && (
-                                        <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
-                                          !
+                                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-600 rounded-full shadow-lg flex items-center justify-center">
+                                          <span className="text-white text-[10px] font-bold">!</span>
                                         </div>
                                       )}
                                     </button>
@@ -287,7 +297,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
             </aside>
 
             {/* MAIN CONTENT */}
-            <main className={`flex-1 p-10 transition-all duration-300 ${sidebarOpen ? 'ml-96' : 'ml-20'}`}>
+            <main className={`flex-1 p-10 transition-all duration-300 ${sidebarOpen ? 'ml-80' : 'ml-20'}`}>
               <div className="max-w-5xl mx-auto">
                 <Card className="shadow-3xl border-0 bg-white rounded-3xl overflow-hidden">
                   <div className="p-12">
@@ -295,7 +305,9 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                       <Badge className="text-2xl px-10 py-5 bg-blue-100 text-blue-800 font-bold rounded-full shadow-lg">
                         Question {currentQuestionIndex + 1} of {totalQuestions}
                       </Badge>
-                      {markedForReview.has(currentQuestion._id) && (
+
+                      {/* FIXED: Safe check before accessing _id */}
+                      {currentQuestion && markedForReview.has(currentQuestion._id) && (
                         <Badge className="bg-yellow-100 text-yellow-800 border-4 border-yellow-500 font-bold text-xl px-8 py-4 rounded-full shadow-lg">
                           <AlertCircle className="w-7 h-7 mr-3" />
                           Marked for Review
@@ -307,6 +319,7 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                       {currentQuestion.questionText}
                     </h2>
 
+                    {/* Rest of your options rendering remains the same */}
                     <div className="space-y-8">
                       {currentQuestion.type === 'single_choice' || currentQuestion.type === 'true_or_false' ? (
                         Object.entries(currentQuestion.options).map(([key, value]) => {
@@ -369,10 +382,10 @@ export function ExamInterface({ exam, studentName = 'Student' }: ExamInterfacePr
                       <Button
                         variant="outline"
                         size="lg"
-                        onClick={() => toggleMarkForReview(currentQuestion._id)}
+                        onClick={() => currentQuestion && toggleMarkForReview(currentQuestion._id)}
                         className="text-xl font-bold px-12 py-8 border-4 rounded-2xl"
                       >
-                        {markedForReview.has(currentQuestion._id) ? 'Unmark Review' : 'Mark for Review'}
+                        {currentQuestion && markedForReview.has(currentQuestion._id) ? 'Unmark Review' : 'Mark for Review'}
                       </Button>
 
                       <div className="flex gap-8">
