@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { useExamStore } from '@/lib/zustand-store';
 import { CheatingDetector } from './anti-cheating-detector';
 import { CheatingWarningModal } from './cheating-warning-modal';
 import { Button } from '@/components/ui/button';
@@ -30,7 +29,8 @@ interface ExamInterfaceProps {
 
 export function ExamInterface({ exam }: ExamInterfaceProps) {
   const router = useRouter();
-  const store = useExamStore();
+
+  // Local state only — NO ZUSTAND HERE
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, any>>({});
   const [timeRemaining, setTimeRemaining] = useState(exam.duration * 60);
@@ -38,34 +38,34 @@ export function ExamInterface({ exam }: ExamInterfaceProps) {
   const [showWarning, setShowWarning] = useState(false);
   const [isTerminated, setIsTerminated] = useState(false);
   const [isExamActive, setIsExamActive] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const currentQuestion = exam.questions[currentQuestionIndex];
 
-  // Initialize exam state
+  // Initialize exam
   useEffect(() => {
-    store.setExamId(exam._id);
-    store.setRemainingTime(exam.duration * 60);
-    
-    // Request fullscreen
-    requestFullscreenIfSupported();
-    setIsExamActive(true);
-  }, [exam._id, exam.duration, store]);
-
-  const requestFullscreenIfSupported = async () => {
-    try {
-      const elem = document.documentElement;
-      if (elem.requestFullscreen) {
-        await elem.requestFullscreen();
-        setIsFullscreen(true);
+    const requestFullscreen = async () => {
+      try {
+        await document.documentElement.requestFullscreen();
+      } catch (err) {
+        console.log('Fullscreen not supported');
       }
-    } catch (err) {
-      console.log('Fullscreen not available');
-    }
-  };
+    };
 
-  // Timer countdown
+    requestFullscreen();
+    setIsExamActive(true);
+
+    // Cleanup on unmount
+    return () => {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      }
+    };
+  }, []); // ← Only run once!
+
+  // Timer
   useEffect(() => {
+    if (!isExamActive) return;
+
     const timer = setInterval(() => {
       setTimeRemaining((prev) => {
         if (prev <= 1) {
@@ -77,18 +77,18 @@ export function ExamInterface({ exam }: ExamInterfaceProps) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isExamActive]);
 
-  // Save progress periodically
+  // Auto-save progress
   useEffect(() => {
     const saveInterval = setInterval(() => {
-      if (Object.keys(answers).length > 0) {
+      if (Object.keys(answers).length > 0 && isExamActive) {
         saveProgress();
       }
-    }, 30000); // Save every 30 seconds
+    }, 30000);
 
     return () => clearInterval(saveInterval);
-  }, [answers, currentQuestionIndex, cheatingAttempts]);
+  }, [answers, currentQuestionIndex, cheatingAttempts, isExamActive]);
 
   const saveProgress = async () => {
     try {
@@ -98,20 +98,20 @@ export function ExamInterface({ exam }: ExamInterfaceProps) {
         body: JSON.stringify({
           examId: exam._id,
           currentQuestionIndex,
-          answers: Object.entries(answers).map(([questionId, selectedAnswer]) => ({
-            questionId,
-            selectedAnswer
+          answers: Object.entries(answers).map(([qId, ans]) => ({
+            questionId: qId,
+            selectedAnswer: ans,
           })),
           cheatingAttempts,
-          terminatedForCheating: isTerminated
-        })
+          terminatedForCheating: isTerminated,
+        }),
       });
-    } catch (error) {
-      console.error('Failed to save progress:', error);
+    } catch (err) {
+      console.error('Auto-save failed');
     }
   };
 
-  const handleViolation = (violationType: string) => {
+  const handleViolation = () => {
     const newAttempts = cheatingAttempts + 1;
     setCheatingAttempts(newAttempts);
     setShowWarning(true);
@@ -122,178 +122,149 @@ export function ExamInterface({ exam }: ExamInterfaceProps) {
     }
   };
 
-  const handleContinueExam = () => {
-    setShowWarning(false);
-  };
-
   const handleAnswerChange = (questionId: string, answer: any) => {
     setAnswers((prev) => ({
       ...prev,
-      [questionId]: answer
+      [questionId]: answer,
     }));
-  };
-
-  const handleNext = () => {
-    if (currentQuestionIndex < exam.questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
-    }
   };
 
   const handleSubmit = async (cheated = false) => {
     setIsExamActive(false);
-    
+
     try {
       const response = await fetch('/api/student/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           examId: exam._id,
+          answers,
           cheatingAttempts,
-          terminatedForCheating: cheated || isTerminated
-        })
+          terminatedForCheating: cheated || isTerminated,
+        }),
       });
 
-      const data = await response.json();
-      
       if (response.ok) {
-        router.push(`/student/result/${data.score.id}`);
+        const data = await response.json();
+        router.push(`/student/result/${data.scoreId}`);
       }
-    } catch (error) {
-      console.error('Submission error:', error);
+    } catch (err) {
+      console.error('Submit failed');
     }
   };
 
   const formatTime = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
-    
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const s = (seconds % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
   };
 
   return (
-    <div className="exam-session bg-background min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
       <CheatingDetector onViolation={handleViolation} isActive={isExamActive} />
       <CheatingWarningModal
         isOpen={showWarning}
         violationCount={cheatingAttempts}
         maxViolations={MAX_VIOLATIONS}
-        onContinue={handleContinueExam}
+        onContinue={() => setShowWarning(false)}
         onTerminate={() => handleSubmit(true)}
         isTerminated={isTerminated}
       />
 
       {/* Header */}
-      <div className="border-b border-border bg-muted-lighter/30 p-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <header className="border-b p-6 bg-muted/50">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-foreground">{exam.title}</h1>
-            <p className="text-muted text-sm">Question {currentQuestionIndex + 1} of {exam.questions.length}</p>
+            <h1 className="text-2xl font-bold">{exam.title}</h1>
+            <p className="text-sm text-muted-foreground">
+              Question {currentQuestionIndex + 1} of {exam.questions.length}
+            </p>
           </div>
-          <div className={`text-3xl font-bold font-mono ${timeRemaining < 300 ? 'text-error' : 'text-foreground'}`}>
+          <div className={`text-3xl font-mono font-bold ${timeRemaining < 300 ? 'text-red-600' : ''}`}>
             {formatTime(timeRemaining)}
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Main Content */}
-      <div className="flex-1 flex">
-        {/* Sidebar - Question Navigator */}
-        <aside className="w-56 border-r border-border bg-muted-lighter/30 p-4 overflow-y-auto">
-          <h3 className="font-semibold text-foreground mb-4">Questions</h3>
-          <div className="grid grid-cols-4 gap-2">
-            {exam.questions.map((_, idx) => (
+      <div className="flex flex-1">
+        {/* Sidebar */}
+        <aside className="w-64 border-r p-6 bg-muted/20">
+          <h3 className="font-semibold mb-4">Questions</h3>
+          <div className="grid grid-cols-5 gap-2">
+            {exam.questions.map((q, i) => (
               <button
-                key={idx}
-                onClick={() => setCurrentQuestionIndex(idx)}
-                className={`h-10 rounded text-sm font-medium transition ${
-                  idx === currentQuestionIndex
+                key={q._id}
+                onClick={() => setCurrentQuestionIndex(i)}
+                className={`w-10 h-10 rounded font-medium text-sm transition-all ${
+                  i === currentQuestionIndex
                     ? 'bg-primary text-white'
-                    : answers[exam.questions[idx]._id]
-                    ? 'bg-success/20 text-success'
-                    : 'bg-input border border-border text-muted hover:bg-muted-lighter'
+                    : answers[q._id]
+                    ? 'bg-green-500 text-white'
+                    : 'bg-gray-200 hover:bg-gray-300'
                 }`}
               >
-                {idx + 1}
+                {i + 1}
               </button>
             ))}
           </div>
         </aside>
 
-        {/* Main Question Area */}
-        <main className="flex-1 p-8 overflow-y-auto">
-          <div className="max-w-3xl mx-auto">
-            <Card className="border-border bg-muted-lighter/30 p-8">
-              <h2 className="text-xl font-semibold text-foreground mb-6">
-                {currentQuestion.questionText}
-              </h2>
+        {/* Main */}
+        <main className="flex-1 p-8">
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8">
+              <h2 className="text-2xl font-semibold mb-8">{currentQuestion.questionText}</h2>
 
-              {/* Question Options */}
-              <div className="space-y-3 mb-8">
-                {currentQuestion.type === 'true_false' || currentQuestion.type === 'single_choice' ? (
+              <div className="space-y-4 mb-10">
+                {currentQuestion.type === 'single_choice' || currentQuestion.type === 'true_or_false' ? (
                   Object.entries(currentQuestion.options).map(([key, value]) => (
-                    <label key={key} className="flex items-center p-4 rounded border border-border bg-input cursor-pointer hover:bg-muted-lighter transition">
+                    <label key={key} className="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-muted">
                       <input
                         type="radio"
-                        name={`question-${currentQuestion._id}`}
+                        name={currentQuestion._id}
                         value={key}
                         checked={answers[currentQuestion._id] === key}
-                        onChange={(e) => handleAnswerChange(currentQuestion._id, e.target.value)}
-                        className="mr-3"
+                        onChange={() => handleAnswerChange(currentQuestion._id, key)}
+                        className="mr-4"
                       />
-                      <span className="text-foreground">{value}</span>
+                      <span className="text-lg">{value}</span>
                     </label>
                   ))
                 ) : (
                   Object.entries(currentQuestion.options).map(([key, value]) => (
-                    <label key={key} className="flex items-center p-4 rounded border border-border bg-input cursor-pointer hover:bg-muted-lighter transition">
+                    <label key={key} className="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-muted">
                       <input
                         type="checkbox"
                         checked={(answers[currentQuestion._id] || []).includes(key)}
                         onChange={(e) => {
                           const current = answers[currentQuestion._id] || [];
-                          if (e.target.checked) {
-                            handleAnswerChange(currentQuestion._id, [...current, key]);
-                          } else {
-                            handleAnswerChange(currentQuestion._id, current.filter((c: string) => c !== key));
-                          }
+                          const newAnswers = e.target.checked
+                            ? [...current, key]
+                            : current.filter((k: string) => k !== key);
+                          handleAnswerChange(currentQuestion._id, newAnswers);
                         }}
-                        className="mr-3"
+                        className="mr-4"
                       />
-                      <span className="text-foreground">{value}</span>
+                      <span className="text-lg">{value}</span>
                     </label>
                   ))
                 )}
               </div>
 
-              {/* Navigation */}
-              <div className="flex gap-4 justify-between">
+              <div className="flex justify-between">
                 <Button
-                  onClick={handlePrevious}
+                  onClick={() => setCurrentQuestionIndex(Math.max(0, currentQuestionIndex - 1))}
                   disabled={currentQuestionIndex === 0}
-                  className="bg-muted-lighter hover:bg-muted-lighter/80 text-foreground disabled:opacity-50"
                 >
                   Previous
                 </Button>
 
                 {currentQuestionIndex === exam.questions.length - 1 ? (
-                  <Button
-                    onClick={() => handleSubmit()}
-                    className="bg-success hover:bg-success/90 text-white"
-                  >
+                  <Button onClick={() => handleSubmit()} variant="destructive">
                     Submit Exam
                   </Button>
                 ) : (
-                  <Button
-                    onClick={handleNext}
-                    className="bg-primary hover:bg-primary-dark text-white"
-                  >
+                  <Button onClick={() => setCurrentQuestionIndex(currentQuestionIndex + 1)}>
                     Next
                   </Button>
                 )}
