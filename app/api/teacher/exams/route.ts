@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 
     await connectDB();
 
-    const { title, description, bankId, duration, passingScore } = await request.json();
+    const { title, description, bankId, duration, passingScore, numberOfQuestion } = await request.json();
 
     // Get questions from bank
     const questions = await Question.find({ bankId });
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       title,
       description,
       bankId,
-      questions: shuffled.map(q => q._id),
+      numberOfQuestion,
       duration,
       passingScore: passingScore || 500,
       createdBy: currentUser.userId,

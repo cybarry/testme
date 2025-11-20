@@ -10,6 +10,8 @@ interface Exam {
   title: string;
   description: string;
   duration: number;
+  numberOfQuestion: number;
+  passingScore: number;
   published: boolean;
   createdAt: string;
 }
@@ -27,6 +29,8 @@ export function ExamManagement() {
   const [newExamDesc, setNewExamDesc] = useState('');
   const [selectedBankId, setSelectedBankId] = useState('');
   const [duration, setDuration] = useState(60);
+  const [numberOfQuestion, setNumberOfQuestion] = useState(10);
+  const [passingScore, setPassingScore] = useState(500);
 
   useEffect(() => {
     fetchExams();
@@ -67,7 +71,9 @@ export function ExamManagement() {
           title: newExamTitle,
           description: newExamDesc,
           bankId: selectedBankId,
-          duration
+          duration,
+          numberOfQuestion,
+          passingScore,
         })
       });
 
@@ -161,6 +167,22 @@ export function ExamManagement() {
               required
             />
 
+            <Input
+              type="number"
+              placeholder="Set number of questions"
+              value={numberOfQuestion}
+              onChange={(e) => setNumberOfQuestion(Number(e.target.value))}
+              className="bg-input border-border text-foreground"
+              required
+            />
+            <Input
+              type="number"
+              placeholder="Passing Score"
+              value={passingScore}
+              onChange={(e) => setPassingScore(Number(e.target.value))}
+              className="bg-input border-border text-foreground"
+              required
+            />
             <Button type="submit" className="w-full bg-primary hover:bg-primary-dark">
               Create Exam
             </Button>
@@ -187,6 +209,8 @@ export function ExamManagement() {
                   <div>
                     <p className="font-medium text-foreground">{exam.title}</p>
                     <p className="text-sm text-muted">{exam.duration} minutes</p>
+                    <p className="font-medium text-foreground">{exam.numberOfQuestion}</p>
+                    <p className="text-sm text-muted">{exam.passingScore}</p>
                   </div>
                   <div className="flex gap-2">
                     <Button

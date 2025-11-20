@@ -12,10 +12,10 @@ const examSchema = new mongoose.Schema(
       ref: 'QuestionBank',
       required: true
     },
-    questions: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Question'
-    }],
+    numberOfQuestion: {
+      type: Number,
+      required: true
+    },
     duration: {
       type: Number,
       required: true
