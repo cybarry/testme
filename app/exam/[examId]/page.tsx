@@ -3,41 +3,63 @@
 import { useState, useEffect } from 'react';
 import { ExamInterface } from '@/components/exam/exam-interface';
 
-interface PageProps {
-  params: { examId: string };
-}
-
-export default function ExamPage({ params }: PageProps) {
-  const [exam, setExam] = useState(null);
+export default function ExamPage({
+  params,
+}: {
+  params: Promise<{ examId: string }>; // params is a Promise!
+}) {
+  const [exam, setExam] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const fetchExam = async () => {
+    let isMounted = true;
+
+    async function loadExam() {
       try {
-        const response = await fetch(`/api/exam/${params.examId}`);
+        const resolvedParams = await params; // await here!
+        const examId = resolvedParams.examId;
+
+        const response = await fetch(`/api/exam/${examId}`);
         if (!response.ok) {
-          setError('Exam not found or not published');
-          return;
+          throw new Error('Exam not found or not published');
         }
         const data = await response.json();
-        setExam(data.exam);
-      } catch (err) {
-        setError('Failed to load exam');
+        if (isMounted) {
+          setExam(data.exam);
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          setError(err.message || 'Failed to load exam');
+        }
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
-    };
+    }
 
-    fetchExam();
-  }, [params.examId]);
+    loadExam();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [params]);
 
   if (isLoading) {
-    return <div className="flex items-center justify-center min-h-screen text-foreground">Loading exam...</div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen text-foreground">
+        Loading exam...
+      </div>
+    );
   }
 
   if (error || !exam) {
-    return <div className="flex items-center justify-center min-h-screen text-error">{error}</div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen text-error">
+        {error || 'Exam not found'}
+      </div>
+    );
   }
 
   return <ExamInterface exam={exam} />;

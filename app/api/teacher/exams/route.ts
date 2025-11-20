@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       duration,
       passingScore: passingScore || 500,
       createdBy: currentUser.userId,
-      published: false
+      published: true,
     });
     
     await exam.save();
