@@ -92,7 +92,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
     }
   }, [exam]);
   // // Prevent crash if exam or questions not loaded
-  
+
   useEffect(() => {
     const requestFullscreen = async () => {
       try { await document.documentElement.requestFullscreen(); } catch (err) { }
@@ -111,7 +111,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
     }, 1000);
     return () => clearInterval(timer);
   }, [isExamActive, timeRemaining]);
-  
+
   // Auto-save progress
   useEffect(() => {
     const saveInterval = setInterval(() => {
@@ -119,7 +119,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
         saveProgress();
       }
     }, 3000);
-    
+
     return () => clearInterval(saveInterval);
   }, [answers, currentQuestionIndex, cheatingAttempts, isExamActive]);
 
