@@ -1,0 +1,312 @@
+[
+  {
+    "question": "ModelArts supports automated data labeling using both active learning and pre-labeling techniques.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In ModelArts, ExeML (Explainable Machine Learning) projects require manual feature engineering.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Huawei Cloud's HiLens supports end-to-end AI skill development and one-click deployment to edge devices.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "ModelArts' AutoML functionality can only be used for image classification and object detection, not for time-series prediction.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The EIS (Enterprise Intelligence Service) is Huawei's serverless AI inference platform.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "ModelArts notebook instances support multi-user collaboration in real time like JupyterLab.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Huawei Cloud's Graph Engine Service (GES) supports only static graph analysis, not real-time streaming graph updates.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "ModelArts allows exporting trained models directly to the ModelArts Model Hub for sharing across projects and regions.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The ModelArts one-stop AI development pipeline includes data preparation, model training, model evaluation, and model deployment.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Huawei Cloud's Pangu large language model series is not accessible through ModelArts.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which Huawei Cloud service is the primary one-stop AI development platform for developers?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ModelArts",
+      "b": "EI Enterprise Intelligence",
+      "c": "HiLens",
+      "d": "Volcano Engine"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which algorithm framework is NOT natively supported as a built-in algorithm in ModelArts ExeML?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "XGBoost",
+      "b": "LightGBM",
+      "c": "BERT",
+      "d": "TensorFlow custom training"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In ModelArts, the \"MindSpore AutoAugment\" feature is used for:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Automatic hyperparameter tuning",
+      "b": "Automatic data augmentation policy search",
+      "c": "Automatic model architecture search",
+      "d": "Automatic learning rate scheduling"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which deployment type in ModelArts provides the highest inference performance with dedicated hardware acceleration?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Real-time service with Ascend-powered nodes",
+      "b": "Batch inference service",
+      "c": "Edge service on Atlas devices",
+      "d": "Online service with GPU nodes"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Huawei Cloud's \"Pangu Sigma\" large model is primarily designed for:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "NLP and multimodal understanding",
+      "b": "Weather forecasting",
+      "c": "Drug discovery",
+      "d": "Industrial defect detection"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which service should be used to manage and serve large-scale vector embeddings for RAG applications?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Graph Engine Service (GES)",
+      "b": "ModelArts Vector Search Engine",
+      "c": "DIS (Data Ingestion Service)",
+      "d": "MapReduce Service (MRS) with Milvus"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The \"Ascend-Powered Computing Instance\" in ModelArts is based on which Huawei chip series?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Kunpeng",
+      "b": "Ascend",
+      "c": "HiSilicon Kirin",
+      "d": "Tiangang"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which feature in ModelArts allows automatic model retraining when data drift is detected?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ModelArts Auto Learning",
+      "b": "ModelArts Pipeline + Data Drift Monitoring",
+      "c": "ModelArts MLOps continuous training",
+      "d": "ModelArts ExeML retraining scheduler"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which Huawei Cloud AI service is specifically designed for multimodal large model inference (text + image)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Pangu-Σ",
+      "b": "Pangu-α",
+      "c": "Pangu-ω",
+      "d": "ModelArts Inference Service only"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "To perform federated learning across multiple organizations without sharing raw data, Huawei Cloud provides:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ModelArts Federated Learning module",
+      "b": "iMaster MAE-Federated",
+      "c": "Privacy-preserving AI in EIS",
+      "d": "No official support yet"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following are built-in algorithms available in ModelArts ExeML?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Image classification",
+      "b": "Object detection",
+      "c": "Sound classification",
+      "d": "Predictive analytics (time-series)"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "ModelArts supports the following training frameworks natively:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "TensorFlow",
+      "b": "PyTorch",
+      "c": "MindSpore",
+      "d": "MXNet"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which components are part of the Huawei Cloud AI development full-stack?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "ModelArts",
+      "b": "Ascend chips",
+      "c": "MindSpore framework",
+      "d": "Atlas AI computing hardware"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following are deployment options in ModelArts?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Real-time inference services",
+      "b": "Batch inference jobs",
+      "c": "Edge deployment (HiLens/Atlas)",
+      "d": "Serverless inference via FunctionGraph"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Pangu large model series includes which of the following specialized models?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Pangu Weather",
+      "b": "Pangu Drug Molecule",
+      "c": "Pangu NLP",
+      "d": "Pangu Vision"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which tools/services can be used for RAG (Retrieval-Augmented Generation) on Huawei Cloud?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "ModelArts Vector Search",
+      "b": "OBS + custom Milvus",
+      "c": "Baidu Pinecone equivalent",
+      "d": "LangChain integration with ModelArts"
+    },
+    "answer": ["a", "b", "d"]
+  },
+  {
+    "question": "ModelArts MLOps features include:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Model versioning",
+      "b": "Experiment tracking",
+      "c": "Automated pipeline orchestration",
+      "d": "Model performance monitoring"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which Ascend hardware is commonly used in ModelArts training and inference?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Ascend 910",
+      "b": "Ascend 310",
+      "c": "Ascend 910B",
+      "d": "Atlas 800 training cluster"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which data labeling types are supported in ModelArts?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Image labeling (classification, detection, segmentation)",
+      "b": "Text labeling (NER, classification)",
+      "c": "Audio labeling",
+      "d": "Video object tracking"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Huawei Cloud AI governance and security features include:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Data encryption at rest and in transit",
+      "b": "Model explainability (SHAP/LIME integration)",
+      "c": "ModelArts access control via IAM",
+      "d": "Audit logging via CTS"
+    },
+    "answer": ["a", "b", "c", "d"]
+  }
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "question": "Regarding the Network Model in database history, which of the following statements accurately describe its characteristics? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "A node can have more than one parent.",
+      "b": "The structure is strictly similar to a tree.",
+      "c": "It allows more than one node to have no parent.",
+      "d": "It does not require relationships to be normalized."
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question": "In the openGauss memory structure, which of the following descriptions regarding specific buffers are correct? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "cstore_buffers are the shared buffers used specifically by column-store tables.",
+      "b": "maintenance_work_mem is used for query operations such as sorting or hash tables.",
+      "c": "wal_buffers are the shared memory used by Write-Ahead Logs (WALs) that have not yet been written to disks.",
+      "d": "temp_buffers are used by database sessions to access temporary tables."
+    },
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "When selecting a storage model in openGauss, which of the following scenarios are most suitable for using a Column-Store table? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Scenarios requiring frequent UPDATE and DELETE operations.",
+      "b": "Statistical analysis queries involving aggregation of large amounts of data.",
+      "c": "Queries where only a small subset of columns are required from a table with many columns.",
+      "d": "Point queries that rely on simple index lookups to return a few records."
+    },
+    "answer": [
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "In the GaussDB(for openGauss) distributed architecture, which of the following components are roles perceived by the management plane? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "DN (Data Node)",
+      "b": "CN (Coordinator Node)",
+      "c": "GTM (Global Transaction Manager)",
+      "d": "LVS (Linux Virtual Server)"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following tools are classified as 'Server Tools' in the openGauss toolset? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "gsql",
+      "b": "gs_checkos",
+      "c": "gs_dump",
+      "d": "Data Studio"
+    },
+    "answer": [
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "According to the SQL standard evolution history, which version introduced support for JSON?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SQL:2008",
+      "b": "SQL:2011",
+      "c": "SQL:2016",
+      "d": "SQL:2019"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In the openGauss thread architecture, which specific thread is responsible for flushing dirty page data from memory to disks?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "bgwriter",
+      "b": "pagewriter",
+      "c": "walwriter",
+      "d": "checkpoint"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "To protect the database system, openGauss will switch to read-only mode when the disk usage of a tablespace reaches which percentage?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "80%",
+      "b": "85%",
+      "c": "90%",
+      "d": "95%"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In the Logical Architecture of openGauss, what is the term for a data file that stores data of only one table, specifically when that table contains more than 1 GB of data?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Tablespace",
+      "b": "Block",
+      "c": "Datafile Segment",
+      "d": "Partition"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "How much storage space does the BIGINT data type occupy in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "4 bytes",
+      "b": "8 bytes",
+      "c": "16 bytes",
+      "d": "Variable length"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Memory-Optimized Tables (MOT) in openGauss store only indexes in memory, while the actual data resides on the disk to ensure persistence and reduce memory costs.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Before installing openGauss, an XML configuration file must be created to specify deployment details such as the server information, installation path, and IP address.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Users are encouraged to manually INSERT or UPDATE values in system catalogs (such as pg_class) to fix metadata inconsistencies if an object is corrupted.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "openGauss utilizes the LSE instruction set based on ARMv8.1, specifically using the CASAL instruction to implement Compare and Swap (CAS) operations more efficiently than ldxr/stlxr.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In SQL logical operations, the result of the expression 'TRUE AND NULL' is FALSE.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  }
+]
+

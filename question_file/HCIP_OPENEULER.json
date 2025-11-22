@@ -1,0 +1,190 @@
+[
+  {
+    "question": "In the Logical Volume Management (LVM) architecture of openEuler, which of the following concepts are integral components? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Physical Extents (PE)",
+      "b": "Volume Group (VG)",
+      "c": "Logical Extents (LE)",
+      "d": "Disk Partition Table (DPT)",
+      "e": "Physical Volume (PV)"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "e"
+    ]
+  },
+  {
+    "question": "Which of the following files are directly involved in user and group management in the openEuler operating system? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "/etc/passwd",
+      "b": "/etc/shadow",
+      "c": "/etc/sysconfig/network",
+      "d": "/etc/group",
+      "e": "/etc/gshadow"
+    },
+    "answer": [
+      "a",
+      "b",
+      "d",
+      "e"
+    ]
+  },
+  {
+    "question": "When using the iSula container engine, which of the following options can be used with the `isula run` command to configure the container instance? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "-d (Run in background)",
+      "b": "-p (Port mapping)",
+      "c": "--net (Specify network)",
+      "d": "-v (Volume mounting)",
+      "e": "--push (Upload image)"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following flow control statements are valid in Shell scripting? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "if-then-else",
+      "b": "switch-case",
+      "c": "case-in-esac",
+      "d": "for loop",
+      "e": "while loop"
+    },
+    "answer": [
+      "a",
+      "c",
+      "d",
+      "e"
+    ]
+  },
+  {
+    "question": "In the context of process management, which of the following signals can be sent to a process using the `kill` command? (Multiple Choice)",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "SIGHUP (1)",
+      "b": "SIGINT (2)",
+      "c": "SIGKILL (9)",
+      "d": "SIGTERM (15)",
+      "e": "SIGSTOP (19)"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "What is the default size of a Physical Extent (PE) in LVM if not specified during creation?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "1 MB",
+      "b": "4 MB",
+      "c": "8 MB",
+      "d": "16 MB"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which command is used to display the socket statistics and connection status in openEuler, often serving as a faster alternative to `netstat`?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ip link",
+      "b": "sockstat",
+      "c": "ss",
+      "d": "nmcli"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which special variable in a Shell script represents the exit status code of the last executed command?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "$#",
+      "b": "$0",
+      "c": "$$",
+      "d": "$?"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "In the `nice` command, what is the valid range for adjusting the priority of a process?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "-20 to 19",
+      "b": "0 to 127",
+      "c": "-100 to 100",
+      "d": "1 to 10"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which configuration file is the primary location for configuring the `dnf` package manager settings in openEuler?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/etc/yum.repos.d/openEuler.repo",
+      "b": "/etc/dnf/dnf.conf",
+      "c": "/etc/sysconfig/dnf",
+      "d": "/usr/lib/rpm/rpmrc"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The iSula container engine currently supports the `isula push` command to upload images to a remote registry.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "When using the `chmod` command, the permission mode `755` is equivalent to `u=rwx,g=rx,o=rx`.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In Shell scripting, enclosing a variable in single quotes (e.g., '$VAR') will expand the variable to its value.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The MBR (Master Boot Record) partitioning scheme supports disks larger than 2 TB.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Systemd is the first process started by the Linux kernel (PID 1) and is responsible for initializing the system and managing services.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  }
+]
+
+
+

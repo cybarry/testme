@@ -1,0 +1,1014 @@
+[
+  {
+    "question": "Shutdown the business interface of the standby machine;",
+    "question_type": "single_choice",
+    "options": {
+      "a": "1-8-3-2-7-4-5-6",
+      "b": "8-1-3-2-4-7-5-6",
+      "c": "8-1-3-2-7-4-5-6",
+      "d": "1-8-3-4-2-7-5-6"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Bandwidth channels define specific bandwidth resources and are the basis for bandwidth management.\n\nWhich of the following is a resource that can be defined in a bandwidth channel?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Bandwidth policy",
+      "b": "Daily traffic quota",
+      "c": "Egress bandwidth restrictions",
+      "d": "Strategic exclusivity"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following parameters is not a condition for global routing policy classification?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Bandwidth",
+      "b": "Port number",
+      "c": "Quality",
+      "d": "Weight"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In a NAT traversal scenario, if a NAT device is detected, the destination port number of the ISAKMP message will become which of the following?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "4500",
+      "b": "51",
+      "c": "50",
+      "d": "500"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following descriptions about GRE over IPSec is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The IP header added during the IPSec encapsulation process, that is, the source address is the interface address of the IPSec gateway to which the IPSec security policy is applied, and the destination address is the interface address of the IPSec peer to which the IPsec security policy is applied.",
+      "b": "When gateways use GRE over IPSec to connect, GRE encapsulation is performed first, and then IPSec encapsulation is performed.",
+      "c": "The IP header added during the GRE encapsulation process, that is, the source address is the source address of the IPSec tunnel, and the destination address is the destination address of the IPSec tunnel.",
+      "d": "The data flow that IPSec needs to protect is the data flow from the GRE starting point to the GRE ending point."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions of the characteristics of SSL VPN is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SSL VPN supports few authentication types and is difficult to integrate with the original identity authentication system.",
+      "b": "SSL VPN can support various IP applications",
+      "c": "SSL VPN can parse intranet resources to the application layer and publish applications in a granular manner",
+      "d": "Since the SSL VPN login method uses a browser, the automatic installation and configuration of the client is realized, so that users can quickly log in with their devices anytime and anywhere, and it also relieves the pressure of network administrators in maintaining the client."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following is not an intranet resource that SSL VPN can provide to mobile office users?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "File resources",
+      "b": "UDP resources",
+      "c": "Web resources",
+      "d": "IP resources"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "As shown in the figure, which of the following is the UDP defense principle shown in the figure?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Fingerprint learning",
+      "b": "Load Check",
+      "c": "Relevant defense",
+      "d": "Session check"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is a method to prevent Tracert packet attacks?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Discard IP packets with time offset",
+      "b": "Discard the detected ICMP messages or UDP messages that have expired, or the destination port is unreachable.",
+      "c": "Users can configure the maximum length of ICP packets allowed to pass according to actual network needs. When the length of the actual IP packet exceeds this value, the packet will be discarded.",
+      "d": "Discard ICMP unreachable messages and record attack logs"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is not the responsibility of the Anti-DDos defense system management center?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Security report analysis",
+      "b": "Device Management",
+      "c": "Issue defense strategies",
+      "d": "Carry out traffic diversion"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of URL classification is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Custom URL classification requires manual configuration by the administrator.",
+      "b": "The predefined URL categories are preset at the factory and do not require the administrator to manually load them.",
+      "c": "Predefined URL categories cannot be created, deleted, or renamed",
+      "d": "Predefined URL categories have higher priority than custom URL categories"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of keywords in content filtering is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Regular expression matching is more flexible and efficient than text matching, but the configuration needs to follow the regular expression rules.",
+      "b": "Keywords include predefined keywords and custom keywords",
+      "c": "Predefined keywords are keywords that are manually defined by the administrator and can be identified",
+      "d": "The minimum length of keywords that can be matched by text and regular expressions is 3 bytes."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "If the administrator needs to set some signature actions to be different from the signature filter, you can configure exception signatures.\n\nWhich of the following is not an exception signature action?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "release",
+      "b": "Block and isolate high-source IP addresses",
+      "c": "Block after alarm and exceeding the threshold",
+      "d": "Block and isolate the destination IP"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions of IPS top definition signatures is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The content of predefined signatures is not fixed and can be created, modified or deleted.",
+      "b": "When the action of the predefined signature is blocking, block the packets that hit the signature and record the log.",
+      "c": "When the action of the predefined signature is release, the packets that hit the signature will be released and no log will be recorded.",
+      "d": "When the action of the predefined signature is alarm, the packets that hit the signature will be released, but the log will be recorded."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "IPS (Intrusion Prevention System) is an application layer security device that can identify network attacks based on which of the following?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Port number",
+      "b": "Destination IP address",
+      "c": "Feature library",
+      "d": "Source IP address"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following commands can be used to check the CPU and memory utilization of the current process on the Linux host?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "iostat",
+      "b": "top",
+      "c": "df-h",
+      "d": "free"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In order to determine whether the Linux host has been added to a path other than the system default or normal business program registration, which environment variable of the Linux system can be checked?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "$HOSTNAME",
+      "b": "$SHELL",
+      "c": "$HOME",
+      "d": "$PATH"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of HWTACACS protocol features is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Use shared key encryption, but only encrypt the password field in the authentication message.",
+      "b": "Supports authorized use of configuration commands on the device, mostly used for device authentication",
+      "c": "Based on TCP transport layer protocol, network transmission reliability is high",
+      "d": "Authentication, authorization and accounting functions are separated, so authentication, authorization and accounting services can be deployed on different servers respectively."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "When configuring authentication rules on iMaster NCE-Campus, which of the following types of authentication methods is not supported as a matching condition?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Device Management Certification",
+      "b": "Wireless user authentication",
+      "c": "User access authentication",
+      "d": "MAC authentication"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which authentication method is generally used in situations where new networks are built, users are concentrated, and information security requirements are strict?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Portal certification",
+      "b": "802.1x authentication",
+      "c": "MAC priority Porta1 authentication",
+      "d": "MAC authentication"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following statements about the features of the firewall hot standby system version upgrade is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "When a bug occurs in the live network fire protection system version, the system version needs to be upgraded.",
+      "b": "When the existing network fire protection system version does not support certain features, the system version needs to be upgraded.",
+      "c": "Version upgrade has requirements for the device model and version before the upgrade",
+      "d": "When upgrading the dual-machine hot audio version, the rule of thumb is to upgrade the Active device first, and then upgrade the Standby device."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of outbound traffic in the firewall virtual system is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Traffic flowing from the private network interface to the public network interface is limited by the bandwidth in the inbound direction.",
+      "b": "Traffic flowing from the public network interface to the private network interface is limited by the bandwidth in the inbound direction.",
+      "c": "Traffic flowing from the private network interface to the public network interface is limited by the outbound bandwidth.",
+      "d": "Traffic flowing from the public network interface to the private network interface is limited by the outbound bandwidth."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about virtual system offloading is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "When the interface works at Layer 2, VLAN-based traffic distribution is used.",
+      "b": "When the interface works at Layer 3, the interface-based offloading method is adopted.",
+      "c": "Through offloading, packets entering the device can be sent to the correct virtual system for processing.",
+      "d": "When using interface-based offloading, the management port can be assigned to a designated virtual system."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is not an implementation process of bandwidth management?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Bandwidth channel",
+      "b": "Traffic Analysis",
+      "c": "Interface speed limit",
+      "d": "Bandwidth policy"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following descriptions of policy routing execution actions is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Unable to forward traffic to other virtual systems according to policy routing",
+      "b": "Policy routing is not required and forwarding is performed according to the existing routing table.",
+      "c": "Use the intelligent routing function to select one outbound interface from multiple outbound interfaces to send messages.",
+      "d": "Send the packet to the specified next-hop device or send the packet from the specified outbound interface"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following prevention technologies can Huawei firewalls adopt?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Source detection",
+      "b": "Fingerprint prevention",
+      "c": "The first packet is discarded",
+      "d": "Current limiting"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following is the correct ordering of URL matching methods?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Exact matching > Suffix matching > Prefix matching > Keyword matching",
+      "b": "Prefix matching > Suffix matching > Keyword matching > Exact matching",
+      "c": "Keyword matching > Suffix matching > Suffix matching > Exact matching",
+      "d": "Keyword matching>Prefix matching>Suffix matching>Exact matching"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following descriptions of the email content filtering operating mechanism is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The firewall first needs to identify the traffic to be filtered based on matching conditions.",
+      "b": "When a POP3 or IMAP message is detected, if it is determined to be an illegal email, the firewall's response action can be to send an alarm message or block the email.",
+      "c": "Email content filtering is only detected in the outbound direction",
+      "d": "After the firewall filters out email traffic, it then checks the email address and attachment size to identify illegal emails."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is not an abnormality in the file type identification results?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "File extension mismatch",
+      "b": "The file type cannot be recognized",
+      "c": "File corruption",
+      "d": "The file is compressed"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "The administrator has defined two keywords that need to be identified on the firewall. The keyword administrator has defined two keywords that need to be identified on the firewall. The weight value of keyword X is 2 and the weight value of keyword Y is 3. The alarm threshold for content filtering is defined as 5 and the blocking threshold is 10. If the device detects that the keyword X exists once and the keyword Y twice exists in the webpage browsed by the user.\n\nRegarding the weight value and the behavior of users accessing web pages, which of the following statements is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The weight value is 8 and you can access the web page",
+      "b": "The weight value is 10 and the web page cannot be accessed.",
+      "c": "The weight value is 8 and the web page cannot be accessed.",
+      "d": "The weight value is 10 and you can access the web page"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "WAF device’s working mode does not include which of the following?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Forward proxy",
+      "b": "Reverse proxy",
+      "c": "Bridge mode",
+      "d": "Transparent proxy"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "WAF devices can effectively and accurately resist CC attacks. Which of the following descriptions of CC attacks is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CC attack is a type of DDoS attack",
+      "b": "The attack cost of CC attacks is relatively high, and launching an attack requires a large amount of bandwidth resources.",
+      "c": "CC attacks can use proxy servers to launch attacks, making it difficult to trace the source of the attack.",
+      "d": "CC attacks are mainly used to attack web servers, causing server resources to be exhausted and even shut down."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "There is a log message in the firewall device, as shown below:\n\nJun 1 2022 14:27:01 FV3 %%01UPDATE/3/1LOAD_FALL (1) [182]: Failed to load the signature database. (SyslogId=0, Module-IP-RIPUTATION, Slot=11, CFU=0, LoadVersion=, Duration (s) =0, Reason=\"No SDB version is available for loading\").\n\nWhich of the following does the \"UPDATE\" field in this log represent?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Summary of log information",
+      "b": "Log description information",
+      "c": "Log level",
+      "d": "The functional module that generated the log"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which item does the authentication protocol of Portal authentication not include?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "EAP protocol",
+      "b": "HTTP protocol",
+      "c": "Portal protocol",
+      "d": "HTTPS protocol"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The LDAP protocol is based on the Client/Server structure to provide binding and query of directory information. All directory information is stored on the LDAP server. In the LDAP protocol, the directory is organized according to a tree structure. The directory is composed of entries, and the entries are attribute sets with distinguished names (DN).\n\nWhich of the following is a domain name attribute of LDAP?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "DC",
+      "b": "CN",
+      "c": "OU",
+      "d": "DN"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Use iNaster NCE-Campus as the Portal server and deploy Portal authentication on the Huawei wireless controller. Which configuration is not necessary?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "URL template",
+      "b": "Certification Template",
+      "c": "Portal authentication template",
+      "d": "MAC authentication template"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "In the MAC address authentication scenario, the user does not need to manually enter the user name and password. Which of the following is used as the authenticated user name?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Account number",
+      "b": "IP address",
+      "c": "Interface number",
+      "d": "MAC address"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions about Huawei IPS equipment upgrade is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Upgrading the signature database of Huawei IPS does not require license authorization.",
+      "b": "Upgrading the system version of Huawei IPS will take effect without restarting the device.",
+      "c": "Upgrading the signature database of Huawei IPS requires restarting the device to take effect.",
+      "d": "Upgrade the Huawei IPS signature database to take effect without restarting the device."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of policy routing matching rules is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "When configuring multiple policy routing rules, the policy routing list is arranged in the order of configuration by default.",
+      "b": "If multiple values can be configured in a matching condition, and there is an \"OR\" relationship between the multiple values, as long as the attributes of the message match any one value, the attributes of the message are considered to match this condition.",
+      "c": "Each policy route contains only one matching condition",
+      "d": "There is a default policy route default in the system by default. The default policy route is at the bottom of the policy list and has the lowest priority. All matching conditions are any and the action is no policy routing."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following parameters is not a condition for link quality check?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Delay",
+      "b": "Bandwidth",
+      "c": "Jitter",
+      "d": "Packet loss rate"
+    },
+    "answer": "¿b"
+  },
+  {
+    "question": "Which of the following is not a functional feature of AH?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Integrity check",
+      "b": "Anti-replay",
+      "c": "Data source verification",
+      "d": "Data encryption"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is a probe protocol that health checks cannot support?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "RADIUS",
+      "b": "CHCMP",
+      "c": "DNS",
+      "d": "UDP"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions about guaranteed bandwidth and maximum bandwidth is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Guaranteed bandwidth and maximum bandwidth can be set on a per-IP/user basis",
+      "b": "If the traffic is greater than the maximum bandwidth, directly discard the traffic exceeding the maximum bandwidth.",
+      "c": "If the traffic is less than the guaranteed bandwidth, this part of the traffic will compete freely with the same type of traffic in other bandwidth channels on the outbound interface for bandwidth resources.",
+      "d": "Guaranteed bandwidth and maximum bandwidth settings for IP or users can achieve more detailed bandwidth restrictions"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about deploying a firewall virtual system is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "A resource class can be bound to multiple virtual systems at the same time",
+      "b": "You can view the created virtual systems and allocated resources in the \"Virtual System List\"",
+      "c": "Configure the resource class first, and then enable the virtual system for binding",
+      "d": "Resource class r0 is bound to the root system by default and cannot be deleted or modified."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "As shown in the figure, the firewall load balancing network is used, and the upstream and downstream devices are switches.\n\nWhich of the following descriptions of the firewall VGMP group status in this scenario is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Firewall A: Active, Firewall B: Standby",
+      "b": "Firewall A: Master, Firewall B: Backup",
+      "c": "Firewall A: Master, Firewall B: Master",
+      "d": "Firewall A: Active, Firewall B: Active"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is not part of the consistency check of dual-machine hot standby?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Interface address",
+      "b": "NAT configuration",
+      "c": "Bandwidth Policy",
+      "d": "Security policy"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "As shown in the figure, the firewall is deployed as a gateway dual-machine hot standby, and the upstream and downstream devices are switches.\nTo achieve round-trip traffic load balancing, at least how many VRRP backup groups need to be configured in this scenario?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "4",
+      "b": "6",
+      "c": "2",
+      "d": "3"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "When a visitor accesses the corporate network through Portal authentication, in order to ensure a good visitor experience, the visitor is required to open the wireless network range for a short period of time. When re-entering, there is no need to enter the username and password again and they can directly access the network.\n\nWhich of the following access methods can meet the above requirements?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "MAC bypass authentication",
+      "b": "MAC authentication",
+      "c": "MAC priority Portal authentication",
+      "d": "802.1X authentication"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "When using an LDAP server as the authentication server, if you want to perform user authentication, which of the following operations needs to be performed on the data of the LDAP server?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Query class",
+      "b": "Delete class",
+      "c": "Writing class",
+      "d": "Update class"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "When using an LDAP server as the authentication server, which of the following protocols is used for the interaction between the device and the server?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "RADIUS protocol",
+      "b": "HTTP protocol",
+      "c": "LDAP protocol",
+      "d": "EAP protocol"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "If you want to control users’ forum postings, user logins, etc., which of the following HTTP behavior controls should be configured?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "POST operation",
+      "b": "Redirect",
+      "c": "File upload",
+      "d": "File download"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "A user uses SSL to access network resources on the intranet. The administrator has enabled file sharing and web proxy services for the user, and has allowed the traffic of the service on the firewall. However, after the user enters the address of the virtual gateway on the PC, the web page fails. I cannot see the list of file shares and web proxies. Which of the following options may cause this failure?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The virtual gateway’s external NAT port is wrong.",
+      "b": "Has the virtual IP address been obtained from the virtual network card of the user's PC?",
+      "c": "The administrator does not have the authorization to configure file sharing and web proxy for the user",
+      "d": "The route between the firewall and the client is unreachable"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "How many levels of bandwidth policies does the firewall support?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "2",
+      "b": "5",
+      "c": "4",
+      "d": "3"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following resources belongs to the quota resources allocated to the virtual system?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Number of strategies",
+      "b": "VLAN",
+      "c": "Interface",
+      "d": "Safe area"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions about bandwidth resource allocation is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Which type of bandwidth resource limits a data flow is subject to depends on the outgoing interface or incoming interface of the traffic.",
+      "b": "The public network interface refers to the interface connecting to the Internet",
+      "c": "Bandwidth resources in the resource category are divided into three categories: inbound bandwidth, outbound bandwidth and overall bandwidth.",
+      "d": "In the cross-virtual system forwarding scenario, the Virtual-if interface defaults to the public network interface."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "When a visitor comes to the enterprise, while facilitating visitor access, it is necessary to control the visitor's access behavior.\n\nFor this kind of visitor scenario, which of the following authentication methods is generally recommended?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "MAC bypass authentication",
+      "b": "Portal authentication",
+      "c": "802.1X authentication",
+      "d": "MAC authentication"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following descriptions of the RADIUS and HWTACACS protocols is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "All use shared keys to encrypt transmitted user information",
+      "b": "Both have good flexibility and scalability",
+      "c": "The structure adopts client/server model.",
+      "d": "All support the authorization of configuration commands on the device."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions about Portal authentication is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Portal authentication can be triggered in two ways: active authentication and passive authentication. Active authentication is initiated by the client, and passive authentication is initiated by the authentication server.",
+      "b": "Under normal circumstances, the client does not need to install additional software and authenticates directly on the Web page, which is simple and convenient.",
+      "c": "The Portal server can be an independent entity outside the access device (external Portal server), or it can be an embedded entity that exists within the access device (built-in Portal server)",
+      "d": "The Portal authentication system mainly includes four basic elements, client, access device, Portal server and authentication server"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Among the following descriptions of IPS signature types, which signature type has the highest action priority?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Exception signature",
+      "b": "Custom signature",
+      "c": "Predefined signature",
+      "d": "Signature filter"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In the URL filtering process, which of the following actions is performed as the first step?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Detect HTTP message anomalies",
+      "b": "Match black and white lists",
+      "c": "Remote query",
+      "d": "Match URL classification"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following attacks does not expose network topology information?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Tracert message attack",
+      "b": "Attacker side of IP packets with routing record entries",
+      "c": "Scanning attack",
+      "d": "Teardrop"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of the ATIC system architecture is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ATIC software consists of three parts: management server, collector and controller",
+      "b": "A management center can centrally manage multiple detection and cleaning equipment distributed in multiple regions.",
+      "c": "Seco Manager uses B/S architecture as the management center",
+      "d": "ATIC management server mainly manages detection and cleaning center equipment"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following descriptions of Web Link in web proxy is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "There is a page compatibility issue, and images may be misaligned.",
+      "b": "The URL will not be rewritten, which will expose the real address of the intranet server.",
+      "c": "There are certain security risks",
+      "d": "Depends on IE controls and cannot be used normally in non-IE environments"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following descriptions of smart DNS is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "By configuring the smart DNS function, the firewall can intelligently modify the resolution address in the DNS response message so that the user can obtain the most appropriate resolution address, that is, an address that belongs to the same ISP network as the user.",
+      "b": "Intelligent DNS supports weighted polling to achieve link load balancing",
+      "c": "Smart DNS does not need to be combined with other technologies and can be used alone",
+      "d": "Smart DNS is divided into two scenarios: single-server smart DNS and multi-server smart DN"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Each bandwidth policy that references a bandwidth channel is independently constrained by the bandwidth channel, that is, traffic that meets the matching conditions of the bandwidth policy has exclusive access to the maximum bandwidth resource.\n\nWhich of the following options belongs to this bandwidth channel reference method?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Broadband sharing",
+      "b": "Bandwidth multiplexing",
+      "c": "Broadband exclusive",
+      "d": "Dynamic equalization"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about dual-machine hot standby is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "In a load-sharing network, the configuration command can be backed up from \"Configure Standby Device\" to \"Configure Primary Device\"",
+      "b": "In an active-standby backup network, configuration commands and status information are backed up from the active device to the standby device.",
+      "c": "In load-sharing mode networking, traffic is processed by two devices, which can bear greater peak traffic than active-standby backup mode or mirroring mode networking.",
+      "d": "In a load-sharing network, both firewalls are active devices. Therefore, if the two active devices are allowed to back up each other's commands, it may cause the problems of mutual overwriting or conflict between the commands of the two devices."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "As shown in the figure, the primary and secondary backup networking based on VRRP is wrong. In the following description of this scenario, which one is wrong?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "In order to ensure the consistency of link switching, the firewall implements device status management based on VGMP groups.",
+      "b": "The configuration and status information of firewall A is backed up to firewall B in real time through the GE0/0/3 interface.",
+      "c": "Dual-machine hot backup can improve network reliability",
+      "d": "The firewall GE0/0/1 interface is the heartbeat interface, and the connected line is the heartbeat line."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In which of the following access authentication methods, the terminal must obtain an IP address before authentication?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "802.1×Authentication",
+      "b": "Portal",
+      "c": "MAC authentication",
+      "d": "MAC bypass authentication"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In Huawei's admission control solution, after the access device receives the CoA-Roquest message or DM-Requst message from the RADTUS server, which RADIUS attribute in the message is used to identify the user?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "called-Station-ld",
+      "b": "Filter-ld",
+      "c": "NAS-IP-Address",
+      "d": "calling-Station-ld"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In the 802.1X authentication scenario, the access device directly encapsulates the EAPoL packet sent by the 802.1X client into a RADIUS packet, without processing the data in the EAP.\n\nWhich of the following authentication methods meets the above description?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "EAP termination",
+      "b": "MAC-based authentication",
+      "c": "Interface-based authentication",
+      "d": "EAP relay"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Common Vulnerability Scoring System (CVSS) is a widely used open standard for vulnerability scoring and adopts a modular scoring system. Which of the following does not include?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Environmental dimension",
+      "b": "Time dimension",
+      "c": "Basic dimensions",
+      "d": "Spatial dimensions"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Malicious URLs refer to URLs that contain malicious information. Which of the following is not the source of malicious URLs?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Malicious URLs reported by the sandbox",
+      "b": "Malicious URLs reported by the intrusion prevention function",
+      "c": "URLs included in local reputation",
+      "d": "Malicious URLs reported by the anti-virus function"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "As shown in the figure, which one of the following descriptions of dual-machine hot standby based on transparent mode is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Since the service interface of the firewall works on the second layer, it cannot run services related to IP addresses.",
+      "b": "In this network, the firewall is transparently connected to the original switch network without changing the network topology.",
+      "c": "It is recommended that this network work in load sharing mode to share user traffic",
+      "d": "By default, the status of any VLAN will not be adjusted based on the VGMP group status."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about the characteristics of Eth-Trunk is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Eth-Trunk can be a Layer 2 interface or a Layer 3 interface.",
+      "b": "Eth-Trunk is a logical interface",
+      "c": "There are at least 2 Eth-Trunk member links",
+      "d": "There is at least 1 active Eth-Trunk link"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions of virtual interfaces is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Mutual access between virtual systems is achieved through virtual interfaces",
+      "b": "The link layer and protocol layer of the virtual interface are always UP",
+      "c": "The virtual interface of the root system is Virtual-if1",
+      "d": "The format of the virtual interface is \"Virtual-if+interface number\""
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about the restrictions on the use of virtual systems is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "As long as the system software is upgraded in the root system",
+      "b": "If the interface has been configured with an IP address, it will be cleared when assigned to a virtual",
+      "c": "Management ports cannot be assigned to virtual systems",
+      "d": "The virtual system administrator can log in to the device through the Console port."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "When IPSec uses certificate authentication, it is necessary to verify the legitimacy of the peer certificate. Which of the following is not a factor that needs to be considered to verify the legitimacy of the certificate?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Whether the certificate is applied for in the same way",
+      "b": "Whether the certificate is within the validity period",
+      "c": "Whether the certificate is located in the CRL repository",
+      "d": "Whether the certificate is issued by the same CA"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "As shown in the figure, IPSec tunnels are established between the headquarters and branches. To achieve IPSec traffic load sharing, at least how many IPSec tunnels need to be established?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "4",
+      "d": "3"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "An enterprise has multiple branches. The exit IP address of the headquarters is fixed, but the exit IP addresses of the branches are random. An IPSec VPN needs to be established between the headquarters and branches. In order to reduce management and maintenance costs, which of the following is appropriate? How to configure IPSec VPN?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Headquarters and branches adopt a point-to-point approach",
+      "b": "Both the headquarters and branches adopt the strategic model approach",
+      "c": "The headquarters adopts the policy template method, and the branches adopt the point-to-point method.",
+      "d": "The headquarters and branches adopt IKE v2 method"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about HTTP Flood defense is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "If the free proxy used during the attack supports the redirection function, the basic mode defense will be ineffective.",
+      "b": "The source authentication defense method is to defend against HTTP",
+      "c": "Defense based on enhanced mode can determine whether the TTP access is initiated by a real user by asking the user to enter a verification code.",
+      "d": "Defense based on basic mode cannot effectively prevent access from non-browser clients"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of cleaning centers is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Back-injection methods include: policy routing back-injection, static route back-injection, VPN back-injection and Layer 2 back-injection.",
+      "b": "The cleaning device supports rich and flexible attack prevention technologies, but cannot defend against CC attacks and ICMP Flood attacks.",
+      "c": "There are two methods of traffic diversion: static traffic diversion and dynamic traffic diversion.",
+      "d": "The cleaning center completes functions such as diversion and cleaning of abnormal traffic, and reinjection of cleaned traffic."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "When a firewall performs email filtering, which of the following email transfer protocols does it support?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SMTPS",
+      "b": "SMTP",
+      "c": "P0P3",
+      "d": "IMAP"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "IPS devices work based on specific intrusion prevention mechanisms. Which of the following is the correct ranking of intrusion prevention mechanisms?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Feature matching->Reorganize application data->Protocol identification and protocol parsing->Response processing",
+      "b": "Reorganize application data->Protocol identification and protocol parsing->Feature matching->Response processing",
+      "c": "Reorganize application data->Feature matching->Protocol identification and protocol parsing->Response processing",
+      "d": "Protocol identification and protocol parsing->Reorganize application data->Feature matching->Response processing"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "When using iMaster NCE-Campus as the Portal server, in order to allow iMaster NCE-Campus to match the corresponding Portal page according to the user's IP address.\n\nWhen configuring the URL template on the access device, which of the following URL parameters need to be configured?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ssid",
+      "b": "device-mac",
+      "c": "user-mac",
+      "d": "user-ipaddress"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "To implement the access control function through Huawei iMaster NCE-Campus controller, which of the following is not required for authentication and authorization configuration?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Certification results",
+      "b": "Authorization results",
+      "c": "Certification rules",
+      "d": "Authorization rules"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following descriptions about 802.1× authentication is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "In EAP termination mode, EAP messages are directly encapsulated into RADIUS",
+      "b": "The 802.1X authentication method is divided into EAP relay method and EAP termination method. In comparison, EAP relay method supports more authentication methods.",
+      "c": "The 802.1X authentication system uses the EAP protocol to realize information exchange between the client, device and authentication server.",
+      "d": "In the 802.1X authentication method, the client must support the 802.1x protocol."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is not a function of the Anti-DDoS Management Center?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Performance management",
+      "b": "Strategic Management",
+      "c": "Alarm management",
+      "d": "Traffic detection"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following descriptions of the network expansion process in SSL VPN is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The remote user's local PC will automatically generate a virtual network card. The virtual gateway randomly selects an IP address from the address pool and assigns it to the remote user's virtual network card.",
+      "b": "The remote user sends a service request message to the server on the enterprise intranet, and the message reaches the virtual gateway through the SSL VPN tunnel.",
+      "c": "In reliable transmission mode, SSL VPN uses SSL protocol to encapsulate messages and uses UDP protocol as the transmission protocol",
+      "d": "After the network expansion function is triggered, an SSL VPN tunnel needs to be established between the remote user and the virtual gateway first."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Use IKE v1 main mode to establish an IPSec VPN. After detecting the presence of a NAT device, which of the following ISAKMP messages will be followed by port number conversion?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Message 5",
+      "b": "Message 6",
+      "c": "Message 3",
+      "d": "Message 4"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "As shown in the figure, enterprise A and enterprise B need to communicate securely, and an IPSec tunnel is established between firewall A and firewall B. Which of the following security protocols and encapsulation modes can meet the needs of this scenario?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "AH, tunnel mode",
+      "b": "ESP, tunnel mode",
+      "c": "ESP, transmission mode",
+      "d": "AH+ESP, transmission mode"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The network architecture of an enterprise is as shown in the figure below. Portal authentication is deployed on SW2. Its authentication-free template is as shown in the figure. Which of the following descriptions is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "At this time, the terminal can open the authentication interface.",
+      "b": "At this time, the terminal can ping its own gateway.",
+      "c": "At this time, the terminal can perform DNS resolution normally.",
+      "d": "At this time, the terminal can be redirected to the authentication interface by entering the URL in the browser."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following descriptions about virtual system resource allocation is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Unreasonable resource allocation may cause other virtual systems to be unable to obtain resources and the business to be unable to operate normally.",
+      "b": "Quota resources automatically allocate a fixed number of resources directly according to system specifications.",
+      "c": "When the administrator manually allocates resources to the virtual system, he first needs to configure the C resource class and specify the guaranteed value and maximum value of each resource item in the resource class, and then bind the source class to the virtual system",
+      "d": "Each virtual system can share and seize the entire machine resources, but they can be allocated manually."
+    },
+    "answer": "d"
+  }
+]

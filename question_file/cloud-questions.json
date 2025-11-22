@@ -1,0 +1,312 @@
+[
+  {
+    "question": "Cloud computing allows on-demand access to shared computing resources over the network.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "One of the driving forces for cloud migration is the need to reduce hardware procurement cycles.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Huawei Cloud infrastructure includes availability zones and regions.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Elasticity in cloud computing refers to the ability to automatically scale resources based on demand.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Cloud migration eliminates the need for data backup.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Reliability is one of the core principles of Huawei Cloud architecture design.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The public cloud allows multiple tenants to share the same physical hardware securely.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Cloud services reduce the burden on enterprises to maintain physical infrastructure.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "High availability means that a service can survive single-point failures.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Migrating to the cloud guarantees zero downtime.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is not a type of cloud deployment model?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Mobile cloud",
+      "b": "Private cloud",
+      "c": "Public cloud",
+      "d": "Hybrid cloud"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is the main benefit of elasticity in cloud computing?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Automatic resource scaling",
+      "b": "Faster user authentication",
+      "c": "Cheaper storage devices",
+      "d": "More programming languages"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which part of Huawei Cloud architecture groups multiple data centers within a region?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Availability Zones",
+      "b": "Edge nodes",
+      "c": "Cloud containers",
+      "d": "Hypervisors"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following is a key force driving cloud migration?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Faster service rollout",
+      "b": "Increased hardware size",
+      "c": "Reduced employee count",
+      "d": "More office space"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which principle focuses on preventing service interruption?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Reliability",
+      "b": "Security",
+      "c": "Manageability",
+      "d": "Cost-effectiveness"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which service model offers complete applications over the internet?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SaaS",
+      "b": "IaaS",
+      "c": "PaaS",
+      "d": "DBaaS"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which Huawei Cloud component ensures disaster recovery across zones?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Multi-AZ deployment",
+      "b": "VPC",
+      "c": "Load balancer",
+      "d": "Security group"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The core goal of scalability in cloud design is to improve:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Resource expansion ability",
+      "b": "Security",
+      "c": "User interface",
+      "d": "Network speed"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following describes the public cloud?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Provided by third-party vendors to multiple customers",
+      "b": "Used only by one organization",
+      "c": "Combines public and private resources",
+      "d": "Operates offline only"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which principle ensures user data and systems are protected?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Security",
+      "b": "Availability",
+      "c": "Elasticity",
+      "d": "Agility"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following are benefits of cloud computing?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Elastic scaling",
+      "b": "Faster deployment",
+      "c": "Reduced O&M costs",
+      "d": "No internet needed"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which items are part of Huawei Cloud infrastructure?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Regions",
+      "b": "Availability Zones",
+      "c": "Virtual Private Cloud",
+      "d": "USB storage servers"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Cloud migration helps organizations achieve:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Lower capex costs",
+      "b": "Improved service availability",
+      "c": "Faster innovation cycles",
+      "d": "Unlimited physical server capacity"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "The five architecture design principles include:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Reliability",
+      "b": "Scalability",
+      "c": "Security",
+      "d": "Automation"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which characteristics describe cloud elasticity?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Scaling resources up based on demand",
+      "b": "Scaling resources down automatically",
+      "c": "Permanent resource allocation",
+      "d": "Manual hardware purchase"
+    },
+    "answer": ["a", "b"]
+  },
+  {
+    "question": "To achieve high availability, a system must:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Run across multiple availability zones",
+      "b": "Use fault-tolerant designs",
+      "c": "Eliminate single points of failure",
+      "d": "Avoid any network connection"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which cloud service models were mentioned in the document?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "IaaS",
+      "b": "PaaS",
+      "c": "SaaS",
+      "d": "NaaS"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which of the following improve cloud security?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Identity and access control",
+      "b": "Data encryption",
+      "c": "Network isolation",
+      "d": "Public Wi-Fi exposure"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "A well-designed cloud architecture should address:",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Manageability",
+      "b": "Cost optimization",
+      "c": "Availability",
+      "d": "Manual server installations"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which components support cloud disaster recovery?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Multi-region deployment",
+      "b": "Data backup",
+      "c": "Load balancing",
+      "d": "Local-only deployment"
+    },
+    "answer": ["a", "b", "c"]
+  }
+]
