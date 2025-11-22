@@ -6,6 +6,7 @@ const encodedKey = new TextEncoder().encode(JWT_SECRET);
 
 export interface TokenPayload {
   userId: string;
+  username?: string;
   role: 'admin' | 'teacher' | 'student';
   iat?: number;
   exp?: number;
@@ -54,7 +55,35 @@ export async function setAuthCookie(token: string) {
 export async function getCurrentUser() {
   const token = await getTokenFromCookies();
   if (!token) return null;
-  return await verifyToken(token);
+
+  const payload = await verifyToken(token);
+  if (!payload) return null;
+
+  // If username is already in token, return payload
+  if (payload.username) {
+    return payload;
+  }
+
+
+  // Otherwise, fetch username from database
+  try {
+    const { connectDB } = await import('./db');
+    const { User } = await import('./schemas/user.schema');
+
+    await connectDB();
+    const user = await User.findById(payload.userId).select('username');
+
+    if (user) {
+      return {
+        ...payload,
+        username: user.username
+      };
+    }
+  } catch (error) {
+    console.error('Error fetching username:', error);
+  }
+
+  return payload;
 }
 
 export async function removeAuthCookie() {

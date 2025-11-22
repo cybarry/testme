@@ -1,44 +1,39 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+// app/exam/[examId]/page.tsx
+import { notFound } from 'next/navigation';
 import { ExamInterface } from '@/components/exam/exam-interface';
+import { ExamErrorBoundary } from '@/components/exam/exam-error-boundary';
+import { getCurrentUser } from '@/lib/auth';
 
-interface PageProps {
-  params: { examId: string };
+interface ExamPageProps {
+  params: Promise<{ examId: string }>;
 }
 
-export default function ExamPage({ params }: PageProps) {
-  const [exam, setExam] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState('');
+export default async function ExamPage({ params }: ExamPageProps) {
+  const { examId } = await params;
+  const user = await getCurrentUser();
 
-  useEffect(() => {
-    const fetchExam = async () => {
-      try {
-        const response = await fetch(`/api/exam/${params.examId}`);
-        if (!response.ok) {
-          setError('Exam not found or not published');
-          return;
-        }
-        const data = await response.json();
-        setExam(data.exam);
-      } catch (err) {
-        setError('Failed to load exam');
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  try {
 
-    fetchExam();
-  }, [params.examId]);
+    if (!examId) {
+      return <ExamErrorBoundary />;
+    }
 
-  if (isLoading) {
-    return <div className="flex items-center justify-center min-h-screen text-foreground">Loading exam...</div>;
+    // Security: Only students can take exams
+    if (!user || user.role !== 'student') {
+      return <ExamErrorBoundary message="You must be logged in as a student to take this exam." />;
+    }
+
+
+  } catch (err: any) {
+    console.log(err)
+    return <ExamErrorBoundary message={err.message} />;
   }
 
-  if (error || !exam) {
-    return <div className="flex items-center justify-center min-h-screen text-error">{error}</div>;
-  }
 
-  return <ExamInterface exam={exam} />;
+  return (
+    <ExamInterface
+      examId={examId}
+      studentName={user.username || 'Student'}
+    />
+  );
 }

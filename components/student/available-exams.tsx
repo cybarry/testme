@@ -9,7 +9,7 @@ interface Exam {
   title: string;
   description: string;
   duration: number;
-  questions: any[];
+  numberOfQuestion: any[];
 }
 
 export function AvailableExams() {
@@ -52,7 +52,7 @@ export function AvailableExams() {
                   <p className="text-sm text-muted mt-1">{exam.description}</p>
                 )}
                 <div className="flex gap-4 mt-3 text-sm text-muted">
-                  <span>{exam.questions?.length || 0} Questions</span>
+                  <span>{exam.numberOfQuestion || 0} Questions</span>
                   <span>{exam.duration} Minutes</span>
                 </div>
               </div>

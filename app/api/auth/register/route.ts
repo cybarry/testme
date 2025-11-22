@@ -1,46 +1,84 @@
+// app/api/auth/register/route.ts
 import { connectDB } from '@/lib/db';
 import { User } from '@/lib/schemas/user.schema';
 import { NextRequest, NextResponse } from 'next/server';
+import bcrypt from 'bcryptjs';
+import { z } from 'zod';
+
+// Zod schema — strict validation
+const registerSchema = z.object({
+  username: z
+    .string()
+    .min(3, 'Username must be at least 3 characters')
+    .max(30, 'Username too long')
+    .regex(/^[a-zA-Z0-9_]+$/, 'Only letters, numbers, and underscores allowed'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
+  role: z.enum(['student']).optional().default('student'), // Only student allowed
+});
 
 export async function POST(request: NextRequest) {
   try {
     await connectDB();
-    
-    const { username, password, role } = await request.json();
-    
-    if (!username || !password) {
+
+    const body = await request.json();
+
+    // Validate input
+    const parsed = registerSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: 'Username and password are required' },
+        { error: parsed.error.errors[0].message },
         { status: 400 }
       );
     }
-    
-    // Check if user exists
-    const existingUser = await User.findOne({ username });
+
+    const { username, password, role } = parsed.data;
+
+    // Block any attempt to register as teacher/admin
+    if (role !== 'student') {
+      return NextResponse.json(
+        { error: 'Only student registration is allowed.' },
+        { status: 403 }
+      );
+    }
+
+    // Normalize username (lowercase for consistency)
+    const normalizedUsername = username.toLowerCase();
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ username: normalizedUsername });
     if (existingUser) {
       return NextResponse.json(
-        { error: 'Username already exists' },
+        { error: 'Username already taken.' },
         { status: 409 }
       );
     }
-    
-    // Create new user
+
+    // Hash password securely
+    const salt = await bcrypt.genSalt(12); // 12 rounds = strong & fast enough
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Create user
     const user = new User({
-      username,
-      password,
-      role: role || 'student'
+      username: normalizedUsername,
+      password: hashedPassword,
+      role: 'student',
     });
-    
+
     await user.save();
-    
+
     return NextResponse.json(
-      { message: 'User registered successfully', userId: user._id },
+      {
+        message: 'Student account created successfully!',
+        userId: user._id,
+      },
       { status: 201 }
     );
-  } catch (error) {
-  console.error('Registration error:', error);
+  } catch (error: any) {
+    console.error('Registration error:', error);
+
+    // Hide internal errors from user
     return NextResponse.json(
-      { error: 'Registration failed' },
+      { error: 'Registration failed. Please try again later.' },
       { status: 500 }
     );
   }

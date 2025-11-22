@@ -13,7 +13,10 @@ export async function GET(request: NextRequest) {
     
     await connectDB();
     
-    const results = await Score.find({ studentId: currentUser.userId })
+    const results = await Score.find({ 
+      studentId: currentUser.userId,
+      status: 'finished'
+    })
       .populate('examId')
       .sort({ completedAt: -1 });
     

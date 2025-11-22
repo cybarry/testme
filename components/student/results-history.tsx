@@ -61,7 +61,7 @@ export function ResultsHistory() {
         >
           <CardContent className="p-4 flex items-center justify-between">
             <div>
-              <p className="font-medium text-foreground">{result.examId.title}</p>
+              <p className="font-medium text-foreground">{result?.examId?.title}</p>
               <p className="text-sm text-muted">
                 {new Date(result.completedAt).toLocaleDateString()} at{' '}
                 {new Date(result.completedAt).toLocaleTimeString()}

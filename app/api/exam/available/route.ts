@@ -7,7 +7,6 @@ export async function GET(request: NextRequest) {
     await connectDB();
     
     const exams = await Exam.find({ published: true })
-      .populate('questions')
       .sort({ createdAt: -1 });
     
     return NextResponse.json({ exams }, { status: 200 });

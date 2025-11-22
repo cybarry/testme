@@ -12,10 +12,10 @@ const examSchema = new mongoose.Schema(
       ref: 'QuestionBank',
       required: true
     },
-    questions: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Question'
-    }],
+    numberOfQuestion: {
+      type: Number,
+      required: true
+    },
     duration: {
       type: Number,
       required: true
@@ -28,11 +28,15 @@ const examSchema = new mongoose.Schema(
       type: Number,
       default: 500
     },
+    maxAttempts: {
+      type: Number,
+      default: 3
+    },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true
-    }
+    },
   },
   { timestamps: true }
 );

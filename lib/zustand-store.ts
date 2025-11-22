@@ -7,7 +7,7 @@ export interface ExamState {
   answers: Record<string, any>;
   cheatingAttempts: number;
   terminatedForCheating: boolean;
-  
+
   setExamId: (id: string) => void;
   setCurrentQuestion: (index: number) => void;
   setRemainingTime: (time: number) => void;
@@ -24,8 +24,8 @@ export const useExamStore = create<ExamState>((set) => ({
   answers: {},
   cheatingAttempts: 0,
   terminatedForCheating: false,
-  
-  setExamId: (id: string) => set({ examId: id }),
+
+  setExamId: (id: string) => set(() => ({ examId: id })),
   setCurrentQuestion: (index: number) => set({ currentQuestionIndex: index }),
   setRemainingTime: (time: number) => set({ remainingTime: time }),
   recordAnswer: (questionId: string, answer: any) =>
@@ -52,7 +52,7 @@ export const useExamStore = create<ExamState>((set) => ({
 export interface AuthState {
   user: { id: string; role: 'admin' | 'teacher' | 'student' } | null;
   isLoading: boolean;
-  
+
   setUser: (user: AuthState['user']) => void;
   setLoading: (loading: boolean) => void;
   logout: () => void;
@@ -61,7 +61,7 @@ export interface AuthState {
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   isLoading: true,
-  
+
   setUser: (user) => set({ user, isLoading: false }),
   setLoading: (loading) => set({ isLoading: loading }),
   logout: () => set({ user: null })
