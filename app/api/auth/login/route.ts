@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
     );
 
     // Set secure HttpOnly cookie
-    await setAuthCookie(token, response); // pass response if needed
+    await setAuthCookie(token); // pass response if needed
 
     return response;
   } catch (error) {
