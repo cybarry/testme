@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import 'dotenv/config';
 
 if (!process.env.MONGODB_URI) {
   throw new Error('Please add your Mongodb URI to .env.local');
