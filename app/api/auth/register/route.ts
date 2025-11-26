@@ -53,14 +53,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Hash password securely
-    const salt = await bcrypt.genSalt(12); // 12 rounds = strong & fast enough
-    const hashedPassword = await bcrypt.hash(password, salt);
-
     // Create user
     const user = new User({
       username: normalizedUsername,
-      password: hashedPassword,
+      password: password,
       role: 'student',
     });
 
