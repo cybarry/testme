@@ -6,13 +6,15 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { bankId: string } }
+  { params }: { params: Promise<{ bankId: string }> }
 ) {
   try {
     await connectDB();
+
+    const { bankId } = await params;
     
-    const bank = await QuestionBank.findById(params.bankId);
-    const questions = await Question.find({ bankId: params.bankId });
+    const bank = await QuestionBank.findById(bankId);
+    const questions = await Question.find({ bankId: bankId });
     
     return NextResponse.json({ bank, questions }, { status: 200 });
   } catch (error) {

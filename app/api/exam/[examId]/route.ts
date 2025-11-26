@@ -111,7 +111,7 @@ export async function GET(
       }
     }, { status: 200 });
   } catch (error) {
-    console.log('Error fetching exam:', error.errors);
+    console.log('Error fetching exam:', error);
     return NextResponse.json({ error: 'Failed to fetch exam' }, { status: 500 });
   }
 }
