@@ -1,0 +1,1035 @@
+[
+  {
+    "question": "Which of the following services can be monitored by Cloud Eye?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Virtual Private Cloud (VPC)",
+      "b": "Elastic Cloud Server (ECS)",
+      "c": "Auto Scaling (AS)",
+      "d": "Elastic Load Balance (ELB)"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following statements about virtualization are incorrect?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "In cloud computing, virtualization at the IaaS layer consists of compute virtualization, storage virtualization, and network virtualization.",
+      "b": "Compute virtualization includes CPU virtualization, memory virtualization, and IO virtualization.",
+      "c": "Storage virtualization refers to distributed storage",
+      "d": "Network virtualization refers to distributed virtual switches."
+    },
+    "answer": [
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following are used to ensure the Elastic Volume Service (EVS) reliability?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Three copies of data",
+      "b": "Backups",
+      "c": "Snapshots",
+      "d": "Disk sharing"
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following are functions of Cloud Trace Service (CTS)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Trace recording",
+      "b": "Trace query",
+      "c": "Trace transfer",
+      "d": "Trace file encryption"
+    },
+    "answer": [
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following Elastic Volume Service (EVS) disk types are used by Elastic Cloud Servers (ECSs)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Common I/O",
+      "b": "High I/O",
+      "c": "Ultra-high I/O",
+      "d": "Local disks"
+    },
+    "answer": [
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following actions cannot resolve capacity insufficiency for Elastic Volume Service (EVS) disks?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Buy a new disk and attach it to the server.",
+      "b": "Expand the capacity of the existing disk.",
+      "c": "Clear up space on the existing disk.",
+      "d": "Set the existing disk as a shared disk."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following is provided with the initial capacity allocation policy of SmartTier?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Storage pool",
+      "b": "LUN",
+      "c": "Disk domain",
+      "d": "CKG"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "A tenant deploys services that require communications with the Internet on multiple Elastic Cloud Servers (ECSs). Which of the following is recommended to reduce the associated public network bandwidth costs?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Add multiple Elastic IPs (EIPs) to the same shared bandwidth.",
+      "b": "Bind a pay-per-use EIP to each ECS. These EIPs are billed by bandwidth.",
+      "c": "Use bandwidth add-on packages.",
+      "d": "Use the enhanced 95th percentile billing mode."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "An enterprise plans to migrate its key workloads on HUAWEI CLOUD. Which of the following networking services is the best choice for the enterprise to securely connect its on-premises data center to HUAWEI CLOUD?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Virtual Private Network (VPN)",
+      "b": "Direct Connect",
+      "c": "Cloud Connect",
+      "d": "NAT Gateway"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "After a tenant has applied for a Relational Database Service (RDS) Instance, which of the following aspects of instance O&M does the tenant need to look out for?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "RDS instance CPU, IOPS, and space",
+      "b": "RDS instance performance",
+      "c": "RDS instance security patches",
+      "d": "RDS instance HA"
+    },
+    "answer": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "question": "Which of the following Items can be configured for a single storage pool when SmartTier is used?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Data migration granularity",
+      "b": "Data migration plan",
+      "c": "RAID policy",
+      "d": "Initial capacity allocation policy"
+    },
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Compared with traditional RAID, what are the features of RAID 2.0+?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Independent global or local hot spare disks must be manually configured.",
+      "b": "It evenly distributes data on disks in a storage pool through block-based virtualization technology.",
+      "c": "It supports concurrent write of reconstruction data flows to multiple disks.",
+      "d": "It further shortens the reconstruction time through thin reconstruction in the event of a disk fault."
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+[
+  {
+    "question": "When shuffling occurs, in which format will the MapTask calculation results be distributed to corresponding tasks?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "RDD",
+      "b": "Key-value pair",
+      "c": "Sequence",
+      "d": "Binary mode"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Assuming that there are five nodes in an Elasticsearch cluster, how many votes are required for a node to be the master node?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "2",
+      "b": "0",
+      "c": "3",
+      "d": "1"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is the resource management framework provided by Spark?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Standalone",
+      "b": "Yarn",
+      "c": "Torca",
+      "d": "Mesos"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following functions as the slave In Yarn's master/slave architecture?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ApplicationMaster",
+      "b": "TaskTracker",
+      "c": "ResourceManager",
+      "d": "NodeManager"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "In which of the following format does the HBase bottom-layer data exist?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Array",
+      "b": "Byte",
+      "c": "String",
+      "d": "Key-value"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is used to store similar fingerprint information that is used in SmartDedupe?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Fingerprint table",
+      "b": "Data address",
+      "c": "Similarity-based deduplication opportunity table",
+      "d": "Metadata"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements about differential incremental backup is false?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Differential incremental backup is based on the previous backup.",
+      "b": "Generally, the backup window of a differential incremental backup is smaller than that of a full backup.",
+      "c": "The backup window of a differential incremental backup is larger than that of a full backup.",
+      "d": "Generally, the recovery window of a differential incremental backup is greater than that of a cumulative incremental backup."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements is incorrect about the relationship between Bare Metal Server (BMS) and other cloud services?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "With Image Management Service (IMS), users can use images to batch create identical BMSs, improving service deployment efficiency.",
+      "b": "With Auto Scaling (AS), users can flexibly scale in and out BMSs by customizing AS configurations and policies, reducing resource consumption and saving money on O&M",
+      "c": "With Elastic Volume Service (EVS), users can attach EVS disks to a BMS and expand their capacity at any time",
+      "d": "With Cloud Eye, users can monitor BMSs. After Agent is installed on a BMS, the Agent will report monitoring data to Cloud Eye."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following items does not need to be configured when HUAWEI CLOUD tenants upload objects to Object Storage Service (OBS)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Storage path",
+      "b": "Storage class",
+      "c": "KMS encryption",
+      "d": "Object size"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following statements is incorrect about HUAWEI CLOUD Object Storage Service (OBS) buckets?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "OBS offers a flat structure in the form of buckets and objects, which enables all objects to be stored at the same logical layer, rather than being stored hierarchically",
+      "b": "Each bucket has its own properties, such as a storage class, access control, and region. You can create buckets with different storage classes and access control rules in different regions.",
+      "c": "There are four bucket storage classes: Standard, Infrequent Access, Archive, and Deep Archive.",
+      "d": "A bucket name is not globally unique. A user can create more than one bucket with the same name as long as it does not have the same name as other users' buckets."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following statements about SAN and NAS storage is false?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SAN storage can be classified as FC SAN or IP SAN based on the differences in the transmission media and protocols used.",
+      "b": "NAS storage uses file-based communication protocols.",
+      "c": "SAN storage supports various operating systems and protocols, including NFS, CIFS, FTP, and HTTP.",
+      "d": "NAS storage allows for cross-platform file sharing."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements about container is false?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "A container repository centrally stores image files.",
+      "b": "The relationship between images and containers is just like that between classes and instances in object-oriented programming. Images are static definitions, and containers are entities at runtime.",
+      "c": "Compared with VMs, containers start up faster, consume fewer resources, and deliver higher security.",
+      "d": "Container is a lightweight virtualization technology at the OS kernel level."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "When a HUAWEI CLOUD IPsec Virtual Private Network (VPN) is used for communications between the cloud and an on-premises data center, encryption, decryption, and authentication are performed on firewalls or routers at both ends of the VPN connection.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "HUAWEI CLOUD Content Delivery Network (CDN) accelerates intranet and Internet resources.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is NOT an advantage of NAS compared with SAN?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "NAS has an independent file system.",
+      "b": "NAS supports multiple protocols and operating systems",
+      "c": "NAS optimizes data block transmission.",
+      "d": "NAS optimizes file sharing"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "A user creates two Virtual Private Clouds (VPCs), VPC 1 and VPC 2, in the CN North-Beijing4 region of HUAWEI CLOUD. Two ECSs (ECS-A and ECS-B) in VPC 1, and one ECS (ECS-C) in VPC 2. Which of the following is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ECS-B can communicate with ECS-A and ECS-C, but ECS-A and ECS-C cannot communicate with each other",
+      "b": "ECS-C cannot communicate with ECS-A or ECS-B, but ECS-A and ECS-B can communicate with each other.",
+      "c": "ECS-A, ECS-B, and ECS-C can communicate with each other.",
+      "d": "ECS-A, ECS-B, and ECS-C cannot communicate with each other."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following does HUAWEI CLOUD provide?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Its low price",
+      "b": "Continuous rollout of HUAWEI CLOUD services",
+      "c": "Faster and stronger next-generation compute instances",
+      "d": "HUAWEI CLOUD ultra-high-speed network"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "An administrator sets the management IP address of OceanStor Dorado V6 storage device to 192.168.5.110. Which of the following operations are correct when an engineer performs O&M on Device Manager?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "The engineer can choose Settings > License Management to check the validity of licenses.",
+      "b": "The engineer can access https://192.168.5.110:8088 on a browser to log in to DeviceManager.",
+      "c": "The engineer can choose Settings > Basic Information to view the SN of the storage device.",
+      "d": "LUNs can be created on DeviceManager."
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following statements about VLANs are false?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "A bond port can be added to multiple Independent VLANs.",
+      "b": "An Ethernet port can be added to only one VLAN.",
+      "c": "An Ethernet port can be added to multiple independent VLANs.",
+      "d": "A bond port can be added to only one VLAN."
+    },
+    "answer": [
+      "b",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following statements about routes are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "A route table contains a set of routes that are used to determine where network traffic from your subnets in a Virtual Private Cloud (VPC) is directed.",
+      "b": "When a user creates a VPC, it automatically has a default route table, which enables internal communications within that VPC.",
+      "c": "A user needs to configure custom routes if the user wants to enable communications across VPCs.",
+      "d": "Users cannot add custom routes."
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following statements about containers and VMs are incorrect?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "The underlying layer of VMs requires that the physical host must have an OS environment.",
+      "b": "The underlying layer of containers requires that the physical host must have an OS environment",
+      "c": "Each VM can be deployed with an independent OS to run applications",
+      "d": "Each container can be deployed with an independent OS to run applications."
+    },
+    "answer": [
+      "a",
+      "d"
+    ]
+  },
+[
+  {
+    "question": "Which of the following statements about memory virtualization is false?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "For the host, guest physical address space is not necessarily continuous and may be mapped to several host physical address ranges that are discontinuous.",
+      "b": "Virtualized memory shares the physical system memory, and is dynamically allocated to VMs.",
+      "c": "The physical address translation from the guest to the host is implemented by using the page table of the host.",
+      "d": "Guest memory address space may not be continuous address space starting from zero."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is used to store similar fingerprint information that is used in SmartDedupe?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Fingerprint table",
+      "b": "Data address",
+      "c": "Similarity-based deduplication opportunity table",
+      "d": "Metadata"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "What is the role of the Kafka server in a Kafka cluster?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Broker",
+      "b": "Topic",
+      "c": "Producer",
+      "d": "Consumer"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In the HDFS copy placement policy, which of the following is the distance between the same servers In the same rack?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "0",
+      "b": "6",
+      "c": "2",
+      "d": "4"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The deployment environment of a particular application requires the following: 1.Physically Isolated resources 2.Connection to cloud servers 3.High-bandwidth, low-latency data access. Which of the following compute cloud services is recommended for this application?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "FunctionGraph",
+      "b": "Elastic Cloud Server (ECS)",
+      "c": "Dedicated Host (DeH)",
+      "d": "Cloud Container Engine (CCE)"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "How many cloud servers can a shared Elastic Volume Service (EVS) disk be attached to?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "18",
+      "b": "12",
+      "c": "16",
+      "d": "8"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following procedures of using Elastic Volume Service (EVS) disks is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "1. Select the disk type and size, and buy a disk. 2. Attach the disk to the specified ECS. 3. Log in to the ECS and initialize the disk. 4. Configure the disk to mount at startup.",
+      "b": "1. Select the disk type and size, and buy a disk. 2. Configure the disk to mount at startup. 3. Attach the disk to the specified ECS. 4. Log in to the ECS and initialize the disk.",
+      "c": "1. Select the disk type and size, and buy a disk. 2. Attach the disk to the specified ECS. 3. Configure the disk to mount at startup. 4. Log in to the ECS and initialize the disk.",
+      "d": "1. Attach the disk to the specified ECS. 2. Select the disk type and size, and buy a disk. 3. Configure the disk to mount at startup. 4. Log in to the ECS and initialize the disk."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "An enterprise plans to use and manage cloud resources through its existing account authentication system. Which function of HUAWEI CLOUD Identity and Access Management (IAM) meets this requirement?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Federated identity authentication",
+      "b": "Agency management",
+      "c": "Permissions management",
+      "d": "Account security settings"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following technologies can be used to enable communications among VMs on the same network but in different data centers?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "VLAN",
+      "b": "Nova",
+      "c": "VXLAN",
+      "d": "IPsec Virtual Private Network (VPN)"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In full virtualization scenarios, on which of the following protection ring layer does the Guest OS run?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Ring3",
+      "b": "Ring1",
+      "c": "Ring2",
+      "d": "Ring0"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following cloud services can use Cloud Backup and Recovery (CBR) for backups?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Hyper Elastic Cloud Server (HECS)",
+      "b": "Elastic Volume Service (EVS)",
+      "c": "Elastic Cloud Server (ECS)",
+      "d": "Bare Metal Server (BMS)"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following statements are true about bare-metal virtualization and hosted virtualization?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "In hosted virtualization, virtualization software runs within the OS of a host server and relies on the OS to manage calls to physical resources.",
+      "b": "Both bare-metal virtualization and hosted virtualization use hypervisors to manage virtual machines (VMs).",
+      "c": "Hosted virtualization performs better and more efficiently than bare-metal virtualization.",
+      "d": "In bare-metal virtualization, virtualization software runs directly on the hardware of a host server and has absolute control over the server."
+    },
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following statements about security groups and network ACLs are true?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Security groups only support packet filtering based on a 3-tuple, whereas network ACLs support packet filtering based on a 5-tuple.",
+      "b": "Default security group rules allow all outgoing data packets and deny all incoming data packets.",
+      "c": "A network ACL is an optional layer of security for subnets. Users can associate one or more subnets with a network ACL to control traffic in and out of the subnets.",
+      "d": "If Elastic Cloud Servers (ECSs) belong to different Virtual Private Clouds (VPCs), but are associated with the same security group, they can communicate with each other without the need to add rules."
+    },
+    "answer": [
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "What are the benefits of migrating enterprise-class big data platforms to the cloud?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Multi-scenario analysis",
+      "b": "Elastic resource allocation",
+      "c": "Ultra-agile application",
+      "d": "Integrated and converged analysis"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following statements are true about Hive User-defined Functions (UDFs)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Temporary functions are not stored permanently. They can be used only in the current session and must be recreated after a session restarts.",
+      "b": "UDTFs are used to receive multiple rows of data and generate one row of results.",
+      "c": "Common UDFs are used to receive one row of data and generate one row of results.",
+      "d": "Permanent functions can be used in multiple sessions. You do not need to create them every time a session restarts."
+    },
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following processes are involved in offline batch processing?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Data collection",
+      "b": "Data storage",
+      "c": "Data processing",
+      "d": "Data application"
+    },
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "A disk interface connects a disk to a host. Interface types vary with interface data transmission modes. What are these types?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Serial interface",
+      "b": "Back-end interface",
+      "c": "Parallel Interface",
+      "d": "Front-end interface"
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following protocols are commonly used in a NAS network?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "CIFS",
+      "b": "ISCSI",
+      "c": "NFS",
+      "d": "FC"
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following statements about backup solutions are true?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Generally, service hosts require no backup software client agent.",
+      "b": "The backup management software initiates backup Jobs.",
+      "c": "Backup media can be tape libraries or cloud storage systems.",
+      "d": "Generally, service hosts require a backup software client agent."
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following statements are true about the back-end storage network of distributed storage?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "The back-end storage network is used to connect the storage system to the user network.",
+      "b": "The back-end storage network is used to connect to the maintenance network.",
+      "c": "The back-end storage network is used to interconnect storage nodes in the storage system.",
+      "d": "The back-end storage network type can be 10GE, 25GE, and IB networks."
+    },
+    "answer": [
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following types can fabric-attached storage be classified into based on the transmission protocol?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Storage area network",
+      "b": "Built-in storage",
+      "c": "Network-attached storage",
+      "d": "Archive storage"
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question": "Data on a disk can be transmitted to a controller in a parallel or serial manner. Which of the following statements about serial and parallel transmissions are true?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Serial transmission supports a higher transmission frequency than parallel transmission.",
+      "b": "The transmission distance of parallel transmission is longer than that of serial transmission.",
+      "c": "The transmission distance of serial transmission is longer than that of parallel transmission.",
+      "d": "Parallel transmission supports a higher transmission frequency than serial transmission."
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following Cloud Eye functions can be used to collect the CPU, memory, and disk usages of Elastic Cloud Servers (ECSs) or Bare Metal Servers (BMSs) in real time?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Server monitoring",
+      "b": "Website monitoring",
+      "c": "Log monitoring",
+      "d": "Event monitoring"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "EIPs added to an SNAT rule may be blocked due to online attacks. When using a NAT gateway to access the Internet, which of the following measures is recommended to improve system reliability?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Select multiple EIPs when configuring source network address translation (SNAT) rules.",
+      "b": "Select multiple EIPs when configuring destination network address translation (DNAT) rules.",
+      "c": "Configure multiple SNAT rules for a Virtual Private Cloud (VPC) subnet.",
+      "d": "Configure multiple DNAT rules for a VPC subnet."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In a Linux VM, which of the following can be used to manage logical volumes?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "DVM",
+      "b": "LVM",
+      "c": "PVM",
+      "d": "OVM"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following statements about NFS is correct?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "NFS uses UDP for transmission and does not support TCP",
+      "b": "NFS is a stateful protocol",
+      "c": "NFS supports multi-user access",
+      "d": "User permissions cannot be set for the NFS."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "A user has created an Elastic Cloud Server (ECS) on HUAWEI CLOUD and installed Windows 10. The user then brought an Elastic Volume Service (EVS) disk and attached it to the ECS, but cannot find the disk in Windows 10. Which of the following is a possible cause?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The disk type is not correct.",
+      "b": "The disk capacity is not enough.",
+      "c": "The disk has not been initialized.",
+      "d": "The disk is a shared disk."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following does not affect the billing of a Bare Metal Server (BMS)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CPU specifications",
+      "b": "Memory size",
+      "c": "Disk size",
+      "d": "Number of NICs"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following statements is correct about HUAWEI CLOUD regions?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ECSs, RDS instances, and OBS buckets in different regions can communicate with each other through an intranet.",
+      "b": "ECSs in different regions can be bound to the same enhanced load balancer.",
+      "c": "Each region can be divided into two or more completely independent fault domains, each of which has independent cooling, fire extinguishing, moisture-proof, and electricity facilities as well as Internet egresses.",
+      "d": "A tenant cannot use resources across regions."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is not a key feature of Relational Database Service (RDS)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "High availability",
+      "b": "Performance monitoring",
+      "c": "Backup and restoration",
+      "d": "Traffic cleaning"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "What is the basis on which HUAWEI CLOUD regions are divided?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Geographical location and network latency",
+      "b": "Cluster server",
+      "c": "AZ",
+      "d": "POD"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following statements about Elastic Load Balance (ELB) is incorrect?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "If a backend server is unhealthy, ELB distributes new requests to other healthy backend servers.",
+      "b": "ELB can relieve the load of service nodes.",
+      "c": "ELB can route traffic across AZs for disaster recovery",
+      "d": "ELB can distribute TCP/UDP traffic at Layer 4."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following services can be used by HUAWEI CLOUD tenants to monitor Relational Database Service (RDS)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Elastic Load Balance (ELB)",
+      "b": "Auto Scaling (AS)",
+      "c": "Cloud Eye",
+      "d": "Cloud Trace Service (CTS)"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "If two Virtual Private Clouds (VPCs) in the same region need to communicate with each other, which of the following is the most cost-effective?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SNAT rule",
+      "b": "Create a VPC peering connection.",
+      "c": "Elastic IP (EIP)",
+      "d": "Direct Connect"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "A shopping mall has a security system with more than 100 HD cameras deployed to monitor key locations such as entrances and exits. The system backend is deployed on a HUAWEI CLOUD Elastic Cloud Server (ECS) and stores videos on the data disk mounted to the ECS. One week after the system started being used, the data disk started running out of space. Which of the following services can be used to quickly address this issue?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Object Storage Service (OBS)",
+      "b": "Cloud Backup and Recovery (CBR)",
+      "c": "Content Delivery Network (CDN)",
+      "d": "Multiple ECSs"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following statements about HUAWEI CLOUD Virtual Private Network (VPN) are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "VPN allows communications between on-premises data centers and the cloud.",
+      "b": "A VPN consists of a VPN gateway and one or more VPN connections. A VPN gateway provides an Internet egress for a Virtual Private Cloud (VPC) and works together with the gateway in user's on-premises data center",
+      "c": "A VPN uses an encrypted connection that links the VPN gateway to the remote gateway to enable communications between a VPC and an on-premises data center.",
+      "d": "Each VPN gateway can connect to one or more remote gateways, so you can set up point-to-point or hub-and-spoke VPN connections."
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "What are the features of HUAWEI CLOUD Object Storage Service (OBS)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Server-side encryption",
+      "b": "Lifecycle management",
+      "c": "Cross-origin resource sharing",
+      "d": "URL validation"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following can be used to enable an Elastic Cloud Server (ECS) to communicate with the Internet?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Apply for an Elastic IP (EIP) and bind it to the ECS.",
+      "b": "Apply for a public network load balancer and add the ECS to a backend server group.",
+      "c": "Apply for a public NAT gateway and associate it with the ECS.",
+      "d": "Apply for Auto Scaling (AS) and create an AS configuration for the ECS"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "Which of the following statements about the use of Elastic Cloud Servers (ECSs) are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "ECSs cannot be used for fraudulent transactions, such as click farming on e-commerce websites.",
+      "b": "ECSs cannot be used to initiate network attacks, such as DDoS attacks, CC attacks, and web attacks.",
+      "c": "Illegal websites or applications cannot be deployed on ECSs.",
+      "d": "ECSs cannot be used for probing operations, such as scanning or penetrating external systems, without written authorization from the external systems"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "What advantages does cloud computing bring to enterprises' digital transformation?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Improved hardware reuse",
+      "b": "Lower costs",
+      "c": "Enhanced data security",
+      "d": "Higher operation and O&M efficiency"
+    },
+    "answer": [
+      "b",
+      "d"
+    ]
+  },
+  {
+    "question": "Which of the following does HUAWEI CLOUD provide?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Its low price",
+      "b": "Continuous rollout of HUAWEI CLOUD services",
+      "c": "Faster and stronger next-generation compute instances",
+      "d": "HUAWEI CLOUD ultra-high-speed network"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "On HUAWEI CLOUD, what are possible reasons a file system may fail to be mounted?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "The file system capacity is too large.",
+      "b": "The file system has been deleted",
+      "c": "The shared path in the mount command is incorrect",
+      "d": "The DNS server used to access the file system is incorrect"
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "When snapshots are created for the Elastic Volume Service (EVS) disks on an Elastic Cloud Server (ECS), the creation time for each snapshot is different. Which of the following are the possible causes?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "The snapshot creation time depends on the EVS disk size.",
+      "b": "The initial snapshot of an EVS disk is a full snapshot, so the initial snapshot takes a relatively long period of time to complete",
+      "c": "After the initial snapshot, follow-up snapshots are all incremental snapshots, which only record changes to data on the disk, so creating follow-up snapshots are faster.",
+      "d": "The EVS disk performance has changed during the snapshot creation."
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "In a virtualized environment, the Guest OS type must be consistent with that of the Host OS.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "HUAWEI CLOUD Alkaid provides central and edge scheduling, edge autonomy and collaborative scheduling, and on-demand service scheduling capabilities.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Elastic Cloud Servers (ECSs) with different OSs can be associated with the same load balancer.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Users can remotely log in to all Elastic Cloud Servers (ECSs) in a VPC using MSTSC.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Image Management Service (IMS) allows users to easily manage the entire lifecycle of their images. They can create a private image and use it to quickly create identical Elastic Cloud Servers (ECSs)",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "To monitor the OS of an Elastic Cloud Server (ECS), a user must manually install the Agent on the ECS.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "HUAWEI CLOUD Object Storage Service (OBS) has no limitations on storage capacity or the number of objects that can be stored.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "A shared Elastic Volume Service (EVS) disk can be attached to multiple servers at the same time. Before you delete a shared EVS disk, it has to be detached from all servers.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "HUAWEI CLOUD Content Delivery Network (CDN) accelerates intranet and Internet resources.",
+    "question_type": "true_or_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  }
+]
+]
+]

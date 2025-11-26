@@ -1,0 +1,445 @@
+[
+  {
+    "question": "Which of the following learns the distribution of data or the relationship between data based on unlabeled data?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Supervised learning",
+      "b": "Unsupervised learning",
+      "c": "Semi-supervised learning",
+      "d": "Fully supervised learning"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following statements is false about machine learning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Model generalization capability: the extent to which a learned model can be applied to new samples. This is also called robustness.",
+      "b": "Error: difference between the prediction of a learned model on a sample and the actual result of the sample. Errors can be classified into training errors and generalization errors.",
+      "c": "Underfitting: The training error is large.",
+      "d": "Overfitting: The training error is large."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is not a hyperparameter for model training?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Learning rate for neural network training",
+      "b": "K in the K-Nearest Neighbors (KNN) algorithm",
+      "c": "The weight coefficient (slope) w in the one-dimensional linear regression model Y=wX+b",
+      "d": "Number of trees in a random forest"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is NOT a type of gate in LSTM?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Input gate",
+      "b": "Forget gate",
+      "c": "Update gate",
+      "d": "Output gate"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is the activation function for neural networks in deep learning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CE",
+      "b": "Dropout",
+      "c": "ReLU",
+      "d": "Sin(x)"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements is true about model capacity?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The capacity of a model refers to its capability to fit various functions. It is also known as model complexity.",
+      "b": "An algorithm usually performs poorly when the capacity matches the task complexity and the amount of training data provided.",
+      "c": "An algorithm usually performs good when the capacity doesn't suit the task complexity and the amount of training data provided.",
+      "d": "Models with a large capacity can handle complex tasks. but there may be underfitting when the capacity is greater than what is required by a task."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following is not a common optimizer in deep learning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Adagrad",
+      "b": "Softplus",
+      "c": "RMSprop",
+      "d": "Adam"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is an unsupervised learning algorithm?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Decision tree",
+      "b": "Neural network",
+      "c": "Hierarchical clustering",
+      "d": "Random forest"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements is false about softmax?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The output of the softmax function is the probability that the sample belongs to each class.",
+      "b": "The softmax function is not a generalized linear regression function.",
+      "c": "The softmax function is often used for multi-class classification problems.",
+      "d": "The softmax function is a generalization of the log-odds function that can be used for multi-class classification problems."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Intelligent quality inspection is implemented based on the cloud-edge-device synergy of deep learning algorithms. Which of the following is performed on the edge?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Model training",
+      "b": "Data labeling",
+      "c": "Model delivery",
+      "d": "Onsite inference"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "PyTorch is a common AI machine learning framework. Which of the following companies released it?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Facebook",
+      "b": "Microsoft",
+      "c": "Huawei",
+      "d": "Google"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In the forward propagation process of feedforward neural networks, which of the following is propagated forward?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Input data",
+      "b": "Loss",
+      "c": "Output data",
+      "d": "Convolution"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following statements about buffer is true?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Data needs to be read from the outside of AI Core through the bus interface each time",
+      "b": "Buffer can permanently retain data that needs to be reused.",
+      "c": "Buffer reduces the risk of congestion on the bus",
+      "d": "Buffer is used to store the initial values in the neural network."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is the correct shape of tensor [[[0,1][2,3]].[[4,5].[6,7]]]?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "[3,3,2]",
+      "b": "[3,2,4]",
+      "c": "[2,3,4]",
+      "d": "[2,2,2]"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is not a network operator in MindSpore?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Conv2D",
+      "b": "SGD",
+      "c": "ControlDepend",
+      "d": "Softmax"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is not a method for compressing an AI model?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Low-rank approximation",
+      "b": "Network quantification",
+      "c": "Compact network design",
+      "d": "Reduction of valid data"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is the correct order of tensor [[0,1].[2,3]]?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "2",
+      "b": "3",
+      "c": "6",
+      "d": "4"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following are popular AI use cases?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Video and image processing",
+      "b": "Audio processing",
+      "c": "Text analysis",
+      "d": "Intelligent control"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following scenarios is the Atlas 300 AI accelerator card suitable for?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Video analysis",
+      "b": "Medical Image analysis",
+      "c": "Optical Character Recognition (OCR)",
+      "d": "Speech recognition"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following statements about the future trends of AI are true?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "The development frameworks are becoming easier to use.",
+      "b": "Algorithm models are becoming smaller in size and offer higher performance.",
+      "c": "AI use cases are increasing in every industry.",
+      "d": "AI-related basic data services are becoming more comprehensive, enabling data sharing in a more secure manner"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following are activation function operators in MindSpore?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Softmax",
+      "b": "MaxPool",
+      "c": "Sigmoid",
+      "d": "ReLU"
+    },
+    "answer": ["a", "c", "d"]
+  },
+  {
+    "question": "The MindArmour subsystem of MindSpore helps build trustworthy AI. Which of the following are features of trustworthy AI?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Security",
+      "b": "Privacy",
+      "c": "Fairness",
+      "d": "Transparency"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following are steps of building a model?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Data splitting",
+      "b": "Model training",
+      "c": "Model validation",
+      "d": "Model testing",
+      "e": "Model deployment"
+    },
+    "answer": ["a", "b", "c", "d", "e"]
+  },
+  {
+    "question": "Which of the following are application fields of AI in terms of smart healthcare?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Virtual assistant",
+      "b": "AI-assisted diagnosis and treatment",
+      "c": "AI-assisted medical research",
+      "d": "Hospital management"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following techniques are used by machine learning?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Supervised learning",
+      "b": "Unsupervised learning",
+      "c": "Semi-supervised learning",
+      "d": "Reinforcement learning"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following are model hyperparameters?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Learning rate, number of iterations, and batch size of the training neural network",
+      "b": "K in the K-Nearest Neighbors (KNN) algorithm",
+      "c": "Number of trees in a random forest",
+      "d": "Weight coefficient w of linear regression"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "Which of the following methods can be used to reduce overfitting?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Adding L1 or L2 regularization terms",
+      "b": "Expanding the dataset and adding noise",
+      "c": "Using the dropout technique to randomly discard units",
+      "d": "Halting training in advance"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "What are the advantages of HUAWEI CLOUD Optical Character Recognition (OCR)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "High precision",
+      "b": "High adaptability",
+      "c": "High efficiency",
+      "d": "Low cost"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following are the advantages of training on ModelArts?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Flexibility, efficiency, and cost-effectiveness",
+      "b": "Preset training models that accelerate AI Implementation",
+      "c": "Multiple development modes that meet various requirements",
+      "d": "Elastic training for higher training efficiency"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Which of the following activation functions is not improved based on the ReLU activation function?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SELU",
+      "b": "ELU",
+      "c": "Swish",
+      "d": "Softsign"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following modules is not included in Transformer encoder?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Feedforward Sub-layer",
+      "b": "Residual Connection",
+      "c": "Self-attention Sub-layer",
+      "d": "Batch Normalization"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following evaluation metrics are most important in credit card fraud detection and spam classification, respectively?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Recall and recall",
+      "b": "Recall and precision",
+      "c": "Precision and recall",
+      "d": "Precision and precision"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In the fit function of Keras, 'verbose' indicates the verbosity mode. Which of the following values indicates the progress bar?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "2",
+      "b": "1",
+      "c": "None",
+      "d": "0"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In pandas, which of the following functions is used to convert categorical data Into dummy or Indicator variables?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "get_dummies()",
+      "b": "get_dummy()",
+      "c": "dummy()",
+      "d": "dummies()"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following statements is false about Loss functions?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Loss functions reflect the gap between the target output and actual output of models.",
+      "b": "Loss functions are defined in feature spaces.",
+      "c": "Quadratic cost functions are mainly used for regression.",
+      "d": "Cross-entropy loss functions are mainly used for classification."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is the value range of the derivatives of hyperbolic tangent (tanh) activation functions?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "[0, 0.25]",
+      "b": "(0, 1)",
+      "c": "(0, 0.25)",
+      "d": "[0, 1]"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "In deep neural networks, which of the following are used to avoid overfitting?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Batch normalization",
+      "b": "Early stopping",
+      "c": "Residual structure",
+      "d": "Label smoothing"
+    },
+    "answer": ["a", "b", "d"]
+  },
+  {
+    "question": "In a recurrent neural network (RNN), parameters of different states (time steps) are shared. Which of the following statements are true about the purpose of parameter sharing In this situation?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "It effectively alleviates the vanishing gradient problem.",
+      "b": "It reduces the number of parameters.",
+      "c": "It helps to prevent overfitting to some extent.",
+      "d": "It is key for an RNN to process data of any length."
+    },
+    "answer": ["b", "c", "d"]
+  },
+[
+  {
+    "question": "Which of the following statements about the history of AI is false?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The concept of \"artificial Intelligence\" can be dated back to the Dartmouth Conference in 1956.",
+      "b": "AI was in the first period of low ebb during 1976 and 1982.",
+      "c": "AI was in the third period of low ebb around 1987.",
+      "d": "AI has been in a period of explosive growth since 2010."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements is false about Central Processing Units (CPUs)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The performance improvement brought by a frequency increase is limited, and the high clock rate results in very low power consumption.",
+      "b": "Adding CPU cores improves performance and better meets hardware requirements, but increases power consumption and costs.",
+      "c": "Adding instructions (modifying the architecture) improves AI performance.",
+      "d": "Computer performance used to improve steadily year by year, which complies with Moore's Law."
+    },
+    "answer": "a"
+  }
+]
+]

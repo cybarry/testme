@@ -1,0 +1,1343 @@
+[
+  {"question": "If a wireless client connecting the same SSID wants to roam from one AP to another, what is the area of the signal overlap between the two APs?", "question_type": "single_choice", "options": {"A":"50%","B":"No need to overlap","C":"100%","D":"10%-15%"}, "answer":"D", "explanation": "For seamless roaming, typically 10-15% (or more) signal overlap with -70 dBm or better is recommended."},
+  {"question": "How many channels can the 2.4 GHz band be divided into?", "question_type": "single_choice", "options": {"A":"14","B":"13","C":"11","D":"3"}, "answer":"A", "explanation": "Worldwide, the 2.4 GHz band defines 14 channels (1–14)."},
+  {"question": "The 802.11 physical layer standard defines some common operations of the wireless network at the physical layer: operations such as QoS, security, and roaming.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "QoS, security, and roaming are handled at the MAC layer (Layer 2), not physical layer."},
+  {"question": "Which of the following rates is not the rate supported by the 802.11a protocol?", "question_type": "single_choice", "options": {"A":"6Mbps","B":"12Mbps","C":"24Mbps","D":"30Mbps"}, "answer":"D", "explanation": "802.11a supports 6, 9, 12, 18, 24, 36, 48, 54 Mbps."},
+  {"question": "The Barker code is an 11-bit sequence (for example, 10110111000), which has advantages in wireless transmission, which can effectively reduce interference, but reduces efficiency.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Barker code is used in 802.11b DSSS for 1 and 2 Mbps rates; it improves autocorrelation but reduces efficiency."},
+  {"question": "What are the two basic service sets included in BSS (Select 2 Answers)?", "question_type": "multiple_choice", "options": {"A":"Independent basic service set","B":"Infrastructure mode basic service set","C":"Extending the basic service set","D":"Extending the structure mode basic service set"}, "answer":["A","B"], "explanation": "BSS consists of IBSS (ad-hoc) and Infrastructure BSS."},
+  {"question": "Which of the following standards organizations is proposed by the CAPWAP protocol?", "question_type": "single_choice", "options": {"A":"FCC","B":"IETF","C":"CCC","D":"ETSI"}, "answer":"B", "explanation": "CAPWAP is defined in RFC 5415 by IETF."},
+  {"question": "What is the Chinese name of SSID?", "question_type": "single_choice", "options": {"A":"Basic service set","B":"Basic service area","C":"Extended service set","D":"Service set identifier"}, "answer":"D", "explanation": "SSID stands for Service Set Identifier."},
+  {"question": "IEEE is the standard organization responsible for the use of wireless frequencies in the United States.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "FCC regulates frequency usage in the US; IEEE defines standards."},
+  {"question": "Spread-spectrum technology is the basis for transmitting wireless data using the ISM band.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "ISM bands require spread-spectrum techniques (FHSS/DSSS)."},
+  {"question": "If the AP works in infrastructure mode, the AP's working state is full-duplex mode.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "802.11 radios are half-duplex."},
+  {"question": "What is correct in the following options (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"SSID technology can divide a wireless local area network into several sub-networks...","B":"The BSSID is actually the MAC address of the AP...","C":"Users can implement roaming under different SSIDs.","D":"The SSID is the same in an ESS, but the BSSID corresponding to each AP in the ESS is different..."}, "answer":["A","B","D"], "explanation": "C is wrong — roaming requires the same SSID."},
+  {"question": "There are four wireless STAs. Which workstations occupy the channel preferentially according to the following backoff time parameters? A.5 B.7 C.4 D.6", "question_type": "single_choice", "options": {"A":"5","B":"7","C":"4","D":"6"}, "answer":"C", "explanation": "Smallest backoff time (4) wins contention."},
+  {"question": "Unlike the 802.11a/b/g standard, the 802.11n protocol is a dual-band mode of operation (supporting two operating bands of 2.4 GHz and 5 GHz).", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "802.11n introduced mandatory dual-band support."},
+  {"question": "When a data frame is sent and acknowledged, what is the time interval to wait before the next data frame is sent?", "question_type": "single_choice", "options": {"A":"SIFS","B":"IFS","C":"DIFS","D":"PIFS"}, "answer":"C", "explanation": "After successful ACK, station waits DIFS before contending again."},
+  {"question": "What is the working frequency band used in the original 802.11 protocol?", "question_type": "single_choice", "options": {"A":"2.4 GHz","B":"900 MHz","C":"2.0 GHz","D":"5 GHz"}, "answer":"A", "explanation": "Original 802.11 (1997) used 2.4 GHz ISM band."},
+  {"question": "BSS is called Basic Service Set, and BSS can be divided into Independent BSS and Infrastructure BSS.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Correct classification: IBSS and Infrastructure BSS."},
+  {"question": "Which country or region is ETSI a standard organization?", "question_type": "single_choice", "options": {"A":"China","B":"USA","C":"Japan","D":"Europe"}, "answer":"D", "explanation": "ETSI is the European Telecommunications Standards Institute."},
+  {"question": "What is the maximum rate supported by the original 802.11 protocol?", "question_type": "single_choice", "options": {"A":"1","B":"2","C":"5.5","D":"11"}, "answer":"B", "explanation": "Original 802.11 (1997) max rate is 2 Mbps."},
+  {"question": "What are the following WLAN standards for transmission rates up to 54 Mbps and above (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"802.11a","B":"802.11b","C":"802.11g","D":"802.11n"}, "answer":["A","C","D"], "explanation": "802.11a/g = 54 Mbps, 802.11n > 54 Mbps."},
+  {"question": "Which of the following protocols support the 2.4 GHz band (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"802.11a","B":"802.11b","C":"802.11g","D":"802.11n"}, "answer":["B","C","D"], "explanation": "802.11a is 5 GHz only."},
+  {"question": "In an 802.11 frame, the terminal needs to obtain access rights to the wireless medium, and what kind of control message is to be sent?", "question_type": "single_choice", "options": {"A":"RTS","B":"CTS","C":"ACK","D":"PS-Poll"}, "answer":"A", "explanation": "RTS is sent to reserve the medium (optional)."},
+  {"question": "Which of the following protocols can support both the 2.4 GHz band and the 5 GHz band?", "question_type": "single_choice", "options": {"A":"802.11a","B":"802.11b","C":"802.11g","D":"802.11n"}, "answer":"D", "explanation": "Only 802.11n (and later) supports dual-band."},
+  {"question": "If a BSS is composed entirely of STAs, what is the BSS also called?", "question_type": "single_choice", "options": {"A":"IBSS","B":"ESS","C":"SSID","D":"BSA"}, "answer":"A", "explanation": "Ad-hoc network = Independent Basic Service Set (IBSS)."},
+  {"question": "802.11b is a protocol based on Orthogonal Frequency Division Multiplexing (OFDM) technology.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "802.11b uses DSSS/CCK, not OFDM (OFDM starts with 802.11a/g)."},
+  {"question": "The antenna configuration of MIMO is usually expressed as \"M*N\", where what does M and N mean (Select 2 Answers)?", "question_type": "multiple_choice", "options": {"A":"M indicates the number of transmission antennas","B":"N indicates the number of transmission antennas","C":"N indicates the number of receiving antennas","D":"M indicates the number of receiving antennas"}, "answer":["A","C"], "explanation": "M×N means M transmit antennas, N receive antennas."},
+  {"question": "In 1999, the IEEE 802.11a standard was developed. The standard specifies that the WLAN operating frequency band is 5.15 to 5.825 GHz, and the data transmission rate reaches 11 Mbps.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "802.11a uses 5 GHz and reaches 54 Mbps, not 11 Mbps."},
+  {"question": "What is the US non-overlapping channel in the 2.4 GHz band?", "question_type": "single_choice", "options": {"A":"2, 7, 12","B":"3, 8, 13","C":"1, 6, 11","D":"3, 7, 13"}, "answer":"C", "explanation": "Standard non-overlapping channels in US: 1, 6, 11."},
+  {"question": "Radio frequency mainly uses spread spectrum technology. Which of the following technologies belong to Spread (Select 2 Answers)?", "question_type": "multiple_choice", "options": {"A":"FHSS","B":"DSSS","C":"QPSK","D":"OFDM"}, "answer":["A","B"], "explanation": "FHSS and DSSS are spread-spectrum techniques."},
+  {"question": "Which of the following standards organizations is implementing WLAN technology interoperability for WLAN device authentication?", "question_type": "single_choice", "options": {"A":"WiFi Alliance","B":"IEEE","C":"IETF","D":"FCC"}, "answer":"A", "explanation": "Wi-Fi Alliance handles certification and interoperability."},
+  {"question": "In WLAN, the AP has been working in a half-duplex state.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "802.11 radios cannot transmit and receive simultaneously."},
+  {"question": "Which of the following statements is correct (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"WDS can transmit the data of the wired network through the wireless network...","B":"The wireless network bridging function usually refers to one-to-one, but the WDS architecture can do one-to-many.","C":"WDS allows wireless APs to bridge (relay) wirelessly, but bridged wireless APs cannot provide coverage at the same time.","D":"Because virtual network lines are formed through wireless networks, WDS is also called wireless network bridging."}, "answer":["A","B","D"], "explanation": "C is false — many WDS implementations allow simultaneous coverage."},
+  {"question": "Which of the following protocols is defined in the Mesh networking?", "question_type": "single_choice", "options": {"A":"802.11a","B":"802.11g","C":"802.11e","D":"802.11s"}, "answer":"D", "explanation": "802.11s defines mesh networking."},
+  {"question": "Wireless client passive scanning is obtained by receiving what frames to get around the wireless network information?", "question_type": "single_choice", "options": {"A":"Beacon frame","B":"Probe Request frame","C":"Authentication frame","D":"Association Request frame"}, "answer":"A", "explanation": "Passive scanning listens for Beacon frames."},
+  {"question": "What parameters are used in 802.11 frames to reassemble frame fragments?", "question_type": "single_choice", "options": {"A":"Frame Control","B":"Duration","C":"Address bit","D":"Fragment number"}, "answer":"D", "explanation": "Fragment Number in Sequence Control field is used."},
+  {"question": "What are the rates that 802.11g can support?", "question_type": "single_choice", "options": {"A":"1,2,5.5,11&6,9,12,18,24,30,36,48,54 Mbps","B":"6,9,12,18,24,36,48,54 Mbps","C":"1,2,5.5,11&6,9,12,18,24,36,48,54 Mbps","D":"6,9,12,18,24,30,36,48,54 Mbps"}, "answer":"C", "explanation": "802.11g supports both 802.11b rates and OFDM rates up to 54 Mbps."},
+  {"question": "What is the value used to record the Network Allocation Vector (NAV) in an 802.11 frame?", "question_type": "single_choice", "options": {"A":"Frame Control","B":"Duration","C":"address bit","D":"Sequence control bit"}, "answer":"B", "explanation": "Duration/ID field sets the NAV."},
+  {"question": "The BSSID is actually the MAC address of the AP and is used to identify the BSS managed by the AP.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "BSSID is the MAC address of the radio interface in infrastructure BSS."},
+  {"question": "802.11 has three frame types, which are (Select 3 Answers).", "question_type": "multiple_choice", "options": {"A":"Data frame","B":"Control frame","C":"Service frame","D":"Management frame"}, "answer":["A","B","D"], "explanation": "Three frame types: Management, Control, Data."},
+  {"question": "What are the wireless LAN standards that support the 5GHz band (Select 2 Answers)?", "question_type": "multiple_choice", "options": {"A":"802.11a","B":"802.11b","C":"802.11g","D":"802.11n"}, "answer":["A","D"], "explanation": "802.11a and 802.11n support 5 GHz."},
+  {"question": "Which channels in the 802.11b protocol do not overlap each other (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"1","B":"3","C":"6","D":"11"}, "answer":["A","C","D"], "explanation": "Non-overlapping channels: 1, 6, 11."},
+  {"question": "How many subcarriers can 802.11n use to transmit data in 20M mode?", "question_type": "single_choice", "options": {"A":"48","B":"52","C":"54","D":"56"}, "answer":"B", "explanation": "802.11n (and a/g) use 52 data subcarriers in 20 MHz."},
+  {"question": "In the 802.11 frame, when the network uses the WDS model for signal transmission, what are the values of To DS and From DS, respectively?", "question_type": "single_choice", "options": {"A":"0,0","B":"0,1","C":"1,0","D":"1,1"}, "answer":"D", "explanation": "WDS uses 4-address format: To DS = 1, From DS = 1."},
+  {"question": "The modulation methods adopted by DSSS are BPSK and QPSK respectively.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "DSSS in 802.11 uses BPSK (1 Mbps) and QPSK (2 Mbps)."},
+  {"question": "What is the operating frequency set by China in the 2.4 GHz band?", "question_type": "single_choice", "options": {"A":"2.4 GHz-2.4835 GHz","B":"2.471 GHz-2.497 GHz","C":"2.4465 GHz-2.4835 GHz","D":"2.445 GHz-2.475 GHz"}, "answer":"A", "explanation": "China uses full 2.4–2.4835 GHz (channels 1–13)."},
+  {"question": "What are the mandatory standards for wireless LAN security in China?", "question_type": "single_choice", "options": {"A":"WiFi","B":"WAPI","C":"WLAN","D":"WiMAX"}, "answer":"B", "explanation": "WAPI is mandatory for WLAN devices sold in China."},
+  {"question": "The basic service set is the basic component of an 802.11 network and consists of a set of workstations that communicate with each other.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Definition of BSS."},
+  {"question": "An infrastructure-mode network consisting of multiple APs and distributed systems that connect them, also known as what?", "question_type": "single_choice", "options": {"A":"Basic service set","B":"Basic service area","C":"Extended service set","D":"Extended service area"}, "answer":"C", "explanation": "Multiple BSSs form an ESS."},
+  {"question": "What is the area covered by a single AP?", "question_type": "single_choice", "options": {"A":"BSA","B":"ESA","C":"SSA","D":"TSA"}, "answer":"A", "explanation": "BSA = Basic Service Area."},
+  {"question": "The parameter used in the 802.11 frame to check the integrity of the received frame is.", "question_type": "single_choice", "options": {"A":"Frame Control","B":"Duration","C":"FCS","D":"Sequence Control Bit"}, "answer":"C", "explanation": "FCS = Frame Check Sequence (CRC)."},
+  {"question": "How many channels does China support in the 2.4 GHz band?", "question_type": "single_choice", "options": {"A":"11","B":"13","C":"3","D":"5"}, "answer":"B", "explanation": "China allows channels 1–13."},
+  {"question": "What kind of technology is implemented by the 802.11a protocol?", "question_type": "single_choice", "options": {"A":"FHSS","B":"DSSS","C":"OFDM","D":"MIMO"}, "answer":"C", "explanation": "802.11a uses OFDM."},
+  {"question": "What is the distance between the center frequencies of the channels in the 2.4 GHz band?", "question_type": "single_choice", "options": {"A":"20 MHz","B":"22 MHz","C":"5 MHz","D":"10 MHz"}, "answer":"C", "explanation": "Channels are spaced 5 MHz apart."},
+  {"question": "What is the name of the first radio communication network based on packet technology?", "question_type": "single_choice", "options": {"A":"INTERNET","B":"ARPANet","C":"ALOHNET","D":"NSFnet"}, "answer":"C", "explanation": "ALOHANET (1971) was the first packet radio network."},
+  {"question": "Which is the longest interval between 802.11 frames?", "question_type": "single_choice", "options": {"A":"SIFS","B":"IFS","C":"DIFS","D":"PIFS"}, "answer":"C", "explanation": "DIFS > PIFS > SIFS."},
+{"question": "Which type of message is used in the 802.11 frame for the terminal to receive data packets in the power saving mode?", "question_type": "single_choice", "options": {"A":"RTS","B":"CTS","C":"ACK","D":"PS-Poll"}, "answer":"D", "explanation": "PS-Poll is used by a client in power-save mode to request buffered frames from the AP."},
+  {"question": "Huawei's AP products can only support one SSID.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "Huawei APs support multiple SSIDs (up to 16 or 32 depending on model)."},
+  {"question": "Because 802.11a supports the same maximum rate as 802.11g supports, the 802.11a protocol is backward compatible with the 802.11g protocol.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "802.11a (5 GHz) and 802.11g (2.4 GHz) use different bands and are not compatible with each other."},
+  {"question": "What are the rates that 802.11a can support?", "question_type": "single_choice", "options": {"A":"6,12,24,54 Mbps","B":"6,9,12,18,24,36,48,54 Mbps","C":"6,12,18,24,36,48,54 Mbps","D":"6,9,12,18,24,30,36,48,54 Mbps"}, "answer":"B", "explanation": "802.11a mandatory and optional rates: 6,9,12,18,24,36,48,54 Mbps."},
+  {"question": "What are the technical advantages of 802.11n over 802.11a/b/g?", "question_type": "single_choice", "options": {"A":"Maximum theoretical transmission rate is increased to 600Mbps","B":"Downward compatible with 802.11a/b/g protocol","C":"Support MIMO technology","D":"The other three items are correct"}, "answer":"D", "explanation": "All three (A, B, C) are correct advantages of 802.11n."},
+  {"question": "In the WDS peer-to-peer network, the backbone link between the Root AP and the Leaf AP is connected in the 5 GHz band. The bandwidth used by the Root AP is 149. Which of the following bands should the Leaf AP use?", "question_type": "single_choice", "options": {"A":"149","B":"153","C":"157","D":"Except for 149"}, "answer":"A", "explanation": "In point-to-point WDS, both sides must use the same channel."},
+  {"question": "Which of the following is included in the 802.11n MAC layer improvement technology (Select 2 Answers)?", "question_type": "multiple_choice", "options": {"A":"Frame aggregation technology","B":"MIMO technology","C":"Block confirmation technology","D":"Beamforming technology"}, "answer":["A","C"], "explanation": "Frame aggregation and Block ACK are MAC-layer enhancements; MIMO and beamforming are PHY-layer."},
+  {"question": "What is the wireless client's active scanning to get the surrounding wireless network information by sending frames?", "question_type": "single_choice", "options": {"A":"Beacon frame","B":"Probe Request frame","C":"Authentication Request frame","D":"Association Request frame"}, "answer":"B", "explanation": "Active scanning uses Probe Request/Response frames."},
+  {"question": "The eSight network management system is Huawei's dedicated network management platform, but it can only manage Huawei's own devices.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "eSight supports multi-vendor device management."},
+  {"question": "If the configuration parameters of the AP radio are changed, the AP must be restarted before the command takes effect.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "Most radio changes take effect immediately or after commit without reboot."},
+  {"question": "When only one interface of the AC is connected to the aggregation layer switch, the user traffic is directly transmitted through the aggregation switch to the public network.", "question_type": "single_choice", "options": {"A":"Side-by-side mode + tunnel forwarding","B":"Side-by-side mode + direct forwarding","C":"Direct connection mode + tunnel forwarding","D":"Direct connection mode + direct forwarding"}, "answer":"B", "explanation": "Side-by-side + direct forwarding means data bypasses AC."},
+  {"question": "The following statement about SSID is wrong.", "question_type": "single_choice", "options": {"A":"Multiple different SSIDs can be released on one AP","B":"The same SSID can be released on multiple APs.","C":"There is no limit to the number of SSIDs that can be configured on an AP.","D":"The same SSID signal can be released on two sets of antennas of one AP."}, "answer":"C", "explanation": "Huawei APs have a maximum number of SSIDs (usually 16 or 32)."},
+  {"question": "For the CAPWAP protocol, the following description is wrong.", "question_type": "single_choice", "options": {"A":"Transmission protocol between AC and thin AP","B":"Transmission protocol between thin AP and wireless client","C":"Developed by the CAPWAP Working Group","D":"CAPWAP protocol draws on the useful features of other protocols."}, "answer":"B", "explanation": "CAPWAP is only between AP and AC, not AP-client."},
+  {"question": "What is the command to check the system version of the AP running?", "question_type": "single_choice", "options": {"A":"display ap all","B":"display ap-run-info id x","C":"display ap version id x","D":"display ap update all"}, "answer":"C", "explanation": "display ap version <id> shows AP software version."},
+  {"question": "The MEthO/0/1 interface on the AC6605 is used for inband network management. The default address is 192.168.1.1/24 and cannot be modified.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"B", "explanation": "Management IP is configurable."},
+  {"question": "For the AC6605, the following commands can be used to check whether the AP is online", "question_type": "single_choice", "options": {"A":"display ap online all","B":"display ap all","C":"display ap-type all","D":"dispay ap-run-info all"}, "answer":"B", "explanation": "display ap all shows online/offline status."},
+  {"question": "Which of the following commands is to add GE 0/0/1 of Huawei access switch to VLAN 100?", "question_type": "single_choice", "options": {"A":"interface GigabitEthernet 0/0/1\nPort link-type access\nPort default VLAN 100","B":"...","C":"...","D":"..."}, "answer":"A", "explanation": "Standard access port configuration."},
+  {"question": "To upgrade an AP through FTP, you need to ensure that the AP and the FTP server can communicate with each other and put the AP upgrade file in the FTP root directory.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Standard FTP upgrade requirement."},
+  {"question": "If the terminal supports both 5 GHz and 2.4 GHz functions, the AP can be configured to control such terminals to preferentially access 5 GHz.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Band steering / 5G priority is supported."},
+  {"question": "What is the correct description of the thin AP below?", "question_type": "single_choice", "options": {"A":"Thin AP is also known as a wireless router.","B":"Thin AP is gradually replaced by fat AP...","C":"Thin AP cannot be configured separately and must be used with the wireless controller.","D":"..."}, "answer":"C", "explanation": "Thin AP requires AC for configuration and management."},
+  {"question": "If not configured, what is the default authentication method supported by the AP?", "question_type": "single_choice", "options": {"A":"mac-auth","B":"sn-auth","C":"no-auth","D":"mac-sn-auth"}, "answer":"C", "explanation": "Default is open (no-auth)."},
+  {"question": "The following description of the management VLAN is correct.", "question_type": "single_choice", "options": {"A":"Mainly responsible for transmitting data...","B":"PVID VLAN under WLAN ESS interface","C":"Service VLAN under the service set template","D":"Responsible for establishing the CAPWAP tunnel between the AC and the AP."}, "answer":"D", "explanation": "Management VLAN carries CAPWAP traffic."},
+  {"question": "Which of the following Huawei APs supports SFP fiber interfaces?", "question_type": "single_choice", "options": {"A":"AP6010DN","B":"AP6310SN","C":"AP6510DN","D":"AP6610DN"}, "answer":"A", "explanation": "AP6010DN-AGN has SFP port."},
+  {"question": "What kinds of VLANs are involved in the WLAN configuration (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"Management VLAN","B":"Service VLAN","C":"User VLAN","D":"Authentication VLAN"}, "answer":["A","B","C"], "explanation": "Common VLAN types in Huawei WLAN."},
+  {"question": "The following command can be used to configure the port of the Huawei switch to be in hybrid mode.", "question_type": "single_choice", "options": {"A":"switchport hybrid","B":"hybrid enable","C":"port link-type hybrid","D":"port mode hybrid"}, "answer":"C", "explanation": "Correct Huawei command syntax."},
+  {"question": "In the TKIP encryption mode, the length of the IV vector is bit.", "question_type": "single_choice", "options": {"A":"12","B":"24","C":"48","D":"64"}, "answer":"C", "explanation": "TKIP uses 48-bit IV."},
+  {"question": "Which of the following is the command to restart the AC6605?", "question_type": "single_choice", "options": {"A":"<Quidway> reload","B":"<Quidway> reboot","C":"[Quidway]reload","D":"[Quidway] reboot"}, "answer":"B", "explanation": "reboot is the correct command."},
+  {"question": "Which of the following two are PoE's power supply standards (Select 2 Answers)?", "question_type": "multiple_choice", "options": {"A":"IEEE 802.3ae","B":"IEEE 802.3af","C":"IEEE 802.3as","D":"IEEE 802.3at"}, "answer":["B","D"], "explanation": "802.3af (PoE) and 802.3at (PoE+)."},
+  {"question": "The CAPWAP protocol supports both Split Mac and Local Mac modes of operation.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Huawei supports both modes."},
+  {"question": "CCMP encryption is more secure than TKIP encryption because of its security.", "question_type": "single_choice", "options": {"A":"Adopt a longer IV","B":"Added a key distribution mechanism...","C":"Adopting a more complex encryption algorithm","D":"Added a message integrity check mechanism"}, "answer":"C", "explanation": "CCMP uses AES (stronger than RC4 in TKIP)."},
+  {"question": "The algorithm used for CCMP encryption is.", "question_type": "single_choice", "options": {"A":"RC4","B":"AES","C":"SMS4","D":"Michael"}, "answer":"B", "explanation": "CCMP = AES in counter mode with CBC-MAC."},
+  {"question": "In the thin AP networking, which of the following authentication methods does not require AC participation during the authentication process.", "question_type": "single_choice", "options": {"A":"Shared key authentication","B":"802.1X authentication","C":"PSK authentication","D":"Portal authentication"}, "answer":"C", "explanation": "PSK is local to AP; others need AC or external server."},
+  {"question": "Among the following encryption methods, the best security is.", "question_type": "single_choice", "options": {"A":"Clear text encryption","B":"WEP encryption","C":"TKIP encryption","D":"CCMP encryption"}, "answer":"D", "explanation": "CCMP (AES) is the strongest."},
+  {"question": "What VLAN is used to establish a CAPWAP tunnel VLAN for the AP and AC?", "question_type": "single_choice", "options": {"A":"Management VLAN","B":"Service VLAN","C":"User VLAN","D":"Authentication VLAN"}, "answer":"A", "explanation": "CAPWAP tunnel uses management VLAN."},
+  {"question": "What is the command to check online users on the AC?", "question_type": "single_choice", "options": {"A":"display users all","B":"display user-interface console 0","C":"display local-user","D":"display access-user"}, "answer":"D", "explanation": "display access-user shows wireless users."},
+  {"question": "In the process of discovering the AC by the thin AP, the first step is to check whether there is a list of pre-configured static AC IP addresses.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Static list has highest priority."},
+  {"question": "What are the main contents of the CAPWAP protocol (Select 3 Answers)?", "question_type": "multiple_choice", "options": {"A":"AP automatic discovery of AC...","B":"The AC manages the AP...","C":"STA data encapsulates CAPWAP tunnel...","D":"Define the transfer rate..."}, "answer":["A","B","C"], "explanation": "These are core CAPWAP functions."},
+  {"question": "What is the command for the Huawei AC6605 to switch between the wired side and the wireless side?", "question_type": "single_choice", "options": {"A":"Ctrl+B","B":"Ctrl+X","C":"Ctrl+Y","D":"Ctrl+Z"}, "answer":"C", "explanation": "Ctrl+Y switches to WLAN view."},
+  {"question": "Regarding the telnet management of the AC6605, the following statement is wrong.", "question_type": "single_choice", "options": {"A":"telnet is a way...","B":"telnet service is disabled by default...","C":"telnet service can be configured separately...","D":"telnet can be authenticated... transmission is encrypted and therefore quite secure."}, "answer":"D", "explanation": "Telnet is plaintext, not encrypted."},
+  {"question": "The upgrade operation of the Huawei wireless controller AC6605 can only be performed on the wired side of the controller.", "question_type": "true_or_false", "options": {"A":"True","B":"False"}, "answer":"A", "explanation": "Upgrade must be done from wired side."},
+  {
+    "question": "Regarding the functional characteristics of the AP6010SN, the following statement is correct (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AP6010SN is an indoor distributed AP that only supports working in the 2.4GHz band.",
+      "B": "The AP6010SN has an Ethernet interface that supports 802.3af PoE power supply standards.",
+      "C": "AP6010SN supports WDS function, which can realize point-to-point and point-to-multipoint wireless bridging",
+      "D": "AP6010SN not only has built-in antenna, but also can be installed with an external antenna."
+    },
+    "answer": ["B", "C"],
+    "explanation": "AP6010SN supports 802.3af PoE and WDS; it is dual-band and typically uses built-in antennas only."
+  },
+  {
+    "question": "The networking mode can be divided into a Layer 2 networking mode and a Layer 3 networking mode based on the network architecture between the AP and the AC.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "Huawei WLAN supports both L2 (direct) and L3 (routed) networking between AP and AC."
+  },
+  {
+    "question": "According to the following configuration example, the following statement is correct.\n[AC] dhcp enable\n[AC] interface VLANif100\n[AC-Vlanif100] ip address 10.1.100.1 24\n[AC-Vlanif100] dhcp select interface\n[AC-Vlanif100] quit",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The DHCP service is enabled by default in the global mode, so the dhcp enable can be configured.",
+      "B": "dhcp select interface command enables the DHCP client function on the interface of VLAN 100.",
+      "C": "If VLAN 100 is a user VLAN, the gateway is 10.1.100.1 and the mask is 255.255.255.0 after the user receives the address.",
+      "D": "If VLAN 100 is the management VLAN where the AP is located, the option 43 field in the DHCP message received by the AP should be 10.1.100.1."
+    },
+    "answer": "C",
+    "explanation": "dhcp select interface enables DHCP server on the interface; gateway and mask are correctly configured for VLAN 100."
+  },
+  {
+    "question": "Configure the security profile of the wireless network as WEP. You need to configure the security profile on the AC6605 as follows.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "security-policy wep\nwep authentication-method open\nwep key wep-40 hex 0 1234567890\nwep default-key 0",
+      "B": "security-policy wep\npolicy wep share-key\nwep key wep-40 hex 0 1234567890\nwep default-key 0",
+      "C": "authentication policy wpa\nwpa authentication-method share-key\nwpa key wpa-40 hex 0 1234567890\nwpa default-key 0",
+      "D": "authentication policy wpa2\nwpa2 authentication-method share-key\nwpa2 key wpa2-40 hex 0 1234567890\nwpa2 default-key 0"
+    },
+    "answer": "B",
+    "explanation": "WEP shared-key authentication uses 'policy wep share-key' in Huawei configuration."
+  },
+  {
+    "question": "What is the function of the AC in the wireless network (Select 3 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Centralized management AP",
+      "B": "Implement roaming function",
+      "C": "Send beacon frame",
+      "D": "Wireless intrusion detection"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "AC manages APs, enables roaming, and supports WIDS; beacon frames are sent by APs."
+  },
+  {
+    "question": "After passing, C. passing, after not following the following two-link backup networking, the description is incorrect.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Dual-link backup technology improves network reliability and ensures business stability in important nodes of the network.",
+      "B": "The standby AC should always be in the power-on state.",
+      "C": "In the process of establishing an active/standby link between the AP and the active and standby ACs, the link established first must be the primary link",
+      "D": "The network service configuration on the active and standby ACs must be consistent."
+    },
+    "answer": "C",
+    "explanation": "In Huawei dual-link backup, the primary CAPWAP tunnel is determined by priority, not the order of establishment."
+  },
+  {
+    "question": "Configure the authentication mode of the AP. What are the authentication modes supported by the AP (Select 3 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "mac-auth",
+      "B": "sn-auth",
+      "C": "no-auth",
+      "D": "mac-sn-auth"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Huawei APs support MAC, SN, no authentication; mac-sn-auth is not a valid mode."
+  },
+  {
+    "question": "Which of the following can be done to protect WLAN security (Select 3 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Authentication",
+      "B": "Encryption",
+      "C": "System protection",
+      "D": "Control traffic"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Authentication, encryption, and system protection (WIDS/WIPS) are standard security measures."
+  },
+  {
+    "question": "Each AC device needs to specify the source IP address of the AC to establish a CAPWAP tunnel with the AP. One AC can specify up to two WLAN source IP addresses.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "Huawei AC supports only one source interface/address per AC for CAPWAP."
+  },
+  {
+    "question": "AAA is a management framework that is implemented using more common protocols.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "RADIUS",
+      "B": "CAPWAP",
+      "C": "802.11a/b/g/n",
+      "D": "802.1X"
+    },
+    "answer": "A",
+    "explanation": "RADIUS is the most common protocol implementing AAA in WLAN."
+  },
+  {
+    "question": "The upgrade operation of the Huawei wireless controller AC6605 can only be performed on the wired side of the controller.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "AC6605 is a box-type controller; upgrades are done via console or network, not wirelessly."
+  },
+  {
+    "question": "In the following priority queues, the queue has the highest default priority.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "AC-BE",
+      "B": "AC-VI",
+      "C": "AC-VO",
+      "D": "AC-BK"
+    },
+    "answer": "C",
+    "explanation": "AC-VO (Voice) has the highest priority in 802.11e WMM."
+  },
+  {
+    "question": "For the networking architecture of the AC+thin AP, the following description is wrong.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "AP can't work alone, it needs to be maintained and managed by AC centralized agent.",
+      "B": "It can enhance service QoS, security and other functions through AC.",
+      "C": "The AP itself has zero configuration and is suitable for large-scale networking.",
+      "D": "Management of APs and users must be implemented through the network management system"
+    },
+    "answer": "D",
+    "explanation": "AP and user management is done directly on the AC or via eSight, not mandatory through NMS."
+  },
+  {
+    "question": "Huawei AC controller AC6605 supports user access security management through security templates and supports WEP, WPA/WPA2, and WAPI security policies.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "AC6605 supports security profiles including WEP, WPA/WPA2, and WAPI."
+  },
+  {
+    "question": "Wireless NICs that only support TKIP can be upgraded via drivers to support AES encryption.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "AES support requires hardware capability; driver update cannot add AES if chipset doesn't support it."
+  },
+  {
+    "question": "What are the upgrade modes of Huawei Wireless AP (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AC Download",
+      "B": "FTP Server Download",
+      "C": "AP Comes with",
+      "D": "BAS Download"
+    },
+    "answer": ["A", "B"],
+    "explanation": "Huawei APs support SFTP/FTP from server or direct download from AC."
+  },
+  {
+    "question": "The description of the following WLAN networking diagram is wrong.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The picture is a side-by-side networking",
+      "B": "PVID of the management VLAN can be configured on the access switch.",
+      "C": "You can use the AC as the DHCP server to assign an IP address to the AP.",
+      "D": "You cannot use an aggregation switch to assign an IP address to a STA."
+    },
+    "answer": "D",
+    "explanation": "Aggregation switch can act as DHCP server for STAs if configured."
+  },
+  {
+    "question": "If PoE is enabled on the switch, you can no longer access legacy devices on these interfaces.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "802.3af/at PoE is backward compatible with non-PoE devices."
+  },
+  {
+    "question": "20dBm is equivalent to mW.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "100",
+      "B": "200",
+      "C": "500",
+      "D": "1000"
+    },
+    "answer": "A",
+    "explanation": "10 log(P/1mW) = 20 → P = 100 mW"
+  },
+  {
+    "question": "The following is an incorrect way to refer to AP access control (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "By default, the access control mode of the AP to the AC is not authenticated.",
+      "B": "By configuring the AP in the offline state, authentication is required to automatically access the AP.",
+      "C": "The configuration whitelist can be authenticated based on the MAC or authenticated based on the SN.",
+      "D": "If the AP access control adopts MAC authentication, the AP outside the MAC authentication list can also be online after being manually confirmed."
+    },
+    "answer": ["A", "B"],
+    "explanation": "Default is MAC authentication (not no-auth), and offline configuration does not force authentication."
+  },
+  {
+    "question": "Commonly used RF cables for WLAN systems are (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "RG-8 jumper",
+      "B": "1/2\" (inch) super soft feeder",
+      "C": "1/2\" (inch) feeder",
+      "D": "13/8\" (inch) feeder"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Standard cables for indoor distributed systems and outdoor connections."
+  },
+  {
+    "question": "The gain of the antenna can be explained by .",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The ability of the antenna to amplify high-frequency electrical signals",
+      "B": "The ability of the antenna to collect or transmit electromagnetic waves in a certain direction",
+      "C": "Amplification ability of electromagnetic waves",
+      "D": "The ability of the antenna to collect or emit electromagnetic waves in all directions"
+    },
+    "answer": "B",
+    "explanation": "Gain is directional concentration of radiated power."
+  },
+  {
+    "question": "The three APs deployed on the first floor have channels from left to right, 1, 6, and 11, respectively. The channels of the three APs deployed on the second floor should be divided into.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1,6,11",
+      "B": "2,7,12",
+      "C": "6,11,1",
+      "D": "11,6,1"
+    },
+    "answer": "C",
+    "explanation": "Staggered channel layout reduces inter-floor co-channel interference."
+  },
+  {
+    "question": "When wireless network engineers are planning for WLAN networks, the purpose of RF simulation is (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Simulate signal coverage, find blind areas",
+      "B": "Obtain field strength distribution at different locations",
+      "C": "Obtain the current signal-to-noise ratio at different locations",
+      "D": "Obtain the available bandwidth at different locations"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "RF simulation predicts coverage, RSSI, and SNR; bandwidth depends on real environment."
+  },
+  {
+    "question": "In order to facilitate management and maintenance, the AP power supply mode generally prefers to supply power.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Independent power adapter",
+      "B": "POE switch",
+      "C": "POE adapter",
+      "D": "AC power supply"
+    },
+    "answer": "B",
+    "explanation": "PoE switch provides centralized power and easier management."
+  },
+  {
+    "question": "AP transmit power 20dBm, antenna gain 4dBi, cable and device loss 1dB, terminal receive antenna gain 2dBi, spatial propagation loss 80dB, terminal receive level RSSI=.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "-57",
+      "B": "-56",
+      "C": "-55",
+      "D": "-54"
+    },
+    "answer": "B",
+    "explanation": "20dBm + 4dBi - 1dB - 80dB + 2dBi = -55dBm → closest is -56dBm (minor rounding)."
+  },
+  {
+    "question": "The gain of antenna A is 11dBi, and the gain of antenna B is 8dBi. It can be said that antenna A has a larger gain than antenna B.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "3dB",
+      "B": "3dBi",
+      "C": "3dBd",
+      "D": "Uncertain"
+    },
+    "answer": "A",
+    "explanation": "11dBi - 8dBi = 3dB gain difference."
+  },
+  {
+    "question": "The following options are prerequisites for starting the Huawei load balancing function.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "AP belongs to the same type",
+      "B": "The AP is under the same AC management, and the signals between the APs overlap.",
+      "C": "STA can scan APs that are load balanced with each other.",
+      "D": "AP's output power setting is consistent"
+    },
+    "answer": "B",
+    "explanation": "Same AC and overlapping coverage are mandatory for load balancing group."
+  },
+  {
+    "question": "The AP and the antenna can be connected.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Network cable",
+      "B": "CATV coaxial cable",
+      "C": "Power cable",
+      "D": "50 ohm RF coaxial cable"
+    },
+    "answer": "D",
+    "explanation": "Antennas connect via 50Ω RF coaxial cables (e.g., LMR, 1/2\" feeder)."
+  },
+  {
+    "question": "In the direct connection network, the AP and the AC establish a CAPWAP tunnel. The management flow must be encapsulated in the CAPWAP tunnel. The data service flow can be encapsulated in the CAPWAP tunnel.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "In direct forwarding (local forwarding), data traffic is not tunneled; in tunnel forwarding, it is."
+  },
+  {
+    "question": "What is the coverage of the AP (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AP transmit power",
+      "B": "Antenna gain",
+      "C": "AP size",
+      "D": "Transmission loss"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "Coverage depends on Tx power, antenna gain, and path loss."
+  },
+  {
+    "question": "Among the following options, is the reason for using 5G priority access.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "5G frequency band is easier to network planning",
+      "B": "5G frequency band can provide better access capacity and capacity",
+      "C": "The connection speed between the user and the AP is fast in the 5G frequency band.",
+      "D": "The transmission rate of the 5G frequency band is higher than the 2.4G frequency band."
+    },
+    "answer": "B",
+    "explanation": "5GHz has more channels and less interference → higher capacity."
+  },
+  {
+    "question": "Regarding the working principle of 5G priority, the following statement is correct.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "5G priority feature is to let the 5G client send data preferentially.",
+      "B": "5G priority is turned on, the network transfer speed of the client supporting only 2.4G will be slower.",
+      "C": "5G priority requires the AP to work normally when it is a dual-band AP.",
+      "D": "5G priority requires all clients to support both 2.4GHz and 5GHz bands"
+    },
+    "answer": "C",
+    "explanation": "5G priority only works on dual-band APs."
+  },
+  {
+    "question": "The 802.11 protocol that defines the quality of service in WLAN is .",
+    "question_type": "single_choice",
+    "options": {
+      "A": "802.11f",
+      "B": "802.11i",
+      "C": "802.11e",
+      "D": "802.11n"
+    },
+    "answer": "C",
+    "explanation": "802.11e defines WMM and EDCA for QoS."
+  },
+  {
+    "question": "Which of the following features is available for the Huawei WLAN Planning Tool (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Support automatic identification and identification of obstacles",
+      "B": "Support common coverage area and key coverage area division",
+      "C": "Support automatic deployment of AP location",
+      "D": "Support WLAN planning report for export specification"
+    },
+    "answer": ["B", "C", "D"],
+    "explanation": "Huawei WLAN Planner supports area division, auto AP placement, and report export."
+  },
+  {
+    "question": "The number of users is 300, and the concurrency rate is 70%. The terminal supports the 2.4 GHz and 5 GHz frequency bands. According to the maximum number of users per dual-band dual-frequency AP, at least __ APs can meet the capacity requirements.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8"
+    },
+    "answer": "B",
+    "explanation": "300 × 70% = 210 concurrent users. Huawei typical dual-radio AP supports ~30-40 users per radio → ~60-80 total → 210 / 35 ≈ 6 APs."
+  },
+  {
+    "question": "The number of APs supported by the AC6605 by default is.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "4",
+      "B": "0",
+      "C": "8",
+      "D": "10"
+    },
+    "answer": "A",
+    "explanation": "AC6605 base license supports 4 APs (requires additional licenses for more)."
+  },
+  {
+    "question": "Among the following options, the common source of WLAN interference is (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Microwave oven",
+      "B": "Remote control",
+      "C": "Cordless telephone",
+      "D": "Bluetooth transmission equipment"
+    },
+    "answer": ["A", "C", "D"],
+    "explanation": "Microwave, 2.4GHz cordless phones, and Bluetooth are common 2.4GHz interferers."
+  },
+  {
+    "question": "The following statement about frequency planning is correct (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "2.4 GHz generally uses 1, 6, and 11 three non-overlapping channels for coverage.",
+      "B": "There are generally 23 non-overlapping channels available in China at 5 GHz.",
+      "C": "Microwave interference will occur in the full 2.4GHz band.",
+      "D": "If the AP is dual-frequency, it is recommended to use the 5G priority function."
+    },
+    "answer": ["A", "D"],
+    "explanation": "1,6,11 are standard non-overlapping; 5G priority is recommended for dual-band APs."
+  },
+  {
+    "question": "There are three types of Huawei load balancing judgment: traffic mode, session mode, and virtual switch mode.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "Huawei supports user number and traffic-based load balancing, not virtual switch mode."
+  },
+  {
+    "question": "Which of the following commands can be used to view the AC current configuration?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "display interface",
+      "B": "display current-configuration",
+      "C": "display ap all",
+      "D": "display version"
+    },
+    "answer": "B",
+    "explanation": "Standard VRP command to view running config."
+  },
+  {
+    "question": "When the two-channel center frequency distance is less than or equal to 25 MHz, there is an overlapping area between the channels, and there may be some interference. Therefore, in order to avoid adjacent channel interference in adjacent area channel planning, the same channel is not allowed.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "Adjacent channel interference occurs when channels overlap; co-channel interference is worse and avoided by reuse distance."
+  },
+  {
+    "question": "The IEEE 802.11 standard used to define roaming is",
+    "question_type": "single_choice",
+    "options": {
+      "A": "IEEE 802.11c",
+      "B": "IEEE 802.11h",
+      "C": "IEEE 802.11j",
+      "D": "IEEE 802.11r"
+    },
+    "answer": "D",
+    "explanation": "802.11r defines fast BSS transition (fast roaming)."
+  },
+  {
+    "question": "The power of the indoor AP is generally __ mW.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "100",
+      "B": "500",
+      "C": "800",
+      "D": "50"
+    },
+    "answer": "A",
+    "explanation": "Typical indoor AP transmit power is 100mW (20dBm) per radio."
+  },
+  {
+    "question": "The choice of WLAN coverage antenna, for narrow and long areas, it is recommended to select (), open a short distance area, it is recommended to select ().",
+    "question_type": "single_choice",
+    "options": {
+      "A": "omnidirectional antenna; omnidirectional antenna",
+      "B": "omnidirectional antenna; directional antenna",
+      "C": "directional antenna; omnidirectional antenna",
+      "D": "directional antenna; directional antenna"
+    },
+    "answer": "C",
+    "explanation": "Corridor → directional; open hall → omnidirectional."
+  },
+  {
+    "question": "The current version information can be viewed in the following commands.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "display interface",
+      "B": "display current-configuration",
+      "C": "display ap all",
+      "D": "display version"
+    },
+    "answer": "D",
+    "explanation": "Standard command for software/hardware version."
+  },
+  {
+    "question": "The following statement about antenna classification is correct (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Classification by direction: omnidirectional antenna, directional antenna, etc.",
+      "B": "Classification by shape: wire antenna, planar antenna, etc.",
+      "C": "Classification by use: short wave antenna, ultrashort wave antenna, microwave antenna, etc.",
+      "D": "Classification by working frequency band: communication antenna, TV antenna, radar antenna, etc."
+    },
+    "answer": ["A", "B"],
+    "explanation": "Standard classifications are by directivity and physical structure."
+  },
+  {
+    "question": "For the polarization of electromagnetic waves, the following description is correct (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The antenna radiates electromagnetic waves to the surrounding space, and the direction of the electric field changes according to a certain law.",
+      "B": "The polarization of the antenna refers to the direction of the magnetic field strength formed by the antenna radiation.",
+      "C": "If the electric field of the electric wave is perpendicular to the ground, we call it a vertically polarized wave.",
+      "D": "If the transmitting antenna is circularly polarized, the receiving antenna must also be circularly polarized, and both polarization directions must be the same"
+    },
+    "answer": ["A", "C", "D"],
+    "explanation": "Polarization is defined by electric field direction; circular requires matching handedness."
+  },
+  {
+    "question": "What are the QoS service models (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Best Effort model",
+      "B": "IntServ model",
+      "C": "FIFO model",
+      "D": "DiffServ model"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "Standard QoS models: Best Effort, Integrated Services (IntServ), Differentiated Services (DiffServ)."
+  },
+  {
+    "question": "The correct statement about WDS is (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Connect two separate LAN segments through a wireless bridge and provide data transmission between them",
+      "B": "WDS uses the 2.4GHz band as the bridge frequency band by default.",
+      "C": "Scalability is good, and there is no need to lay new wired connections and deploy more APs",
+      "D": "Huawei indoor AP does not support WDS function."
+    },
+    "answer": ["A", "C"],
+    "explanation": "WDS provides wireless bridging and extends coverage without cabling."
+  },
+  {
+    "question": "The AP domain deployment types are as follows (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Independent deployment",
+      "B": "Discrete deployment",
+      "C": "Ordinary deployment",
+      "D": "Dense deployment"
+    },
+    "answer": ["B", "C", "D"],
+    "explanation": "Huawei uses discrete, normal, and dense deployment scenarios."
+  },
+  {
+    "question": "For outdoor WLAN coverage, the following statement is correct (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The higher the antenna gain, the stronger the antenna directivity and the weaker the radiation gain directly below the antenna.",
+      "B": "The feeder interface must match the selected antenna",
+      "C": "The length of the feeder must not exceed 2 meters.",
+      "D": "Outdoor antennas should not blindly pursue high gain"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "High-gain antennas have narrow vertical beamwidth and null below; connectors must match; high gain may cause coverage holes."
+  },
+  {
+    "question": "Which of the following 2.4GHz bands are non-overlapping (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "6 and 11",
+      "B": "3 and 8",
+      "C": "4 and 8",
+      "D": "4 and 10"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "Non-overlapping pairs in 2.4GHz: 1-6, 6-11, 1-11, and combinations separated by ≥5 channels."
+  },
+  {
+    "question": "To configure a WLAN service, you need to add an AC to the U2000.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "U2000 (now eSight) manages ACs and requires adding the AC device."
+  },
+  {
+    "question": "The omnidirectional antenna exhibits a degree of on the horizontal pattern.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "90",
+      "B": "180",
+      "C": "360",
+      "D": "0"
+    },
+    "answer": "C",
+    "explanation": "Omnidirectional antennas have 360° horizontal coverage."
+  },
+  {
+    "question": "In Uranium to ensure that there is no interference between the channels of the WLAN network, which of the following bands belong to the Chinese 5.8GHz band (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "149",
+      "B": "151",
+      "C": "153",
+      "D": "155"
+    },
+    "answer": ["A", "C"],
+    "explanation": "China 5.8GHz UNII-3 channels: 149, 153, 157, 161, 165."
+  },
+  {
+    "question": "In Huawei eSight, the method of adding WLAN devices includes (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "真人 Add manually",
+      "B": "Add automatically",
+      "C": "Add in batches",
+      "D": "Add script"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "eSight supports manual, auto-discovery, and batch import."
+  },
+  {
+    "question": "Which of the following are factors that need to be considered for AP capacity planning (Select 3 Answers)",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Equipment performance",
+      "B": "Number of concurrent users",
+      "C": "Bandwidth requirements",
+      "D": "Power supply type"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Capacity planning considers AP capability, user count, and traffic demand."
+  },
+  {
+    "question": "The AC performs a load balancing process based on the information.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "The AP periodically sends information about the STA associated with it to the AC.",
+      "B": "STA periodically reports the currently associated AP ID.",
+      "C": "AC periodically queries the number of STAs associated with an AP.",
+      "D": "STA periodically searches for the AP information and reports the AP ID through the associated AP."
+    },
+    "answer": "A",
+    "explanation": "AP reports associated STA count and load to AC for load balancing decision."
+  },
+  {
+    "question": "The following description of the splitter and coupler is correct.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Power splitter and coupler are equal power allocation",
+      "B": "Power splitter is equal power distribution, coupler is unequal power distribution",
+      "C": "Power splitter is unequal power distribution, coupler is equal power distribution",
+      "D": "Power splitter and coupler are unequal power distribution"
+    },
+    "answer": "B",
+    "explanation": "Splitter divides power equally; coupler has one main path and coupled path (unequal)."
+  },
+  {
+    "question": "Antennas are classified by direction and can be classified into __ antennas and __ antennas (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "plate shape",
+      "B": "paraboloid",
+      "C": "omnidirectional",
+      "D": "directional"
+    },
+    "answer": ["C", "D"],
+    "explanation": "Basic classification: omnidirectional and directional."
+  },
+  {
+    "question": "The AP can provide power and data transmission through the POE switch.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "PoE switches provide both power and data over Ethernet."
+  },
+  {
+    "question": "Which of the following WLAN signals pass through (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Gypsum board",
+      "B": "Glass window (colorless)",
+      "C": "Concrete wall",
+      "D": "Brick wall"
+    },
+    "answer": ["A", "B"],
+    "explanation": "Gypsum and clear glass have low attenuation; concrete and brick have high loss."
+  },
+  {
+    "question": "For indoor distributed APs, the following description is correct.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "AP power can be up to 800mW.",
+      "B": "It can be deployed in conjunction with the carrier's 3G network.",
+      "C": "Waterproof and dustproof",
+      "D": "AP6310SN supports dual frequency mode"
+    },
+    "answer": "B",
+    "explanation": "Indoor distributed APs (e.g., AP6010DN) are used in IBS with mobile networks."
+  },
+  {
+    "question": "If the demand for WLAN capacity is high in a coverage area, the construction method of __ should be considered.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Indoor distribution system combination road",
+      "B": "Outdoor distribution system combination road",
+      "C": "Indoor installation",
+      "D": "Outdoor type AP+ directional antenna"
+    },
+    "answer": "C",
+    "explanation": "High capacity → indoor put-mode (ceiling/wall-mounted) APs."
+  },
+  {
+    "question": "How many management nodes does the eSight Standard Edition support?",
+    "question_type": "single_choice",
+    "options": {
+      "A": "60",
+      "B": "2000",
+      "C": "5000",
+      "D": "20000"
+    },
+    "answer": "B",
+    "explanation": "eSight Standard supports up to 2000 NEs."
+  },
+  {
+    "question": "Among the following obstacles, has the greatest loss of wireless signals.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Gypsum ceiling",
+      "B": "Glass",
+      "C": "120mm Brick wall",
+      "D": "200mm Concrete wall"
+    },
+    "answer": "D",
+    "explanation": "Thick concrete has the highest attenuation (~30-50dB)."
+  },
+  {
+    "question": "The gain of antenna A is 11dBi, and the gain of antenna B is 8dBi. It can be said that antenna A has a larger gain than antenna B.",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "3dB",
+      "B": "3dBi",
+      "C": "3dBd",
+      "D": "Uncertain"
+    },
+    "answer": ["A", "B"],
+    "explanation": "Difference is 3dB or 3dBi since both are in dBi."
+  },
+  {
+    "question": "The AP or AC performing the connectivity test must be online",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "Ping or trace tests require the device to be reachable."
+  },
+  {
+    "question": "The equipment manufacturer can usually be judged according to the following.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "SSID",
+      "B": "MAC address",
+      "C": "Encryption type",
+      "D": "Channel"
+    },
+    "answer": "B",
+    "explanation": "First 3 bytes of MAC (OUI) identify manufacturer."
+  },
+  {
+    "question": "Which of the following options will cause users to not find a wireless network signal (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AP is configured with 5G priority, resulting in 2.4G wireless client not searching for signals.",
+      "B": "The user wireless network card is not enabled or the wireless network card hardware switch is not turned on.",
+      "C": "The wireless controller is configured with user isolation",
+      "D": "User wireless network card driver is abnormal"
+    },
+    "answer": ["B", "D"],
+    "explanation": "NIC disabled or driver issue prevents scanning; 5G priority does not hide 2.4G SSID."
+  },
+  {
+    "question": "What are the reasons why APs cannot go online (Select 3 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The configuration of the DHCP address pool is incorrect. The AP cannot obtain the address.",
+      "B": "The AP uses static discovery but the IP address of the AC is incorrect.",
+      "C": "The version of AP is inconsistent with the version of AC.",
+      "D": "The controller adopts no-auth authentication mode."
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Common causes: no IP, wrong AC IP in static mode, version mismatch."
+  },
+  {
+    "question": "When an 802.11 packet sent by a STA enters the Ethernet through the AP, it is converted into an 802.3 packet, which is not a priority mapping method.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "No priority mapping",
+      "B": "Different priorities according to different VAP settings",
+      "C": "According to the order in which the packets arrive at the AP",
+      "D": "Map the priorities according to UP."
+    },
+    "answer": "C",
+    "explanation": "Priority mapping is based on 802.11 UP or VAP profile, not FIFO order."
+  },
+  {
+    "question": "Which of the following options are EDCA parameters (Select 2 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "AIFSN",
+      "B": "SIFS",
+      "C": "DIFS",
+      "D": "TXOPLimit"
+    },
+    "answer": ["A", "D"],
+    "explanation": "EDCA parameters include AIFSN, CWmin/CWmax, TXOP Limit."
+  },
+  {
+    "question": "In China, the WLAN band supported by regulations is",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "2.4-2.4835GHz",
+      "B": "5.15-5.25GHz",
+      "C": "5.25-5.35GHz",
+      "D": "5.725-5.850GHz"
+    },
+    "answer": ["A", "D"],
+    "explanation": "China allows 2.4–2.4835GHz and 5.725–5.85GHz for general use."
+  },
+  {
+    "question": "If an AP has been added offline, the AP can go online directly.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "Pre-provisioned offline APs can come online without manual confirmation if in whitelist."
+  },
+  {
+    "question": "For dBm, dB, dBi, the following description is correct (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "dBm: characterizes the absolute value of power",
+      "B": "dBi and dBd: characterize the relative value of the gain",
+      "C": "dB: Characterizing the relative value of power",
+      "D": "If the antenna is 12dBi and the antenna is 14dBi, it can be said that A is smaller than 2D."
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "dBm is absolute power; dB/dBi/dBd are relative; option D has grammatical error."
+  },
+  {
+    "question": "What are the general methods for solving co-channel interference (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Adjust AP transmit power and adjust antenna feed",
+      "B": "Reasonable frequency reuse to ensure that the same channel does not appear in the same or adjacent coverage area",
+      "C": "Multi-directional coverage using omnidirectional antennas",
+      "D": "Natural isolation using obstacles"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "Reduce power, increase reuse distance, and use physical barriers."
+  },
+  {
+    "question": "How to deal with the failure of AP and AC version mismatch on a large number of devices.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Upgrade the versions to match each other.",
+      "B": "Replace the AP device.",
+      "C": "Replace the switch",
+      "D": "Check if the POE power supply is normal."
+    },
+    "answer": "A",
+    "explanation": "Version compatibility issue is resolved by unified upgrade."
+  },
+  {
+    "question": "The following is not the AP binding template.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Radio frequency template",
+      "B": "AP template",
+      "C": "ESS template",
+      "D": "Planning table template"
+    },
+    "answer": "D",
+    "explanation": "Huawei uses RF, AP, and service (ESS) templates; planning table is from WLAN Planner."
+  },
+  {
+    "question": "Metal objects have a greater attenuation of the wireless signal, and the AP or antenna should be placed behind a metal ceiling or the like.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "Metal reflects/absorbs signal; AP should be in front of metal ceiling."
+  },
+  {
+    "question": "Use the display ap all command to view the MAC, type, and running status of an AP.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "display ap all shows AP ID, MAC, type, state, etc."
+  },
+  {
+    "question": "WLAN APs can be powered by (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "POE switch",
+      "B": "POE adapter",
+      "C": "Independent power adapter",
+      "D": "RF cable"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Standard power methods for Huawei APs."
+  },
+  {
+    "question": "The electrical performance indicators of the antenna include (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Gain",
+      "B": "Lobe width",
+      "C": "Power size",
+      "D": "Polarization mode"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "Key electrical parameters: gain, beamwidth, polarization, VSWR, etc."
+  },
+  {
+    "question": "The roaming of the terminal in different VLANs belongs to.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Seamless AP roaming",
+      "B": "Layer 2 roaming",
+      "C": "Three-layer roaming",
+      "D": "Four-layer roaming"
+    },
+    "answer": "C",
+    "explanation": "Cross-VLAN roaming is Layer 3 roaming."
+  },
+  {
+    "question": "For outdoor long-distance point-to-point backhaul, the antenna of __ should be selected.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "High gain, small lobe width",
+      "B": "High gain, large lobe width",
+      "C": "Omnidirectional",
+      "D": "Low gain, large lobe width"
+    },
+    "answer": "A",
+    "explanation": "Long-distance PtP requires high-gain narrow-beam antennas."
+  },
+  {
+    "question": "What are the prerequisites for users to implement Layer 3 roaming (Select 3 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The two APs of the user roaming switch must have the same SSID.",
+      "B": "Two APs for user roaming switch must have the same VLAN",
+      "C": "User roaming requires two AP signals to be covered with overlapping areas",
+      "D": "The SSID released by the two APs of the user roaming switch must have the same authentication method."
+    },
+    "answer": ["A", "C", "D"],
+    "explanation": "L3 roaming requires same SSID, authentication, and overlapping coverage; VLAN can differ."
+  },
+  {
+    "question": "The antenna obtains the gain by means of __.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Using a power amplifier in the antenna system",
+      "B": "Making the antenna radiation more concentrated",
+      "C": "Use high efficiency antenna feeder",
+      "D": "Use low standing wave ratio equipment"
+    },
+    "answer": "B",
+    "explanation": "Gain is achieved by focusing energy in a direction."
+  },
+  {
+    "question": "The common reason why an AP cannot obtain an IP address is (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "The address pool is incorrectly configured.",
+      "B": "The address pool is exhausted.",
+      "C": "Intermediate network problems.",
+      "D": "POE power failure."
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "DHCP issues and L2 connectivity problems prevent IP assignment."
+  },
+  {
+    "question": "When deploying APs on multiple floors of a building, the factor to be aware of is (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Material of the wall",
+      "B": "Other interference signals",
+      "C": "In order not to affect the appearance, the AP should be hidden in the ceiling",
+      "D": "Unified planning channel"
+    },
+    "answer": ["A", "B", "D"],
+    "explanation": "Wall material, interference, and channel planning are critical; hiding behind metal affects coverage."
+  },
+  {
+    "question": "For areas with roaming requirements, the coverage of neighboring APs is kept above 50% to ensure smooth switching between APs.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "50-70% overlap recommended for seamless roaming."
+  },
+  {
+    "question": "When WLAN planning is performed in a single area, the factors affecting the number of APs deployed are (Select 3 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Number of people accessing in the area",
+      "B": "Size of the area",
+      "C": "Field strength and bandwidth requirements",
+      "D": "Number of network ports"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "User count, area size, and coverage/capacity requirements determine AP quantity."
+  },
+  {
+    "question": "Capacity planning mainly estimates the number of APs needed to meet the traffic volume in terms of device performance, number of users, bandwidth requirements, and wireless environment.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "Definition of capacity planning."
+  },
+  {
+    "question": "When the channel interference of the 2.4 GHz band is large and severe, the device is adjusted to 3 channels, which can effectively reduce interference.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "Using only 3 channels increases co-channel interference; better to use 1-6-11 properly."
+  },
+  {
+    "question": "Which configuration methods does the wireless controller support (Select 3 Answers)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "telnet configuration",
+      "B": "console port configuration",
+      "C": "eSight configuration",
+      "D": "LLDP configuration"
+    },
+    "answer": ["A", "B", "C"],
+    "explanation": "Standard methods: CLI (Telnet/Console) and eSight NMS."
+  },
+  {
+    "question": "The two commonly used units describing antenna gain are dBi and dBd, and the conversion relationship between them is: dBi=dBd+2.14.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "dBi = dBd + 2.15 (approximately 2.14)."
+  },
+  {
+    "question": "The conditions for switching triggers are generally set (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Start the switch after the STA reaches a certain distance from the original AP.",
+      "B": "Set the signal strength ratio between the current AP and the neighbor AP, and switch to the threshold.",
+      "C": "Check the packet loss rate and start switching when the packet loss rate reaches a certain value.",
+      "D": "Start the switch when the network speed is very slow when it is associated with the original AP."
+    },
+    "answer": ["B", "C"],
+    "explanation": "Roaming triggered by RSSI difference or high PER."
+  },
+  {
+    "question": "The port number of the control packet of the CAPWAP tunneling protocol is",
+    "question_type": "single_choice",
+    "options": {
+      "A": "1645",
+      "B": "1646",
+      "C": "5246",
+      "D": "5247"
+    },
+    "answer": "D",
+    "explanation": "CAPWAP control port: UDP 5247; data port: UDP 5246."
+  },
+  {
+    "question": "If the AP's transmit power is 1mW, it is converted to dBm and then __ dBm.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "20",
+      "B": "1",
+      "C": "0",
+      "D": "10"
+    },
+    "answer": "C",
+    "explanation": "10 log(1mW/1mW) = 0 dBm"
+  },
+  {
+    "question": "Among the following options, it is not the main purpose of roaming.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Avoid excessive authentication time during roaming, resulting in packet loss or even service interruption.",
+      "B": "Ensure user authorization information remains unchanged.",
+      "C": "Ensure that the user's IP address is unchanged.",
+      "D": "Ensure that the user's network rate is unchanged."
+    },
+    "answer": "D",
+    "explanation": "Roaming does not guarantee sustained high rate; rate may change."
+  },
+  {
+    "question": "The cable used in the project cannot theoretically exceed the __ meter.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "50",
+      "B": "80",
+      "C": "100",
+      "D": "150"
+    },
+    "answer": "B",
+    "explanation": "For 1/2\" feeder, maximum recommended length is ~80-100m to limit loss."
+  },
+  {
+    "question": "The size of the coverage area of the AP is controlled by means (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "Adjust the angle of the AP antenna",
+      "B": "Adjust the transmit power of the AP",
+      "C": "Adjusting the power supply of the AP",
+      "D": "Adjusting the access bandwidth of the AP"
+    },
+    "answer": ["A", "B"],
+    "explanation": "Coverage controlled by Tx power and antenna pattern."
+  },
+  {
+    "question": "Various pipes, metal keels and aluminum alloy gussets in the ceiling will have a greater impact on the actual signal coverage.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "Metal objects cause reflection and attenuation."
+  },
+  {
+    "question": "The indicator used to describe the extent to which the antenna converges on the transmit power is.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Broadband",
+      "B": "Power",
+      "C": "Gain",
+      "D": "Polarity"
+    },
+    "answer": "C",
+    "explanation": "Gain measures directivity and focusing of energy."
+  },
+  {
+    "question": "The systematic process of AP RF resource management is.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Acquisition -> Decision -> Analysis -> Execution",
+      "B": "Analysis -> Acquisition -> Decision -> Execution",
+      "C": "Acquisition -> Analysis -> Execution -> Decision",
+      "D": "Acquisition -> Analysis -> Decision -> Execution"
+    },
+    "answer": "D",
+    "explanation": "RRM process: collect data → analyze → decide → execute (e.g., TPC, DCA)."
+  },
+  {
+    "question": "Regarding the characteristics of Huawei WLAN products, the following statement is correct.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Wireless controller can achieve high availability through stacking",
+      "B": "Huawei's AP radio tuning function is divided into global tuning and local tuning. The local tuning is done by the AP independently.",
+      "C": "The switching threshold of WLAN load balancing has two configurations based on the number of users and the number of sessions.",
+      "D": "After the dual-link backup configuration, if the user adopts the tunnel forwarding mode, the active service will not be interrupted even if the active AC fails."
+    },
+    "answer": "C",
+    "explanation": "Huawei supports both user-number and session-based load balancing thresholds."
+  },
+  {
+    "question": "There are many video conferences in large companies, and QoS generally adopts the service model.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Best Effort model",
+      "B": "IntServ model",
+      "C": "FIFO model",
+      "D": "DiffServ model"
+    },
+    "answer": "D",
+    "explanation": "DiffServ is widely used in enterprise networks for voice/video prioritization."
+  },
+  {
+    "question": "The Int-Serv model provides users with end-to-end absolute QoS guarantees, but the reason for the lack of successful large-scale commercial use is.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Limited bandwidth reservation",
+      "B": "Low forwarding efficiency",
+      "C": "Poor scalability",
+      "D": "Not conducive to traffic regulation"
+    },
+    "answer": "C",
+    "explanation": "IntServ requires per-flow state in all routers → poor scalability."
+  },
+  {
+    "question": "For better coverage, try to make the AP signal pass through the wall.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "Vertical",
+      "B": "Parallel",
+      "C": "45°",
+      "D": "60°"
+    },
+    "answer": "A",
+    "explanation": "Perpendicular incidence has least reflection and best penetration."
+  },
+  {
+    "question": "Which of the following are related parameters of the Traffic template (Select 2 Answers).",
+    "question_type": "multiple_choice",
+    "options": {
+      "A": "802.3 Priority Mapping Policy",
+      "B": "CAC Policy",
+      "C": "Tunnel priority mapping strategy",
+      "D": "ACK strategy"
+    },
+    "answer": ["A", "C"],
+    "explanation": "Traffic policy includes 802.11e to 802.1p and CAPWAP tunnel priority mapping."
+  },
+  {
+    "question": "The maximum number of layers supported by the location topology in Huawei eSight is __ layer.",
+    "question_type": "single_choice",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "9",
+      "D": "10"
+    },
+    "answer": "D",
+    "explanation": "eSight supports up to 10 layers in topology hierarchy."
+  },
+  {
+    "question": "The port number of the data packet on the AC side of the CAPWAP tunnel is 5246, and the port number of the control packet is 5247.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "B",
+    "explanation": "Correct is: control = 5247, data = 5246 (statement has them reversed)."
+  },
+  {
+    "question": "To avoid reconfiguration of data when an AP on the network is faulty, you can quickly replace APs by configuring AP replacement.",
+    "question_type": "true_or_false",
+    "options": {"A": "True", "B": "False"},
+    "answer": "A",
+    "explanation": "Huawei supports AP auto-replacement with configuration inheritance via MAC/SN."
+  },
+]
