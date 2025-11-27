@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { examId: string } }
+  { params }: { params: Promise<{ examId: string }> }
 ) {
   try {
     const currentUser = await getCurrentUser();
@@ -16,8 +16,10 @@ export async function GET(
     }
     
     await connectDB();
-    
-    const scores = await Score.find({ examId: params.examId })
+
+
+    const {examId} = await params;
+    const scores = await Score.find({ examId: examId })
       .populate('studentId', 'username')
       .sort({ normalizedScore: -1 });
     

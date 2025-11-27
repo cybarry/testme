@@ -44,10 +44,11 @@ export async function POST(request: NextRequest) {
       if (!question) continue;
       questionsDict[question._id.toString()] = question;
 
-      const isCorrect = Array.isArray(answer.selectedAnswer) && Array.isArray(question.answer)
-        ? answer.selectedAnswer.length === question.answer.length &&
-          answer.selectedAnswer.every((ans: any) => question.answer.includes(ans))
-        : JSON.stringify(answer.selectedAnswer) === JSON.stringify(question.answer);
+      const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
+      const selectedAnswers = Array.isArray(answer.selectedAnswer) ? answer.selectedAnswer : [answer.selectedAnswer];
+
+      const isCorrect = correctAnswers.length === selectedAnswers.length &&
+        selectedAnswers.every((ans: any) => correctAnswers.includes(ans));
 
       if (isCorrect) {
         correctCount++;

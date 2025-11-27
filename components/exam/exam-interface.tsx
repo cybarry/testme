@@ -18,8 +18,8 @@ const MAX_VIOLATIONS = 3;
 interface Question {
   _id: string;
   questionText: string;
-  questionType: 'single_choice' | 'multiple_choice' | 'true_or_false' | 'drag_drop' | string;
-  type: 'single_choice' | 'multiple_choice' | 'true_or_false' | 'drag_drop' | string;
+  questionType: 'single_choice' | 'multiple_choice' | 'true_false' | 'drag_drop' | string;
+  type: 'single_choice' | 'multiple_choice' | 'true_false' | 'drag_drop' | string;
   options: Record<string, string>;
   answer: string | string[];
 }
@@ -43,7 +43,7 @@ const getQuestionTypeInfo = (type: string) => {
   switch (type) {
     case 'single_choice': return { label: 'Single Choice', icon: Radio, color: 'text-blue-600' };
     case 'multiple_choice': return { label: 'Multiple Choice', icon: Hash, color: 'text-purple-600' };
-    case 'true_or_false': return { label: 'True/False', icon: ToggleLeft, color: 'text-green-600' };
+    case 'true_false': return { label: 'True/False', icon: ToggleLeft, color: 'text-green-600' };
     case 'drag_drop': return { label: 'Drag & Drop', icon: Grip, color: 'text-orange-600' };
     default: return { label: type.replace('_', ' ').toUpperCase(), icon: Hash, color: 'text-gray-600' };
   }
@@ -385,7 +385,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
 
                     {/* Rest of your options rendering remains the same */}
                     <div className="space-y-8">
-                      {currentQuestion?.type === 'single_choice' || currentQuestion?.type === 'true_or_false' ? (
+                      {currentQuestion?.type === 'single_choice' || currentQuestion?.type === 'true_false' ? (
                         Object.entries(currentQuestion?.options).map(([key, value]) => {
                           const isSelected = answers[currentQuestion?._id] === key;
                           return (

@@ -22,6 +22,7 @@ export async function GET(request: NextRequest) {
     
     return NextResponse.json({ results }, { status: 200 });
   } catch (error) {
+    console.log('Error fetching results:', error);
     return NextResponse.json({ error: 'Failed to fetch results' }, { status: 500 });
   }
 }

@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { bankId: string } }
+  { params }: { params: Promise<{ bankId: string }> }
 ) {
   try {
     const currentUser = await getCurrentUser();
@@ -31,7 +31,8 @@ export async function POST(
       return NextResponse.json({ error: 'Invalid JSON format' }, { status: 400 });
     }
     
-    const bank = await QuestionBank.findById(params.bankId);
+    const { bankId } = await params;
+    const bank = await QuestionBank.findById(bankId);
     if (!bank) {
       return NextResponse.json({ error: 'Bank not found' }, { status: 404 });
     }
@@ -45,14 +46,14 @@ export async function POST(
           options: q.options,
           answer: q.answer,
           explanation: q.explanation || '',
-          bankId: params.bankId
+          bankId: bankId
         });
         return question.save();
       })
     );
     
     // Update bank question count
-    bank.questionCount = await Question.countDocuments({ bankId: params.bankId });
+    bank.questionCount = await Question.countDocuments({ bankId: bankId });
     await bank.save();
     
     return NextResponse.json(
