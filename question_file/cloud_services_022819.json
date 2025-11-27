@@ -152,7 +152,6 @@
       "d"
     ]
   },
-[
   {
     "question": "When shuffling occurs, in which format will the MapTask calculation results be distributed to corresponding tasks?",
     "question_type": "single_choice",
@@ -287,7 +286,7 @@
   },
   {
     "question": "When a HUAWEI CLOUD IPsec Virtual Private Network (VPN) is used for communications between the cloud and an on-premises data center, encryption, decryption, and authentication are performed on firewalls or routers at both ends of the VPN connection.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -296,7 +295,7 @@
   },
   {
     "question": "HUAWEI CLOUD Content Delivery Network (CDN) accelerates intranet and Internet resources.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -399,7 +398,6 @@
       "d"
     ]
   },
-[
   {
     "question": "Which of the following statements about memory virtualization is false?",
     "question_type": "single_choice",
@@ -951,7 +949,7 @@
   },
   {
     "question": "In a virtualized environment, the Guest OS type must be consistent with that of the Host OS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -960,7 +958,7 @@
   },
   {
     "question": "HUAWEI CLOUD Alkaid provides central and edge scheduling, edge autonomy and collaborative scheduling, and on-demand service scheduling capabilities.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -969,7 +967,7 @@
   },
   {
     "question": "Elastic Cloud Servers (ECSs) with different OSs can be associated with the same load balancer.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -978,7 +976,7 @@
   },
   {
     "question": "Users can remotely log in to all Elastic Cloud Servers (ECSs) in a VPC using MSTSC.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -987,7 +985,7 @@
   },
   {
     "question": "Image Management Service (IMS) allows users to easily manage the entire lifecycle of their images. They can create a private image and use it to quickly create identical Elastic Cloud Servers (ECSs)",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -996,7 +994,7 @@
   },
   {
     "question": "To monitor the OS of an Elastic Cloud Server (ECS), a user must manually install the Agent on the ECS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1005,7 +1003,7 @@
   },
   {
     "question": "HUAWEI CLOUD Object Storage Service (OBS) has no limitations on storage capacity or the number of objects that can be stored.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1014,7 +1012,7 @@
   },
   {
     "question": "A shared Elastic Volume Service (EVS) disk can be attached to multiple servers at the same time. Before you delete a shared EVS disk, it has to be detached from all servers.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1023,13 +1021,11 @@
   },
   {
     "question": "HUAWEI CLOUD Content Delivery Network (CDN) accelerates intranet and Internet resources.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
     },
     "answer": "b"
   }
-]
-]
 ]

@@ -1,7 +1,7 @@
 [
   {
     "question": "ModelArts supports automated data labeling using both active learning and pre-labeling techniques.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -10,7 +10,7 @@
   },
   {
     "question": "In ModelArts, ExeML (Explainable Machine Learning) projects require manual feature engineering.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -19,7 +19,7 @@
   },
   {
     "question": "Huawei Cloud's HiLens supports end-to-end AI skill development and one-click deployment to edge devices.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -28,7 +28,7 @@
   },
   {
     "question": "ModelArts' AutoML functionality can only be used for image classification and object detection, not for time-series prediction.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -37,7 +37,7 @@
   },
   {
     "question": "The EIS (Enterprise Intelligence Service) is Huawei's serverless AI inference platform.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -46,7 +46,7 @@
   },
   {
     "question": "ModelArts notebook instances support multi-user collaboration in real time like JupyterLab.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -55,7 +55,7 @@
   },
   {
     "question": "Huawei Cloud's Graph Engine Service (GES) supports only static graph analysis, not real-time streaming graph updates.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -64,7 +64,7 @@
   },
   {
     "question": "ModelArts allows exporting trained models directly to the ModelArts Model Hub for sharing across projects and regions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -73,7 +73,7 @@
   },
   {
     "question": "The ModelArts one-stop AI development pipeline includes data preparation, model training, model evaluation, and model deployment.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -82,7 +82,7 @@
   },
   {
     "question": "Huawei Cloud's Pangu large language model series is not accessible through ModelArts.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"

@@ -418,7 +418,6 @@
     },
     "answer": ["b", "c", "d"]
   },
-[
   {
     "question": "Which of the following statements about the history of AI is false?",
     "question_type": "single_choice",
@@ -441,5 +440,4 @@
     },
     "answer": "a"
   }
-]
 ]

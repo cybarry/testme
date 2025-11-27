@@ -1,7 +1,7 @@
 [
   {
     "question": "Cloud computing allows on-demand access to shared computing resources over the network.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -10,7 +10,7 @@
   },
   {
     "question": "One of the driving forces for cloud migration is the need to reduce hardware procurement cycles.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -19,7 +19,7 @@
   },
   {
     "question": "Huawei Cloud infrastructure includes availability zones and regions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -28,7 +28,7 @@
   },
   {
     "question": "Elasticity in cloud computing refers to the ability to automatically scale resources based on demand.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -37,7 +37,7 @@
   },
   {
     "question": "Cloud migration eliminates the need for data backup.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -46,7 +46,7 @@
   },
   {
     "question": "Reliability is one of the core principles of Huawei Cloud architecture design.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -55,7 +55,7 @@
   },
   {
     "question": "The public cloud allows multiple tenants to share the same physical hardware securely.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -64,7 +64,7 @@
   },
   {
     "question": "Cloud services reduce the burden on enterprises to maintain physical infrastructure.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -73,7 +73,7 @@
   },
   {
     "question": "High availability means that a service can survive single-point failures.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -82,7 +82,7 @@
   },
   {
     "question": "Migrating to the cloud guarantees zero downtime.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
