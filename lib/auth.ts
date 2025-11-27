@@ -46,7 +46,7 @@ export async function setAuthCookie(token: string) {
   cookieStore.set('auth_token', token, {
     httpOnly: true,
     secure: false,
-    sameSite: 'None',
+    sameSite: 'lax',
     path: '/',
     maxAge: 24 * 60 * 60, // 24 hours
   });

@@ -157,7 +157,7 @@
 
   {
     "question": "The 'Caesar cipher' is mainly used to encrypt data by using a stick of a specific specification.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -183,7 +183,7 @@
 
   {
     "question": "In the Client-Initiated VPN configuration, it is generally recommended to plan the address pool and the headquarters network address into different network segments, otherwise it needs to be on the gateway device Turn on the proxy forwarding function.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -202,21 +202,21 @@
 
   {
     "question": "In addition to supporting built-in Portal authentication, the firewall also supports custom Portal authentication. When custom Portal authentication is used, it does not need to be deployed separately External Portal server.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
 
   {
     "question": "NAPT technology can realize a public IP address for multiple private network hosts.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "IPSec VPN technology does not support NAT traversal when it adopts ESP security protocol encapsulation, because ESP encrypts the header of the message",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -259,7 +259,7 @@
 
   {
     "question": "When configuring a security policy, a security policy can reference an address set or configure multiple destination IP addresses.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -338,14 +338,14 @@
 
   {
     "question": "'Being good at observing' and 'keeping suspicion' can help us better identify security threats in the cyber world",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "In the tunnel encapsulation mode. IPSec configuration does not need to have a route to the destination private network segment, because the data will be re-encapsulated to use the new IP The head looks up the routing table.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -474,7 +474,7 @@
 
   {
     "question": "Commonly used scanning attacks include: port scanning tools, vulnerability scanning tools, application scanning tools, database scanning tools, etc.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -505,7 +505,7 @@
 
   {
     "question": "Intrusion prevention system (IPS, intrusion prevention system) is a defense system that can block intrusion in real time",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -531,7 +531,7 @@
 
   {
     "question": "Digital certificates can be divided into local certificates, CA certificates, root certificates, and self-signed certificates according to different usage scenarios.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -634,7 +634,7 @@
 
   {
     "question": "The European TCSEC guidelines are divided into two modules: function and evaluation, which are mainly used in the military, government and commercial fields",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -689,7 +689,7 @@
 
   {
     "question": "If you want to implement the 'anti-virus function' in the security policy, you must activate the license.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -708,7 +708,7 @@
 
   {
     "question": "On the surface, threats such as viruses, vulnerabilities, and Trojan horses are the causes of information security incidents, but at the root, information security incidents are related to people and information systems It is also very relevant.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -782,7 +782,7 @@
 
   {
     "question": "IPSec VPN uses an asymmetric encryption algorithm to encrypt the transmitted data",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -801,7 +801,7 @@
 
   {
     "question": "The repair of antivirus software only needs to repair some system files that were accidentally deleted when checking and killing viruses to prevent system crashes.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -1055,7 +1055,7 @@
 
   {
     "question": "Security policy conditions can be divided into multiple fields... between these fields is The 'and' relationship...",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1129,7 +1129,7 @@
 
   {
     "question": "The vulnerabilities that have not been discovered are 0 day vulnerabilities",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1172,7 +1172,7 @@
 
   {
     "question": "When the firewall uses the security service center to upgrade the signature database and virus database online, the firewall must first be able to connect to the Internet, and secondly, the configuration must be correct. DNS address",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1246,21 +1246,21 @@
 
   {
     "question": "In information security protection, commonly used security products include firewalls, Anti-DDos devices, and IPS/IDS devices",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "If the administrator uses the default default authentication domain to authenticate the user, the user only needs to enter the user name when logging in; if the administrator Use the newly created authentication domain to authenticate the user, and the user needs to enter 'Username@Authentication Domain Name' when logging in",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "Digital certificate technology solves the problem that the owner of the public key cannot be determined in digital signature technology",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1387,7 +1387,7 @@
 
   {
     "question": "Using a computer to store information about criminal activities is not a way of computer crime",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -1425,14 +1425,14 @@
 
   {
     "question": "Information security grade protection is to improve the overall national security level, while at the same time rationally optimizing the allocation of security resources so that Send back the greatest safety and economic benefits",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "In response to network security incidents, remote emergency response is generally taken first...",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1451,7 +1451,7 @@
 
   {
     "question": "After the firewall uses the hrp standby config enable command to enable the standby device configuration function...",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1482,7 +1482,7 @@
 
   {
     "question": "An intrusion prevention system (IPS) is a defense system that can block intrusions in real time",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1537,14 +1537,14 @@
 
   {
     "question": "The digital certificate uses a third-party organization to impartiality to the public key... So confirm that the public key is correct Sex only needs the certificate of the communicating party",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
 
   {
     "question": "Digital signature is to generate a digital fingerprint by using a hash algorithm to ensure the integrity of data transmission",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1563,7 +1563,7 @@
 
   {
     "question": "The SIP protocol uses SDP messages to establish a session, and the SDP message contains a remote address or multicast address",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -1704,21 +1704,21 @@
 
   {
     "question": "In the VRRP (Virtual Router Redundancy Protocol) group, the primary firewall periodically sends notification messages to the backup firewall. The backup firewall is only responsible for listening to the notification message and will not respond",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "Huawei USG firewall VRRP notification messages are multicast messages, so each firewall in the backup group must be able to realize direct Layer 2 intercommunication",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "Because the server is a kind of computer, we can use our personal computer as a server in the enterprise.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -1797,21 +1797,21 @@
 
   {
     "question": "In the security assessment method, the purpose of security scanning is to use scanning analysis and assessment tools to scan the target system in order to find relevant vulnerabilities. Prepare for attack",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
 
   {
     "question": "In the construction of an information security system, a security model is needed to accurately describe the relationship between important aspects of security and system behavior",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "The matching principle of the security policy is: first search for the manually configured inter-domain security policy, if it does not match, then directly discard the data packet.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -1880,7 +1880,7 @@
 
   {
     "question": "The reason why OSPF is more commonly used than RIP is that OSPF has a device authentication function and is more secure",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -1923,14 +1923,14 @@
 
   {
     "question": "In practical applications, asymmetric encryption is mainly used to encrypt user data",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
 
   {
     "question": "When an enterprise establishes its own information system, it checks every operation in accordance with the authoritative international standards and can detect its own information Is the system safe",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -2004,14 +2004,14 @@
 
   {
     "question": "Network administrators can collect data that needs to be analyzed on network devices through packet capture, port mirroring or logs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
 
   {
     "question": "The world’s first worm-'Morris worm' made people realize that as people’s reliance on computers increases... it is necessary to establish a complete emergency response system",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2051,7 +2051,7 @@
   },
   {
     "question": "When the user uses the session authentication method to trigger the firewall's built-in Portal authentication, the user does not take the initiative to perform identity authentication, advanced business access,The device pushes \"redirect\" to the authentication page",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -2079,7 +2079,7 @@
   },
   {
     "question": "The tunnel addresses at both ends of the GRE tunnel can be configured as addresses of different network segments",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2212,7 +2212,7 @@
   },
   {
     "question": "Information security grade protection is the basic system of national information security work",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2251,25 +2251,25 @@
   },
   {
     "question": "If the company structure has undergone practical changes, it is necessary to re-test whether the business continuity plan is feasible",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
   {
     "question": "HTTP messages are carried by UDP, and the HTTPS protocol is based on TCP three-way handshake, so HTTPS is more secure and recommendedUse HTTPS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
   {
     "question": "Single sign-on function for Internet users, the user directly authenticates to the AD server, the device does not interfere with the user authentication process, and the AD monitoring service needsDeployed in the USG device to monitor the authentication information of the AD server",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
   {
     "question": "UDP port scanning means that the attacker sends a zero-byte length UDP packet to a specific port of the target host. If the port is open,An ICMP port reachable data message will be returned.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -2297,7 +2297,7 @@
   },
   {
     "question": "Social engineering is a kind of psychological traps such as the psychological weakness, instinctual reaction, curiosity, trust, greed, etc. of the victim.Deception, harm and other harmful means.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2314,7 +2314,7 @@
   },
   {
     "question": "Device sabotage attacks are generally not easy to cause information leakage, but usually cause the interruption of network communication services.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2441,7 +2441,7 @@
   },
   {
     "question": "NAT technology can realize data secure transmission by encrypting data.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -2469,7 +2469,7 @@
   },
   {
     "question": "Encryption technology can convert readable information into unreadable information through a certain method.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2486,19 +2486,19 @@
   },
   {
     "question": "The role of anti-virus software and host firewall is the same.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
   {
     "question": "The process of electronic evidence collection includes: protecting the scene, obtaining evidence, preserving evidence, identifying evidence, analyzing evidence, tracking and presenting evidence.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
   {
     "question": "In the USG series firewall system view, the device configuration will be restored to the default configuration after the reset saved-configuration command is executed.No other operations are required to take effect.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
@@ -2537,7 +2537,7 @@
   },
   {
     "question": "The host firewall is mainly used to protect the host from attacks and intrusions from the network.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "A"
   },
@@ -2565,7 +2565,7 @@
   },
   {
     "question": "On Huawei USG series firewalls, the default security policy does not support modification.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": { "A": "Yes", "B": "Wrong" },
     "answer": "B"
   },
