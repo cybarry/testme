@@ -33,34 +33,55 @@ export async function GET(
       return NextResponse.json({ error: 'Result not finished' }, { status: 400 });
     }
 
-    // Fetch all questions details
-    const allQuestionIds = [
-      ...score.correctAnswers,
-      ...score.incorrectAnswers.map((ia: any) => ia.questionId)
-    ];
+    let allAnswers = [];
 
-    const questions = await Question.find({
-      _id: { $in: allQuestionIds }
-    });
+    // --- LOGIC UPDATE START ---
+    // Check if the new 'answers' field is populated (New Submissions)
+    if (score.answers && score.answers.length > 0) {
+      // Get all question IDs to fetch details efficiently
+      const questionIds = score.answers.map((a: any) => a.questionId);
+      const questions = await Question.find({ _id: { $in: questionIds } });
+      const questionsMap = new Map(questions.map(q => [q._id.toString(), q]));
 
-    const questionsMap = new Map(questions.map(q => [q._id.toString(), q]));
+      allAnswers = score.answers.map((ans: any) => ({
+        questionId: ans.questionId,
+        isCorrect: ans.isCorrect,
+        question: questionsMap.get(ans.questionId.toString()) || { questionText: 'Question Deleted', type: 'unknown', options: {} },
+        selectedAnswer: ans.selectedAnswer,
+        correctAnswer: ans.correctAnswer
+      }));
+    } 
+    // Fallback for Old Submissions (Legacy Logic using separate arrays)
+    else {
+      const allQuestionIds = [
+        ...score.correctAnswers,
+        ...score.incorrectAnswers.map((ia: any) => ia.questionId)
+      ];
 
-    // Build complete answers list with correctness status
-    const allAnswers = [
-      ...score.correctAnswers.map((qId: any) => ({
-        questionId: qId,
-        isCorrect: true,
-        question: questionsMap.get(qId.toString()),
-        selectedAnswer: null
-      })),
-      ...score.incorrectAnswers.map((ia: any) => ({
-        questionId: ia.questionId,
-        isCorrect: false,
-        question: questionsMap.get(ia.questionId.toString()),
-        selectedAnswer: ia.selectedAnswer,
-        correctAnswer: ia.correctAnswer
-      }))
-    ];
+      const questions = await Question.find({
+        _id: { $in: allQuestionIds }
+      });
+
+      const questionsMap = new Map(questions.map(q => [q._id.toString(), q]));
+
+      allAnswers = [
+        ...score.correctAnswers.map((qId: any) => ({
+          questionId: qId,
+          isCorrect: true,
+          question: questionsMap.get(qId.toString()),
+          selectedAnswer: null, // Limitation of old data: we don't know what specific correct option they clicked
+          correctAnswer: questionsMap.get(qId.toString())?.answer
+        })),
+        ...score.incorrectAnswers.map((ia: any) => ({
+          questionId: ia.questionId,
+          isCorrect: false,
+          question: questionsMap.get(ia.questionId.toString()),
+          selectedAnswer: ia.selectedAnswer,
+          correctAnswer: ia.correctAnswer
+        }))
+      ];
+    }
+    // --- LOGIC UPDATE END ---
 
     // Calculate pagination
     const totalAnswers = allAnswers.length;

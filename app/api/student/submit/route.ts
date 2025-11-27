@@ -36,29 +36,46 @@ export async function POST(request: NextRequest) {
 
     // Calculate score
     let correctCount = 0;
-    const incorrectAnswers = [];
-    const questionsDict: { [key: string]: any } = {};
+    
+    // Arrays for legacy support (to prevent breaking old logic)
+    const incorrectAnswersLegacy = [];
+    const correctAnswersLegacy = [];
+    
+    // New unified array that stores EVERYTHING
+    const processedAnswers = [];
 
     for (const answer of answers) {
       const question = await Question.findById(answer.questionId);
       if (!question) continue;
-      questionsDict[question._id.toString()] = question;
 
-      const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
-      const selectedAnswers = Array.isArray(answer.selectedAnswer) ? answer.selectedAnswer : [answer.selectedAnswer];
+      // Normalize to array to handle single/multi choice uniformly
+      const correctArr = Array.isArray(question.answer) ? question.answer : [question.answer];
+      const selectedArr = Array.isArray(answer.selectedAnswer) ? answer.selectedAnswer : [answer.selectedAnswer];
 
-      const isCorrect = correctAnswers.length === selectedAnswers.length &&
-        selectedAnswers.every((ans: any) => correctAnswers.includes(ans));
+      // Robust check: same length AND every selected item is in correct array
+      // This handles cases where order might differ in multiple choice
+      const isCorrect = correctArr.length === selectedArr.length &&
+        selectedArr.every((ans: any) => correctArr.includes(ans));
 
+      // 1. Update Legacy Counts/Arrays
       if (isCorrect) {
         correctCount++;
+        correctAnswersLegacy.push(question._id);
       } else {
-        incorrectAnswers.push({
+        incorrectAnswersLegacy.push({
           questionId: question._id,
           selectedAnswer: answer.selectedAnswer,
           correctAnswer: question.answer
         });
       }
+
+      // 2. Push to NEW Unified Array (Crucial Step for Accuracy)
+      processedAnswers.push({
+        questionId: question._id,
+        selectedAnswer: answer.selectedAnswer, // We save this explicitly now
+        correctAnswer: question.answer,
+        isCorrect: isCorrect
+      });
     }
 
     const normalizedScore = (correctCount / exam.numberOfQuestion) * 1000;
@@ -66,13 +83,14 @@ export async function POST(request: NextRequest) {
     // Update the score record
     score.rawScore = correctCount;
     score.normalizedScore = Math.round(normalizedScore);
-    score.correctAnswers = answers
-      .filter((a: any) => {
-        const q = questionsDict[a.questionId.toString()];
-        return q && JSON.stringify(a.selectedAnswer) === JSON.stringify(q.answer);
-      })
-      .map((a: any) => a.questionId);
-    score.incorrectAnswers = incorrectAnswers;
+    
+    // Save new unified data
+    score.answers = processedAnswers; 
+    
+    // Save legacy data (safety net)
+    score.correctAnswers = correctAnswersLegacy;
+    score.incorrectAnswers = incorrectAnswersLegacy;
+    
     score.cheatingAttempts = cheatingAttempts;
     score.terminatedForCheating = terminatedForCheating;
     score.status = 'finished';
