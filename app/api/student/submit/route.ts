@@ -43,7 +43,6 @@ export async function POST(request: NextRequest) {
       const question = await Question.findById(answer.questionId);
       if (!question) continue;
       questionsDict[question._id.toString()] = question;
-      console.log('Evaluating answer for question:', question.answer, 'Selected answer:', answer.selectedAnswer)
 
       const correctAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
       const selectedAnswers = Array.isArray(answer.selectedAnswer) ? answer.selectedAnswer : [answer.selectedAnswer];
