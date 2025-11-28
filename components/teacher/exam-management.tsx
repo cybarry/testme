@@ -10,6 +10,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Leaderboard } from '@/components/teacher/leaderboard';
+import { Trophy } from 'lucide-react';
 
 interface Exam {
   _id: string;
@@ -39,6 +47,9 @@ export function ExamManagement() {
   const [numberOfQuestion, setNumberOfQuestion] = useState(60);
   const [passingScore, setPassingScore] = useState(600);
   const [maxAttempts, setMaxAttempts] = useState(3);
+  
+  // New state for leaderboard dialog
+  const [viewLeaderboardId, setViewLeaderboardId] = useState<string | null>(null);
 
   useEffect(() => {
     fetchExams();
@@ -258,6 +269,25 @@ export function ExamManagement() {
                     </div>
                   </div>
                   <div className="flex gap-2">
+                    {/* Leaderboard Button */}
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => setViewLeaderboardId(exam._id)}
+                            className="border-primary text-primary hover:bg-primary/10"
+                          >
+                            <Trophy className="w-4 h-4" />
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          View Leaderboard
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
@@ -298,6 +328,16 @@ export function ExamManagement() {
           )}
         </CardContent>
       </Card>
+
+      {/* Leaderboard Dialog */}
+      <Dialog open={!!viewLeaderboardId} onOpenChange={(open) => !open && setViewLeaderboardId(null)}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-background border-border">
+          <DialogHeader>
+            <DialogTitle className="text-foreground">Student Leaderboard</DialogTitle>
+          </DialogHeader>
+          {viewLeaderboardId && <Leaderboard examId={viewLeaderboardId} />}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
