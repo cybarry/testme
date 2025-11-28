@@ -26,7 +26,7 @@
   {
     "id": 3,
     "question": "Cloud computing is only one of many components of the third platform and is not considered its core.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -60,7 +60,7 @@
   {
     "id": 6,
     "question": "Huawei Cloud Healthcare Intelligent Twins are mentioned as an example of how cloud services enable new industry capabilities.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -94,7 +94,7 @@
   {
     "id": 9,
     "question": "The 14th Five-Year Plan in China emphasizes that cloud computing has become key to national economic growth.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -128,7 +128,7 @@
   {
     "id": 12,
     "question": "According to the material, cost optimization means avoiding or eliminating unnecessary costs or suboptimal resources.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -162,7 +162,7 @@
   {
     "id": 15,
     "question": "A 99.999% SLA allows approximately 5.26 minutes of downtime per year.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -196,7 +196,7 @@
   {
     "id": 18,
     "question": "Tenants must test security workloads in production before deploying them to avoid adverse effects.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -230,7 +230,7 @@
   {
     "id": 21,
     "question": "Vertical scaling means replacing existing resources with higher-capacity ones (e.g., more vCPUs or RAM).",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -264,7 +264,7 @@
   {
     "id": 24,
     "question": "After migrating to the cloud, costs will always be lower than on-premises without any design effort.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -298,7 +298,7 @@
   {
     "id": 27,
     "question": "Whole site acceleration can accelerate both static and dynamic content using CDN.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -332,7 +332,7 @@
   {
     "id": 30,
     "question": "AS (Auto Scaling) can automatically add or remove ECS instances and bandwidth based on policies.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -366,7 +366,7 @@
   {
     "id": 33,
     "question": "Modern data management uses database and big data services to achieve intelligent analysis and better decision-making.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -412,7 +412,7 @@
   {
     "id": 37,
     "question": "Ignoring security, reliability, scalability, performance, and cost in cloud migration design can lead to a system that does not meet expectations.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -458,7 +458,7 @@
   {
     "id": 41,
     "question": "Tenants are responsible for the security configuration of the application software they deploy on Huawei Cloud.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -492,7 +492,7 @@
   {
     "id": 44,
     "question": "OPEX includes depreciation and is mainly cash cost of the current period.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -526,7 +526,7 @@
   {
     "id": 47,
     "question": "Whole site acceleration can handle both static and dynamic content acceleration.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -560,7 +560,7 @@
   {
     "id": 50,
     "question": "Cost is described as a decisive factor in the profitability of an enterprise when selecting a cloud solution.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -594,7 +594,7 @@
   {
     "id": 53,
     "question": "Horizontal scaling is achieved by adding more nodes/servers rather than increasing resources on existing ones.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -628,7 +628,7 @@
   {
     "id": 56,
     "question": "Cloud performance can be unpredictable due to shared infrastructure and load changes.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -662,7 +662,7 @@
   {
     "id": 59,
     "question": "After cloud migration, unrestricted resource usage may result in higher costs than on-premises architecture.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -696,7 +696,7 @@
   {
     "id": 62,
     "question": "Static content such as images and videos can be effectively accelerated by CDN.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -730,7 +730,7 @@
   {
     "id": 65,
     "question": "Big data is described as turbocharging data analysis for better-informed decisions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -764,7 +764,7 @@
   {
     "id": 68,
     "question": "Virtualization deployment improves device utilization compared to physical machine deployment.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -798,7 +798,7 @@
   {
     "id": 71,
     "question": "Encrypted images can be shared with other tenants.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -832,7 +832,7 @@
   {
     "id": 74,
     "question": "Microservices and containerized architectures encourage independent scaling of components.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -866,7 +866,7 @@
   {
     "id": 77,
     "question": "Huawei Cloud provides visualized fee management and budget functions to optimize costs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -900,7 +900,7 @@
   {
     "id": 80,
     "question": "AS works with ELB to automatically distribute traffic to newly added instances.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -934,7 +934,7 @@
   {
     "id": 83,
     "question": "Traditional development methods are described as rigid but stable.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -968,7 +968,7 @@
   {
     "id": 86,
     "question": "Cross-AZ active-active is one of the recommended deployment models for high availability.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1002,7 +1002,7 @@
   {
     "id": 89,
     "question": "Higher SLA percentages require higher system capabilities and design effort.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1036,7 +1036,7 @@
   {
     "id": 92,
     "question": "Vertical scaling is also known as scaling out.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1070,7 +1070,7 @@
   {
     "id": 95,
     "question": "Dynamic content includes ASP, JSP, PHP, and API requests.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1104,7 +1104,7 @@
   {
     "id": 98,
     "question": "Cloud computing enables extreme elasticity compared to on-premises infrastructure.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1138,7 +1138,7 @@
   {
     "id": 101,
     "question": "Resource pooling allows virtualization silos to be managed separately.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1172,7 +1172,7 @@
   {
     "id": 104,
     "question": "Data encryption is enabled by default for storage in Huawei Cloud.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1206,7 +1206,7 @@
   {
     "id": 107,
     "question": "Cloud infrastructure performance is always predictable.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1240,7 +1240,7 @@
   {
     "id": 110,
     "question": "Good cloud-based architecture design can solve traditional e-commerce platform challenges.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1274,7 +1274,7 @@
   {
     "id": 113,
     "question": "AS can monitor instance health and replace unhealthy instances automatically.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1308,7 +1308,7 @@
   {
     "id": 116,
     "question": "Cloud computing allows users to purchase more powerful servers without installing new IT systems.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1342,7 +1342,7 @@
   {
     "id": 119,
     "question": "The document states that cost plays a decisive role in enterprise profitability.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1376,7 +1376,7 @@
   {
     "id": 122,
     "question": "Modern IT architecture shifts focus from O&M support to operations-oriented.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1410,7 +1410,7 @@
   {
     "id": 125,
     "question": "Storage resources affect data transmission performance of applications.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1444,7 +1444,7 @@
   {
     "id": 128,
     "question": "High-security methods and tools are adopted in cloud-based e-commerce solutions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1502,7 +1502,7 @@
   {
     "id": 133,
     "question": "A single tenant can create multiple VPCs in the same region.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1548,7 +1548,7 @@
   {
     "id": 137,
     "question": "Security Groups act at the subnet level and are stateful.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1582,7 +1582,7 @@
   {
     "id": 140,
     "question": "VPC CIDR blocks can overlap between different VPCs under the same account.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1616,7 +1616,7 @@
   {
     "id": 143,
     "question": "It is recommended to allocate one subnet per AZ for high availability deployment.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1650,7 +1650,7 @@
   {
     "id": 146,
     "question": "VPC Peering supports transitive routing.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1684,7 +1684,7 @@
   {
     "id": 149,
     "question": "Network ACLs are stateless and must explicitly allow both inbound and outbound traffic.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1730,7 +1730,7 @@
   {
     "id": 153,
     "question": "Direct Connect provides lower latency and higher bandwidth than Internet-based VPN.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1776,7 +1776,7 @@
   {
     "id": 157,
     "question": "A single EIP can be bound to multiple ECS instances simultaneously.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1810,7 +1810,7 @@
   {
     "id": 160,
     "question": "Network ACL rules are processed in order of rule number, and the first match stops further processing.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1844,7 +1844,7 @@
   {
     "id": 163,
     "question": "It is best practice to place database servers in public subnets.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1878,7 +1878,7 @@
   {
     "id": 166,
     "question": "Cloud Connect supports one-click connection to all Huawei Cloud regions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1912,7 +1912,7 @@
   {
     "id": 169,
     "question": "EIP supports bandwidth billing by traffic and by fixed bandwidth.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1946,7 +1946,7 @@
   {
     "id": 172,
     "question": "Security Groups can be shared across different projects in the same account.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -1980,7 +1980,7 @@
   {
     "id": 175,
     "question": "Direct Connect supports both dedicated and hosted connection types.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2014,7 +2014,7 @@
   {
     "id": 178,
     "question": "NAT Gateway supports both SNAT and DNAT simultaneously on the same gateway.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2048,7 +2048,7 @@
   {
     "id": 181,
     "question": "A VPC can span multiple regions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2082,7 +2082,7 @@
   {
     "id": 184,
     "question": "VPC endpoints allow private connection to cloud services without going through the public Internet.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2116,7 +2116,7 @@
   {
     "id": 187,
     "question": "It is recommended to use the same security group for web and database servers.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2150,7 +2150,7 @@
   {
     "id": 190,
     "question": "Anti-DDoS protection is automatically enabled for all EIPs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2184,7 +2184,7 @@
   {
     "id": 193,
     "question": "Network ACLs can be associated with multiple subnets.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2218,7 +2218,7 @@
   {
     "id": 196,
     "question": "You must purchase bandwidth when buying an EIP.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
     "b": "False"
@@ -2264,7 +2264,7 @@
   {
     "id": 200,
     "question": "Network ACLs are stateless and require explicit rules for both directions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
     "a": "True",
     "b": "False"
@@ -2310,7 +2310,7 @@
   {
     "id": 204,
     "question": "Security groups are stateful and act at the instance NIC level.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
     "a": "True",
     "b": "False"
@@ -2344,7 +2344,7 @@
   {
     "id": 207,
     "question": "Direct Connect provides lower latency and higher bandwidth than Internet VPN.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
     "a": "True",
     "b": "False"
@@ -2402,7 +2402,7 @@
   {
     "id": 212,
     "question": "Cloud Connect can be used to aggregate multiple Direct Connect links and share bandwidth.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
     "a": "True",
     "b": "False"
@@ -2424,7 +2424,7 @@
   {
     "id": 214,
     "question": "Which of the following is true about VPC endpoints (interface type)?",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
     "a": "DNS resolution may need to be configured to route service domains to private endpoints",
     "b": "They always traverse the public Internet",
@@ -2472,7 +2472,7 @@
   {
     "id": 218,
     "question": "Enterprise Router (ER) provides transit routing and advanced route policies compared to VPC peering.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
     "a": "True",
     "b": "False"
@@ -2649,7 +2649,7 @@
   {
     "id": 233,
     "question": "ECS supports automatic scaling based on service demand.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2659,7 +2659,7 @@
   {
     "id": 234,
     "question": "ECS provides extreme elasticity, allowing resources to be scaled flexibly as service demand changes.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2705,7 +2705,7 @@
   {
     "id": 238,
     "question": "The T6 ECS family is suitable for scenarios where the CPU usage is low but requires burstable CPU power.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2739,7 +2739,7 @@
   {
     "id": 241,
     "question": "DeH allows migration of ECSs to a public resource pool if not in use.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2771,7 +2771,7 @@
   {
     "id": 244,
     "question": "Cloud Container Engine (CCE) streamlines deployment and scaling of containerized applications.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2781,7 +2781,7 @@
   {
     "id": 245,
     "question": "FunctionGraph requires managing underlying compute resources.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2803,7 +2803,7 @@
   {
     "id": 247,
     "question": "A private image can be a system disk image, data disk image, or full-ECS image.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2813,7 +2813,7 @@
   {
     "id": 248,
     "question": "Encrypted images can be shared.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2835,7 +2835,7 @@
   {
     "id": 250,
     "question": "Auto Scaling (AS) automatically adjusts resources based on service demand.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2857,7 +2857,7 @@
   {
     "id": 252,
     "question": "AS can work with Cloud Eye to trigger scaling actions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2879,7 +2879,7 @@
   {
     "id": 254,
     "question": "Lifecycle hooks in AS allow custom operations during scaling.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2911,7 +2911,7 @@
   {
     "id": 257,
     "question": "ECSs in different regions can communicate over private network.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -2965,7 +2965,7 @@
   {
     "id": 262,
     "question": "DeH provides physical isolation for compliance.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3009,7 +3009,7 @@
   {
     "id": 266,
     "question": "Cloud Phone integrates GPUs for graphics processing.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3041,7 +3041,7 @@
   {
     "id": 269,
     "question": "IMS supports envelope encryption for private images.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3063,7 +3063,7 @@
   {
     "id": 271,
     "question": "AS policies include alarm-based, scheduled, and periodic.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3095,7 +3095,7 @@
   {
     "id": 274,
     "question": "BMS is suitable for HPC and AI.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3127,7 +3127,7 @@
   {
     "id": 277,
     "question": "Full-ECS images can be used to change ECS OS, writing system disk data.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3171,7 +3171,7 @@
   {
     "id": 281,
     "question": "Lifecycle hooks suspend instances for custom operations.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3191,7 +3191,7 @@
   {
     "id": 283,
     "question": "CCE supports high performance with bare-metal NUMA architecture.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3223,7 +3223,7 @@
   {
     "id": 286,
     "question": "Images can be shared across regions directly.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3255,7 +3255,7 @@
   {
     "id": 289,
     "question": "DeH allocation takes several minutes.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3287,7 +3287,7 @@
   {
     "id": 292,
     "question": "IMS allows exporting images to other cloud platforms.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3319,7 +3319,7 @@
   {
     "id": 295,
     "question": "FunctionGraph manages code deployment and resource monitoring.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3351,7 +3351,7 @@
   {
     "id": 298,
     "question": "Full-ECS image creation uses differential backups.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3383,7 +3383,7 @@
   {
     "id": 301,
     "question": "DeH ensures workloads are not affected by other tenants.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3415,7 +3415,7 @@
   {
     "id": 304,
     "question": "AS integrates with Cloud Eye for metrics like CPU usage.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3449,7 +3449,7 @@
   {
     "id": 307,
     "question": "CCE is secure with private clusters and RBAC permissions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3481,7 +3481,7 @@
   {
     "id": 310,
     "question": "AS expected instances define the target number of instances.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3513,7 +3513,7 @@
   {
     "id": 313,
     "question": "DeH migration requires stopped ECSs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3545,7 +3545,7 @@
   {
     "id": 316,
     "question": "AS supports periodic scaling policies.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3577,7 +3577,7 @@
   {
     "id": 319,
     "question": "FunctionGraph is serverless.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3609,7 +3609,7 @@
   {
     "id": 322,
     "question": "BMS has no virtualization overhead.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3641,7 +3641,7 @@
   {
     "id": 325,
     "question": "IMS is secure with multiple copies in OBS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3675,7 +3675,7 @@
   {
     "id": 328,
     "question": "Cloud computing has on-demand self-service.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -3709,7 +3709,7 @@
   {
     "id": 331,
     "question": "PPS is packets per second.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4521,7 +4521,7 @@
   {
     "id": 435,
     "question": "Huawei Cloud states that modern infrastructure management has shifted IT focus from O&M to operations.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4568,7 +4568,7 @@
   {
     "id": 439,
     "question": "The document states that performance of cloud infrastructure can be unpredictable due to resource competition.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4602,7 +4602,7 @@
   {
     "id": 442,
     "question": "Only stopped ECSs can be migrated from DeH to public resource pool.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4636,7 +4636,7 @@
   {
     "id": 445,
     "question": "When creating a full-ECS image from a running ECS containing a database, the document recommends stopping the ECS first.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4670,7 +4670,7 @@
   {
     "id": 448,
     "question": "If snapshots exist but the full ECS backup is incomplete, the resulting full-ECS image can only be used in the source AZ.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4704,7 +4704,7 @@
   {
     "id": 451,
     "question": "AS can automatically bind newly added instances to multiple load balancing listeners if different applications are hosted.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4726,7 +4726,7 @@
   {
     "id": 453,
     "question": "In AS, the instance status changes to 'Removing from AS group' when an unhealthy instance is automatically replaced.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4748,7 +4748,7 @@
   {
     "id": 455,
     "question": "The document states that vertical scaling involves replacing existing IT resources with higher-capacity ones in place.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4782,7 +4782,7 @@
   {
     "id": 458,
     "question": "To change an ECS OS using a full-ECS image, only the system disk data will be written.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4816,7 +4816,7 @@
   {
     "id": 461,
     "question": "The document explicitly states that CCE clusters are private and completely controlled by users.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4850,7 +4850,7 @@
   {
     "id": 464,
     "question": "In AS, lifecycle hooks are used to perform custom operations like installing software before an instance joins the group.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4884,7 +4884,7 @@
   {
     "id": 467,
     "question": "The document states that horizontal scaling is achieved by adding more servers to a load balancing network.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4918,7 +4918,7 @@
   {
     "id": 470,
     "question": "FunctionGraph is responsible for managing underlying CPUs, memory, and networks.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4952,7 +4952,7 @@
   {
     "id": 473,
     "question": "The maximum session stickiness duration at Layer 4 in ELB when used with AS is one hour.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -4986,7 +4986,7 @@
   {
     "id": 476,
     "question": "The document states that PPS (packets per second) includes both private and public traffic.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5020,7 +5020,7 @@
   {
     "id": 479,
     "question": "BMS can be provisioned within minutes after order submission due to hardware-based acceleration in QingTian architecture.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5054,7 +5054,7 @@
   {
     "id": 482,
     "question": "The document states that CCE draws on years of experience in heterogeneous infrastructure to launch containers at scale.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5076,7 +5076,7 @@
   {
     "id": 484,
     "question": "When using a full-ECS image to restore data disk data, you must create a new ECS rather than change OS on an existing one.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5110,7 +5110,7 @@
   {
     "id": 487,
     "question": "The document explicitly mentions that DeH provides 99.95% availability.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5144,7 +5144,7 @@
   {
     "id": 490,
     "question": "AS configuration defines the image and disk size of instances to be added.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5178,7 +5178,7 @@
   {
     "id": 493,
     "question": "The document states that BMS supports at least 10 Gbit/s bandwidth.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5200,7 +5200,7 @@
   {
     "id": 495,
     "question": "When creating a full-ECS image, the system automatically creates a backup using CBR.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5234,7 +5234,7 @@
   {
     "id": 498,
     "question": "ECSs in different regions cannot communicate over private network.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5268,7 +5268,7 @@
   {
     "id": 501,
     "question": "AS monitors instance health and replaces unhealthy instances automatically.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5302,7 +5302,7 @@
   {
     "id": 504,
     "question": "The T6 family performance is restricted by benchmark performance and CPU credits.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5336,7 +5336,7 @@
   {
     "id": 507,
     "question": "BMS supports VM access to the Internet within the same VPC.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5370,7 +5370,7 @@
   {
     "id": 510,
     "question": "The document states that DeH isolates compute resources to prevent interference from other tenants.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5404,7 +5404,7 @@
   {
     "id": 513,
     "question": "AS supports binding multiple load balancing listeners to handle different applications on the same instances.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5438,7 +5438,7 @@
   {
     "id": 516,
     "question": "The document states that modern IT architecture uses microservices and DevOps for quick roll-out and elastic scaling.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5472,7 +5472,7 @@
   {
     "id": 519,
     "question": "The document explicitly states that BMS can easily cooperate with other cloud resources in a VPC just like ECSs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5494,7 +5494,7 @@
   {
     "id": 521,
     "question": "AS can reduce costs by removing unneeded resources during low demand.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5528,7 +5528,7 @@
   {
     "id": 524,
     "question": "Encrypted private images cannot be shared.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5562,7 +5562,7 @@
   {
     "id": 527,
     "question": "The document states that IMS provides a unified platform to simplify image maintenance and ensure environment consistency.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5596,7 +5596,7 @@
   {
     "id": 530,
     "question": "AS groups are the basis for enabling/disabling policies and performing scaling actions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5630,7 +5630,7 @@
   {
     "id": 533,
     "question": "The document states that cloud computing enables extreme elasticity by allowing flexible scaling without installing new IT systems.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5664,7 +5664,7 @@
   {
     "id": 536,
     "question": "The maximum single EVS disk capacity available on Huawei Cloud is 32 TiB.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5722,7 +5722,7 @@
   {
     "id": 541,
     "question": "EVS disks can be directly used as boot volumes for BMS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5768,7 +5768,7 @@
   {
     "id": 545,
     "question": "SFS Turbo supports dynamic expansion without service interruption.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5814,7 +5814,7 @@
   {
     "id": 549,
     "question": "The minimum retrieval time for OBS Deep Archive storage class is 12 hours.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5860,7 +5860,7 @@
   {
     "id": 553,
     "question": "OBS supports server-side encryption using customer-provided keys (SSE-C).",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5906,7 +5906,7 @@
   {
     "id": 557,
     "question": "CDN supports refresh and prefetch of cached content to improve hit ratio.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5952,7 +5952,7 @@
   {
     "id": 561,
     "question": "OBS supports static website hosting directly from a bucket.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -5998,7 +5998,7 @@
   {
     "id": 565,
     "question": "CDN can automatically compress objects using Gzip or Brotli before delivery.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6044,7 +6044,7 @@
   {
     "id": 569,
     "question": "EVS disks automatically inherit the encryption status of the source disk during backup and restore.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6090,7 +6090,7 @@
   {
     "id": 573,
     "question": "CDN supports token authentication to prevent hotlinking.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6136,7 +6136,7 @@
   {
     "id": 577,
     "question": "SFS Turbo supports encryption at rest using KMS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6182,7 +6182,7 @@
   {
     "id": 581,
     "question": "CDN supports IPv6 dual-stack acceleration.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6228,7 +6228,7 @@
   {
     "id": 585,
     "question": "CBR vaults automatically deduct storage capacity from the purchased backup package.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6274,7 +6274,7 @@
   {
     "id": 589,
     "question": "EVS supports online expansion of system disks without reboot.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6320,7 +6320,7 @@
   {
     "id": 593,
     "question": "OBS supports event notification to FunctionGraph, SMN, and other services.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6366,7 +6366,7 @@
   {
     "id": 597,
     "question": "CBR supports vault-level encryption independent of source disk encryption.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6412,7 +6412,7 @@
   {
     "id": 601,
     "question": "CDN can accelerate dynamic content using intelligent routing and protocol optimization.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6458,7 +6458,7 @@
   {
     "id": 605,
     "question": "OBS buckets in the same region can have the same name across different accounts.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6504,7 +6504,7 @@
   {
     "id": 609,
     "question": "CBR allows restoring a backup to an ECS in a different region using replication vault.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6550,7 +6550,7 @@
   {
     "id": 613,
     "question": "EVS supports automatic backup policies through integration with CBR.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6596,7 +6596,7 @@
   {
     "id": 617,
     "question": "CDN supports custom domain names with CNAME binding.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6642,7 +6642,7 @@
   {
     "id": 621,
     "question": "CBR supports automatic association of new resources using tag-based policies.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6688,7 +6688,7 @@
   {
     "id": 625,
     "question": "OBS supports direct mounting as a file system using s3fs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6734,7 +6734,7 @@
   {
     "id": 629,
     "question": "SFS Capacity-Oriented supports automatic capacity expansion.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6780,7 +6780,7 @@
   {
     "id": 633,
     "question": "CDN supports real-time monitoring of bandwidth, traffic, and hit ratio.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6838,7 +6838,7 @@
   {
     "id": 638,
     "question": "GaussDB is a distributed cloud-native database based on shared-nothing architecture and supports massive parallel processing (MPP).",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6884,7 +6884,7 @@
   {
     "id": 642,
     "question": "Database backup on Huawei Cloud RDS is automatically stored in OBS and supports cross-region replication.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6930,7 +6930,7 @@
   {
     "id": 646,
     "question": "Read/write splitting can be implemented automatically when using RDS proxy.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6964,7 +6964,7 @@
   {
     "id": 649,
     "question": "For financial core transaction systems, Huawei Cloud recommends using GaussDB (for MySQL) with primary/standby + multi-AZ deployment.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -6998,7 +6998,7 @@
   {
     "id": 652,
     "question": "DWS is based on MPP architecture and is suitable for OLTP workloads.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7044,7 +7044,7 @@
   {
     "id": 656,
     "question": "CloudTable is compatible with Apache HBase and is suitable for massive structured and semi-structured data storage.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7078,7 +7078,7 @@
   {
     "id": 659,
     "question": "Database Security Service (DBSS) provides database audit and protection functions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7112,7 +7112,7 @@
   {
     "id": 662,
     "question": "DRS can migrate data from Oracle to GaussDB(for MySQL) directly.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7158,7 +7158,7 @@
   {
     "id": 666,
     "question": "All Huawei Cloud database services are serverless and require no instance management.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7192,7 +7192,7 @@
   {
     "id": 669,
     "question": "GaussDB(for Cassandra) is compatible with Apache Cassandra and supports wide-column storage model.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7214,7 +7214,7 @@
   {
     "id": 671,
     "question": "DRS supports disaster recovery switchover and failover functions during migration.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7260,7 +7260,7 @@
   {
     "id": 675,
     "question": "RDS automated backups can be used to restore to any point in time within the retention period.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7294,7 +7294,7 @@
   {
     "id": 678,
     "question": "DRS supports migrating from Amazon RDS to Huawei Cloud RDS.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7328,7 +7328,7 @@
   {
     "id": 681,
     "question": "GaussDB supports separation of storage and compute.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7362,7 +7362,7 @@
   {
     "id": 684,
     "question": "All Huawei Cloud databases support transparent data encryption (TDE) by default.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7396,7 +7396,7 @@
   {
     "id": 687,
     "question": "GaussDB(for Redis) is compatible with Redis and supports cluster architecture with high availability.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7430,7 +7430,7 @@
   {
     "id": 690,
     "question": "DRS supports one-click switchover after synchronization is complete.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7464,7 +7464,7 @@
   {
     "id": 693,
     "question": "RDS supports automated minor version upgrades during maintenance windows.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7498,7 +7498,7 @@
   {
     "id": 696,
     "question": "All database backups on Huawei Cloud are encrypted by default.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7532,7 +7532,7 @@
   {
     "id": 699,
     "question": "GaussDB supports HTAP (Hybrid Transactional/Analytical Processing) workloads.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7554,7 +7554,7 @@
   {
     "id": 701,
     "question": "DRS migration tasks support pause and resume functions.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7588,7 +7588,7 @@
   {
     "id": 704,
     "question": "Database parameter templates in RDS can be applied to multiple instances at once.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7622,7 +7622,7 @@
   {
     "id": 707,
     "question": "Huawei Cloud databases support private network access only by default.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7656,7 +7656,7 @@
   {
     "id": 710,
     "question": "Point-in-time recovery (PITR) is supported by RDS automated backups.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7690,7 +7690,7 @@
   {
     "id": 713,
     "question": "All Huawei Cloud database services support IPv6 access.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7724,7 +7724,7 @@
   {
     "id": 716,
     "question": "DRS supports data subscription for real-time change data capture (CDC).",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7758,7 +7758,7 @@
   {
     "id": 719,
     "question": "Database connections should go through a private network (VPC) rather than public network for security and performance.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7792,7 +7792,7 @@
   {
     "id": 722,
     "question": "Huawei Cloud provides enterprise-grade database solutions for both OLTP and OLAP workloads.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7826,7 +7826,7 @@
   {
     "id": 725,
     "question": "RDS supports manual failover for testing disaster recovery procedures.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7860,7 +7860,7 @@
   {
     "id": 728,
     "question": "All Huawei Cloud database services support automated daily backups.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7894,7 +7894,7 @@
   {
     "id": 731,
     "question": "Huawei Cloud database services are available in all regions globally.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7916,7 +7916,7 @@
   {
     "id": 733,
     "question": "When choosing a database service, performance, cost, availability, and scalability should all be considered.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7938,7 +7938,7 @@
   {
     "id": 735,
     "question": "The goal of database service planning on Huawei Cloud is to select the most suitable database engine and architecture that meets business requirements while optimizing cost and performance.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7972,7 +7972,7 @@
   {
     "id": 738,
     "question": "Huawei Cloud provides shared responsibility for security, where tenants are responsible for their data security.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -7994,7 +7994,7 @@
   {
     "id": 740,
     "question": "Data Security Center (DSC) manages data security throughout the data lifecycle.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8052,7 +8052,7 @@
   {
     "id": 745,
     "question": "Network security in Huawei Cloud includes the use of cloud firewall between Internet borders and VPCs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8074,7 +8074,7 @@
   {
     "id": 747,
     "question": "Situational Awareness (SA) is used to ensure cloud resource security in security management.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8108,7 +8108,7 @@
   {
     "id": 750,
     "question": "Tenants are responsible for the security of application software they deploy on Huawei Cloud.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8154,7 +8154,7 @@
   {
     "id": 754,
     "question": "Network ACLs and security groups are used for access control within a VPC.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8188,7 +8188,7 @@
   {
     "id": 757,
     "question": "Encrypted images can be shared in Huawei Cloud.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8222,7 +8222,7 @@
   {
     "id": 760,
     "question": "For application security, vulnerability scans include general web vulnerability scans and third-party application scans.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8268,7 +8268,7 @@
   {
     "id": 764,
     "question": "Data encryption is enabled for storage by default in Huawei Cloud.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8302,7 +8302,7 @@
   {
     "id": 767,
     "question": "Tenants are not responsible for testing security workloads before deploying in production.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8336,7 +8336,7 @@
   {
     "id": 770,
     "question": "Huawei Cloud's security system includes protection for compute, network, and data.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8346,7 +8346,7 @@
   {
     "id": 771,
     "question": "For workload security, HSS and CGS are deployed to protect hosts and containers.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8380,7 +8380,7 @@
   {
     "id": 774,
     "question": "Data Security Center (DSC) does not handle data encryption.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8414,7 +8414,7 @@
   {
     "id": 777,
     "question": "In Huawei Cloud, tenants own and control their data.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8446,7 +8446,7 @@
   {
     "id": 780,
     "question": "Application security includes protection against malicious code in allowed data streams.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8490,7 +8490,7 @@
   {
     "id": 784,
     "question": "In security management, Cloud Bastion Host (CBH) is used for O&M.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8524,7 +8524,7 @@
   {
     "id": 787,
     "question": "Vulnerability Scan Service (VSS) includes port detection and fingerprint identification.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8546,7 +8546,7 @@
   {
     "id": 789,
     "question": "In network security, cloud firewall is not needed for VPCs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8580,7 +8580,7 @@
   {
     "id": 792,
     "question": "Huawei Cloud does not provide multi-dimensional protection for security.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8602,7 +8602,7 @@
   {
     "id": 794,
     "question": "Host Security Service (HSS) provides protection for containers.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8636,7 +8636,7 @@
   {
     "id": 797,
     "question": "Cloud resources are periodically scanned to detect vulnerabilities in Huawei Cloud.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8670,7 +8670,7 @@
   {
     "id": 800,
     "question": "Tenants need to test security workloads before production deployment.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8702,7 +8702,7 @@
   {
     "id": 803,
     "question": "Application security does not include fingerprint identification.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8758,7 +8758,7 @@
   {
     "id": 808,
     "question": "Container Guard Service (CGS) is for host security.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8792,7 +8792,7 @@
   {
     "id": 811,
     "question": "Cloud Eye is used for vulnerability detection.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8826,7 +8826,7 @@
   {
     "id": 814,
     "question": "Huawei Cloud provides envelope encryption for images.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8860,7 +8860,7 @@
   {
     "id": 817,
     "question": "Application security includes third-party application vulnerability scans.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8882,7 +8882,7 @@
   {
     "id": 819,
     "question": "Key Management Service (KMS) is used for data encryption.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8916,7 +8916,7 @@
   {
     "id": 822,
     "question": "Tenants can share encrypted images.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8948,7 +8948,7 @@
   {
     "id": 825,
     "question": "Network security does not include data encryption.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -8982,7 +8982,7 @@
   {
     "id": 828,
     "question": "Huawei Cloud security includes multi-layered protection.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -9014,7 +9014,7 @@
   {
     "id": 831,
     "question": "Security groups are not used for access control.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -9046,7 +9046,7 @@
   {
     "id": 834,
     "question": "Cloud Eye is used for resource monitoring in security.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -9068,7 +9068,7 @@
   {
     "id": 836,
     "question": "Huawei Cloud security system is based on shared responsibility model.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
