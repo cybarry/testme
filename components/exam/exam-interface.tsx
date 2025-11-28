@@ -1,7 +1,6 @@
-// components/exam/exam-interface.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { CheatingDetector } from './anti-cheating-detector';
 import { CheatingWarningModal } from './cheating-warning-modal';
@@ -9,9 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AlertCircle, User, CheckCircle2, ChevronLeft, ChevronRight, Radio, Hash, ToggleLeft, Grip } from 'lucide-react';
-import { Exam } from '../../lib/schemas/exam.schema';
-import { ExamErrorBoundary } from './exam-error-boundary';
+import { AlertCircle, CheckCircle2, ChevronLeft, ChevronRight, Radio, Hash, ToggleLeft, Grip } from 'lucide-react';
 
 const MAX_VIOLATIONS = 3;
 
@@ -34,6 +31,7 @@ interface Exam {
   attemptNumber?: number;
   numberOfQuestion?: number;
 };
+
 interface ExamInterfaceProps {
   examId?: string;
   studentName?: string;
@@ -52,11 +50,12 @@ const getQuestionTypeInfo = (type: string) => {
 export function ExamInterface({ examId, studentName = 'Student' }: ExamInterfaceProps) {
   const router = useRouter();
 
+  // State
   const [exam, setExams] = useState<Exam | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, any>>({});
   const [markedForReview, setMarkedForReview] = useState<Set<string>>(new Set());
-  const [timeRemaining, setTimeRemaining] = useState(0);
+  const [timeRemaining, setTimeRemaining] = useState<number | null>(null);
   const [cheatingAttempts, setCheatingAttempts] = useState(0);
   const [showWarning, setShowWarning] = useState(false);
   const [isTerminated, setIsTerminated] = useState(false);
@@ -65,93 +64,83 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeTab, setActiveTab] = useState('all');
 
+  // Refs for auto-save (Critical for preserving state inside intervals)
+  const answersRef = useRef(answers);
+  const timeRef = useRef(timeRemaining);
+  const cheatingRef = useRef(cheatingAttempts);
+  const terminatedRef = useRef(isTerminated);
+  const examRef = useRef(exam);
+  const indexRef = useRef(currentQuestionIndex);
 
-  // SAFELY access current question
+  // Sync Refs with State
+  useEffect(() => { answersRef.current = answers; }, [answers]);
+  useEffect(() => { timeRef.current = timeRemaining; }, [timeRemaining]);
+  useEffect(() => { cheatingRef.current = cheatingAttempts; }, [cheatingAttempts]);
+  useEffect(() => { terminatedRef.current = isTerminated; }, [isTerminated]);
+  useEffect(() => { examRef.current = exam; }, [exam]);
+  useEffect(() => { indexRef.current = currentQuestionIndex; }, [currentQuestionIndex]);
+
+  // Derived state
   const currentQuestion = exam?.questions?.[currentQuestionIndex];
   const totalQuestions = exam?.numberOfQuestion!;
   const answeredCount = Object.keys(answers).length;
   const pendingCount = totalQuestions - answeredCount;
   const markedCount = markedForReview.size;
 
-  useEffect(() => {
-    fetchExams();
-  }, []);
-
-  const fetchExams = async () => {
-    try {
-      const response = await fetch(`/api/exam/${examId}`);
-      const data = await response.json();
-      setExams(data.exam);
-    } catch (error) {
-      console.error('Failed to fetch exams:', error);
-    }
-  };
-  useEffect(() => {
-    if (exam?.duration) {
-      setTimeRemaining(exam.duration * 60);
-    }
-  }, [exam]);
-  // // Prevent crash if exam or questions not loaded
-
-  useEffect(() => {
-    const requestFullscreen = async () => {
-      try { await document.documentElement.requestFullscreen(); } catch (err) { }
-    };
-    requestFullscreen();
-    setIsExamActive(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isExamActive || timeRemaining <= 0) return;
-    const timer = setInterval(() => {
-      setTimeRemaining(prev => {
-        if (prev <= 1) { handleSubmit(); return 0; }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [isExamActive, timeRemaining]);
-
-  // Auto-save progress
-  useEffect(() => {
-    const saveInterval = setInterval(() => {
-      if (Object.keys(answers).length > 0 && isExamActive) {
-        saveProgress();
-      }
-    }, 3000);
-
-    return () => clearInterval(saveInterval);
-  }, [answers, currentQuestionIndex, cheatingAttempts, isExamActive]);
-
-  if (!exam || !exam.questions || exam?.numberOfQuestion === 0) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-xl text-gray-700">Loading exam...</p>
-        </div>
-      </div>
-    );
-  }
+  // --- HELPER FUNCTIONS (Defined BEFORE Effects to fix ReferenceError) ---
 
   const saveProgress = async () => {
+    // Read from REFS to get latest values inside the interval
+    const currentExam = examRef.current;
+    if (!currentExam) return;
+
+    const payload = {
+      examId: currentExam._id,
+      currentQuestionIndex: indexRef.current,
+      answers: Object.entries(answersRef.current).map(([qId, ans]) => ({
+        questionId: qId,
+        selectedAnswer: ans,
+      })),
+      cheatingAttempts: cheatingRef.current,
+      terminatedForCheating: terminatedRef.current,
+      remainingTime: timeRef.current 
+    };
+
     try {
       await fetch('/api/student/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error('Auto-save failed');
+    }
+  };
+
+  const handleSubmit = async (cheated = false) => {
+    setIsExamActive(false);
+    setShowSubmitDialog(false);
+    try {
+      const response = await fetch('/api/student/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          examId: exam._id,
-          currentQuestionIndex,
+          examId: exam?._id,
+          scoreId: exam?.scoreId,
           answers: Object.entries(answers).map(([qId, ans]) => ({
             questionId: qId,
             selectedAnswer: ans,
           })),
           cheatingAttempts,
-          terminatedForCheating: isTerminated,
+          terminatedForCheating: cheated || isTerminated,
         }),
       });
+      if (response.ok) {
+        const data = await response.json();
+        router.push(`/student/result/${data?.score?.id}`);
+      }
     } catch (err) {
-      console.error('Auto-save failed');
+      console.error('Submit failed');
     }
   };
 
@@ -165,6 +154,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
     const newAttempts = cheatingAttempts + 1;
     setCheatingAttempts(newAttempts);
     setShowWarning(true);
+    saveProgress(); 
     if (newAttempts >= MAX_VIOLATIONS) {
       setIsTerminated(true);
       setTimeout(() => handleSubmit(true), 3000);
@@ -183,32 +173,104 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
     });
   };
 
-  const handleSubmit = async (cheated = false) => {
-    setIsExamActive(false);
-    setShowSubmitDialog(false);
+  const fetchExams = async () => {
     try {
-      const response = await fetch('/api/student/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          examId: exam._id,
-          scoreId: exam.scoreId,
-          answers: Object.entries(answers).map(([qId, ans]) => ({
-            questionId: qId,
-            selectedAnswer: ans,
-          })),
-          cheatingAttempts,
-          terminatedForCheating: cheated || isTerminated,
-        }),
-      });
-      if (response.ok) {
-        const data = await response.json();
-        router.push(`/student/result/${data?.score?.id}`);
+      const response = await fetch(`/api/exam/${examId}`);
+      const data = await response.json();
+      setExams(data.exam);
+
+      // --- RECOVERY LOGIC ---
+      if (data.progress) {
+        console.log("Restoring progress from server:", data.progress);
+        
+        if (data.progress.answers && Array.isArray(data.progress.answers)) {
+          const answerMap: Record<string, any> = {};
+          data.progress.answers.forEach((ans: any) => {
+            answerMap[ans.questionId] = ans.selectedAnswer;
+          });
+          setAnswers(answerMap);
+        }
+
+        if (typeof data.progress.currentQuestionIndex === 'number') {
+          setCurrentQuestionIndex(data.progress.currentQuestionIndex);
+        }
+        if (typeof data.progress.cheatingAttempts === 'number') {
+          setCheatingAttempts(data.progress.cheatingAttempts);
+        }
+
+        if (typeof data.progress.remainingTime === 'number') {
+          setTimeRemaining(data.progress.remainingTime);
+        } else {
+          setTimeRemaining(data.exam.duration * 60);
+        }
+      } else {
+        setTimeRemaining(data.exam.duration * 60);
       }
-    } catch (err) {
-      console.error('Submit failed');
+    } catch (error) {
+      console.error('Failed to fetch exams:', error);
     }
   };
+
+  // --- EFFECTS ---
+
+  // Initial Fetch
+  useEffect(() => {
+    fetchExams();
+  }, []);
+
+  // Fullscreen
+  useEffect(() => {
+    const requestFullscreen = async () => {
+      try { await document.documentElement.requestFullscreen(); } catch (err) { }
+    };
+    requestFullscreen();
+    setIsExamActive(true);
+  }, []);
+
+  // Timer Effect
+  useEffect(() => {
+    if (!isExamActive || timeRemaining === null) return;
+    if (timeRemaining <= 0) return; 
+    
+    const timer = setInterval(() => {
+      setTimeRemaining(prev => {
+        if (prev === null) return null;
+        if (prev <= 1) { 
+          handleSubmit(); 
+          return 0; 
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [isExamActive, timeRemaining !== null]);
+
+  // Auto-save Effect
+  useEffect(() => {
+    if (!isExamActive) return;
+
+    const saveInterval = setInterval(() => {
+      // Check refs to decide if we should save
+      if (examRef.current && timeRef.current !== null) {
+        saveProgress();
+      }
+    }, 5000); 
+
+    return () => clearInterval(saveInterval);
+  }, [isExamActive]); 
+
+  // --- RENDER ---
+
+  if (!exam || !exam.questions || exam?.numberOfQuestion === 0 || timeRemaining === null) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-xl text-gray-700">Loading exam...</p>
+        </div>
+      </div>
+    );
+  }
 
   const questionsByType = exam.questions.reduce((acc, q, i) => {
     const type = q.questionType || 'unknown';
@@ -254,8 +316,8 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
               <div className="flex items-center gap-10">
                 <div className="text-right">
                   <p className="text-sm font-bold text-gray-600 tracking-wider">TIME REMAINING</p>
-                  <p className={`text-5xl font-bold font-mono ${timeRemaining < 300 ? 'text-red-600 animate-pulse' : 'text-blue-700'}`}>
-                    {formatTime(timeRemaining)}
+                  <p className={`text-5xl font-bold font-mono ${timeRemaining! < 300 ? 'text-red-600 animate-pulse' : 'text-blue-700'}`}>
+                    {formatTime(timeRemaining!)}
                   </p>
                 </div>
                 <Button
@@ -271,7 +333,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
           </header>
 
           <div className="flex flex-1 relative">
-            {/* COMPACT SIDEBAR */}
+            {/* SIDEBAR */}
             <aside className={`absolute left-0 top-0 h-full bg-white border-r border-gray-200 shadow-2xl transition-all duration-300 z-40 ${sidebarOpen ? 'w-80' : 'w-20'}`}>
               <div className="absolute -right-8 top-24 z-50">
                 <Button
@@ -370,7 +432,6 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
                         Question {currentQuestionIndex + 1} of {totalQuestions}
                       </Badge>
 
-                      {/* FIXED: Safe check before accessing _id */}
                       {currentQuestion && markedForReview.has(currentQuestion._id) && (
                         <Badge className="bg-yellow-100 text-yellow-800 border-4 border-yellow-500 font-bold text-xl px-8 py-4 rounded-full shadow-lg">
                           <AlertCircle className="w-7 h-7 mr-3" />
@@ -383,10 +444,9 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
                       {currentQuestion?.questionText}
                     </h2>
 
-                    {/* Rest of your options rendering remains the same */}
                     <div className="space-y-8">
                       {currentQuestion?.type === 'single_choice' || currentQuestion?.type === 'true_false' ? (
-                        Object.entries(currentQuestion?.options).map(([key, value]) => {
+                        Object.entries(currentQuestion?.options || {}).map(([key, value]) => {
                           const isSelected = answers[currentQuestion?._id] === key;
                           return (
                             <label
@@ -410,7 +470,7 @@ export function ExamInterface({ examId, studentName = 'Student' }: ExamInterface
                           );
                         })
                       ) : (
-                        Object.entries(currentQuestion?.options!)?.map(([key, value]) => {
+                        Object.entries(currentQuestion?.options || {}).map(([key, value]) => {
                           const isSelected = (answers[currentQuestion?._id!] || []).includes(key);
                           return (
                             <label

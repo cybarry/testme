@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     
     await connectDB();
     
-    const { examId, currentQuestionIndex, answers, cheatingAttempts, terminatedForCheating } = await request.json();
+    const { examId, currentQuestionIndex, answers, cheatingAttempts, terminatedForCheating, remainingTime } = await request.json();
     
     let progress = await StudentProgress.findOne({
       studentId: currentUser.userId,
@@ -28,6 +28,7 @@ export async function POST(request: NextRequest) {
         answers: answers || [],
         cheatingAttempts: cheatingAttempts || 0,
         terminatedForCheating: terminatedForCheating || false,
+        remainingTime: remainingTime,
         startTime: new Date()
       });
     } else {
@@ -35,12 +36,17 @@ export async function POST(request: NextRequest) {
       progress.answers = answers;
       progress.cheatingAttempts = cheatingAttempts;
       progress.terminatedForCheating = terminatedForCheating;
+      
+      if (remainingTime !== undefined && remainingTime !== null) {
+        progress.remainingTime = remainingTime;
+      }
     }
     
     await progress.save();
     
     return NextResponse.json({ progress }, { status: 200 });
   } catch (error) {
+    console.error("Progress save error:", error);
     return NextResponse.json({ error: 'Failed to save progress' }, { status: 500 });
   }
 }

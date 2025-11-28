@@ -2,6 +2,7 @@ import { connectDB } from '@/lib/db';
 import { Exam } from '@/lib/schemas/exam.schema';
 import { Question } from '@/lib/schemas/question.schema';
 import { Score } from '@/lib/schemas/score.schema';
+import { StudentProgress } from '@/lib/schemas/student-progress.schema';
 import { getCurrentUser } from '@/lib/auth';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -31,26 +32,30 @@ export async function GET(
       status: 'unfinished'
     });
 
-    // If unfinished attempt exists, return it with questions
     if (existingScore) {
+      // Fetch saved progress to resume
+      const savedProgress = await StudentProgress.findOne({
+        studentId: currentUser.userId,
+        examId
+      });
+
       return NextResponse.json({
         exam: {
           ...exam.toObject(),
           questions: existingScore.questions,
           attemptNumber: existingScore.attemptNumber,
           scoreId: existingScore._id,
-        }
+        },
+        progress: savedProgress
       }, { status: 200 });
     }
 
-    // Check number of finished attempts
     const finishedAttempts = await Score.countDocuments({
       studentId: currentUser.userId,
       examId,
       status: 'finished'
     });
 
-    // Check if max attempts exceeded
     if (finishedAttempts >= exam.maxAttempts) {
       return NextResponse.json(
         { error: `No more permission. Maximum ${exam.maxAttempts} attempts allowed.` },
@@ -58,11 +63,10 @@ export async function GET(
       );
     }
 
-    // Generate questions for new attempt
     const totalQuestions = exam.numberOfQuestion;
-    const trueFalseCount = Math.ceil(totalQuestions * 0.2); // 20%
-    const singleChoiceCount = Math.ceil(totalQuestions * 0.3); // 30%
-    const multipleChoiceCount = totalQuestions - trueFalseCount - singleChoiceCount; // 50%
+    const trueFalseCount = Math.ceil(totalQuestions * 0.2);
+    const singleChoiceCount = Math.ceil(totalQuestions * 0.3);
+    const multipleChoiceCount = totalQuestions - trueFalseCount - singleChoiceCount;
 
     const [trueFalseQuestions, singleChoiceQuestions, multipleChoiceQuestions] = await Promise.all([
       Question.aggregate([
@@ -91,7 +95,6 @@ export async function GET(
       ...q
     }));
 
-    // Create new score record with unfinished status
     const newScore = new Score({
       studentId: currentUser.userId,
       examId,

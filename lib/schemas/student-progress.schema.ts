@@ -24,7 +24,10 @@ const studentProgressSchema = new mongoose.Schema(
       type: Date,
       default: Date.now
     },
-    remainingTime: Number,
+    remainingTime: {
+      type: Number,
+      default: null
+    },
     completed: {
       type: Boolean,
       default: false

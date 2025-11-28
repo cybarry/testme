@@ -1,6 +1,9 @@
 import { connectDB } from '@/lib/db';
 import { Score } from '@/lib/schemas/score.schema';
 import { Question } from '@/lib/schemas/question.schema';
+// CRITICAL FIX: Import User and Exam to register schemas before populate
+import { User } from '@/lib/schemas/user.schema';
+import { Exam } from '@/lib/schemas/exam.schema';
 import { getCurrentUser } from '@/lib/auth';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -20,6 +23,9 @@ export async function GET(
     const page = request.nextUrl.searchParams.get('page') || '1';
     const pageSize = 10;
     const pageNum = Math.max(1, parseInt(page));
+
+    // Force model registration to prevent MissingSchemaError
+    const _registeredModels = [User, Exam];
 
     const score = await Score.findById(resultId)
       .populate('studentId', 'username')
