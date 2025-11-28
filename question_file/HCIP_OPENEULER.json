@@ -141,7 +141,7 @@
   },
   {
     "question": "The iSula container engine currently supports the `isula push` command to upload images to a remote registry.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -150,7 +150,7 @@
   },
   {
     "question": "When using the `chmod` command, the permission mode `755` is equivalent to `u=rwx,g=rx,o=rx`.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -159,7 +159,7 @@
   },
   {
     "question": "In Shell scripting, enclosing a variable in single quotes (e.g., '$VAR') will expand the variable to its value.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -168,7 +168,7 @@
   },
   {
     "question": "The MBR (Master Boot Record) partitioning scheme supports disks larger than 2 TB.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -177,7 +177,7 @@
   },
   {
     "question": "Systemd is the first process started by the Linux kernel (PID 1) and is responsible for initializing the system and managing services.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"

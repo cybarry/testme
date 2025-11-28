@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which of the following learns the distribution of data or the relationship between data based on unlabeled data?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Supervised learning",
+      "b": "Unsupervised learning",
+      "c": "Semi-supervised learning",
+      "d": "Fully supervised learning"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following statements is false about machine learning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Model generalization capability: the extent to which a learned model can be applied to new samples. This is also called robustness.",
+      "b": "Error: difference between the prediction of a learned model on a sample and the actual result of the sample. Errors can be classified into training errors and generalization errors.",
+      "c": "Underfitting: The training error is large.",
+      "d": "Overfitting: The training error is large."
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following is not a hyperparameter for model training?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Learning rate for neural network training",
+      "b": "K in the K-Nearest Neighbors (KNN) algorithm",
+      "c": "The weight coefficient (slope) w in the one-dimensional linear regression model Y=wX+b",
+      "d": "Number of trees in a random forest"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is NOT a type of gate in LSTM?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Input gate",
+      "b": "Forget gate",
+      "c": "Update gate",
+      "d": "Output gate"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following is the activation function for neural networks in deep learning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CE",
+      "b": "Dropout",
+      "c": "ReLU",
+      "d": "Sin(x)"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements is true about model capacity?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The capacity of a model refers to its capability to fit various functions. It is also known as model complexity.",
+      "b": "An algorithm usually performs poorly when the capacity matches the task complexity and the amount of training data provided.",
+      "c": "An algorithm usually performs good when the capacity doesn't suit the task complexity and the amount of training data provided.",
+      "d": "Models with a large capacity can handle complex tasks. but there may be underfitting when the capacity is greater than what is required by a task."
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following is not a common optimizer in deep learning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Adagrad",
+      "b": "Softplus",
+      "c": "RMSprop",
+      "d": "Adam"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is an unsupervised learning algorithm?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Decision tree",
+      "b": "Neural network",
+      "c": "Hierarchical clustering",
+      "d": "Random forest"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following statements is false about softmax?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "The output of the softmax function is the probability that the sample belongs to each class.",
+      "b": "The softmax function is not a generalized linear regression function.",
+      "c": "The softmax function is often used for multi-class classification problems.",
+      "d": "The softmax function is a generalization of the log-odds function that can be used for multi-class classification problems."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Intelligent quality inspection is implemented based on the cloud-edge-device synergy of deep learning algorithms. Which o

@@ -21,14 +21,6 @@ const scoreSchema = new mongoose.Schema(
       enum: ['unfinished', 'finished'],
       default: 'unfinished'
     },
-    // --- NEW FIELD: Unified storage for all answers ---
-    answers: [{
-      questionId: { type: mongoose.Schema.Types.ObjectId, ref: 'Question' },
-      selectedAnswer: mongoose.Schema.Types.Mixed,
-      correctAnswer: mongoose.Schema.Types.Mixed,
-      isCorrect: Boolean
-    }],
-    // --- LEGACY FIELDS (Kept for backward compatibility) ---
     questions: {
       type: [
         {
@@ -40,15 +32,14 @@ const scoreSchema = new mongoose.Schema(
       ],
       default: []
     },
+    rawScore: Number,
+    normalizedScore: Number,
     correctAnswers: [mongoose.Schema.Types.ObjectId],
     incorrectAnswers: [{
       questionId: mongoose.Schema.Types.ObjectId,
       selectedAnswer: mongoose.Schema.Types.Mixed,
       correctAnswer: mongoose.Schema.Types.Mixed
     }],
-    // -------------------------------------------------------
-    rawScore: Number,
-    normalizedScore: Number,
     cheatingAttempts: {
       type: Number,
       default: 0

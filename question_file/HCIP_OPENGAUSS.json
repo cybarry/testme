@@ -128,7 +128,7 @@
   },
   {
     "question": "Memory-Optimized Tables (MOT) in openGauss store only indexes in memory, while the actual data resides on the disk to ensure persistence and reduce memory costs.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -137,7 +137,7 @@
   },
   {
     "question": "Before installing openGauss, an XML configuration file must be created to specify deployment details such as the server information, installation path, and IP address.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -146,7 +146,7 @@
   },
   {
     "question": "Users are encouraged to manually INSERT or UPDATE values in system catalogs (such as pg_class) to fix metadata inconsistencies if an object is corrupted.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -155,7 +155,7 @@
   },
   {
     "question": "openGauss utilizes the LSE instruction set based on ARMv8.1, specifically using the CASAL instruction to implement Compare and Swap (CAS) operations more efficiently than ldxr/stlxr.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
@@ -164,7 +164,7 @@
   },
   {
     "question": "In SQL logical operations, the result of the expression 'TRUE AND NULL' is FALSE.",
-    "question_type": "true_or_false",
+    "question_type": "true_false",
     "options": {
       "a": "True",
       "b": "False"
