@@ -99,6 +99,7 @@
     "answer": "b"
   },
   {
+<<<<<<< HEAD
     "question": "Intelligent quality inspection is implemented based on the cloud-edge-device synergy of deep learning algorithms. Which of the following is performed on the edge?",
     "question_type": "single_choice",
     "options": {
@@ -441,3 +442,6 @@
     "answer": "a"
   }
 ]
+=======
+    "question": "Intelligent quality inspection is implemented based on the cloud-edge-device synergy of deep learning algorithms. Which o
+>>>>>>> chore/resultpage
