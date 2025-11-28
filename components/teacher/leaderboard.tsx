@@ -1,85 +1,79 @@
-import { connectDB } from '@/lib/db';
-import { Score } from '@/lib/schemas/score.schema';
-// Import User model to ensure schema registration
-import { User } from '@/lib/schemas/user.schema'; 
-import mongoose from 'mongoose';
-import { NextRequest, NextResponse } from 'next/server';
+'use client';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ examId: string }> }
-) {
-  try {
-    await connectDB();
-    
-    // Ensure models are registered
-    const _models = [User, Score];
-    
-    const { examId } = await params;
-    
-    const leaderboard = await Score.aggregate([
-      // 1. Filter for this exam and only finished attempts
-      {
-        $match: { 
-          examId: new mongoose.Types.ObjectId(examId),
-          status: 'finished'
-        }
-      },
-      // 2. Sort by score descending (so the first item per student is their best)
-      {
-        $sort: { normalizedScore: -1 }
-      },
-      // 3. Group by Student ID to deduplicate
-      {
-        $group: {
-          _id: "$studentId",
-          highestScore: { $first: "$normalizedScore" }, // Take the best score
-          attempts: { $sum: 1 }, // Count total attempts
-          // Capture details from the best attempt
-          originalId: { $first: "$_id" },
-          terminatedForCheating: { $first: "$terminatedForCheating" },
-          completedAt: { $first: "$completedAt" }
-        }
-      },
-      // 4. Join with User collection to get username
-      {
-        $lookup: {
-          from: "users", // Mongoose defaults collection name to 'users'
-          localField: "_id",
-          foreignField: "_id",
-          as: "studentDetails"
-        }
-      },
-      // 5. Flatten the user array
-      {
-        $unwind: "$studentDetails"
-      },
-      // 6. Format the output
-      {
-        $project: {
-          _id: "$originalId",
-          studentId: {
-            username: "$studentDetails.username"
-          },
-          normalizedScore: "$highestScore",
-          attempts: "$attempts",
-          terminatedForCheating: "$terminatedForCheating",
-          completedAt: "$completedAt"
-        }
-      },
-      // 7. Sort the final list by score
-      {
-        $sort: { normalizedScore: -1 }
-      },
-      // 8. Limit to top 50
-      {
-        $limit: 50
-      }
-    ]);
-    
-    return NextResponse.json({ leaderboard }, { status: 200 });
-  } catch (error) {
-    console.error("Leaderboard fetch error:", error);
-    return NextResponse.json({ error: 'Failed to fetch leaderboard' }, { status: 500 });
+import { useEffect, useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+interface LeaderboardEntry {
+  _id: string;
+  studentId: { username: string };
+  normalizedScore: number;
+  terminatedForCheating: boolean;
+}
+
+interface LeaderboardProps {
+  examId: string;
+}
+
+export function Leaderboard({ examId }: LeaderboardProps) {
+  const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchLeaderboard();
+  }, [examId]);
+
+  const fetchLeaderboard = async () => {
+    try {
+      const response = await fetch(`/api/exam/${examId}/leaderboard`);
+      const data = await response.json();
+      setLeaderboard(data.leaderboard || []);
+    } catch (error) {
+      console.error('Failed to fetch leaderboard:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  if (isLoading) {
+    return <div className="text-muted">Loading leaderboard...</div>;
   }
+
+  if (leaderboard.length === 0) {
+    return <div className="text-muted text-center p-8">No submissions yet</div>;
+  }
+
+  return (
+    <Card className="border-border bg-muted-lighter/30">
+      <CardHeader>
+        <CardTitle className="text-foreground">Leaderboard</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-2">
+          {leaderboard.map((entry, idx) => (
+            <div
+              key={entry._id}
+              className="flex items-center justify-between p-4 rounded bg-input border border-border"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-sm font-bold text-primary">#{idx + 1}</span>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">{entry.studentId.username}</p>
+                  {entry.terminatedForCheating && (
+                    <p className="text-xs text-error">Terminated for cheating</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="text-right">
+                <p className="text-xl font-bold text-foreground">{entry.normalizedScore}</p>
+                <p className="text-xs text-muted">/1000</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
 }
