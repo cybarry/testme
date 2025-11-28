@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
 
     await connectDB();
 
-    const { examId, scoreId, cheatingAttempts, terminatedForCheating, answers } = await request.json();
+    const { examId, scoreId, cheatingAttempts, terminatedForCheating, answers: submittedAnswers } = await request.json();
 
     // Find the score record
     const score = await Score.findById(scoreId);
@@ -34,45 +34,73 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Exam not found' }, { status: 404 });
     }
 
-    // Calculate score
+    // 1. Prepare to grade
     let correctCount = 0;
     
-    // Arrays for legacy support (to prevent breaking old logic)
+    // Arrays for legacy support
     const incorrectAnswersLegacy = [];
     const correctAnswersLegacy = [];
     
-    // New unified array that stores EVERYTHING
+    // New unified array that will store EVERYTHING (Attempted + Skipped)
     const processedAnswers = [];
 
-    for (const answer of answers) {
-      const question = await Question.findById(answer.questionId);
-      if (!question) continue;
+    // 2. Fetch all Question documents from DB to get the correct answers
+    // We use score.questions (assigned questions) as the source of truth for the exam structure
+    const assignedQuestions = score.questions && score.questions.length > 0 
+      ? score.questions 
+      : []; 
 
-      // Normalize to array to handle single/multi choice uniformly
-      const correctArr = Array.isArray(question.answer) ? question.answer : [question.answer];
-      const selectedArr = Array.isArray(answer.selectedAnswer) ? answer.selectedAnswer : [answer.selectedAnswer];
+    // Fallback: if score.questions is empty (legacy data), use submitted answers keys
+    const questionsToGrade = assignedQuestions.length > 0 
+      ? assignedQuestions 
+      : submittedAnswers.map((a: any) => ({ _id: a.questionId }));
 
-      // Robust check: same length AND every selected item is in correct array
-      // This handles cases where order might differ in multiple choice
-      const isCorrect = correctArr.length === selectedArr.length &&
-        selectedArr.every((ans: any) => correctArr.includes(ans));
+    const questionIds = questionsToGrade.map((q: any) => q._id);
+    const dbQuestions = await Question.find({ _id: { $in: questionIds } });
+    const dbQuestionsMap = new Map(dbQuestions.map(q => [q._id.toString(), q]));
 
-      // 1. Update Legacy Counts/Arrays
+    // 3. Create a map of the student's submission for O(1) lookup
+    const submissionMap = new Map(submittedAnswers.map((a: any) => [a.questionId, a.selectedAnswer]));
+
+    // 4. Iterate through ALL assigned questions (ensures skips are recorded)
+    for (const assignedQ of questionsToGrade) {
+      const qId = assignedQ._id.toString();
+      const question = dbQuestionsMap.get(qId);
+      
+      if (!question) continue; // Question might have been deleted from DB
+
+      // Check if student answered this question
+      const hasAnswered = submissionMap.has(qId);
+      const selectedAnswer = submissionMap.get(qId);
+
+      let isCorrect = false;
+
+      if (hasAnswered && selectedAnswer !== null && selectedAnswer !== undefined) {
+        // Normalize to array to handle single/multi choice uniformly
+        const correctArr = Array.isArray(question.answer) ? question.answer : [question.answer];
+        const selectedArr = Array.isArray(selectedAnswer) ? selectedAnswer : [selectedAnswer];
+
+        // Robust check: same length AND every selected item is in correct array
+        isCorrect = correctArr.length === selectedArr.length &&
+          selectedArr.every((ans: any) => correctArr.includes(ans));
+      }
+
+      // Populate Legacy fields
       if (isCorrect) {
         correctCount++;
         correctAnswersLegacy.push(question._id);
       } else {
         incorrectAnswersLegacy.push({
           questionId: question._id,
-          selectedAnswer: answer.selectedAnswer,
+          selectedAnswer: hasAnswered ? selectedAnswer : null,
           correctAnswer: question.answer
         });
       }
 
-      // 2. Push to NEW Unified Array (Crucial Step for Accuracy)
+      // Populate New Unified Field
       processedAnswers.push({
         questionId: question._id,
-        selectedAnswer: answer.selectedAnswer, // We save this explicitly now
+        selectedAnswer: hasAnswered ? selectedAnswer : null, // Records null if skipped
         correctAnswer: question.answer,
         isCorrect: isCorrect
       });
@@ -84,7 +112,7 @@ export async function POST(request: NextRequest) {
     score.rawScore = correctCount;
     score.normalizedScore = Math.round(normalizedScore);
     
-    // Save new unified data
+    // Save new data (Primary source of truth now)
     score.answers = processedAnswers; 
     
     // Save legacy data (safety net)

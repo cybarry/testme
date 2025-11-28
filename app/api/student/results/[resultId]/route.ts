@@ -35,8 +35,7 @@ export async function GET(
 
     let allAnswers = [];
 
-    // --- LOGIC UPDATE START ---
-    // Check if the new 'answers' field is populated (New Submissions)
+    // --- NEW LOGIC: Use the unified answers field if available ---
     if (score.answers && score.answers.length > 0) {
       // Get all question IDs to fetch details efficiently
       const questionIds = score.answers.map((a: any) => a.questionId);
@@ -51,7 +50,7 @@ export async function GET(
         correctAnswer: ans.correctAnswer
       }));
     } 
-    // Fallback for Old Submissions (Legacy Logic using separate arrays)
+    // --- FALLBACK LOGIC: For old exams before this update ---
     else {
       const allQuestionIds = [
         ...score.correctAnswers,
@@ -69,7 +68,7 @@ export async function GET(
           questionId: qId,
           isCorrect: true,
           question: questionsMap.get(qId.toString()),
-          selectedAnswer: null, // Limitation of old data: we don't know what specific correct option they clicked
+          selectedAnswer: null, 
           correctAnswer: questionsMap.get(qId.toString())?.answer
         })),
         ...score.incorrectAnswers.map((ia: any) => ({
@@ -81,9 +80,8 @@ export async function GET(
         }))
       ];
     }
-    // --- LOGIC UPDATE END ---
 
-    // Calculate pagination
+    // Pagination
     const totalAnswers = allAnswers.length;
     const totalPages = Math.ceil(totalAnswers / pageSize);
     const startIdx = (pageNum - 1) * pageSize;

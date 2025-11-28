@@ -122,53 +122,44 @@ export function ResultView({ resultId }: ResultViewProps) {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {answers.map((item, idx) => (
-              <div
-                key={idx}
-                className={`p-4 rounded border-2 space-y-3 ${
-                  item.isCorrect ? 'border-success/30 bg-success/5' : 'border-error/30 bg-error/5'
-                }`}
-              >
-                {/* Question Header */}
-                <div className="flex items-start justify-between">
-                  <p className={`font-medium text-lg ${item.isCorrect ? 'text-success' : 'text-error'}`}>
-                    Question {(currentPage - 1) * pageSize + idx + 1}
-                  </p>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    item.isCorrect
-                      ? 'bg-success/20 text-success'
-                      : 'bg-error/20 text-error'
-                  }`}>
-                    {item.isCorrect ? 'Correct' : 'Incorrect'}
-                  </span>
-                </div>
+            {answers.map((item, idx) => {
+              const isSkipped = item.selectedAnswer === null || item.selectedAnswer === undefined;
+              
+              return (
+                <div
+                  key={idx}
+                  className={`p-4 rounded border-2 space-y-3 ${
+                    item.isCorrect ? 'border-success/30 bg-success/5' : 'border-error/30 bg-error/5'
+                  }`}
+                >
+                  {/* Question Header */}
+                  <div className="flex items-start justify-between">
+                    <p className={`font-medium text-lg ${item.isCorrect ? 'text-success' : 'text-error'}`}>
+                      Question {(currentPage - 1) * pageSize + idx + 1}
+                    </p>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      item.isCorrect
+                        ? 'bg-success/20 text-success'
+                        : isSkipped 
+                          ? 'bg-muted text-muted-foreground'
+                          : 'bg-error/20 text-error'
+                    }`}>
+                      {item.isCorrect ? 'Correct' : isSkipped ? 'Skipped' : 'Incorrect'}
+                    </span>
+                  </div>
 
-                {/* Question Text */}
-                <p className="text-foreground font-medium">{item.question.questionText}</p>
+                  {/* Question Text */}
+                  <p className="text-foreground font-medium">{item.question.questionText}</p>
 
-                {/* Question Type */}
-                <p className="text-muted text-sm">Type: {item.question.type.replace('_', ' ').toUpperCase()}</p>
+                  {/* Question Type */}
+                  <p className="text-muted text-sm">Type: {item.question.type ? item.question.type.replace('_', ' ').toUpperCase() : 'Unknown'}</p>
 
-                {/* Answer Display */}
-                <div className="space-y-2 mt-3">
-                  {item.isCorrect ? (
-                    <div>
-                      <p className="text-muted text-sm mb-1">Your Answer:</p>
-                      <div className="bg-success/20 border border-success/30 rounded p-2 text-foreground">
-                        {typeof item.selectedAnswer === 'string'
-                          ? item.question.options?.[item.selectedAnswer] || item.selectedAnswer
-                          : Array.isArray(item.selectedAnswer)
-                            ? item.selectedAnswer
-                                .map((ans: string) => item.question.options?.[ans] || ans)
-                                .join(', ')
-                            : JSON.stringify(item.selectedAnswer)}
-                      </div>
-                    </div>
-                  ) : (
-                    <>
+                  {/* Answer Display */}
+                  <div className="space-y-2 mt-3">
+                    {item.isCorrect ? (
                       <div>
                         <p className="text-muted text-sm mb-1">Your Answer:</p>
-                        <div className="bg-error/20 border border-error/30 rounded p-2 text-foreground">
+                        <div className="bg-success/20 border border-success/30 rounded p-2 text-foreground">
                           {typeof item.selectedAnswer === 'string'
                             ? item.question.options?.[item.selectedAnswer] || item.selectedAnswer
                             : Array.isArray(item.selectedAnswer)
@@ -178,23 +169,42 @@ export function ResultView({ resultId }: ResultViewProps) {
                               : JSON.stringify(item.selectedAnswer)}
                         </div>
                       </div>
-                      <div>
-                        <p className="text-muted text-sm mb-1">Correct Answer:</p>
-                        <div className="bg-success/20 border border-success/30 rounded p-2 text-foreground">
-                          {typeof item.correctAnswer === 'string'
-                            ? item.question.options?.[item.correctAnswer] || item.correctAnswer
-                            : Array.isArray(item.correctAnswer)
-                              ? item.correctAnswer
-                                  .map((ans: string) => item.question.options?.[ans] || ans)
-                                  .join(', ')
-                              : JSON.stringify(item.correctAnswer)}
+                    ) : (
+                      <>
+                        <div>
+                          <p className="text-muted text-sm mb-1">Your Answer:</p>
+                          <div className={`border rounded p-2 text-foreground ${isSkipped ? 'bg-muted/20 border-muted' : 'bg-error/20 border-error/30'}`}>
+                            {isSkipped ? (
+                              <span className="italic text-muted-foreground">No answer provided</span>
+                            ) : (
+                              typeof item.selectedAnswer === 'string'
+                                ? item.question.options?.[item.selectedAnswer] || item.selectedAnswer
+                                : Array.isArray(item.selectedAnswer)
+                                  ? item.selectedAnswer
+                                      .map((ans: string) => item.question.options?.[ans] || ans)
+                                      .join(', ')
+                                  : JSON.stringify(item.selectedAnswer)
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    </>
-                  )}
+                        <div>
+                          <p className="text-muted text-sm mb-1">Correct Answer:</p>
+                          <div className="bg-success/20 border border-success/30 rounded p-2 text-foreground">
+                            {typeof item.correctAnswer === 'string'
+                              ? item.question.options?.[item.correctAnswer] || item.correctAnswer
+                              : Array.isArray(item.correctAnswer)
+                                ? item.correctAnswer
+                                    .map((ans: string) => item.question.options?.[ans] || ans)
+                                    .join(', ')
+                                : JSON.stringify(item.correctAnswer)}
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Pagination Controls */}
