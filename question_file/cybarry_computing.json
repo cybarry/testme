@@ -1,0 +1,2647 @@
+[
+  {
+    "question": "What is the default file system on openEuler?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ext4",
+      "b": "NTFS",
+      "c": "FAT32",
+      "d": "XFS"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "During openEuler installation, which option allows you to test the media before installing?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Install openEuler 20.03 LTS",
+      "b": "Test this media & install openEuler 20.03 LTS",
+      "c": "Troubleshooting",
+      "d": "Boot from local drive"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In openEuler, the RPM command option '-ivh' is used for what?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Installing a package",
+      "b": "Querying a package",
+      "c": "Upgrading a package",
+      "d": "Removing a package"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: In openEuler, you must specify the password of the root user during the OS installation.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which command is used to enable remote login for root in openEuler?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Edit sshd_config and set PermitRootLogin yes",
+      "b": "Edit hosts.allow",
+      "c": "Use passwd command",
+      "d": "Run sudo su"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, which directory temporarily mounts other file systems?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/mnt",
+      "b": "/opt",
+      "c": "/proc",
+      "d": "/lib"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What are the advantages of source code-based software installation in openEuler?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Flexible settings during compilation",
+      "b": "Customized installation",
+      "c": "Fully compatible with local host",
+      "d": "Simple configuration process"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "True or False: systemd supports snapshot and system status restoration.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler process management, what does the 'ps' command display?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Currently running processes",
+      "b": "File systems",
+      "c": "Network interfaces",
+      "d": "User accounts"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which signal is used to terminate a process gracefully in openEuler?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SIGTERM (15)",
+      "b": "SIGKILL (9)",
+      "c": "SIGHUP (1)",
+      "d": "SIGINT (2)"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler security hardening, what is the recommended umask value?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "0077",
+      "b": "0022",
+      "c": "0000",
+      "d": "0755"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: SSH protocol provides security assurance for remote login sessions.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, which tool is used for managing software packages similar to YUM?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "DNF",
+      "b": "APT",
+      "c": "RPM",
+      "d": "PIP"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What does ACL stand for in file permissions?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Access Control List",
+      "b": "Advanced Command Line",
+      "c": "Automated Configuration Layer",
+      "d": "Application Control Language"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In shell scripts, what is the purpose of the shebang line?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Specifies the interpreter",
+      "b": "Comments the script",
+      "c": "Defines variables",
+      "d": "Executes commands"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: In openEuler, the root user can log in remotely by default.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which components are part of the LAMP stack in openEuler web services?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Linux",
+      "b": "Apache",
+      "c": "MySQL",
+      "d": "PHP"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "In openGauss, what is the default port for database connections?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "5432",
+      "b": "8000",
+      "c": "3306",
+      "d": "1521"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "True or False: openGauss supports resource pooling architecture.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which authentication methods are supported in openGauss?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "MD5",
+      "b": "SHA-256",
+      "c": "GSSAPI",
+      "d": "Cert"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "In openGauss architecture, what is DMS?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Dynamic library for memory sharing",
+      "b": "Data Management Service",
+      "c": "Distributed Management System",
+      "d": "Database Monitoring Service"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What does SELinux provide in terms of security?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Mandatory Access Control",
+      "b": "Discretionary Access Control",
+      "c": "Role-Based Access Control",
+      "d": "Attribute-Based Access Control"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: openGauss emerged in the 1960s as a new discipline for automating information management.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In Kunpeng, what is the manufacturing process of the Kunpeng 920 chipset?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "7nm",
+      "b": "5nm",
+      "c": "10nm",
+      "d": "14nm"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which BoostKit is used for database optimization in Kunpeng?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "BoostKit for Database",
+      "b": "BoostKit for Big Data",
+      "c": "BoostKit for Virtualization",
+      "d": "BoostKit for HPC"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Kunpeng chipsets are Arm-based processors.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss installation, which file is configured for cluster setup?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "XML file",
+      "b": "JSON file",
+      "c": "YAML file",
+      "d": "INI file"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What are the three pooling modes in openGauss resource pooling architecture?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Storage pooling",
+      "b": "Memory pooling",
+      "c": "Compute pooling",
+      "d": "Network pooling"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "In openEuler, the command to view processes in real time is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "top",
+      "b": "ps",
+      "c": "kill",
+      "d": "jobs"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: In shell scripts, single quotes and double quotes have the same effect on variables.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which table in iptables is used for packet filtering?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Filter table",
+      "b": "NAT table",
+      "c": "Mangle table",
+      "d": "Raw table"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss, row-level security enables control at which level?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Row level",
+      "b": "Column level",
+      "c": "Table level",
+      "d": "Database level"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is the purpose of the gs_checkperf tool in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Check performance",
+      "b": "Uninstall database",
+      "c": "Backup data",
+      "d": "Migrate data"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: openEuler supports multiple architectures including Arm and x86.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In Kunpeng, what is used for Java application tuning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Java Profiler",
+      "b": "GCC",
+      "c": "BiSheng Compiler",
+      "d": "QEMU"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which permissions are managed by security administrators in openGauss?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Create users",
+      "b": "Modify users",
+      "c": "Delete users",
+      "d": "Manage audit logs"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "In openEuler, the /proc directory is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "A virtual directory",
+      "b": "For temporary mounts",
+      "c": "For optional software",
+      "d": "For libraries"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Firewalld denies all traffic by default unless specified.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is the command to modify SELinux security context of a file?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "chcon",
+      "b": "chmod",
+      "c": "chown",
+      "d": "setfacl"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss, the storage layer uses which engine?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Row and column hybrid storage engine",
+      "b": "Only row storage",
+      "c": "Only column storage",
+      "d": "Key-value storage"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which is a component in openGauss primary/standby architecture?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CM (Cluster Manager)",
+      "b": "DMS",
+      "c": "DSS",
+      "d": "OM"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Kunpeng 920 exceeds the industry benchmark by 25%.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, to install software through source code, which sequence is followed?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "configure, make, make install",
+      "b": "make, configure, install",
+      "c": "install, make, configure",
+      "d": "make install, configure, make"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What are common RPM options in openEuler?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "-i for install",
+      "b": "-q for query",
+      "c": "-U for upgrade",
+      "d": "-e for erase"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "In openGauss, the security context consists of how many elements?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "5",
+      "b": "3",
+      "c": "4",
+      "d": "6"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: openGauss supports SM algorithms for high security.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which tool is used for browsing PDF attachments in this context?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "browse_pdf_attachment",
+      "b": "search_pdf_attachment",
+      "c": "web_search",
+      "d": "code_execution"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following partitions are generally advised to be created when installing the openEuler operating system?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "/boot",
+      "b": "swap",
+      "c": "/root",
+      "d": "/"
+    },
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "question": "In openEuler, which command is used to view the command history executed by the user?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "record",
+      "b": "history",
+      "c": "log",
+      "d": "trace"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following commands can be used to rename a file or move a file to another directory in Linux?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "cp",
+      "b": "mv",
+      "c": "rm",
+      "d": "touch"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The 'root' user in Linux has the highest permissions and can perform any operation on the system.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which directory in the Linux file system structure is typically used to store system configuration files?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/bin",
+      "b": "/etc",
+      "c": "/var",
+      "d": "/home"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In the Vim editor, which key should be pressed to switch from Insert mode to Normal mode?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Enter",
+      "b": "Ctrl",
+      "c": "Esc",
+      "d": "Shift"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following commands is used to change the permissions of a file or directory?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "chown",
+      "b": "chmod",
+      "c": "chgrp",
+      "d": "umask"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Regarding the 'tar' command options, which of the following descriptions are correct?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "-c: Create a new archive.",
+      "b": "-x: Extract files from an archive.",
+      "c": "-t: List the contents of an archive.",
+      "d": "-z: Compress the archive using gzip."
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which command is used to manage software packages (install, update, remove) in openEuler?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "apt",
+      "b": "yum/dnf",
+      "c": "pacman",
+      "d": "zypper"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following commands can be used to check the current storage space usage of the file system?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "du",
+      "b": "df",
+      "c": "fdisk",
+      "d": "mount"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In openEuler, what is the default firewall management tool?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "iptables",
+      "b": "ufw",
+      "c": "firewalld",
+      "d": "nftables"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which command allows a standard user to execute commands with superuser privileges?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "su",
+      "b": "admin",
+      "c": "root",
+      "d": "sudo"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which of the following are logical volume management (LVM) concepts?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Physical Volume (PV)",
+      "b": "Volume Group (VG)",
+      "c": "Logical Volume (LV)",
+      "d": "Partition Table (PT)"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "Which command is used to view the current network interface configuration information, such as IP address?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ping",
+      "b": "ip addr",
+      "c": "netstat",
+      "d": "route"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "SSH is a protocol used for secure remote login. What is its default port number?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "21",
+      "b": "23",
+      "c": "22",
+      "d": "80"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following tools can be used to monitor Linux system performance in real-time?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "top",
+      "b": "ps",
+      "c": "jobs",
+      "d": "nice"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In an HA (High Availability) cluster using Keepalived, what protocol is used to advertise the master server's status?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "HTTP",
+      "b": "VRRP",
+      "c": "DHCP",
+      "d": "FTP"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which command is used to create a physical volume in LVM?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "lvcreate",
+      "b": "vgcreate",
+      "c": "pvcreate",
+      "d": "fdisk"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which file stores the user account information (username, UID, GID, etc.) in Linux?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/etc/shadow",
+      "b": "/etc/passwd",
+      "c": "/etc/group",
+      "d": "/etc/gshadow"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The 'chmod 755 file.txt' command sets the permission of file.txt to rwxr-xr-x.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "openGauss is a relational database management system derived from which open source database?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "MySQL",
+      "b": "PostgreSQL",
+      "c": "MariaDB",
+      "d": "SQLite"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following are the main components of the openGauss architecture?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Storage Engine",
+      "b": "SQL Engine",
+      "c": "Communication Management",
+      "d": "Client Driver"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which command is used to connect to the openGauss database from the command line?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "mysql",
+      "b": "psql",
+      "c": "gsql",
+      "d": "sqlplus"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which tool is provided by openGauss for logical backup and export of database objects?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "gs_basebackup",
+      "b": "gs_dump",
+      "c": "gs_restore",
+      "d": "gs_probackup"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "What is the default port number used by the openGauss database?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "3306",
+      "b": "1521",
+      "c": "5432",
+      "d": "8080"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In openGauss, which of the following statements is used to create a new table?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CREATE DATABASE",
+      "b": "CREATE USER",
+      "c": "CREATE TABLE",
+      "d": "INSERT INTO"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "The MOT (Memory-Optimized Table) engine in openGauss is designed for which type of workload?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "OLAP (Online Analytical Processing)",
+      "b": "OLTP (Online Transaction Processing)",
+      "c": "Data Archiving",
+      "d": "File Storage"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following constraints ensures that the value in a column is unique across the table?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "NOT NULL",
+      "b": "CHECK",
+      "c": "UNIQUE",
+      "d": "FOREIGN KEY"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "openGauss supports which of the following deployment modes?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Single Node",
+      "b": "Primary/Standby",
+      "c": "One Primary Multiple Standbys",
+      "d": "Serverless"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "Which SQL statement is used to retrieve data from a database table?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "UPDATE",
+      "b": "DELETE",
+      "c": "SELECT",
+      "d": "DROP"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which tool is used for physical backup and recovery in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "gs_dump",
+      "b": "gs_dumpall",
+      "c": "gs_basebackup",
+      "d": "gsql"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which system catalog in openGauss stores information about database users?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "pg_database",
+      "b": "pg_user",
+      "c": "pg_tables",
+      "d": "pg_class"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The Kunpeng processor is based on which instruction set architecture?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "x86",
+      "b": "ARMv8",
+      "c": "PowerPC",
+      "d": "MIPS"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following are characteristics of the Kunpeng 920 processor?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "High performance",
+      "b": "High throughput",
+      "c": "High integration",
+      "d": "High energy efficiency"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which operating system is optimized for the Kunpeng architecture?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Windows Server",
+      "b": "openEuler",
+      "c": "macOS",
+      "d": "Solaris"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "When porting C/C++ applications from x86 to Kunpeng, source code recompilation is generally required.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which acceleration engine is built into the Kunpeng processor to improve encryption and decryption performance?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "KAE (Kunpeng Acceleration Engine)",
+      "b": "AVX-512",
+      "c": "SSE4",
+      "d": "CUDA"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The TaiShan 200 server series is based on which processor?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Intel Xeon",
+      "b": "AMD EPYC",
+      "c": "Kunpeng 920",
+      "d": "Ascend 910"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following languages is an interpreted language and typically does not require code modification when migrating to Kunpeng?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "C",
+      "b": "C++",
+      "c": "Java",
+      "d": "Python"
+    },
+    "answer": [
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Kunpeng processors use a RISC (Reduced Instruction Set Computing) architecture, while x86 uses a CISC (Complex Instruction Set Computing) architecture.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler OS installation process, what is the first step?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Prepare the installation environment",
+      "b": "Select an installation mode",
+      "c": "Configure system settings",
+      "d": "Installation complete"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: During openEuler installation, you can choose to test the media before installing.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which software installation options are supported in openEuler 20.03 LTS?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Minimum installation",
+      "b": "Server with GUI",
+      "c": "Virtualization host",
+      "d": "Custom installation"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "In openEuler, the RPM option to upgrade a package is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "-Uvh",
+      "b": "-ivh",
+      "c": "-e",
+      "d": "-q"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What are disadvantages of RPM installation?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Installation environment must match packaging environment",
+      "b": "Dependencies must be processed before installation",
+      "c": "Simple to use",
+      "d": "Automatic dependency resolution"
+    },
+    "answer": ["a", "b"]
+  },
+  {
+    "question": "True or False: Source code-based installation allows flexible settings during compilation.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The sequence for source code installation is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "configure, make, make install",
+      "b": "make, configure, make install",
+      "c": "make install, make, configure",
+      "d": "install, configure, make"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In systemd, which unit represents a file system mount point?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Mount unit",
+      "b": "Service unit",
+      "c": "Target unit",
+      "d": "Device unit"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What does the /etc/fstab file store?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Static information about file systems",
+      "b": "Temporary files",
+      "c": "User accounts",
+      "d": "Kernel modules"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: The default file system on openEuler is ext4.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which command is used to create a Linux file system in a partition?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "mkfs",
+      "b": "fdisk",
+      "c": "mount",
+      "d": "umount"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In fstab, what does the 'ro' option mean?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Mount as read-only",
+      "b": "Mount as read/write",
+      "c": "Allow any user to mount",
+      "d": "Automatically mount at startup"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "For LVM capacity expansion, which command resizes the file system?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "resize2fs",
+      "b": "lvextend",
+      "c": "e2fsck",
+      "d": "umount"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Capacity reduction in LVM is risky and should be done with caution.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss, the overall architecture is divided into how many layers?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Three",
+      "b": "Two",
+      "c": "Four",
+      "d": "Five"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What are the three pooling modes in openGauss resource pooling architecture?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Storage pooling",
+      "b": "Memory pooling",
+      "c": "Compute pooling",
+      "d": "Network pooling"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "In openGauss primary/standby architecture, what is CM?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Cluster Manager",
+      "b": "Connection Manager",
+      "c": "Cache Manager",
+      "d": "Configuration Manager"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: openGauss supports MOT (Memory Optimized Table).",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss thread architecture, what is the advantage of multi-thread over multi-process?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Less data sharing and synchronization overhead",
+      "b": "More isolation",
+      "c": "Higher memory usage",
+      "d": "Slower context switching"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Databases emerged in which decade as a new discipline?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "1960s",
+      "b": "1950s",
+      "c": "1970s",
+      "d": "1980s"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: System catalogs in openGauss store structured metadata.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is WDR in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Workload Diagnosis Report",
+      "b": "Write Data Record",
+      "c": "Web Database Router",
+      "d": "Workflow Data Repository"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which AI tool in openGauss is used for parameter tuning?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "X-Tuner",
+      "b": "SQLdiag",
+      "c": "Index-advisor",
+      "d": "Predictor"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In Kunpeng 920, what is the manufacturing process?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "7nm",
+      "b": "5nm",
+      "c": "10nm",
+      "d": "14nm"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Kunpeng chipsets are Arm-based processors.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The SPECint benchmark score of Kunpeng 920 exceeds the industry benchmark by what percentage?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "25%",
+      "b": "15%",
+      "c": "30%",
+      "d": "20%"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler service management, what module is used for service management in SaltStack?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "service",
+      "b": "pkg",
+      "c": "file",
+      "d": "cmd"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What does the smbmount command do?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Mounts a Samba file system",
+      "b": "Installs Samba server",
+      "c": "Configures Samba shares",
+      "d": "Unmounts file systems"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: In openGauss, JDBC architecture supports multiple databases like Oracle and SQL Server.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "During migration evaluation to openGauss, what is surveyed using database survey tables?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Deployment architecture",
+      "b": "Typical services",
+      "c": "Data capacity",
+      "d": "Functions and performance"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "In openGauss, HeatWave is used for what?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "OLAP analysis",
+      "b": "OLTP transactions",
+      "c": "Backup",
+      "d": "Encryption"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is DataKit in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Toolkit for managing resources",
+      "b": "Data encryption tool",
+      "c": "Query optimizer",
+      "d": "Backup utility"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: openGauss supports SM algorithms for encryption.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, the /run directory is for?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Temporary file system after system start",
+      "b": "System administrator home",
+      "c": "Service data",
+      "d": "Kernel modules"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which file system is specially designed for Linux?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ext",
+      "b": "NTFS",
+      "c": "FAT",
+      "d": "HFS"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In fdisk, what does 'l' do?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Lists known file system types",
+      "b": "Deletes a partition",
+      "c": "Creates a new partition",
+      "d": "Sets DOS compatibility"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Swap file is independent from system and data files.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss resource pooling, DSS stands for?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Distributed Storage Service",
+      "b": "Data Storage System",
+      "c": "Dynamic Shared Storage",
+      "d": "Distributed Shared Storage"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is OM in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Operation Manager",
+      "b": "Object Manager",
+      "c": "Optimization Module",
+      "d": "Output Manager"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss, NUMA-aware data structure is optimized for which processor?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Kunpeng",
+      "b": "Intel x86",
+      "c": "AMD",
+      "d": "PowerPC"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: openGauss uses LSE from Armv8.1 for optimizations.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In Kunpeng, the desktop board model is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "D920S10",
+      "b": "Kunpeng 920",
+      "c": "TaiShan 200",
+      "d": "FusionServer"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Kunpeng uses which architecture?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Arm",
+      "b": "x86",
+      "c": "RISC-V",
+      "d": "MIPS"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In SaltStack, the service module option 'enabled' does what?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Enables or disables the service",
+      "b": "Installs the service",
+      "c": "Removes the service",
+      "d": "Queries the service"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Samba client on Linux uses smbmount for mounting file systems.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss migration, how many syntaxes is it compatible with?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "475+",
+      "b": "300+",
+      "c": "500+",
+      "d": "200+"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is DeepSQL in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Enhanced DB4AI for machine learning",
+      "b": "SQL diagnostic tool",
+      "c": "Index advisor",
+      "d": "Anomaly detection"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following commands determines the file type by analyzing the file content rather than the extension?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ls",
+      "b": "type",
+      "c": "file",
+      "d": "stat"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In openEuler, what is the valid range of 'Nice' values for process priority adjustment?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "0 to 100",
+      "b": "-20 to 19",
+      "c": "-100 to 100",
+      "d": "0 to 127"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following signals allows a process to be forcibly terminated and cannot be ignored or blocked by the process?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "SIGTERM (15)",
+      "b": "SIGINT (2)",
+      "c": "SIGKILL (9)",
+      "d": "SIGHUP (1)"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following describes the function of the /proc directory in Linux?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Stores system administrator commands.",
+      "b": "Stores persistent device files.",
+      "c": "A virtual file system containing runtime system information.",
+      "d": "Stores variable data files like logs."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "If the umask value is set to 022, what will be the default permissions for a newly created directory?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "644",
+      "b": "755",
+      "c": "700",
+      "d": "777"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following commands can be used to view the content of a text file?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "cat",
+      "b": "less",
+      "c": "more",
+      "d": "head"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "In the Vi/Vim editor, which command is used to save changes and exit?",
+    "question_type": "single_choice",
+    "options": {
+      "a": ":q!",
+      "b": ":wq",
+      "c": ":exit",
+      "d": ":w"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following are states in the Linux process lifecycle?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Running",
+      "b": "Sleeping",
+      "c": "Stopped",
+      "d": "Zombie"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Which command is used to display the disk usage of files and directories?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "df",
+      "b": "du",
+      "c": "lsblk",
+      "d": "free"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Hard links point to the same inode as the original file, whereas symbolic (soft) links point to the file path.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which configuration file is used to persistently mount file systems in Linux so they are mounted automatically at boot?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/etc/mtab",
+      "b": "/etc/fstab",
+      "c": "/proc/mounts",
+      "d": "/etc/mount.conf"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following commands is used to modify the group ownership of a file?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "chmod",
+      "b": "chown",
+      "c": "chgrp",
+      "d": "groupadd"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "What is the function of the 'systemctl enable' command?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Starts a service immediately.",
+      "b": "Restarts a running service.",
+      "c": "Configures a service to start automatically at boot.",
+      "d": "Checks the status of a service."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following are valid modes for SELinux (Security-Enhanced Linux)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Enforcing",
+      "b": "Permissive",
+      "c": "Disabled",
+      "d": "Restricted"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  {
+    "question": "The 'grep' command is used for searching plain-text data sets for lines that match a regular expression.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss, which background thread is responsible for writing dirty pages from the shared buffer to the disk?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "WalWriter",
+      "b": "BgWriter",
+      "c": "AutoVacuum",
+      "d": "Checkpointer"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is the default transaction isolation level in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Read Uncommitted",
+      "b": "Read Committed",
+      "c": "Repeatable Read",
+      "d": "Serializable"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which command in the gsql client is used to list all databases in the current openGauss instance?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "\\d",
+      "b": "\\l",
+      "c": "\\c",
+      "d": "\\dt"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Regarding the openGauss 'gs_om' tool, which of the following operations can it perform?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Start the cluster",
+      "b": "Stop the cluster",
+      "c": "Check cluster status",
+      "d": "Generate configuration files"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "MVCC (Multi-Version Concurrency Control) allows openGauss to handle concurrent access without excessive locking.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which data type in openGauss is best suited for storing IP addresses?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "VARCHAR",
+      "b": "TEXT",
+      "c": "CIDR/INET",
+      "d": "BLOB"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following SQL commands is used to revoke privileges from a user?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "DENY",
+      "b": "REVOKE",
+      "c": "REMOVE",
+      "d": "DELETE"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The 'VACUUM FULL' command in openGauss reclaims storage by rewriting the table, but it requires an exclusive lock on the table.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which configuration file in openGauss is used to control client authentication (IP address, authentication method)?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "postgresql.conf",
+      "b": "pg_hba.conf",
+      "c": "pg_ident.conf",
+      "d": "recovery.conf"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which memory region in openGauss is used for caching table data and indexes?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Work_mem",
+      "b": "Shared_buffers",
+      "c": "Maintenance_work_mem",
+      "d": "Temp_buffers"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The Kunpeng processor utilizes a weak memory consistency model. What does this imply for software development?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Memory access order is always guaranteed by hardware.",
+      "b": "Memory barriers may be needed to ensure correct execution order in multi-threaded programs.",
+      "c": "It is slower than strong memory models.",
+      "d": "It does not support multi-threading."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which tool in the Kunpeng development kit is used to analyze source code and identify portability issues when migrating from x86?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Kunpeng Performance Profiler",
+      "b": "Kunpeng Porting Advisor",
+      "c": "GCC Compiler",
+      "d": "Kunpeng Build Tool"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following SIMD (Single Instruction, Multiple Data) instruction sets is supported by the Kunpeng processor?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "AVX",
+      "b": "SSE",
+      "c": "NEON",
+      "d": "MMX"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "NUMA (Non-Uniform Memory Access) architecture is used in TaiShan servers. This means that:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "All processors access all memory at the same speed.",
+      "b": "A processor can access its local memory faster than remote memory.",
+      "c": "Memory is not shared between processors.",
+      "d": "Processors cannot access remote memory."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following are typical application scenarios for Kunpeng-based TaiShan servers?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Big Data Analysis",
+      "b": "Distributed Storage",
+      "c": "Web Applications",
+      "d": "Cloud Computing"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "Atomic operations in the Kunpeng architecture are often implemented using which instruction pair?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "LOCK / UNLOCK",
+      "b": "LDREX / STREX",
+      "c": "XCHG / CMP",
+      "d": "PUSH / POP"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following commands is used to view the kernel ring buffer messages, often used for debugging hardware or driver issues?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "cat /var/log/messages",
+      "b": "dmesg",
+      "c": "journalctl",
+      "d": "uname -a"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In openEuler, which command is used to display the current routing table?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ip route show",
+      "b": "route -n",
+      "c": "netstat -r",
+      "d": "All of the above"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "When configuring an Apache HTTP Server, which directive is used to define the directory where the website content is stored?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "DirectoryIndex",
+      "b": "DocumentRoot",
+      "c": "ServerRoot",
+      "d": "Location"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following special permissions allows a user to execute a binary executable file with the permissions of the file owner?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Sticky Bit",
+      "b": "SGID (Set Group ID)",
+      "c": "SUID (Set User ID)",
+      "d": "ACL"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Regarding the RPM package manager, what does the command 'rpm -qa' do?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Installs a package.",
+      "b": "Removes a package.",
+      "c": "Queries all installed packages.",
+      "d": "Verifies a package's integrity."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which of the following RAID levels provides both data redundancy and improved read performance but requires at least 3 disks?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "RAID 0",
+      "b": "RAID 1",
+      "c": "RAID 5",
+      "d": "RAID 10"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In openEuler, the 'firewall-cmd --permanent' option is used to make firewall rule changes persistent across reboots. Without this option, changes are only applied to the runtime configuration.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which command is used to create a compressed archive file using the gzip algorithm?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "tar -cvf archive.tar files",
+      "b": "tar -czvf archive.tar.gz files",
+      "c": "tar -cjvf archive.tar.bz2 files",
+      "d": "tar -xzvf archive.tar.gz"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following are valid states for a systemd service unit?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "active (running)",
+      "b": "inactive (dead)",
+      "c": "failed",
+      "d": "activating"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "To forcefully kill a process with PID 1234, which command should be used?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "kill 1234",
+      "b": "kill -9 1234",
+      "c": "kill -15 1234",
+      "d": "stop 1234"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which configuration file in openEuler is used to configure DNS name servers?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/etc/hosts",
+      "b": "/etc/resolv.conf",
+      "c": "/etc/nsswitch.conf",
+      "d": "/etc/sysconfig/network"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Logical Volume Manager (LVM) allows for online resizing of logical volumes.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which command allows you to view the real-time resource usage of a specific process ID?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "top -p [PID]",
+      "b": "ps -ef",
+      "c": "free -m",
+      "d": "vmstat"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, which directory typically contains the log files for the system and various applications?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "/usr/log",
+      "b": "/var/log",
+      "c": "/etc/log",
+      "d": "/home/log"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The 'ln -s' command creates a hard link to a file.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In openGauss, which meta-command in the gsql client is used to view the structure of a table?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "\\d table_name",
+      "b": "\\t table_name",
+      "c": "\\s table_name",
+      "d": "DESC table_name"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following logical backup formats does the 'gs_dump' tool support?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Plain text (.sql)",
+      "b": "Custom archive (.dmp)",
+      "c": "Tar archive (.tar)",
+      "d": "Directory format"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "What is the primary function of the 'WalSender' thread in an openGauss primary/standby cluster?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Writes logs to the disk on the primary node.",
+      "b": "Sends Write-Ahead Logs (WAL) from the primary to the standby node.",
+      "c": "Receives logs on the standby node.",
+      "d": "Executes checkpoints on the primary node."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In openGauss, the 'EXPLAIN' statement is used to display the execution plan of an SQL query without actually executing it.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following data types is used to store variable-length character strings in openGauss?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CHAR(n)",
+      "b": "VARCHAR(n)",
+      "c": "INTEGER",
+      "d": "FLOAT"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which SQL statement is used to remove all records from a table but keeps the table structure?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "DELETE FROM table_name",
+      "b": "DROP TABLE table_name",
+      "c": "TRUNCATE TABLE table_name",
+      "d": "REMOVE TABLE table_name"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In openGauss permission management, which keyword is used to grant permissions to a role or user?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "ALLOW",
+      "b": "GRANT",
+      "c": "PERMIT",
+      "d": "ASSIGN"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following are benefits of using Database Views?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Simplifies complex queries.",
+      "b": "Enhances security by restricting access to specific columns.",
+      "c": "Reduces physical storage space for data.",
+      "d": "Provides logical data independence."
+    },
+    "answer": [
+      "a",
+      "b",
+      "d"
+    ]
+  },
+  {
+    "question": "The 'gs_check' tool is used to inspect the health status, operating system parameters, and database parameters of the openGauss cluster.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The Kunpeng 920 processor supports PCIe 4.0 interface technology.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following encryption algorithms is accelerated by the Kunpeng Acceleration Engine (KAE)?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "RSA",
+      "b": "SM3",
+      "c": "SM4",
+      "d": "AES"
+    },
+    "answer": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "question": "When optimizing applications for Kunpeng, using GCC's '-fsigned-char' flag is often necessary because:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Kunpeng CPUs do not support characters.",
+      "b": "The default char type on x86 is signed, while on ARM (Kunpeng) it is unsigned by default.",
+      "c": "It increases compilation speed.",
+      "d": "It reduces memory usage."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following is a hardware-based virtualization technology supported by Kunpeng processors?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "KVM",
+      "b": "Docker",
+      "c": "ARM-VHE (Virtualization Host Extensions)",
+      "d": "LXC"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "In the context of Kunpeng performance tuning, what is 'False Sharing'?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Sharing incorrect data between threads.",
+      "b": "Multiple threads modifying independent variables that reside on the same cache line.",
+      "c": "Processes sharing memory without permission.",
+      "d": "The OS falsely reporting shared memory usage."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "The 'ExaGear' tool is primarily used for:",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Compiling source code for Kunpeng.",
+      "b": "Running x86 binary applications directly on ARM (Kunpeng) systems via dynamic binary translation.",
+      "c": "Monitoring system performance.",
+      "d": "Managing database clusters."
+    },
+    "answer": "b"
+  },
+  {
+    "question": "In openEuler task management, what is the purpose of the at command?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Schedule one-time tasks",
+      "b": "Schedule recurring tasks",
+      "c": "View running processes",
+      "d": "Manage network interfaces"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: The crontab command is used for managing recurring tasks in openEuler.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which elements are included in openEuler network management?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Basic network knowledge",
+      "b": "Managing network elements",
+      "c": "Task scheduling",
+      "d": "Process viewing"
+    },
+    "answer": ["a", "b"]
+  },
+  {
+    "question": "In openEuler process management, the nice command is used to?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Adjust process priority",
+      "b": "Kill processes",
+      "c": "View process tree",
+      "d": "Suspend processes"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What are common commands for process management in openEuler?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "ps",
+      "b": "top",
+      "c": "kill",
+      "d": "ifconfig"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "True or False: In openEuler, process management includes viewing and managing system processes.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss, after database installation, separation of duties is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Disabled by default",
+      "b": "Enabled by default",
+      "c": "Optional during install",
+      "d": "Always enabled"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "To check the database cluster status in openGauss, which user should run the commands?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Database installation user omm",
+      "b": "Root user",
+      "c": "Any user",
+      "d": "Admin user"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What is required for log collection in openGauss?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Host running properly",
+      "b": "Normal network connection",
+      "c": "Mutual trust between installation users",
+      "d": "OS tool like gstack"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "True or False: The openGauss installation package includes Dolphin plug-ins by default.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler web service, a server can run multiple?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Virtual hosts",
+      "b": "Physical hosts",
+      "c": "Databases",
+      "d": "Processes"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The web service access process starts with?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "User sending request via browser",
+      "b": "Server starting",
+      "c": "Database query",
+      "d": "Log writing"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which web service applications are covered in the course?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Apache",
+      "b": "NGINX",
+      "c": "IIS",
+      "d": "Tomcat"
+    },
+    "answer": ["a", "b"]
+  },
+  {
+    "question": "True or False: To build a blog system, web servers need to distribute requests using LVS.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss overview, databases emerged in the?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "1960s",
+      "b": "1950s",
+      "c": "1970s",
+      "d": "1980s"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Data management involves which tasks?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Classification",
+      "b": "Organization",
+      "c": "Encoding",
+      "d": "Storage"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "True or False: openGauss has become an important branch of computer science.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In Kunpeng Developer Kit, which tool provides portability evaluation?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Kunpeng Dependency Advisor",
+      "b": "Tuning Kit",
+      "c": "Acceleration library",
+      "d": "Compiler collection"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The Kunpeng Tuning Kit supports analysis of?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "CPU",
+      "b": "BMC",
+      "c": "NICs",
+      "d": "SSD controllers"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "True or False: Kunpeng Dependency Advisor implements automatic porting of 90% C/C++ code.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Huawei invested how much in Kunpeng computing industry in 2020?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "US$200 million",
+      "b": "US$100 million",
+      "c": "US$300 million",
+      "d": "US$50 million"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, the pstree command shows?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Process tree",
+      "b": "Process status",
+      "c": "Network status",
+      "d": "File tree"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: In openGauss, the owner of an object has full permissions by default.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which syntaxes are supported by Dolphin plug-ins in openGauss?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Character conversion",
+      "b": "DDL/DML/DCL syntax",
+      "c": "Stored procedures",
+      "d": "System views"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "In web services, each virtual host corresponds to?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "A web service",
+      "b": "A database",
+      "c": "A process",
+      "d": "A user"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The mainstream open source web service applications include?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Apache",
+      "b": "NGINX",
+      "c": "Lighttpd",
+      "d": "IIS"
+    },
+    "answer": ["a", "b"]
+  },
+  {
+    "question": "True or False: Web greatly promotes the development of the Internet.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openGauss technical specifications, what is covered?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Basic functions",
+      "b": "Advanced features",
+      "c": "Installation guide",
+      "d": "User manual"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Kunpeng Porting Advisor provides?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Code porting guidance",
+      "b": "Hardware installation",
+      "c": "Network configuration",
+      "d": "Database setup"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The Kunpeng Tuning Kit improves tuning efficiency by?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "5x",
+      "b": "2x",
+      "c": "10x",
+      "d": "3x"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Kunpeng reduces labor costs by 50% in code porting.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, scheduling includes?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Task management",
+      "b": "File management",
+      "c": "User management",
+      "d": "Device management"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "CMServer state in openGauss refers to?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "CM Server status in the cluster",
+      "b": "Database version",
+      "c": "User permissions",
+      "d": "Storage capacity"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "For openGauss log collection, an OS tool depended on is?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "gstack",
+      "b": "top",
+      "c": "ps",
+      "d": "netstat"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Users can use different domain names for virtual hosts in web services.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Data processing and database technology are applied in?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "More computer applications",
+      "b": "Only servers",
+      "c": "Mobile devices only",
+      "d": "Databases only"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Kunpeng acceleration library is part of?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Huawei Kunpeng Developer Kit",
+      "b": "openEuler OS",
+      "c": "openGauss DB",
+      "d": "Web server"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, network management includes managing?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Network elements in the system",
+      "b": "Processes only",
+      "c": "Files only",
+      "d": "Users only"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Database system administrator has the same permissions as object owners when separation of duties is disabled.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The Dolphin plug-ins in openGauss support?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "User-defined functions",
+      "b": "DDL syntax",
+      "c": "DML syntax",
+      "d": "DCL syntax"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "In web service, after receiving a request, the server?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Processes it",
+      "b": "Ignores it",
+      "c": "Deletes it",
+      "d": "Forwards it"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The course describes mainstream open source web service applications and?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Other related applications",
+      "b": "Closed source apps",
+      "c": "Mobile apps",
+      "d": "Desktop apps"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Data management is the core task involving a database.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Kunpeng Developer Kit includes?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Dependency Advisor",
+      "b": "Porting Advisor",
+      "c": "Tuning Kit",
+      "d": "Acceleration library"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "The Kunpeng Tuning Kit provides?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "Visualized analysis of system data",
+      "b": "Hardware replacement",
+      "c": "Software installation",
+      "d": "User creation"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "True or False: Huawei announced investment in Kunpeng at HDC.Cloud.",
+    "question_type": "true_false",
+    "options": {
+      "a": "True",
+      "b": "False"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "In openEuler, common management operations include?",
+    "question_type": "multiple_choice",
+    "options": {
+      "a": "Task management",
+      "b": "Network management",
+      "c": "Process management",
+      "d": "Database management"
+    },
+    "answer": ["a", "b", "c"]
+  },
+  {
+    "question": "In openGauss, the installation package is downloaded from?",
+    "question_type": "single_choice",
+    "options": {
+      "a": "openGauss official website",
+      "b": "Huawei store",
+      "c": "GitHub",
+      "d": "SourceForge"
+    },
+    "answer": "a"
+  }  
+
+]
